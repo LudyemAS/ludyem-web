@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — {{APP_NAME}} by Ludyem</title>
+  <meta name="description" content="Privacy Policy for {{APP_NAME}} by Ludyem." />
+  <link rel="canonical" href="https://ludyem.dev/{{APP_SLUG}}/privacy" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>{{THEME_CSS}}</style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/{{APP_SLUG}}" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="6" cy="7" r="1.6" fill="#fff"/><circle cx="17" cy="5" r="1.4" fill="#fff"/>
+            <circle cx="12" cy="13" r="1.8" fill="#fff"/><circle cx="19" cy="17" r="1.4" fill="#fff"/>
+            <circle cx="7" cy="18" r="1.5" fill="#fff"/>
+            <path d="M6 7 L12 13 L17 5 M12 13 L19 17 M12 13 L7 18" stroke="#fff" stroke-width="1" opacity="0.55" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ {{APP_NAME}}</span>
+      </a>
+      <a href="/{{APP_SLUG}}" class="back-link">← Back to {{APP_NAME}}</a>
+    </div>
+  </nav>
+
+  <main class="doc-main">
+    <div class="page-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="doc-body">
+      <p class="updated">Last updated {{DATE}} · Applies to <strong>{{APP_NAME}}</strong> by Ludyem (the "app").</p>
+
+      <p>We build {{APP_NAME}} so that your data stays on your device. We don't run servers that collect your personal information, we don't require an account, and we don't track you. This policy explains exactly what that means.</p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>No account, no sign-up, no email required.</li>
+        <li>We don't collect, store, or sell your personal data.</li>
+        <li>Your data lives on your device (and in your own iCloud, if enabled).</li>
+        <li>No third-party advertising or tracking SDKs.</li>
+      </ul>
+
+      <h2>Information we do <em>not</em> collect</h2>
+      <p>The app has no backend that receives your data. We do not collect your name, email, location, contacts, device identifiers for tracking, or your health and fitness data. Because there is no account system, there is nothing for us to log you into and nothing for us to store about you.</p>
+
+      <h2>Health &amp; fitness data</h2>
+      <p>With your permission, {{APP_NAME}} integrates with Apple Health to read and/or write the data it needs to do its job. This data is managed by Apple Health on your device and is governed by Apple's privacy protections. The app never transmits your Health data off your device. You can review or revoke these permissions any time in <strong>iOS Settings → Health → Data Access &amp; Devices</strong>.</p>
+
+      <h2>Data stored on your device</h2>
+      <p>Your entries, history, and preferences are stored locally on your device. If you enable iCloud, this data may sync across your own Apple devices via your private iCloud account, which is encrypted by Apple and not accessible to us.</p>
+
+      <h2>Subscriptions &amp; purchases</h2>
+      <p>The app may offer an optional Pro subscription. Purchases are processed by Apple through the App Store — we never see your payment details. Apple shares only anonymous, aggregated transaction information with us so we can confirm entitlements.</p>
+
+      <h2>Children</h2>
+      <p>The app is not directed at children under 13 and does not knowingly collect any personal information from anyone, regardless of age.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If we update this policy, we'll revise the "last updated" date above. Material changes will be reflected in an app update.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about privacy? Email us at <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+    </div>
+  </main>
+
+  <footer class="doc-foot">
+    <p>
+      <a href="/{{APP_SLUG}}">{{APP_NAME}}</a>
+      <a href="support.html">Support</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>
+    </p>
+    <p style="margin-top:12px;">© {{YEAR}} Ludyem AS. All rights reserved.</p>
+  </footer>
+</body>
+</html>

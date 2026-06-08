@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Generated from _template/ by new-app.py.
+     After generating: edit the feature copy below, drop a hero image at
+     {{APP_SLUG}}/assets/hero.png (or remove the .hero-art line), and set real stats. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{APP_NAME}} — {{APP_TAGLINE}}</title>
+  <meta name="description" content="{{APP_BLURB}}" />
+  <meta property="og:title" content="{{APP_NAME}} — {{APP_TAGLINE}}" />
+  <meta property="og:description" content="{{APP_BLURB}}" />
+  <meta property="og:url" content="https://ludyem.dev/{{APP_SLUG}}" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://ludyem.dev/{{APP_SLUG}}" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>{{THEME_CSS}}</style>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="6" cy="7" r="1.6" fill="#fff"/><circle cx="17" cy="5" r="1.4" fill="#fff"/>
+            <circle cx="12" cy="13" r="1.8" fill="#fff"/><circle cx="19" cy="17" r="1.4" fill="#fff"/>
+            <circle cx="7" cy="18" r="1.5" fill="#fff"/>
+            <path d="M6 7 L12 13 L17 5 M12 13 L19 17 M12 13 L7 18" stroke="#fff" stroke-width="1" opacity="0.55" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ {{APP_NAME}}</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="support.html">Support</a>
+      </div>
+      {{DOWNLOAD_NAV}}
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Privacy-first · On-device · Apple Health</div>
+      <h1>{{APP_HEADLINE}}</h1>
+      <p class="hero-sub">{{APP_TAGLINE}}</p>
+      <div class="hero-actions">
+        {{DOWNLOAD_PRIMARY}}
+        <a href="#features" class="btn-secondary">See features</a>
+      </div>
+      <img class="hero-art" src="assets/hero.png" alt="{{APP_NAME}}" onerror="this.remove()" />
+
+      <div class="stats-bar">
+        <div class="stat-item"><div class="stat-num">⌚</div><div class="stat-label">Apple Watch</div></div>
+        <div class="stat-item"><div class="stat-num">🍎</div><div class="stat-label">Apple Health</div></div>
+        <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Accounts</div></div>
+        <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">On-device</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features — edit this copy per app -->
+  <section id="features" class="alt">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">Everything you need, nothing you don't</h2>
+        <p class="section-sub">{{APP_NAME}} does one job well and stays out of your way.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Fast &amp; focused</h3><p>Open it and go. No setup walls, no clutter — just the thing you came to do.</p></div>
+        <div class="feature-card"><div class="feature-icon">📱</div><h3>Widgets</h3><p>Glanceable widgets for your home and lock screen, so you stay on track without opening the app.</p></div>
+        <div class="feature-card"><div class="feature-icon">⌚</div><h3>Apple Watch</h3><p>A companion app on your wrist for when your phone isn't in your hand.</p></div>
+        <div class="feature-card"><div class="feature-icon">🍎</div><h3>Apple Health</h3><p>Reads and writes Apple Health so your data flows with the rest of your ecosystem.</p></div>
+        <div class="feature-card"><div class="feature-icon">🎯</div><h3>Goals &amp; streaks</h3><p>Set a target, build a streak, and watch your progress add up day after day.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔒</div><h3>Private by design</h3><p>No account, no tracking. Everything stays on your device.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy">
+    <div class="container text-center">
+      <div class="section-label">Privacy</div>
+      <h2 class="section-title">On your iPhone. Full stop.</h2>
+      <p class="section-sub" style="margin-bottom:40px;">No account, no sign-in, no tracking. Your data stays with you.</p>
+      <div class="dl-row" style="justify-content:center;">
+        <a href="privacy.html" class="btn-secondary">Privacy Policy →</a>
+        <a href="terms.html" class="btn-secondary">Terms →</a>
+        <a href="support.html" class="btn-secondary">Support →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Get started<br><span class="grad">today.</span></h2>
+        <p>Free to download. No account required. Your data stays on your iPhone.</p>
+        {{DOWNLOAD_CTA}}
+        <p class="cta-note">iOS 26+ · Apple Watch optional · Apple Health</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="footer-logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <circle cx="6" cy="7" r="1.8" fill="#fff"/><circle cx="17" cy="5" r="1.6" fill="#fff"/>
+            <circle cx="12" cy="13" r="2" fill="#fff"/><circle cx="19" cy="17" r="1.6" fill="#fff"/>
+            <circle cx="7" cy="18" r="1.7" fill="#fff"/>
+            <path d="M6 7 L12 13 L17 5 M12 13 L19 17 M12 13 L7 18" stroke="#fff" stroke-width="1.2" opacity="0.55" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/">All apps</a>
+        <a href="#features">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p class="footer-copy">© {{YEAR}} Ludyem AS</p>
+    </div>
+  </footer>
+
+</body>
+</html>

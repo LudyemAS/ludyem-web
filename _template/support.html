@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — {{APP_NAME}} by Ludyem</title>
+  <meta name="description" content="Help with {{APP_NAME}} by Ludyem. FAQs and contact." />
+  <link rel="canonical" href="https://ludyem.dev/{{APP_SLUG}}/support" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>{{THEME_CSS}}</style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/{{APP_SLUG}}" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="6" cy="7" r="1.6" fill="#fff"/><circle cx="17" cy="5" r="1.4" fill="#fff"/>
+            <circle cx="12" cy="13" r="1.8" fill="#fff"/><circle cx="19" cy="17" r="1.4" fill="#fff"/>
+            <circle cx="7" cy="18" r="1.5" fill="#fff"/>
+            <path d="M6 7 L12 13 L17 5 M12 13 L19 17 M12 13 L7 18" stroke="#fff" stroke-width="1" opacity="0.55" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ {{APP_NAME}}</span>
+      </a>
+      <a href="/{{APP_SLUG}}" class="back-link">← Back to {{APP_NAME}}</a>
+    </div>
+  </nav>
+
+  <main class="doc-main">
+    <div class="page-label">Help</div>
+    <h1>Support</h1>
+    <p class="subtitle">Can't find what you're looking for? We're happy to help.</p>
+
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <h2>Contact us</h2>
+        <p>Send us an email and we'll get back to you as soon as possible — usually within one business day.</p>
+        <a href="mailto:{{SUPPORT_EMAIL}}" class="btn-contact">{{SUPPORT_EMAIL}}</a>
+      </div>
+    </div>
+
+    <div class="faq-label">Frequently asked questions</div>
+    <div class="faq-list">
+
+      <details>
+        <summary>Is {{APP_NAME}} free?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>{{APP_NAME}} is free to download and use. An optional Pro subscription unlocks advanced features — and includes a free trial so you can try it first.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do I need an account?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>No. There's no account and no sign-up. Everything is stored on your device, and optionally synced across your own devices through your private iCloud. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why can't {{APP_NAME}} see my Apple Health data?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>The app needs your permission. Go to <strong>iOS Settings → Health → Data Access &amp; Devices → {{APP_NAME}}</strong> and enable the categories you want. You can also grant permission again from the app's own settings.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I add a widget?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>Long-press an empty area of your home screen until the icons jiggle, tap the <strong>+</strong> in the corner, search for <strong>{{APP_NAME}}</strong>, choose a size, and tap <strong>Add Widget</strong>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I cancel my Pro subscription?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>Subscriptions are managed by Apple. Go to <strong>iOS Settings → [your name] → Subscriptions</strong>, select {{APP_NAME}}, and tap <strong>Cancel Subscription</strong>. You'll keep Pro until the end of the current period. For refunds, use <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I restore my purchase on a new iPhone?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>Sign in with the same Apple ID you used to buy Pro, open {{APP_NAME}}, and go to <strong>Settings → Restore Purchases</strong>.</p>
+        </div>
+      </details>
+
+    </div>
+  </main>
+
+  <footer class="doc-foot">
+    <p>
+      <a href="/{{APP_SLUG}}">{{APP_NAME}}</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>
+    </p>
+    <p style="margin-top:12px;">© {{YEAR}} Ludyem AS. All rights reserved.</p>
+  </footer>
+</body>
+</html>

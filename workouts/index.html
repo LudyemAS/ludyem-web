@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workouts — Push-Ups, Sit-Ups, Pull-Ups &amp; Squats trainers</title>
+  <meta name="description" content="Four focused bodyweight trainers from Ludyem. Adaptive plans, camera rep detection, streaks, and Apple Watch — every set written to Apple Health. No account." />
+  <meta property="og:title" content="Workouts — Bodyweight rep trainers by Ludyem" />
+  <meta property="og:description" content="Push-Ups, Sit-Ups, Pull-Ups & Squats. Adaptive plans, rep detection, Apple Watch, and Apple Health. No account." />
+  <meta property="og:url" content="https://ludyem.dev/workouts" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://ludyem.dev/workouts" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    /* ── Workouts theme: energetic orange → red ── */
+    :root {
+      --accent1: #ff7a2f; --accent2: #ff3b5c;
+      --grad-a:  #ffb27a; --grad-b:  #ff7a93;
+      --accent-soft: rgba(255,122,47,0.14);
+      --accent-line: rgba(255,122,47,0.32);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="6" cy="7" r="1.6" fill="#fff"/><circle cx="17" cy="5" r="1.4" fill="#fff"/>
+            <circle cx="12" cy="13" r="1.8" fill="#fff"/><circle cx="19" cy="17" r="1.4" fill="#fff"/>
+            <circle cx="7" cy="18" r="1.5" fill="#fff"/>
+            <path d="M6 7 L12 13 L17 5 M12 13 L19 17 M12 13 L7 18" stroke="#fff" stroke-width="1" opacity="0.55" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Workouts</span>
+      </a>
+      <div class="nav-links">
+        <a href="#apps">The apps</a>
+        <a href="#features">Features</a>
+        <a href="support.html">Support</a>
+      </div>
+      <a href="#apps" class="btn-nav">Get the apps</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Four apps · One adaptive trainer · Apple Watch ready</div>
+      <h1>Master the basics,<br><span class="grad">one rep at a time.</span></h1>
+      <p class="hero-sub">
+        Four focused bodyweight trainers — Push-Ups, Sit-Ups, Pull-Ups, and Squats. Each builds you
+        from your current max to a real goal with an adaptive plan, counts your reps, and writes every
+        set to Apple Health. No account, ever.
+      </p>
+      <div class="hero-actions">
+        <a href="#apps" class="btn-primary">
+          Choose your app
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#features" class="btn-secondary">See what's inside</a>
+      </div>
+      <img class="hero-art" src="assets/rocky-pushup.png" alt="Rocky, the Workouts mascot, doing a push-up" />
+
+      <div class="stats-bar">
+        <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Focused apps</div></div>
+        <div class="stat-item"><div class="stat-num">Adaptive</div><div class="stat-label">Training plans</div></div>
+        <div class="stat-item"><div class="stat-num">⌚</div><div class="stat-label">Apple Watch</div></div>
+        <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Accounts</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The four apps -->
+  <section id="apps">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">The apps</div>
+        <h2 class="section-title">Pick your exercise</h2>
+        <p class="section-sub">Same trainer, same care — each app focuses on one movement so your home screen stays about the goal you're chasing.</p>
+      </div>
+      <div class="app-grid">
+
+        <!-- App Store IDs are the live ASC records from project.yml.
+             TODO: confirm each listing is live before publishing (all 4 returned 404 at build time). -->
+        <div class="app-card" id="pushups" style="--app:#ff7a2f;">
+          <div class="app-icon">💪</div>
+          <h3>Push-Ups</h3>
+          <p class="app-blurb">Build to 100 consecutive push-ups. Optional camera rep detection counts for you, hands-free.</p>
+          <div class="dl-row">
+            <a class="appstore-btn" href="https://apps.apple.com/app/id6447548662" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span class="as-lines"><small>Download on the</small><span class="as-big">App Store</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="app-card" id="situps" style="--app:#ff3b5c;">
+          <div class="app-icon">🔥</div>
+          <h3>Sit-Ups</h3>
+          <p class="app-blurb">Work toward 200 sit-ups with a plan that scales to your level. Tap to count, set after set.</p>
+          <div class="dl-row">
+            <a class="appstore-btn" href="https://apps.apple.com/app/id6449369495" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span class="as-lines"><small>Download on the</small><span class="as-big">App Store</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="app-card" id="pullups" style="--app:#8b5cf6;">
+          <div class="app-icon">🧗</div>
+          <h3>Pull-Ups</h3>
+          <p class="app-blurb">The hardest of the four — ramp safely from your current max toward 20 strict pull-ups.</p>
+          <div class="dl-row">
+            <a class="appstore-btn" href="https://apps.apple.com/app/id6449373216" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span class="as-lines"><small>Download on the</small><span class="as-big">App Store</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="app-card" id="squats" style="--app:#22c55e;">
+          <div class="app-icon">🦵</div>
+          <h3>Squats</h3>
+          <p class="app-blurb">Legs day, every day. Climb toward 200 squats with the same adaptive ladder.</p>
+          <div class="dl-row">
+            <a class="appstore-btn" href="https://apps.apple.com/app/id6449372822" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span class="as-lines"><small>Download on the</small><span class="as-big">App Store</span></span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <p class="text-center" style="color:var(--faint);font-size:13px;margin-top:28px;">All four are free to download · iOS 26+ · Apple Watch optional</p>
+    </div>
+  </section>
+
+  <!-- Features (shared across all four) -->
+  <section id="features" class="alt">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">Inside every app</div>
+        <h2 class="section-title">A real trainer, not just a counter</h2>
+        <p class="section-sub">The same engine powers all four apps — so whichever you pick, you get the full thing.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Adaptive plan</h3>
+          <p>Tell it your current max and your goal — it builds a multi-week ladder of sets and rest that ramps you there at your chosen pace.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📷</div>
+          <h3>Camera rep detection</h3>
+          <p>For push-ups and sit-ups, on-device Vision counts your reps hands-free. Frames never leave your iPhone.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔥</div>
+          <h3>Streaks &amp; records</h3>
+          <p>Daily streaks you'll want to protect, plus personal-best tracking with a satisfying "new best" celebration.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⌚</div>
+          <h3>Apple Watch trainer</h3>
+          <p>A standalone watch app — count with taps or the Digital Crown, guided through your sets right on your wrist.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Game Center leaderboards</h3>
+          <p>Compare your best session against everyone else training the same movement. Friendly, optional pressure.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍎</div>
+          <h3>Writes to Apple Health</h3>
+          <p>Every set is logged as a workout in Apple Health, so your effort counts toward your rings and the rest of your data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy">
+    <div class="container text-center">
+      <div class="section-label">Privacy</div>
+      <h2 class="section-title">On your iPhone. Full stop.</h2>
+      <p class="section-sub" style="margin-bottom:40px;">No account, no sign-in, no tracking. Camera rep detection runs entirely on-device — frames are analysed and discarded, never uploaded.</p>
+      <div class="dl-row" style="justify-content:center;">
+        <a href="privacy.html" class="btn-secondary">Privacy Policy →</a>
+        <a href="terms.html" class="btn-secondary">Terms →</a>
+        <a href="support.html" class="btn-secondary">Support →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Pick a movement.<br><span class="grad">Start today.</span></h2>
+        <p>Free to download. No account required. Your reps stay on your iPhone.</p>
+        <a href="#apps" class="btn-primary" style="display:inline-flex;">Choose your app</a>
+        <p class="cta-note">iOS 26+ · Apple Watch optional · Writes to Apple Health</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="footer-logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <circle cx="6" cy="7" r="1.8" fill="#fff"/><circle cx="17" cy="5" r="1.6" fill="#fff"/>
+            <circle cx="12" cy="13" r="2" fill="#fff"/><circle cx="19" cy="17" r="1.6" fill="#fff"/>
+            <circle cx="7" cy="18" r="1.7" fill="#fff"/>
+            <path d="M6 7 L12 13 L17 5 M12 13 L19 17 M12 13 L7 18" stroke="#fff" stroke-width="1.2" opacity="0.55" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/">All apps</a>
+        <a href="#apps">The apps</a>
+        <a href="#features">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p class="footer-copy">© 2026 Ludyem AS</p>
+    </div>
+  </footer>
+
+</body>
+</html>
