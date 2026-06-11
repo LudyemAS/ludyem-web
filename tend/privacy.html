@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Tend by Ludyem</title>
+  <meta name="description" content="Tend privacy policy. Your health data never leaves your iPhone. No account, no tracking, no ads." />
+  <link rel="canonical" href="https://ludyem.dev/tend/privacy" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #109e8d; --accent2: #6bbf59;
+      --grad-a: #7ccac0; --grad-b: #aedca4;
+      --accent-soft: rgba(16,158,141,0.14); --accent-line: rgba(16,158,141,0.32);
+    }
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/tend" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="6" cy="7" r="1.6" fill="#fff"/><circle cx="17" cy="5" r="1.4" fill="#fff"/>
+            <circle cx="12" cy="13" r="1.8" fill="#fff"/><circle cx="19" cy="17" r="1.4" fill="#fff"/>
+            <circle cx="7" cy="18" r="1.5" fill="#fff"/>
+            <path d="M6 7 L12 13 L17 5 M12 13 L19 17 M12 13 L7 18" stroke="#fff" stroke-width="1" opacity="0.55" stroke-linecap="round"/>
+          </svg>
+        </span>
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Tend</span>
+      </a>
+      <a href="/tend" class="back-link">← Back to Tend</a>
+    </div>
+  </nav>
+
+  <main class="doc-main">
+    <div class="page-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="doc-body">
+      <p class="updated">Last updated 10 June 2026 · Applies to <strong>Tend</strong> by Ludyem (the "app").</p>
+
+      <p>Ludyem AS ("we", "us", or "our") operates Tend. This policy explains what data Tend touches, where it lives, and your rights. The same policy is available inside the app under Settings → About → Privacy Policy.</p>
+
+      <h2>1. Summary</h2>
+      <p>Tend is designed to keep your health data on your device. We do not operate a backend server that collects, stores, or analyses your personal health information. Your health data is never used for advertising and is never sold.</p>
+      <ul>
+        <li>No account, no sign-up, no email required.</li>
+        <li>Your health data never leaves your iPhone or Apple Watch.</li>
+        <li>Patterns and AI summaries are computed entirely on-device.</li>
+        <li>No third-party advertising or tracking SDKs.</li>
+      </ul>
+
+      <h2>2. Health data (Apple Health / HealthKit)</h2>
+      <p>With your explicit permission, Tend reads and writes the following data in Apple Health:</p>
+      <p><strong>Mood (State of Mind):</strong> your Tend check-ins are written to Apple Health as State of Mind samples, and Tend reads State of Mind samples (including ones logged by other apps) to show your mood history. Notes you attach to a check-in stay local to Tend — State of Mind has no note field, so notes are never written to Apple Health.</p>
+      <p><strong>Symptoms:</strong> symptom logs are written to Apple Health using Apple's standard symptom types (for example headache, fatigue, or nausea), and Tend reads them back to build your history. Custom symptoms you create yourself have no Apple Health equivalent and stay local to Tend.</p>
+      <p><strong>Passive reads for patterns:</strong> with permission, Tend reads steps, active energy, mindful minutes, sleep, and menstrual cycle data from Apple Health to look for associations with how you feel.</p>
+      <p><strong>Medications:</strong> if you use the Medications feature, Tend reads your medication list and dose events from Apple Health to show adherence and include it in patterns. Tend never writes medication data; you manage medications in the Health app.</p>
+      <p>This data is used solely to display your history, power widgets, and compute on-device patterns. Health data never leaves your iPhone or Apple Watch: it is not transmitted to any server we operate or to any third party, and it is never included in analytics (see section 7).</p>
+      <p><strong>Important limitation:</strong> Tend is not a medical device. The information displayed is for general wellness tracking only and must not be used to diagnose, treat, cure, or prevent any medical condition. Always consult a qualified healthcare professional before making health or medication decisions.</p>
+
+      <h2>3. Patterns are associations, not diagnoses</h2>
+      <p>Tend's Patterns feature computes statistical associations between your factors, symptoms, mood, and passive health data — entirely on your device. An association is not causation and is not medical insight. Do not change treatment, medication, or behaviour based on a pattern without consulting a healthcare professional.</p>
+
+      <h2>4. Local storage and iCloud</h2>
+      <p>Your factors, factor ratings, custom symptoms, notes, streaks, and pattern results are stored using Apple's SwiftData framework on your device. If you have iCloud enabled for Tend, this data syncs across your devices via your private iCloud container. That container is encrypted by Apple and tied to your Apple Account; we have no access to it. (Whether the contents are end-to-end encrypted depends on your device's Advanced Data Protection setting.)</p>
+
+      <h2>5. Purchases (RevenueCat)</h2>
+      <p>Tend uses RevenueCat to manage in-app purchases. RevenueCat receives a randomly-generated anonymous user identifier and your App Store transaction receipts to verify purchase status. RevenueCat does not receive your name, email address, or any health data. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a> for their policy. Payment itself is processed entirely by Apple.</p>
+
+      <h2>6. Local notifications</h2>
+      <p>Tend sends local notifications for check-in reminders, medication reminders, and streak protection alerts. These are generated entirely on-device. We do not use a remote push notification service.</p>
+
+      <h2>7. Anonymous usage analytics</h2>
+      <p>Tend includes our own privacy-first analytics (built and operated by us, with no third-party analytics, crash-reporting, or advertising SDKs). To understand which features are used and keep the app improving, App Store builds send a small set of anonymous usage events (for example "app opened" or "check-in completed").</p>
+      <ul>
+        <li>Events are tied to a randomly-generated identifier stored in your device's Keychain. It is created on install, identifies only this installation, and is never linked to your name, email, Apple Account, or any other identity.</li>
+        <li>No personal information and <strong>no health data of any kind</strong> is ever included.</li>
+        <li>Location is limited to your device's region setting (country only) — we never read GPS or derive location from your network address.</li>
+        <li>We do not track you across other apps or websites, and we do not use the data for advertising.</li>
+      </ul>
+
+      <h2>8. Apple Watch (watchOS)</h2>
+      <p>Tend includes a companion Apple Watch app. The Watch app reads data directly from Apple Health via HealthKit. No data is collected, stored, or transmitted by the Watch app beyond what is described in section 2. All the same protections apply.</p>
+
+      <h2>9. Children's privacy</h2>
+      <p>Tend is not directed at children under the age of 13 and we do not knowingly collect data from children. If you believe we have inadvertently received information from a child under 13, please contact us at <a href="mailto:support@ludyem.dev">support@ludyem.dev</a> and we will take steps to delete it promptly.</p>
+
+      <h2>10. California residents (CCPA)</h2>
+      <p>If you are a California resident, the California Consumer Privacy Act (CCPA) may provide you with additional rights. We do not sell, share, or disclose your personal information to third parties for monetary or other valuable consideration. Because Tend processes no personal data on our servers, there is no personal information held by us to access, delete, or opt out of selling. To submit a privacy request, email <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>.</p>
+
+      <h2>11. Your rights (EEA, UK, and Norway)</h2>
+      <p>You may revoke HealthKit permissions at any time via Settings → Apps → Health → Data Access &amp; Devices → Tend. You may delete all Tend data from within the app's Settings. This does not affect data stored in Apple Health, which you manage in the Health app.</p>
+      <p>If you are a resident of the European Economic Area, United Kingdom, or Norway, you have the following rights under the GDPR or equivalent applicable law: access, rectification, erasure, restriction of processing, data portability, objection to processing, and the right to lodge a complaint with a supervisory authority.</p>
+      <p>Because we hold no personal data on our servers, these rights are largely exercised through your device. To raise a privacy concern, email <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>.</p>
+      <p><strong>Supervisory authority:</strong> As a Norwegian company, our lead supervisory authority is the Norwegian Data Protection Authority (Datatilsynet — <a href="https://www.datatilsynet.no" target="_blank" rel="noopener">datatilsynet.no</a>). You also have the right to contact the supervisory authority in your country of residence.</p>
+
+      <h2>12. Apple's privacy practices</h2>
+      <p>Tend relies on several Apple platform services (HealthKit, iCloud, StoreKit). Apple's handling of data within these services is governed by Apple's Privacy Policy at <a href="https://www.apple.com/privacy" target="_blank" rel="noopener">apple.com/privacy</a>.</p>
+
+      <h2>13. Changes to this policy</h2>
+      <p>We will update the "Last updated" date above when this policy changes materially. Continued use of Tend after changes constitutes acceptance of the updated policy.</p>
+
+      <h2>14. Contact</h2>
+      <p>Questions or concerns? Email <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>.</p>
+    </div>
+  </main>
+
+  <footer class="doc-foot">
+    <p>
+      <a href="/tend">Tend</a>
+      <a href="support.html">Support</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 Ludyem AS. All rights reserved.</p>
+  </footer>
+</body>
+</html>
