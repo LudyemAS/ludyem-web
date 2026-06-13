@@ -141,8 +141,9 @@ h1 { font-size: clamp(44px, 7vw, 82px); font-weight: 800; line-height: 1.06; let
 .app-card:hover { border-color: var(--app, var(--accent1)); transform: translateY(-4px); }
 .app-card .app-icon {
   width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
-  font-size: 28px; background: color-mix(in srgb, var(--app, var(--accent1)) 18%, transparent);
+  font-size: 28px; overflow: hidden; background: color-mix(in srgb, var(--app, var(--accent1)) 18%, transparent);
 }
+.app-card .app-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .app-card h3 { font-size: 20px; font-weight: 700; }
 .app-card .app-blurb { font-size: 15px; color: var(--muted); line-height: 1.6; flex: 1; }
 .app-card .app-foot { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--app, var(--accent1)); }

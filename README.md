@@ -62,8 +62,8 @@ In Porkbun's DNS for `ludyem.dev`, remove the parking records and add:
 > HTTP. GitHub Pages issues a free TLS certificate automatically; just don't panic during
 > the few minutes between DNS resolving and the cert being ready.
 
-Optional: set up **email forwarding** in Porkbun so `support@ludyem.dev` and
-`hello@ludyem.dev` (used across the pages) reach your inbox.
+Optional: set up **email forwarding** in Porkbun so `support@ludyem.dev`
+(the single contact address used across every page) reaches your inbox.
 
 ## Notes
 
