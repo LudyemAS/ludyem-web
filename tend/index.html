@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tend — Mood &amp; Symptom Diary for Apple Health</title>
+  <title>Tend, Mood &amp; Symptom Diary for Apple Health</title>
   <meta name="description" content="Log moods and symptoms in seconds, find your patterns, and keep every entry in Apple Health, where your data belongs. No account, no tracking, free to log forever." />
-  <meta property="og:title" content="Tend — Mood &amp; Symptom Diary for Apple Health" />
+  <meta property="og:title" content="Tend, Mood &amp; Symptom Diary for Apple Health" />
   <meta property="og:description" content="Log moods and symptoms in seconds, find your patterns, and keep every entry in Apple Health, where your data belongs." />
   <meta property="og:url" content="https://ludyem.dev/tend" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://ludyem.dev/tend" />
-  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <link rel="stylesheet" href="../assets/ludyem.css" />
   <style>
     :root {
       --accent1: #109e8d; --accent2: #6bbf59;
@@ -18,7 +18,7 @@
       --accent-soft: rgba(16,158,141,0.14); --accent-line: rgba(16,158,141,0.32);
     }
     /* Tend-only extras, layered on the shared stylesheet */
-    .hero-mascot { width: 180px; max-width: 45vw; margin: 48px auto 0; display: block; }
+    .hero-mascot { width: 176px; max-width: 42vw; margin: 44px auto 0; display: block; }
     .duo { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
     .duo img { width: 200px; max-width: 35vw; }
     @media (max-width: 700px) { .duo { grid-template-columns: 1fr; } .duo img { margin: 0 auto; } }
@@ -35,11 +35,53 @@
       max-width: 640px; margin-left: auto; margin-right: auto;
     }
     .covenant strong { color: var(--grad-a); }
+
+    /* Custom feature icons (replace emoji) */
+    .feature-icon svg.ficon, .ficon { width: 24px; height: 24px; display: block; fill: none; stroke: var(--grad-a); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Screenshot showcase */
+    .shots { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px 22px; margin: 28px auto 0; }
+    .shot { width: 188px; }
+    .phone {
+      border-radius: 30px; padding: 7px;
+      background: linear-gradient(165deg, #20202f, #0c0c16);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 26px 50px -22px rgba(0,0,0,0.82), 0 0 0 1px rgba(255,255,255,0.04) inset;
+    }
+    .phone img { width: 100%; display: block; border-radius: 24px; }
+    .shot-cap { margin-top: 14px; text-align: center; font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .shot-cap strong { display: block; color: var(--text); font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    @media (max-width: 560px) { .shot { width: 44vw; max-width: 200px; } }
+
+    /* Section mascot accent */
+    .lead-mascot { width: 120px; height: auto; display: block; margin: 0 auto 12px; }
   </style>
-  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
-  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
+  <link rel="icon" type="image/png" href="../assets/icons/tend.png" />
+  <link rel="apple-touch-icon" href="../assets/icons/tend.png" />
 </head>
 <body>
+
+  <!-- Icon sprite (decorative) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="ic-mood" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 14.2c.9 1.2 2.1 1.8 3.5 1.8s2.6-.6 3.5-1.8"/><path d="M9 10h.01"/><path d="M15 10h.01"/></symbol>
+    <symbol id="ic-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></symbol>
+    <symbol id="ic-factors" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><circle cx="9" cy="7" r="2.1"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2.1"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="11" cy="17" r="2.1"/></symbol>
+    <symbol id="ic-patterns" viewBox="0 0 24 24"><path d="M4 16l5-4 4 3 7-8"/><circle cx="4" cy="16" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="13" cy="15" r="1.5"/><circle cx="20" cy="7" r="1.5"/></symbol>
+    <symbol id="ic-sprout" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13C12 9.5 9.8 7 6.5 7 6.5 10.5 8.7 13 12 13z"/><path d="M12 11c0-3 2-5.2 5.2-5.2C17.2 8.8 15.2 11 12 11z"/></symbol>
+    <symbol id="ic-doctor" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9.5 4a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v1h-5z"/><path d="M8 14h2l1.3-3 2 5 1.2-2H16"/></symbol>
+    <symbol id="ic-pill" viewBox="0 0 24 24"><path d="M10.2 3.6l10.2 10.2a4.8 4.8 0 0 1-6.8 6.8L3.4 10.4a4.8 4.8 0 0 1 6.8-6.8z"/><line x1="6.8" y1="6.8" x2="17" y2="17"/></symbol>
+    <symbol id="ic-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M18 13.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></symbol>
+    <symbol id="ic-access" viewBox="0 0 24 24"><circle cx="12" cy="4" r="2"/><path d="M5 9c2.2.9 4.5 1.3 7 1.3S16.8 9.9 19 9"/><path d="M12 9.8V14"/><path d="M8.4 21l3.6-7 3.6 7"/></symbol>
+    <symbol id="ic-watch" viewBox="0 0 24 24"><rect x="7" y="6.5" width="10" height="11" rx="3"/><path d="M9.2 6.5L9.7 4h4.6l.5 2.5"/><path d="M9.2 17.5l.5 2.5h4.6l.5-2.5"/></symbol>
+    <symbol id="ic-widgets" viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.8"/></symbol>
+    <symbol id="ic-controls" viewBox="0 0 24 24"><line x1="8" y1="3" x2="8" y2="21"/><circle cx="8" cy="8" r="2.2"/><line x1="16" y1="3" x2="16" y2="21"/><circle cx="16" cy="15" r="2.2"/></symbol>
+    <symbol id="ic-tablet" viewBox="0 0 24 24"><rect x="11" y="4" width="10" height="15" rx="2"/><line x1="14.5" y1="16.5" x2="17.5" y2="16.5"/><rect x="3" y="7" width="6.5" height="12" rx="1.6"/></symbol>
+    <symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.5 2.4 3.9 5.3 3.9 8.5s-1.4 6.1-3.9 8.5c-2.5-2.4-3.9-5.3-3.9-8.5s1.4-6.1 3.9-8.5z"/></symbol>
+    <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.7v5.1c0 4.6-3 7.7-7 9.2-4-1.5-7-4.6-7-9.2V5.7z"/><path d="M9 12l2 2 4-4.3"/></symbol>
+    <symbol id="ic-cycle" viewBox="0 0 24 24"><path d="M12 3.5c3.4 4.4 5.8 7.5 5.8 10.6A5.8 5.8 0 0 1 6.2 14.1C6.2 11 8.6 7.9 12 3.5z"/></symbol>
+    <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.8l6.1-.7z"/></symbol>
+    <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9.5L5 20.5V16H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="M9 10.5h.01"/><path d="M12 10.5h.01"/><path d="M15 10.5h.01"/></symbol>
+  </defs></svg>
 
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -48,13 +90,13 @@
   <nav>
     <div class="nav-inner">
       <a href="/" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
+        <img class="logo-mark" src="../assets/icons/tend.png" alt="" width="32" height="32" />
         Ludyem <span style="color:var(--muted);font-weight:600;">/ Tend</span>
       </a>
       <div class="nav-links">
+        <a href="#look">A look inside</a>
         <a href="#features">Features</a>
         <a href="#health">Apple Health</a>
-        <a href="#roadmap">Roadmap</a>
         <a href="support.html">Support</a>
       </div>
       <!-- At launch: swap for the live App Store button (id 6778921650) -->
@@ -74,7 +116,7 @@
       <div class="hero-actions">
         <!-- At launch: swap for the live App Store button (id 6778921650) -->
         <span class="btn-primary" style="opacity:.6;cursor:default;">Coming soon to the App Store</span>
-        <a href="#features" class="btn-secondary">See features</a>
+        <a href="#look" class="btn-secondary">See it in action</a>
       </div>
       <img class="hero-mascot" src="assets/mascot-wave.svg" width="768" height="768" decoding="async" fetchpriority="high" alt="Sprout, Tend's plant mascot, waving hello" />
 
@@ -87,8 +129,41 @@
     </div>
   </section>
 
+  <!-- Screenshot showcase -->
+  <section id="look" class="alt">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">A look inside</div>
+        <h2 class="section-title">Calm to use, honest with you</h2>
+        <p class="section-sub">A check-in takes seconds. Everything else is here when you want it.</p>
+      </div>
+      <div class="shots">
+        <div class="shot">
+          <figure class="phone"><img src="assets/shots/home.png" width="800" height="1738" loading="lazy" decoding="async" alt="Tend Home screen showing today's mood check-in, the streak, and today's factors" /></figure>
+          <p class="shot-cap"><strong>Home</strong>Your daily check-in, streak, and what moved your mood.</p>
+        </div>
+        <div class="shot">
+          <figure class="phone"><img src="assets/shots/log.png" width="800" height="1738" loading="lazy" decoding="async" alt="Tend Log screen with symptom search and a grid of symptoms to log" /></figure>
+          <p class="shot-cap"><strong>Log</strong>Dozens of symptoms, severity in a tap, saved to Apple Health.</p>
+        </div>
+        <div class="shot">
+          <figure class="phone"><img src="assets/shots/insights.png" width="800" height="1738" loading="lazy" decoding="async" alt="Tend Insights screen showing the week summary, mood, sleep, and factor averages" /></figure>
+          <p class="shot-cap"><strong>Insights</strong>Your week and month, summed up from your check-ins.</p>
+        </div>
+        <div class="shot">
+          <figure class="phone"><img src="assets/shots/patterns.png" width="800" height="1738" loading="lazy" decoding="async" alt="Tend Patterns screen with plain-sentence links between factors and how you feel" /></figure>
+          <p class="shot-cap"><strong>Patterns</strong>Plain sentences about what moves with what. Never causes.</p>
+        </div>
+        <div class="shot">
+          <figure class="phone"><img src="assets/shots/factors.png" width="800" height="1738" loading="lazy" decoding="async" alt="Tend Factors screen listing built-in and lifestyle factors you can track" /></figure>
+          <p class="shot-cap"><strong>Factors</strong>Energy, stress, sleep, and the lifestyle factors you choose.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Features -->
-  <section id="features" class="alt">
+  <section id="features">
     <div class="container">
       <div class="text-center">
         <div class="section-label">Features</div>
@@ -96,21 +171,21 @@
         <p class="section-sub">Most trackers keep your data hostage. Tend logs fast, finds what moves you, and hands everything to Apple Health.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">🌤️</div><h3>Mood check-ins</h3><p>A gentle daily check-in saved as State of Mind in Apple Health. Two taps on a good day, room for notes on a hard one.</p></div>
-        <div class="feature-card"><div class="feature-icon">🩹</div><h3>Symptom logging</h3><p>39 Apple Health symptom types plus custom ones of your own. Severity in one tap, written back to Health as real samples.</p></div>
-        <div class="feature-card"><div class="feature-icon">🎚️</div><h3>Factors</h3><p>Rate energy, stress, and sleep quality, or define up to three factors of your own. They feed straight into your patterns.</p></div>
-        <div class="feature-card"><div class="feature-icon">🔭</div><h3>Patterns</h3><p>On-device correlations between your moods, symptoms, factors, sleep, steps, mindfulness, and cycle. Plain sentences, not charts to decode.</p></div>
-        <div class="feature-card"><div class="feature-icon">🌱</div><h3>A streak that forgives</h3><p>Sprout, your garden companion, grows with your check-ins. Miss a day and nothing resets: life happens, and Tend knows it.</p></div>
-        <div class="feature-card"><div class="feature-icon">🧑‍⚕️</div><h3>For your doctor</h3><p>A one-tap month summary as a clean printable PDF: mood line, top symptoms, factor effects. Bring data, not guesswork.</p></div>
-        <div class="feature-card"><div class="feature-icon">💊</div><h3>Medication adherence</h3><p>See your Apple Health medication log next to how you feel, and let patterns connect the two.</p></div>
-        <div class="feature-card"><div class="feature-icon">🍎</div><h3>Week in a sentence</h3><p>Apple Intelligence sums up your week in one honest line, generated on your iPhone. Nothing ever leaves it.</p></div>
-        <div class="feature-card"><div class="feature-icon">♿</div><h3>Accessible by design</h3><p>VoiceOver labels everywhere, full Dynamic Type, Reduce Motion respected, and charts that describe themselves.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-mood"/></svg></div><h3>Mood check-ins</h3><p>A gentle daily check-in saved as State of Mind in Apple Health. Two taps on a good day, room for notes on a hard one.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-pulse"/></svg></div><h3>Symptom logging</h3><p>39 Apple Health symptom types plus custom ones of your own. Severity in one tap, written back to Health as real samples.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-factors"/></svg></div><h3>Factors</h3><p>Rate energy, stress, and sleep quality, or define your own. They feed straight into your patterns.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-patterns"/></svg></div><h3>Patterns</h3><p>On-device correlations between your moods, symptoms, factors, sleep, steps, mindfulness, and cycle. Plain sentences, not charts to decode.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-sprout"/></svg></div><h3>A streak that forgives</h3><p>Sprout, your garden companion, grows with your check-ins. Miss a day and nothing resets: life happens, and Tend knows it.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-doctor"/></svg></div><h3>For your doctor</h3><p>A one-tap month summary you can share or print: mood line, top symptoms, factor effects. Bring data, not guesswork.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-pill"/></svg></div><h3>Medication adherence</h3><p>See your Apple Health medication log next to how you feel, and let patterns connect the two.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-sparkle"/></svg></div><h3>Week in a sentence</h3><p>Apple Intelligence sums up your week in one honest line, generated on your iPhone. Nothing ever leaves it.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-access"/></svg></div><h3>Accessible by design</h3><p>VoiceOver labels everywhere, full Dynamic Type, Reduce Motion respected, and charts that describe themselves out loud.</p></div>
       </div>
     </div>
   </section>
 
   <!-- Apple Health two-way -->
-  <section id="health">
+  <section id="health" class="alt">
     <div class="container">
       <div class="duo">
         <div>
@@ -131,9 +206,29 @@
     </div>
   </section>
 
+  <!-- Across your devices -->
+  <section id="devices">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">Across your devices</div>
+        <h2 class="section-title">Tend goes where you go</h2>
+        <p class="section-sub">One check-in, everywhere you already are. All included, no extra purchase.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-watch"/></svg></div><h3>Apple Watch</h3><p>Check in from your wrist with a crown-first flow, plus complications for your streak and today's mood.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-widgets"/></svg></div><h3>Home Screen widgets</h3><p>A face picker that opens straight to how you feel, a one-tap logger, and a Duolingo-style streak flame.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-controls"/></svg></div><h3>Control Center</h3><p>A Log Mood control, one swipe away from anywhere on your iPhone.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-tablet"/></svg></div><h3>iPhone and iPad</h3><p>A warm, native iOS 26 layout that scales cleanly to the bigger screen.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-globe"/></svg></div><h3>16 languages</h3><p>Localized from day one, from Norwegian and German to Arabic, Hindi, and Japanese.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-shield"/></svg></div><h3>Private iCloud sync</h3><p>Your notes and custom factors follow you between devices through your own iCloud, never our servers.</p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Privacy -->
   <section id="privacy" class="alt">
     <div class="container text-center">
+      <img class="lead-mascot" src="assets/mascot-night.svg" width="512" height="512" loading="lazy" decoding="async" alt="Sprout resting calmly under the night sky" />
       <div class="section-label">Privacy</div>
       <h2 class="section-title">On your iPhone. Full stop.</h2>
       <p class="section-sub" style="margin:0 auto 8px;">
@@ -145,9 +240,9 @@
         writing down how you feel, your own history, or getting your data out.
       </div>
       <div class="dl-row" style="justify-content:center;margin-top:40px;">
-        <a href="privacy.html" class="btn-secondary">Privacy Policy →</a>
-        <a href="terms.html" class="btn-secondary">Terms of Service →</a>
-        <a href="support.html" class="btn-secondary">Support →</a>
+        <a href="privacy.html" class="btn-secondary">Privacy Policy</a>
+        <a href="terms.html" class="btn-secondary">Terms of Service</a>
+        <a href="support.html" class="btn-secondary">Support</a>
       </div>
     </div>
   </section>
@@ -158,15 +253,13 @@
       <div class="text-center">
         <div class="section-label">Roadmap</div>
         <h2 class="section-title">What's growing next</h2>
-        <p class="section-sub">The iPhone app comes first. These are already on the trellis.</p>
+        <p class="section-sub">iPhone, iPad, and Apple Watch ship today. Here is what's already on the trellis.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">📱</div><h3>One-tap widget logging<span class="badge-next">Next</span></h3><p>Log your mood straight from a home or lock screen widget, without opening the app.</p></div>
-        <div class="feature-card"><div class="feature-icon">🎛️</div><h3>Control Center quick log<span class="badge-next">Next</span></h3><p>A "log mood" control right in Control Center, one swipe away from anywhere.</p></div>
-        <div class="feature-card"><div class="feature-icon">⌚</div><h3>Watch check-ins<span class="badge-next">Next</span></h3><p>Full mood check-ins from your wrist, with complications for your streak and today's mood. The watch glance ships at launch.</p></div>
-        <div class="feature-card"><div class="feature-icon">🖥️</div><h3>iPad layout<span class="badge-next">Next</span></h3><p>A proper split-view iPad experience, built once the iPhone app has earned it.</p></div>
-        <div class="feature-card"><div class="feature-icon">🌍</div><h3>More languages<span class="badge-next">Next</span></h3><p>German first, then French, Spanish, and Japanese.</p></div>
-        <div class="feature-card"><div class="feature-icon">🏝️</div><h3>And beyond</h3><p>In-app gentle challenges, richer cycle insights, and whatever you ask for at <a href="mailto:support@ludyem.dev" style="color:var(--grad-a);text-decoration:none;">support@ludyem.dev</a>.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-cycle"/></svg></div><h3>Richer cycle insights<span class="badge-next">Next</span></h3><p>Deeper menstrual-cycle patterns for the people Tend was built for.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-star"/></svg></div><h3>Gentle challenges<span class="badge-next">Next</span></h3><p>Optional, kind nudges that build the habit without a hint of streak guilt.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-sparkle"/></svg></div><h3>More on-device AI<span class="badge-next">Next</span></h3><p>Smarter, fully private recaps as Apple's on-device models grow.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-chat"/></svg></div><h3>And whatever you ask for</h3><p>Tell us what would help at <a href="mailto:support@ludyem.dev" style="color:var(--grad-a);text-decoration:none;">support@ludyem.dev</a>. A human reads every note.</p></div>
       </div>
     </div>
   </section>
@@ -175,11 +268,12 @@
   <section class="cta">
     <div class="container">
       <div class="cta-card">
+        <img class="lead-mascot" src="assets/mascot-celebrate.svg" width="512" height="512" loading="lazy" decoding="async" alt="Sprout celebrating" />
         <h2>Start tending<br><span class="grad">to yourself.</span></h2>
         <p>Free to download. Logging free forever. No account, and your data stays yours.</p>
         <!-- At launch: swap for the live App Store button (id 6778921650) -->
         <span class="btn-primary" style="display:inline-flex;opacity:.6;cursor:default;">Coming soon to the App Store</span>
-        <p class="cta-note">iOS 26+ · Apple Watch glance included · Writes to Apple Health</p>
+        <p class="cta-note">iOS 26+ · iPhone, iPad &amp; Apple Watch · Writes to Apple Health</p>
       </div>
     </div>
   </section>
@@ -187,7 +281,7 @@
   <footer>
     <div class="footer-inner">
       <a href="/" class="footer-logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="22" height="22" />
+        <img class="logo-mark" src="../assets/icons/ludyem.png" alt="" width="22" height="22" />
         Ludyem
       </a>
       <div class="footer-links">

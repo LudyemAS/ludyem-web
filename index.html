@@ -3,19 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ludyem — Focused iOS health apps</title>
+  <title>Ludyem, focused iOS health apps</title>
   <meta name="description" content="Ludyem builds a small constellation of privacy-first iOS health apps. On-device, no accounts, native to Apple Health." />
-  <meta property="og:title" content="Ludyem — Focused iOS health apps" />
+  <meta property="og:title" content="Ludyem, focused iOS health apps" />
   <meta property="og:description" content="A constellation of privacy-first iOS health apps. On-device, no accounts, native to Apple Health." />
   <meta property="og:url" content="https://ludyem.dev" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ludyem.dev/assets/icons/ludyem-512.png" />
   <link rel="canonical" href="https://ludyem.dev" />
-  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
-  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
-  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <link rel="icon" type="image/png" href="assets/icons/ludyem.png" />
+  <link rel="apple-touch-icon" href="assets/icons/ludyem-180.png" />
+  <link rel="stylesheet" href="assets/ludyem.css" />
+  <style>
+    .feature-icon svg.ficon, .ficon { width: 24px; height: 24px; display: block; fill: none; stroke: var(--grad-a); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
 </head>
 <body>
+
+  <!-- Icon sprite (decorative) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></symbol>
+    <symbol id="ic-notrack" viewBox="0 0 24 24"><path d="M3.2 12C5.6 8.2 8.6 6.5 12 6.5s6.4 1.7 8.8 5.5c-2.4 3.8-5.4 5.5-8.8 5.5-1 0-2-.15-3-.45"/><circle cx="12" cy="12" r="2.4"/><path d="M4.5 4.5l15 15"/></symbol>
+    <symbol id="ic-health" viewBox="0 0 24 24"><path d="M12 20.3C9.5 18.8 3 14.8 3 9.6 3 7 4.8 5 7.2 5c1.7 0 3 .9 3.8 2.2C11.8 5.9 13.1 5 14.8 5 17.2 5 19 7 19 9.6c0 5.2-6.5 9.2-7 10.7z"/></symbol>
+    <symbol id="ic-devices" viewBox="0 0 24 24"><rect x="4" y="4" width="9" height="16" rx="2.5"/><line x1="7" y1="17.5" x2="10" y2="17.5"/><rect x="15" y="8" width="5.5" height="8" rx="2"/></symbol>
+    <symbol id="ic-focus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/></symbol>
+    <symbol id="ic-gem" viewBox="0 0 24 24"><path d="M6 4h12l3 5-9 11L3 9z"/><path d="M3 9h18"/><path d="M9 4l-3 5 6 11 6-11-3-5"/></symbol>
+  </defs></svg>
 
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -24,7 +37,7 @@
   <nav>
     <div class="nav-inner">
       <a href="/" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
+        <img class="logo-mark" src="assets/icons/ludyem.png" alt="" width="32" height="32" />
         Ludyem
       </a>
       <div class="nav-links">
@@ -43,7 +56,7 @@
       <h1>Health apps that<br><span class="grad">respect your data.</span></h1>
       <p class="hero-sub">
         Ludyem builds a small constellation of focused iOS apps. Each does one thing well,
-        reads and writes Apple Health, and keeps everything on your iPhone — no accounts, no tracking.
+        reads and writes Apple Health, and keeps everything on your iPhone, with no accounts and no tracking.
       </p>
       <div class="hero-actions">
         <a href="#apps" class="btn-primary">
@@ -66,28 +79,28 @@
       <div class="app-grid">
 
         <a class="app-card" href="/workouts" style="--app:#ff7a2f;">
-          <div class="app-icon"><img src="/assets/icons/workouts.png" alt="" /></div>
+          <div class="app-icon"><img src="assets/icons/workouts.png" alt="" /></div>
           <h3>Workouts</h3>
-          <p class="app-blurb">Four focused rep counters — Push-Ups, Sit-Ups, Pull-Ups, Squats. Guided plans, streaks, and Apple Watch, writing every set to Health.</p>
+          <p class="app-blurb">Four focused rep counters: Push-Ups, Sit-Ups, Pull-Ups, Squats. Guided plans, streaks, and Apple Watch, writing every set to Health.</p>
           <div class="app-foot">Explore →</div>
         </a>
 
         <a class="app-card" href="https://vitaview.app" target="_blank" rel="noopener" style="--app:#26b373;">
-          <div class="app-icon"><img src="/assets/icons/vitaview.png" alt="" /></div>
+          <div class="app-icon"><img src="assets/icons/vitaview.png" alt="" /></div>
           <h3>VitaView</h3>
           <p class="app-blurb">Turn Apple Health into live widgets, on-device AI insights, and daily goals. 26+ metrics on every home and lock screen.</p>
           <div class="app-foot">Visit vitaview.app →</div>
         </a>
 
         <div class="app-card is-soon" style="--app:#2e8dd9;">
-          <div class="app-icon"><img src="/assets/icons/water.png" alt="" /></div>
+          <div class="app-icon"><img src="assets/icons/water.png" alt="" /></div>
           <h3>Water <span class="badge-soon">Soon</span></h3>
           <p class="app-blurb">Log hydration in a single tap, from the app or a widget. A friendly companion that keeps you on pace all day.</p>
           <div class="app-foot" style="color:var(--muted);">In development</div>
         </div>
 
         <a class="app-card" href="/tend" style="--app:#109e8d;">
-          <div class="app-icon"><img src="/assets/icons/tend.png" alt="" /></div>
+          <div class="app-icon"><img src="assets/icons/tend.png" alt="" /></div>
           <h3>Tend <span class="badge-soon">Soon</span></h3>
           <p class="app-blurb">A gentle mood and symptom diary that finds your patterns and writes every entry to Apple Health, where your data belongs.</p>
           <div class="app-foot">Explore →</div>
@@ -103,36 +116,36 @@
       <div class="text-center">
         <div class="section-label">Why Ludyem</div>
         <h2 class="section-title">The same promise in every app</h2>
-        <p class="section-sub">These aren't features we toggle per app — they're how everything we make is built.</p>
+        <p class="section-sub">These aren't features we toggle per app. They're how everything we make is built.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">🔒</div>
+          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-lock"/></svg></div>
           <h3>Your data stays yours</h3>
-          <p>Everything runs on-device. Your health data is never sent to our servers — because we don't have any servers for it.</p>
+          <p>Everything runs on-device. Your health data is never sent to our servers, because we don't have any servers for it.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🚫</div>
+          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-notrack"/></svg></div>
           <h3>No accounts, no tracking</h3>
           <p>No sign-up, no email wall, no analytics following you around. Open the app and it just works.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🍎</div>
+          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-health"/></svg></div>
           <h3>Native to Apple Health</h3>
           <p>Each app reads and writes Apple Health, so your data flows between them and the rest of your ecosystem.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">⌚</div>
+          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-devices"/></svg></div>
           <h3>iPhone &amp; Apple Watch</h3>
-          <p>Widgets, Live Activities, and watch apps where it makes sense — built for the way you actually use your devices.</p>
+          <p>Widgets, Live Activities, and watch apps where it makes sense, built for the way you actually use your devices.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🧩</div>
+          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-focus"/></svg></div>
           <h3>Focused, not bloated</h3>
           <p>Each app does one job well instead of a hundred jobs poorly. Less to learn, faster to use.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">✨</div>
+          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-gem"/></svg></div>
           <h3>Crafted, not cranked out</h3>
           <p>Shared design system, thoughtful detail, and real attention to accessibility across the whole family.</p>
         </div>
@@ -155,7 +168,7 @@
   <footer>
     <div class="footer-inner">
       <a href="/" class="footer-logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="22" height="22" />
+        <img class="logo-mark" src="assets/icons/ludyem.png" alt="" width="22" height="22" />
         Ludyem
       </a>
       <div class="footer-links">
