@@ -18,10 +18,10 @@
       --accent-soft: rgba(16,158,141,0.14); --accent-line: rgba(16,158,141,0.32);
     }
     /* Tend-only extras, layered on the shared stylesheet */
-    .hero-mascot { width: 128px; height: 128px; object-fit: contain; max-width: 34vw; margin: 18px auto 0; display: block; }
+    .hero-mascot { width: 128px; height: 128px; object-fit: contain; max-width: 34vw; margin: 40px auto 16px; display: block; }
     .hero .stats-bar { margin-top: 44px; }
     .duo { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
-    .duo img { width: 200px; max-width: 35vw; }
+    .duo img { width: 200px; max-width: 35vw; margin-block: -20px; }
     @media (max-width: 700px) { .duo { grid-template-columns: 1fr; } .duo img { margin: 0 auto; } }
     .badge-next {
       display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px;
@@ -48,14 +48,14 @@
     }
     .shots::-webkit-scrollbar { height: 6px; }
     .shots::-webkit-scrollbar-thumb { background: var(--border); border-radius: 50px; }
-    .shot { flex: 0 0 auto; width: clamp(150px, 44vw, 200px); scroll-snap-align: center; }
+    .shot { flex: 0 0 auto; max-width: 200px; scroll-snap-align: center; }
     .phone {
       border-radius: 28px; padding: 6px;
       background: linear-gradient(165deg, #20202f, #0c0c16);
       border: 1px solid rgba(255,255,255,0.10);
       box-shadow: 0 22px 44px -20px rgba(0,0,0,0.82), 0 0 0 1px rgba(255,255,255,0.04) inset;
     }
-    .phone img { width: 100%; display: block; border-radius: 23px; aspect-ratio: 9 / 19.5; max-height: 70vh; object-fit: cover; }
+    .phone img { display: block; border-radius: 23px; aspect-ratio: 9 / 19.5; height: clamp(300px, 46vh, 400px); width: auto; object-fit: cover; }
     .shot-cap { margin-top: 13px; text-align: center; font-size: 13px; color: var(--muted); line-height: 1.5; }
     .shot-cap strong { display: block; color: var(--text); font-size: 14px; font-weight: 600; margin-bottom: 2px; }
 
