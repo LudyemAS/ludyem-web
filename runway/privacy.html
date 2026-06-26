@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Runway by Ludyem</title>
+  <meta name="description" content="Runway privacy policy. Your financial figures never leave your iPhone. No account, no bank logins, no tracking, no ads." />
+  <link rel="canonical" href="https://ludyem.dev/runway/privacy" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #14b8a6; --accent2: #f6b73e;
+      --grad-a: #5fd6c4; --grad-b: #ffd27a;
+      --accent-soft: rgba(20,184,166,0.14); --accent-line: rgba(20,184,166,0.32);
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/runway-icon.svg" />
+  <link rel="apple-touch-icon" href="/assets/icons/runway-180.png" />
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/runway" class="logo">
+        <img class="logo-mark" src="/assets/icons/runway.png" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Runway</span>
+      </a>
+      <a href="/runway" class="back-link">← Back to Runway</a>
+    </div>
+  </nav>
+
+  <main class="doc-main">
+    <div class="page-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="doc-body">
+      <p class="updated">Last updated 26 June 2026 · Applies to <strong>Runway</strong> by Ludyem (the "app").</p>
+
+      <p>Ludyem AS ("we", "us", or "our") operates Runway, an adaptive retirement-planning app. This policy explains what data Runway touches, where it lives, and your rights. The same policy is available inside the app under Settings → About → Privacy Policy.</p>
+
+      <h2>1. Summary</h2>
+      <p>Runway is designed to keep your financial information on your device. We do not operate a backend server that collects, stores, or analyses your personal finances. Runway never connects to your bank or brokerage. Your data is never used for advertising and is never sold.</p>
+      <ul>
+        <li>No account, no sign-up, no email required.</li>
+        <li>No bank, brokerage, or open-banking connections, ever. You enter your own figures.</li>
+        <li>Your financial figures never leave your iPhone or iPad, except to sync privately through your own iCloud.</li>
+        <li>Every projection, lever, and Monte Carlo simulation is computed entirely on-device.</li>
+        <li>No third-party advertising or tracking SDKs.</li>
+      </ul>
+
+      <h2>2. The information you enter</h2>
+      <p>Runway works from numbers you type yourself: your age and target retirement age, current savings and investments, contributions, expected spending, income sources such as pensions, rental, or side income, property, debts, and your country. This is the raw material the planning engine uses to compute your freedom age, freedom number, levers, and projections.</p>
+      <p>This information is stored locally on your device. It is used solely to produce your plan on-device. It is not transmitted to any server we operate, and it is never included in analytics (see section 6).</p>
+
+      <h2>3. iCloud sync</h2>
+      <p>If you are signed in to iCloud, Runway syncs your plan across your own Apple devices using Apple's private iCloud key-value storage, so a new iPhone or iPad picks up where you left off. That storage is tied to your Apple Account and encrypted by Apple; we have no access to it. (Whether the contents are end-to-end encrypted depends on your device's Advanced Data Protection setting.) Some data, such as cached calculations and your active profile selection, stays local to each device and never syncs.</p>
+
+      <h2>4. Currency conversion</h2>
+      <p>If your plan spans more than one currency, Runway fetches daily euro reference exchange rates published by the European Central Bank, via the open <a href="https://frankfurter.dev" target="_blank" rel="noopener">Frankfurter API</a>. These requests contain only currency codes and dates so we can retrieve a rate table. <strong>Your amounts, balances, and any personal data are never sent</strong> as part of a rate request. Fetched rates are cached on your device.</p>
+
+      <h2>5. Purchases (RevenueCat)</h2>
+      <p>Runway uses RevenueCat to manage optional in-app purchases (Runway Pro). RevenueCat receives a randomly-generated anonymous user identifier and your App Store transaction receipts to verify purchase status. RevenueCat does not receive your name, email address, or any financial figures from your plan. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a> for their policy. Payment itself is processed entirely by Apple.</p>
+
+      <h2>6. Anonymous usage analytics</h2>
+      <p>Runway includes our own privacy-first analytics (built and operated by us, with no third-party analytics, crash-reporting, or advertising SDKs). To understand which features are used and keep the app improving, App Store builds send a small set of anonymous usage events (for example "app opened" or "onboarding completed").</p>
+      <ul>
+        <li>Events are tied to a randomly-generated identifier stored in your device's Keychain. It is created on install, identifies only this installation, and is never linked to your name, email, Apple Account, or any other identity.</li>
+        <li>No personal information and <strong>none of your financial figures</strong> are ever included. We do not send the numbers in your plan, your freedom age, or your balances.</li>
+        <li>Location is limited to your device's region setting (country only) — we never read GPS or derive location from your network address.</li>
+        <li>We do not track you across other apps or websites, and we do not use the data for advertising.</li>
+      </ul>
+
+      <h2>7. Local notifications</h2>
+      <p>If you enable reminders, Runway sends local notifications generated entirely on-device. We do not use a remote push notification service, and notifications carry no personal data off your device.</p>
+
+      <h2>8. Not financial advice</h2>
+      <p>Runway is an educational planning tool, not a financial adviser, and it is not a regulated financial service. The numbers it produces are estimates based on the inputs and assumptions you provide and on tax figures that are income-year-stamped estimates from public sources. They are not investment, tax, or legal advice. Always consult a qualified professional before making financial decisions. See our <a href="terms.html">Terms of Service</a> for the full disclaimer.</p>
+
+      <h2>9. Children's privacy</h2>
+      <p>Runway is not directed at children under the age of 13 and we do not knowingly collect data from children. If you believe we have inadvertently received information from a child under 13, please contact us at <a href="mailto:support@ludyem.dev">support@ludyem.dev</a> and we will take steps to delete it promptly.</p>
+
+      <h2>10. California residents (CCPA)</h2>
+      <p>If you are a California resident, the California Consumer Privacy Act (CCPA) may provide you with additional rights. We do not sell, share, or disclose your personal information to third parties for monetary or other valuable consideration. Because Runway processes no personal data on our servers, there is no personal information held by us to access, delete, or opt out of selling. To submit a privacy request, email <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>.</p>
+
+      <h2>11. Your rights (EEA, UK, and Norway)</h2>
+      <p>You can delete all Runway data from within the app at any time, and uninstalling the app removes its local data from that device. Data stored in your private iCloud is managed through your Apple Account settings.</p>
+      <p>If you are a resident of the European Economic Area, United Kingdom, or Norway, you have the following rights under the GDPR or equivalent applicable law: access, rectification, erasure, restriction of processing, data portability, objection to processing, and the right to lodge a complaint with a supervisory authority.</p>
+      <p>Because we hold no personal data on our servers, these rights are largely exercised through your device. To raise a privacy concern, email <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>.</p>
+      <p><strong>Supervisory authority:</strong> As a Norwegian company, our lead supervisory authority is the Norwegian Data Protection Authority (Datatilsynet — <a href="https://www.datatilsynet.no" target="_blank" rel="noopener">datatilsynet.no</a>). You also have the right to contact the supervisory authority in your country of residence.</p>
+
+      <h2>12. Apple's privacy practices</h2>
+      <p>Runway relies on several Apple platform services (iCloud, StoreKit). Apple's handling of data within these services is governed by Apple's Privacy Policy at <a href="https://www.apple.com/privacy" target="_blank" rel="noopener">apple.com/privacy</a>.</p>
+
+      <h2>13. Changes to this policy</h2>
+      <p>We will update the "Last updated" date above when this policy changes materially. Continued use of Runway after changes constitutes acceptance of the updated policy.</p>
+
+      <h2>14. Contact</h2>
+      <p>Questions or concerns? Email <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>.</p>
+    </div>
+  </main>
+
+  <footer class="doc-foot">
+    <p>
+      <a href="/runway">Runway</a>
+      <a href="support.html">Support</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 Ludyem AS. All rights reserved.</p>
+  </footer>
+</body>
+</html>

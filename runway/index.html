@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runway, the FIRE planner that shows you when you're free</title>
+  <meta name="description" content="Runway turns your money into one honest number: the age you could stop working. Adaptive planning, an opportunity engine that finds the levers to retire sooner, and cross-border tax modelling. On-device, no account, no bank logins." />
+  <meta property="og:title" content="Runway, know the day you're free" />
+  <meta property="og:description" content="One honest number: the age you could stop working. Pull the levers that move it sooner. On-device, no account, no bank logins." />
+  <meta property="og:url" content="https://ludyem.dev/runway" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ludyem.dev/assets/icons/runway.png" />
+  <link rel="canonical" href="https://ludyem.dev/runway" />
+  <link rel="stylesheet" href="../assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #14b8a6; --accent2: #f6b73e;
+      --grad-a: #5fd6c4; --grad-b: #ffd27a;
+      --accent-soft: rgba(20,184,166,0.14); --accent-line: rgba(20,184,166,0.32);
+    }
+    /* Runway-only extras, layered on the shared stylesheet */
+    .hero-mascot { width: 168px; height: 168px; object-fit: contain; max-width: 42vw; margin: 36px auto 8px; display: block; }
+    .hero .stats-bar { margin-top: 40px; }
+    .duo { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+    .duo img { width: 210px; max-width: 38vw; margin-block: -10px; }
+    @media (max-width: 700px) { .duo { grid-template-columns: 1fr; } .duo img { margin: 8px auto 0; } }
+    .badge-next {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--accent2);
+      background: rgba(246,183,62,0.14); border: 1px solid rgba(246,183,62,0.32);
+      border-radius: 50px; padding: 3px 10px; margin-left: 8px; vertical-align: 2px;
+    }
+    .covenant {
+      background: var(--accent-soft); border: 1px solid var(--accent-line);
+      border-radius: 16px; padding: 28px 32px; margin-top: 48px;
+      font-size: 16px; line-height: 1.7; color: var(--text);
+      max-width: 640px; margin-left: auto; margin-right: auto;
+    }
+    .covenant strong { color: var(--grad-a); }
+
+    /* Custom feature icons (replace emoji) */
+    .feature-icon svg.ficon, .ficon { width: 24px; height: 24px; display: block; fill: none; stroke: var(--grad-a); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* "How it works" three-step path */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+    @media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
+    .step { position: relative; padding: 28px 24px; border-radius: 18px; background: var(--card); border: 1px solid var(--border); }
+    .step-num {
+      width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 15px; color: var(--bg);
+      background: linear-gradient(135deg, var(--accent1), var(--accent2)); margin-bottom: 14px;
+    }
+    .step h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+    .step p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+    .step .free-pill {
+      display: inline-block; margin-top: 12px; font-size: 12px; font-weight: 700; letter-spacing: .4px;
+      color: var(--grad-a); background: var(--accent-soft); border: 1px solid var(--accent-line);
+      border-radius: 50px; padding: 3px 11px;
+    }
+
+    /* Section mascot accent */
+    .lead-mascot { width: 132px; height: auto; display: block; margin: 0 auto 12px; }
+
+    /* Runway's nav labels are longer than the other apps', so collapse them to the
+       logo + button a little earlier than the shared 640px breakpoint to avoid crowding. */
+    @media (max-width: 860px) { nav .nav-links { display: none; } }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/runway-icon.svg" />
+  <link rel="alternate icon" type="image/png" href="../assets/icons/runway.png" />
+  <link rel="apple-touch-icon" href="../assets/icons/runway-180.png" />
+</head>
+<body>
+
+  <!-- Icon sprite (decorative) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="ic-flag" viewBox="0 0 24 24"><path d="M6 21V4"/><path d="M6 4.5h11l-2.2 3.2L17 11H6"/></symbol>
+    <symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="ic-levers" viewBox="0 0 24 24"><line x1="4" y1="8" x2="20" y2="8"/><circle cx="9" cy="8" r="2.3"/><line x1="4" y1="16" x2="20" y2="16"/><circle cx="15" cy="16" r="2.3"/></symbol>
+    <symbol id="ic-gauge" viewBox="0 0 24 24"><path d="M4.5 16a8 8 0 0 1 15 0"/><path d="M12 16l4.2-4.6"/><circle cx="12" cy="16" r="1.4"/></symbol>
+    <symbol id="ic-chart" viewBox="0 0 24 24"><path d="M4 5v15h16"/><path d="M7 15l4-4 3 2 5-6"/></symbol>
+    <symbol id="ic-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M18 13.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></symbol>
+    <symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.5 2.4 3.9 5.3 3.9 8.5s-1.4 6.1-3.9 8.5c-2.5-2.4-3.9-5.3-3.9-8.5s1.4-6.1 3.9-8.5z"/></symbol>
+    <symbol id="ic-lab" viewBox="0 0 24 24"><path d="M9.5 3h5"/><path d="M10.5 3v5.5L5.8 17a2 2 0 0 0 1.8 3h8.8a2 2 0 0 0 1.8-3L13.5 8.5V3"/><line x1="8" y1="15" x2="16" y2="15"/></symbol>
+    <symbol id="ic-exit" viewBox="0 0 24 24"><path d="M14 4h3.5a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H14"/><path d="M3.5 12h11"/><path d="M11 8.2l3.8 3.8L11 15.8"/></symbol>
+    <symbol id="ic-currency" viewBox="0 0 24 24"><path d="M4 9.5a8 8 0 0 1 13.2-3.1L20 8.8"/><path d="M20 14.5a8 8 0 0 1-13.2 3.1L4 15.2"/><path d="M20 4.5v4.3h-4.3"/><path d="M4 19.5v-4.3h4.3"/></symbol>
+    <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></symbol>
+    <symbol id="ic-notrack" viewBox="0 0 24 24"><path d="M3.2 12C5.6 8.2 8.6 6.5 12 6.5s6.4 1.7 8.8 5.5c-2.4 3.8-5.4 5.5-8.8 5.5-1 0-2-.15-3-.45"/><circle cx="12" cy="12" r="2.4"/><path d="M4.5 4.5l15 15"/></symbol>
+    <symbol id="ic-bank" viewBox="0 0 24 24"><path d="M3.5 9.5L12 5l8.5 4.5"/><path d="M5.5 10v7M18.5 10v7M10 10v7M14 10v7"/><path d="M4 20h16"/><path d="M4.5 4.5l15 15"/></symbol>
+    <symbol id="ic-watch" viewBox="0 0 24 24"><rect x="7" y="6.5" width="10" height="11" rx="3"/><path d="M9.2 6.5L9.7 4h4.6l.5 2.5"/><path d="M9.2 17.5l.5 2.5h4.6l.5-2.5"/></symbol>
+    <symbol id="ic-widgets" viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.8"/></symbol>
+    <symbol id="ic-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.2 8.8l-1.9 4.5-4.5 1.9 1.9-4.5z"/></symbol>
+    <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9.5L5 20.5V16H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="M9 10.5h.01"/><path d="M12 10.5h.01"/><path d="M15 10.5h.01"/></symbol>
+    <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.7v5.1c0 4.6-3 7.7-7 9.2-4-1.5-7-4.6-7-9.2V5.7z"/><path d="M9 12l2 2 4-4.3"/></symbol>
+  </defs></svg>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img class="logo-mark" src="../assets/icons/runway.png" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Runway</span>
+      </a>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#borders">Cross-border</a>
+        <a href="support.html">Support</a>
+      </div>
+      <!-- At launch: swap for the live App Store button -->
+      <span class="btn-nav" style="opacity:.6;cursor:default;">Coming soon</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Adaptive FIRE planner · On-device · No account, no bank logins</div>
+      <h1>Know the day<br><span class="grad">you're free.</span></h1>
+      <p class="hero-sub">
+        Runway turns your money into one honest number: the age you could stop working.
+        Answer a few questions, see your freedom age, then pull the levers that move it sooner.
+      </p>
+      <div class="hero-actions">
+        <!-- At launch: swap for the live App Store button -->
+        <span class="btn-primary" style="opacity:.6;cursor:default;">Coming soon to the App Store</span>
+        <a href="#how" class="btn-secondary">See how it works</a>
+      </div>
+      <img class="hero-mascot" src="assets/mascot-celebrate.svg" width="768" height="768" decoding="async" fetchpriority="high" alt="Pip, Runway's bird mascot, lifting off in celebration" />
+
+      <div class="stats-bar">
+        <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Number: your freedom age</div></div>
+        <div class="stat-item"><div class="stat-num">400</div><div class="stat-label">Market futures simulated</div></div>
+        <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Accounts or bank logins</div></div>
+        <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Computed on-device</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="alt">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">How it works</div>
+        <h2 class="section-title">From a few questions to your freedom age</h2>
+        <p class="section-sub">No spreadsheets, no 40-field forms. Runway asks only what's relevant to your life, then does the maths.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Tell Runway about your money</h3>
+          <p>Your age, what you've saved, what you put away, and roughly what you'll spend. Adaptive onboarding skips anything that doesn't apply to you.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>See your freedom age</h3>
+          <p>Runway projects your pot, applies the 4% rule, and shows the age you could stop, plus the number you need to get there.</p>
+          <span class="free-pill">Free forever</span>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Pull the levers</h3>
+          <p>The opportunity engine surfaces the moves that matter: invest a little more, trim spending, retire abroad, and shows the years each one saves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">As simple as your life, as deep as a spreadsheet</h2>
+        <p class="section-sub">Most planners are either shallow toys or overwhelming web apps built for US tax law. Runway is right-sized depth that fits in your pocket.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-flag"/></svg></div><h3>Your freedom age</h3><p>The one number that matters: the age your money could carry you. It's the hook, and it's free forever, no account required.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-target"/></svg></div><h3>Freedom number</h3><p>The pot you actually need, derived from your real spending and a safe 4% withdrawal, net of pensions, rental, and side income.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-levers"/></svg></div><h3>The levers</h3><p>An opportunity engine that finds the doors you didn't open: "invest 300 more a month, retire two years sooner." Every lever shows its effect.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-gauge"/></svg></div><h3>Plan health</h3><p>A seeded Monte Carlo runs your plan through 400 simulated market futures and scores how often your money lasts the distance.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-chart"/></svg></div><h3>Money over time</h3><p>Watch your pot grow, peak, and draw down year by year, with your freedom goal line anchored to today so progress reads honestly.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-sparkle"/></svg></div><h3>Adaptive onboarding</h3><p>No side income? Runway never mentions it. Retiring where you live? No currency or tax-move screens. It asks what fits, nothing more.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-lab"/></svg></div><h3>Scenario lab</h3><p>Try the what-ifs side by side: a market crash, a later start, a different spend, a change in how you invest. Compare paths before you commit.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-globe"/></svg></div><h3>Built across borders</h3><p>Plan a move abroad with exit-tax modelling, country packs, and true multi-currency, not a single mental currency bolted on.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-border -->
+  <section id="borders" class="alt">
+    <div class="container">
+      <div class="duo">
+        <div>
+          <div class="section-label">Cross-border</div>
+          <h2 class="section-title">For a life that crosses borders</h2>
+          <p class="section-sub" style="margin-bottom:24px;">
+            Most FIRE tools assume one country, one currency, one tax code, usually America's.
+            Runway was built for the rest of us. Model an exit tax when you move, switch the
+            country pack, and see numbers in every currency you hold.
+          </p>
+          <p class="section-sub">
+            Norway is tax-accurate today, with more country packs on the way. Everywhere else
+            falls back to a solid generic baseline, and currency conversions use daily euro
+            reference rates from the European Central Bank.
+          </p>
+        </div>
+        <img src="assets/mascot-globe.svg" width="768" height="768" loading="lazy" decoding="async" alt="Pip holding a globe" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy">
+    <div class="container text-center">
+      <img class="lead-mascot" src="assets/mascot-shield.svg" width="512" height="512" loading="lazy" decoding="async" alt="Pip behind a protective shield" />
+      <div class="section-label">Privacy</div>
+      <h2 class="section-title">On your iPhone. Full stop.</h2>
+      <p class="section-sub" style="margin:0 auto 8px;">
+        No account, no sign-in, no bank connections, no ads. You type your own figures, and
+        every projection, lever, and simulation is computed on-device. Your numbers are never
+        sent to us or anyone else.
+      </p>
+      <div class="covenant">
+        <strong>The promise:</strong> your freedom age and freedom number are free, forever.
+        Runway will never paywall the answer to "when can I stop?" Pro deepens the plan; it
+        never holds the hook hostage.
+      </div>
+      <div class="dl-row" style="justify-content:center;margin-top:40px;">
+        <a href="privacy.html" class="btn-secondary">Privacy Policy</a>
+        <a href="terms.html" class="btn-secondary">Terms of Service</a>
+        <a href="support.html" class="btn-secondary">Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you get free vs Pro -->
+  <section id="pro" class="alt">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">Free &amp; Pro</div>
+        <h2 class="section-title">The number is free. The depth is Pro.</h2>
+        <p class="section-sub">Start free and keep your freedom age forever. Upgrade when you want the full toolkit, as a yearly plan with a free trial, or a one-time lifetime purchase.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-flag"/></svg></div><h3>Free, forever</h3><p>Your freedom age and number, the base projection, a first taste of the levers, and a Monte Carlo read on your plan. No account, no expiry.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-levers"/></svg></div><h3>Pro: every lever</h3><p>The full opportunity engine, the complete year-by-year projection and scenario lab, and the deep plan-health detail behind the score.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-globe"/></svg></div><h3>Pro: country depth</h3><p>Tax-accurate country packs and the freshest figures, kept current as tax years change, so your plan stays honest over time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">Roadmap</div>
+        <h2 class="section-title">What's on the runway</h2>
+        <p class="section-sub">iPhone and iPad ship first. Here's what's already taxiing for take-off.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-compass"/></svg></div><h3>More countries<span class="badge-next">Next</span></h3><p>New tax-accurate country packs beyond Norway, so more of us get numbers built for where we actually live.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-widgets"/></svg></div><h3>Home Screen widgets<span class="badge-next">Next</span></h3><p>Your freedom age and progress, a glance away on your home and lock screen.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-watch"/></svg></div><h3>Apple Watch<span class="badge-next">Later</span></h3><p>A quiet check on your number and plan health, from your wrist.</p></div>
+        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-chat"/></svg></div><h3>And whatever you ask for</h3><p>Tell us what would help at <a href="mailto:support@ludyem.dev" style="color:var(--grad-a);text-decoration:none;">support@ludyem.dev</a>. A human reads every note.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card">
+        <img class="lead-mascot" src="assets/mascot-proud.svg" width="512" height="512" loading="lazy" decoding="async" alt="Pip standing proud" />
+        <h2>Find the day<br><span class="grad">you're free.</span></h2>
+        <p>Free to download. Your freedom number free forever. No account, and your figures never leave your iPhone.</p>
+        <!-- At launch: swap for the live App Store button -->
+        <span class="btn-primary" style="display:inline-flex;opacity:.6;cursor:default;">Coming soon to the App Store</span>
+        <p class="cta-note">iOS 26+ · iPhone &amp; iPad · Not financial advice, an educational planning tool</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="footer-logo">
+        <img class="logo-mark" src="../assets/icons/ludyem.png" alt="" width="22" height="22" />
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/">All apps</a>
+        <a href="#features">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p class="footer-copy">© 2026 Ludyem AS · Not financial advice</p>
+    </div>
+  </footer>
+
+</body>
+</html>
