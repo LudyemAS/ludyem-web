@@ -64,6 +64,16 @@
     /* Runway's nav labels are longer than the other apps', so collapse them to the
        logo + button a little earlier than the shared 640px breakpoint to avoid crowding. */
     @media (max-width: 860px) { nav .nav-links { display: none; } }
+
+    /* Screenshot showcase: one row, swipe sideways, height-capped so shots never overflow the viewport */
+    .shots { display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 6px 24px 22px; margin: 28px -24px 0; justify-content: safe center; }
+    .shots::-webkit-scrollbar { height: 6px; }
+    .shots::-webkit-scrollbar-thumb { background: var(--border); border-radius: 50px; }
+    .shot { flex: 0 0 auto; max-width: 200px; scroll-snap-align: center; margin: 0; }
+    .phone { border-radius: 28px; padding: 6px; background: linear-gradient(165deg, #1a1f24, #0a0d10); border: 1px solid rgba(255,255,255,0.10); box-shadow: 0 22px 44px -20px rgba(0,0,0,0.82), 0 0 0 1px rgba(255,255,255,0.04) inset; }
+    .phone img { display: block; border-radius: 23px; aspect-ratio: 9 / 19.5; height: clamp(300px, 46vh, 400px); width: auto; object-fit: cover; }
+    .shot-cap { margin-top: 13px; text-align: center; font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .shot-cap strong { display: block; color: var(--text); font-size: 14px; font-weight: 600; margin-bottom: 2px; }
   </style>
   <link rel="icon" type="image/svg+xml" href="../assets/icons/runway-icon.svg" />
   <link rel="alternate icon" type="image/png" href="../assets/icons/runway.png" />
@@ -110,7 +120,7 @@
         <a href="support.html">Support</a>
       </div>
       <!-- PRE-LAUNCH: app is not live yet. On launch day (2026-08-25) swap this for the LAUNCH DAY line below. -->
-      <a href="#how" class="btn-nav">Coming Aug 25</a>
+      <a href="#screens" class="btn-nav" style="white-space:nowrap;">Aug 25</a>
       <!-- LAUNCH DAY: <a href="https://apps.apple.com/app/id6784426559" class="btn-nav" target="_blank" rel="noopener">Download Free</a> -->
     </div>
   </nav>
@@ -137,6 +147,39 @@
         <div class="stat-item"><div class="stat-num">400</div><div class="stat-label">Market futures simulated</div></div>
         <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Accounts or bank logins</div></div>
         <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Computed on-device</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screens">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">A look inside</div>
+        <h2 class="section-title">See it before you download</h2>
+        <p class="section-sub">Real screens from Runway, in dark mode. Swipe through.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot">
+          <div class="phone"><img src="assets/shots/plan.png" width="800" height="1738" loading="lazy" decoding="async" alt="Runway Plan screen showing a freedom age of 41, the freedom number, and plan health" /></div>
+          <figcaption class="shot-cap"><strong>Your freedom age</strong>The one number that matters, updated live.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone"><img src="assets/shots/levers.png" width="800" height="1738" loading="lazy" decoding="async" alt="Runway Levers screen showing the what-if moves that bring your freedom date sooner" /></div>
+          <figcaption class="shot-cap"><strong>The levers</strong>See what pulls your date in, ranked.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone"><img src="assets/shots/projection.png" width="800" height="1738" loading="lazy" decoding="async" alt="Runway Projection screen with a money-over-time chart from today to retirement" /></div>
+          <figcaption class="shot-cap"><strong>Money over time</strong>Your whole journey, year by year.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone"><img src="assets/shots/grow.png" width="800" height="1738" loading="lazy" decoding="async" alt="Runway Grow screen showing the countdown to freedom and financial-independence badges" /></div>
+          <figcaption class="shot-cap"><strong>Watch it grow</strong>Your countdown and milestones.</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone"><img src="assets/shots/norway.png" width="800" height="1738" loading="lazy" decoding="async" alt="Runway Norwegian tax screen explaining wealth tax, shielding, and pension rules" /></div>
+          <figcaption class="shot-cap"><strong>Built for Norway</strong>Wealth tax, shielding and pensions, built in.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
