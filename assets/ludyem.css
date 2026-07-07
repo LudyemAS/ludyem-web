@@ -306,3 +306,28 @@ details[open] .summary-icon { transform: rotate(45deg); color: var(--accent2); }
    The <html> element carries .is-prelaunch or .is-live; one branch is always hidden. ── */
 html.is-prelaunch .js-live { display: none !important; }
 html.is-live .js-prelaunch { display: none !important; }
+
+/* ── Blog visuals: pros/cons cards, in-post screenshots, pullquotes, stat rows ── */
+.verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+@media (max-width: 620px) { .verdict-grid { grid-template-columns: 1fr; } }
+.verdict-col { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px; }
+.verdict-col h4 { font-size: 14px; font-weight: 700; letter-spacing: .3px; margin: 0 0 14px; }
+.verdict-col.pro h4 { color: var(--grad-a); }
+.verdict-col.con h4 { color: var(--accent2); }
+.verdict-col ul { list-style: none; margin: 0; padding: 0; }
+.verdict-col li { font-size: 14px; color: var(--muted); line-height: 1.55; padding-left: 26px; position: relative; margin-bottom: 11px; }
+.verdict-col li:last-child { margin-bottom: 0; }
+.verdict-col.pro li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--grad-a); font-weight: 800; }
+.verdict-col.con li::before { content: "\2715"; position: absolute; left: 1px; top: 0; color: var(--accent2); font-weight: 700; }
+
+.post-shot { margin: 30px auto; max-width: 250px; }
+.post-shot .frame { border-radius: 26px; padding: 6px; background: linear-gradient(165deg, #1a1f24, #0a0d10); border: 1px solid rgba(255,255,255,0.10); box-shadow: 0 22px 44px -20px rgba(0,0,0,0.82); }
+.post-shot img { display: block; width: 100%; height: auto; border-radius: 21px; }
+.post-shot figcaption { margin-top: 12px; font-size: 13px; color: var(--faint); line-height: 1.5; text-align: center; }
+@media (min-width: 720px) { .post-shot.float { float: right; margin: 4px 0 18px 30px; max-width: 205px; } }
+
+.pullquote { font-size: 22px; font-weight: 700; line-height: 1.42; color: var(--text); letter-spacing: -.3px; border-left: 3px solid var(--accent1); padding: 2px 0 2px 22px; margin: 32px 0; }
+@media (max-width: 600px) { .pullquote { font-size: 19px; } }
+
+.post-main .doc-body h2 { clear: both; }
+.doc-body .stats-bar { margin: 26px 0; }
