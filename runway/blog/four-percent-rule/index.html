@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="is-prelaunch">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 4% Rule, and Where It Actually Breaks (2026)</title>
+  <meta name="description" content="The 4 percent rule turns your spending into a FIRE number, and it is a great starting point. Here is where it holds, where it breaks (long retirements, sequence risk, non-US taxes), and what to do." />
+  <link rel="canonical" href="https://ludyem.dev/runway/blog/four-percent-rule/" />
+
+  <meta property="og:title" content="The 4 percent rule, and where it actually breaks" />
+  <meta property="og:description" content="Withdraw 4 percent, or multiply your spending by 25, and you have a FIRE number. A useful start, but it quietly breaks on long retirements, bad early years, and taxes outside the US. Here is how to use it anyway." />
+  <meta property="og:url" content="https://ludyem.dev/runway/blog/four-percent-rule/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ludyem.dev/assets/icons/runway.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #14b8a6; --accent2: #f6b73e;
+      --grad-a: #5fd6c4; --grad-b: #ffd27a;
+      --accent-soft: rgba(20,184,166,0.14); --accent-line: rgba(20,184,166,0.32);
+    }
+  </style>
+  <script src="/assets/launch.js"></script>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/runway-icon.svg?v=2" />
+  <link rel="alternate icon" type="image/png" href="/assets/icons/runway.png?v=2" />
+  <link rel="apple-touch-icon" href="/assets/icons/runway-180.png?v=2" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The 4 percent rule, and where it actually breaks",
+    "description": "A plain-English guide to the 4 percent rule: what it says, where it holds as a first estimate, the three places it quietly breaks (long retirements, sequence-of-returns risk, and non-US taxes), and what to do instead.",
+    "image": "https://ludyem.dev/assets/icons/runway.png",
+    "datePublished": "2026-07-07",
+    "dateModified": "2026-07-07",
+    "author": { "@type": "Person", "name": "Dylan", "description": "Maker of Runway, an Italian who has lived in Norway for about eight years." },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ludyem",
+      "logo": { "@type": "ImageObject", "url": "https://ludyem.dev/assets/icons/ludyem.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ludyem.dev/runway/blog/four-percent-rule/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the 4 percent rule?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 4 percent rule is a rule of thumb for how much you can safely spend from a retirement pot. Take about 4 percent of the pot in your first year, adjust that amount for inflation each year after, and historically, based on US market data over 30-year retirements, the money tended to last. Read the other way, it says your target pot is roughly 25 times your annual spending." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the 4 percent rule still safe?",
+        "acceptedAnswer": { "@type": "Answer", "text": "As a rough starting point for a standard retirement of around 30 years in a diversified portfolio, it is a reasonable default. It is less reliable for very long or very early retirements, it can be undone by a bad run of returns in your first few years, and it was built on US market history and US taxes, so your own market and taxes can change the picture. Treat it as a first estimate to stress-test, not a promise." }
+      },
+      {
+        "@type": "Question",
+        "name": "What withdrawal rate should I use for early retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "There is no single correct number. Because an early retirement can run 40 to 50 years rather than 30, many people aim a little lower than 4 percent, often somewhere around 3.25 to 3.5 percent, to give themselves more margin. A lower rate means a bigger pot: 3.5 percent implies about 29 times your spending, and 3 percent about 33 times. Better than fixing one rate is to test your plan against many market futures and keep your spending flexible." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the 4 percent rule work outside the US?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Use it with care. The rule came from US market history, which has been unusually strong, and it was framed around US taxes. If you live somewhere with a wealth tax, or tax on the gains you realise as you sell, that comes out of the same 4 percent you planned to live on, and returns in other markets can differ. The idea travels as a starting point, but the exact rate does not, so check it against your own taxes and assumptions." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/runway/" class="logo">
+        <img class="logo-mark" src="/assets/icons/runway.png" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Runway</span>
+      </a>
+      <div class="nav-links">
+        <a href="/runway/#how">How it works</a>
+        <a href="/runway/#features">Features</a>
+        <a href="/runway/blog/">Blog</a>
+        <a href="/runway/support.html">Support</a>
+      </div>
+      <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-nav js-prelaunch" style="white-space:nowrap;" target="_blank" rel="noopener">Try the beta</a>
+      <a href="https://apps.apple.com/app/id6784426559" class="btn-nav js-live" style="white-space:nowrap;" target="_blank" rel="noopener">Download free</a>
+    </div>
+  </nav>
+
+  <main class="doc-main post-main">
+    <a href="/runway/blog/" class="back-link">&larr; All posts</a>
+
+    <article>
+      <p class="page-label" style="margin-top:28px;">The basics</p>
+      <h1>The 4 percent rule, and where it actually breaks</h1>
+      <div class="post-meta">
+        <strong>Dylan</strong>
+        <span class="dot"></span><span>7 July 2026</span>
+        <span class="dot"></span><span>7 min read</span>
+      </div>
+
+      <div class="doc-body">
+        <p class="post-lead">
+          The 4 percent rule is the most quoted number in the whole FIRE world, and quietly one of the
+          most misunderstood. I use it myself as a first pass, and I think it is a genuinely useful
+          starting point. It is just not a law of physics, and a lot of people treat it like one. So here
+          is what it actually says, where it holds up perfectly well, and the three places it quietly
+          breaks.
+        </p>
+
+        <h2>What the 4 percent rule says</h2>
+        <p>
+          The rule comes out of decades of US market history, the line of research people usually point
+          to as the Trinity study. The finding, in plain terms: take about 4 percent of your pot in your
+          first year of retirement, then adjust that amount for inflation each year after, and across most
+          of the historical stretches tested, the money lasted 30 years or more. That is the whole rule.
+        </p>
+        <p>
+          There is a neat trick hidden inside it. If you can live on 4 percent of your pot, then your pot
+          has to be about 25 times what you spend in a year, because 1 divided by 0.04 is 25. That is
+          where the famous "multiply your annual spending by 25" shortcut comes from. Your FIRE number is
+          25 times what you spend. It is the exact same rule, just read backwards, and it is the fastest
+          way I know to turn a fuzzy worry about money into a concrete target.
+        </p>
+
+        <h2>Where it holds</h2>
+        <p>
+          For a lot of people this is genuinely all they need to get moving. If you are planning a fairly
+          standard retirement, call it around 30 years, holding a sensible diversified mix of stocks and
+          bonds, 4 percent is a reasonable default to build a first plan on. It gets you a target that is
+          roughly the right size, quickly, without a spreadsheet full of assumptions you would only be
+          guessing at anyway. Most of the value of the rule is exactly that: it hands you a number you can
+          actually aim at, today.
+        </p>
+
+        <h2>Where it breaks</h2>
+        <p>
+          The trouble starts when you take a rule built for one situation and quietly apply it to a
+          different one. Before the prose, here is the same idea in reverse, because a withdrawal rate is
+          just the flip side of a pot size. A lower rate is more cautious, and it needs a bigger pot.
+        </p>
+
+        <div class="cmp-wrap">
+          <table class="cmp">
+            <thead><tr><th>Withdrawal rate</th><th>Pot it implies</th><th>Rough read</th></tr></thead>
+            <tbody>
+              <tr><td>4%</td><td>25x spending</td><td>The classic 30-year number</td></tr>
+              <tr><td>3.5%</td><td>about 29x</td><td>Safer for a long, early retirement</td></tr>
+              <tr><td>3%</td><td>about 33x</td><td>Cautious, for a very long horizon</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cmp-note">The pots are rounded; the arithmetic is simply 1 divided by the rate. Aim lower and the number you have to hit gets noticeably bigger.</p>
+
+        <p>
+          First, long retirements. The classic study was mostly about 30-year windows. Retire early and
+          you might be planning for 40 or 50 years instead, and over a horizon that long the rule has far
+          more chances to run into trouble. This is why you will often see people aim a bit lower for a
+          long, early retirement, somewhere in the region of 3.25 to 3.5 percent, to buy themselves more
+          margin. There is nothing magic about those figures. They are simply more cautious, and caution
+          is cheap insurance when the horizon is measured in decades.
+        </p>
+        <p>
+          Second, the order of returns, not just the average. The rule leans on long-run average growth,
+          but you do not retire into an average. You retire into one specific sequence of years. A bad
+          crash in the first few years of drawdown, while you are also selling to live, does far more
+          damage than the same crash later on, because you never give those early losses a chance to
+          recover. Two retirees with an identical average return can end up in completely different places
+          depending only on when the bad years landed. That is sequence-of-returns risk, and a single
+          average number hides it entirely.
+        </p>
+        <p>
+          Third, it is built on US market history and, quietly, US taxes. Those historical periods were
+          one particular country's stock and bond returns, which have been unusually strong, and there is
+          no guarantee your market or your future looks the same. On top of that, the 4 percent was
+          largely a pre-tax withdrawal in a US frame. If you live somewhere with a wealth tax, or tax on
+          the gains you realise as you sell, that comes out of the same 4 percent you were planning to
+          live on. I live in Norway, where a wealth tax is a real line item, so for me the headline rate
+          and the money that actually reaches my pocket are two different numbers.
+        </p>
+
+        <h2>What to do about it</h2>
+        <p>
+          None of this means throw the rule out. It means use it for what it is: a fast first estimate,
+          and then pressure-test it. Two things help most. One, instead of trusting a single historical
+          average, run your plan through a lot of different market futures and see how often it actually
+          survives. That is what a Monte Carlo simulation does, and the honest output is not a yes or a
+          no, it is a percentage: this plan held up in, say, 85 out of 100 futures. Two, do not treat your
+          spending as a fixed number carved in stone. Real retirees adjust. Guardrails are simple rules
+          that trim spending a little in bad years and let it rise again in good ones, and even mild ones
+          make a plan far more robust than a rigid 4 percent ever could.
+        </p>
+        <p>
+          This is more or less exactly what I built Runway to do. It starts from your number, the
+          25-times-spending kind of estimate, and then runs it through hundreds of simulated futures, so
+          you can see how often 4 percent actually holds for your situation rather than for the average
+          American in a decades-old dataset.
+        </p>
+
+        <p class="pullquote">4 percent is where the thinking starts, not where it ends.</p>
+
+        <figure class="post-shot"><div class="frame"><img src="/runway/assets/shots/plan.png" width="800" height="1738" loading="lazy" decoding="async" alt="Runway's Plan screen showing plan health from a Monte Carlo simulation" /></div><figcaption>Runway stress-tests your number against 400 market futures.</figcaption></figure>
+
+        <div class="post-cta">
+          <img src="/runway/assets/mascot-shield.svg" width="96" height="96" loading="lazy" decoding="async" alt="" style="margin:0 auto 8px;display:block;" />
+          <h2 style="border:0;padding:0;">See how often 4 percent holds for you</h2>
+          <p class="js-prelaunch">Runway starts from your number and then runs it through 400 simulated futures, so you see how often 4 percent actually holds for your plan. It launches on the App Store on 25 August 2026, and the beta is open now.</p>
+          <p class="js-live">Runway starts from your number and then runs it through 400 simulated futures, so you see how often 4 percent actually holds for your plan. Your freedom age is free, forever.</p>
+          <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-primary js-prelaunch" target="_blank" rel="noopener">Try the beta on TestFlight</a>
+          <a href="https://apps.apple.com/app/id6784426559" class="btn-primary js-live" target="_blank" rel="noopener">Download free on the App Store</a>
+        </div>
+
+        <h2>Frequently asked</h2>
+        <div class="faq-list" style="margin-top:20px;">
+          <details>
+            <summary>What is the 4 percent rule?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>The 4 percent rule is a rule of thumb for how much you can safely spend from a retirement pot. Take about 4 percent of the pot in your first year, adjust that amount for inflation each year after, and historically, based on US market data over 30-year retirements, the money tended to last. Read the other way, it says your target pot is roughly 25 times your annual spending.</p></div>
+          </details>
+          <details>
+            <summary>Is the 4 percent rule still safe?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>As a rough starting point for a standard retirement of around 30 years in a diversified portfolio, it is a reasonable default. It is less reliable for very long or very early retirements, it can be undone by a bad run of returns in your first few years, and it was built on US market history and US taxes, so your own market and taxes can change the picture. Treat it as a first estimate to stress-test, not a promise.</p></div>
+          </details>
+          <details>
+            <summary>What withdrawal rate should I use for early retirement?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>There is no single correct number. Because an early retirement can run 40 to 50 years rather than 30, many people aim a little lower than 4 percent, often somewhere around 3.25 to 3.5 percent, to give themselves more margin. A lower rate means a bigger pot: 3.5 percent implies about 29 times your spending, and 3 percent about 33 times. Better than fixing one rate is to test your plan against many market futures and keep your spending flexible.</p></div>
+          </details>
+          <details>
+            <summary>Does the 4 percent rule work outside the US?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>Use it with care. The rule came from US market history, which has been unusually strong, and it was framed around US taxes. If you live somewhere with a wealth tax, or tax on the gains you realise as you sell, that comes out of the same 4 percent you planned to live on, and returns in other markets can differ. The idea travels as a starting point, but the exact rate does not, so check it against your own taxes and assumptions.</p></div>
+          </details>
+        </div>
+
+        <div class="author-box">
+          <img src="/runway/assets/mascot-proud.svg" alt="" width="54" height="54" />
+          <div>
+            <h3>Written by Dylan, maker of Runway</h3>
+            <p>Italian, in Norway about eight years, building the cross-border FIRE planner that did not exist for someone like me. Runway runs entirely on your iPhone. It is an educational planning tool, not financial or tax advice.</p>
+          </div>
+        </div>
+
+        <p class="updated" style="margin-top:32px;">If you want to turn this into your own number, I wrote up
+          how to size it in <a href="/runway/blog/fire-number-norway/">the FIRE number in Norway</a>, and how
+          the different flavours of FIRE move the target in <a href="/runway/blog/types-of-fire/">the types of
+          FIRE</a>. Rules of thumb drift and some of the figures here are deliberately rounded, so treat all of
+          it as a starting point and check it against your own situation.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/runway/" class="footer-logo">
+        <img class="logo-mark" src="/assets/icons/ludyem.png" alt="" width="22" height="22" />
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/runway/blog/">Blog</a>
+        <a href="/runway/privacy.html">Privacy</a>
+        <a href="/runway/terms.html">Terms</a>
+        <a href="/runway/support.html">Support</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Ludyem AS &middot; Not financial advice</p>
+    </div>
+  </footer>
+
+</body>
+</html>
