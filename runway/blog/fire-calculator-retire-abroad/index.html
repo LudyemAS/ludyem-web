@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="is-prelaunch">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIRE Calculators and Retiring Abroad: Which Ones Handle a Cross-Border Move (2026)</title>
+  <meta name="description" content="Most FIRE calculators assume you retire where you live now. Plan to move countries and two things break: the exit tax on the way out, and the destination's tax on your withdrawals. Here is how the main tools compare in 2026." />
+  <link rel="canonical" href="https://ludyem.dev/runway/blog/fire-calculator-retire-abroad/" />
+
+  <meta property="og:title" content="FIRE calculators and retiring abroad: which ones handle a cross-border move" />
+  <meta property="og:description" content="Most FIRE calculators assume you retire where you live now. If you plan to move, the exit tax and the destination's tax on your withdrawals are what break. A straight comparison for 2026." />
+  <meta property="og:url" content="https://ludyem.dev/runway/blog/fire-calculator-retire-abroad/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ludyem.dev/assets/icons/runway.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #14b8a6; --accent2: #f6b73e;
+      --grad-a: #5fd6c4; --grad-b: #ffd27a;
+      --accent-soft: rgba(20,184,166,0.14); --accent-line: rgba(20,184,166,0.32);
+    }
+  </style>
+  <script src="/assets/launch.js"></script>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/runway-icon.svg?v=2" />
+  <link rel="alternate icon" type="image/png" href="/assets/icons/runway.png?v=2" />
+  <link rel="apple-touch-icon" href="/assets/icons/runway-180.png?v=2" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "FIRE calculators and retiring abroad: which ones handle a cross-border move",
+    "description": "Most FIRE calculators assume you retire where you live now. If you plan to move countries, the exit tax and the destination's tax on your withdrawals are what break. A straight comparison of the main tools for 2026.",
+    "image": "https://ludyem.dev/assets/icons/runway.png",
+    "datePublished": "2026-07-07",
+    "dateModified": "2026-07-07",
+    "author": { "@type": "Person", "name": "Dylan", "description": "Maker of Runway, an Italian who has lived in Norway for about eight years." },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ludyem",
+      "logo": { "@type": "ImageObject", "url": "https://ludyem.dev/assets/icons/ludyem.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ludyem.dev/runway/blog/fire-calculator-retire-abroad/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do FIRE calculators account for moving to another country?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most do not. The common ones assume you retire under one country's tax rules, usually the one you already live in. If you plan to move, the two things they tend to miss are the exit tax your current country may charge on unrealised gains when you leave, and the way your new country taxes the money you withdraw. A small number of tools model destination taxes, and fewer still model the exit on the way out." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an exit tax and does it affect early retirement?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An exit tax, or departure tax, is a charge some countries apply on the unrealised gains in your investments when you stop being a tax resident, as if you had sold everything on the way out. Norway's utflyttingsskatt is one example. It matters for early retirement because a large investment pot built up over years can carry a big untaxed gain, and leaving can trigger a bill that a single-country calculator never shows you." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which FIRE calculator is best if I plan to retire in another country?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on what you need. For deep single-country modelling that you drive yourself, ProjectionLab and Boldin are strong. For comparing the cost of living across destinations, the expat-specific calculators are useful. If you want your home-country rules and the destination move priced together, including the exit tax, on a phone and without an account, that gap is the reason Runway exists. Be honest with yourself about which question you are actually asking." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free FIRE calculator that models cross-border tax?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Free tools tend to be either quick single-country estimators or cost-of-living comparisons by destination. Runway gives your freedom age and freedom number for free, models 14 retirement destinations including the exit tax on the way out, and keeps everything on your device with no account. Deeper year-by-year analysis is a paid tier. As with any tool, treat the numbers as estimates, not tax advice." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does retiring abroad let me retire earlier?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Often, yes, because a lower cost of living shrinks the pot you need. But the saving is smaller than a pure cost-of-living comparison suggests, once you add the destination's tax on your withdrawals and any exit tax when you leave. To answer it properly, price the whole move, the leaving and the arriving, not just the rent." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/runway/" class="logo">
+        <img class="logo-mark" src="/assets/icons/runway.png" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Runway</span>
+      </a>
+      <div class="nav-links">
+        <a href="/runway/#how">How it works</a>
+        <a href="/runway/#features">Features</a>
+        <a href="/runway/blog/">Blog</a>
+        <a href="/runway/support.html">Support</a>
+      </div>
+      <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-nav js-prelaunch" style="white-space:nowrap;" target="_blank" rel="noopener">Try the beta</a>
+      <a href="https://apps.apple.com/app/id6784426559" class="btn-nav js-live" style="white-space:nowrap;" target="_blank" rel="noopener">Download free</a>
+    </div>
+  </nav>
+
+  <main class="doc-main post-main">
+    <a href="/runway/blog/" class="back-link">&larr; All posts</a>
+
+    <article>
+      <p class="page-label" style="margin-top:28px;">Retiring abroad</p>
+      <h1>FIRE calculators and retiring abroad: which ones handle a cross-border move</h1>
+      <div class="post-meta">
+        <strong>Dylan</strong>
+        <span class="dot"></span><span>7 July 2026</span>
+        <span class="dot"></span><span>8 min read</span>
+      </div>
+
+      <div class="doc-body">
+        <p class="post-lead">
+          Almost every FIRE calculator makes the same quiet assumption: that you retire where you live
+          now. I'm not sure I will. I'm Italian, I have been in Norway eight years, and I never got a
+          straight answer to one question. If I keep saving like this, when can I actually stop, and
+          does that change if I move back to Italy? Two things shift the moment you cross a border, and
+          a single-country tool shows you neither. Leaving home can trigger an exit tax on gains you
+          have not sold yet. Arriving hands your withdrawals to a new country's rules. Here is where the
+          popular tools help, and where each one quietly stops.
+        </p>
+
+        <div class="callout">
+          <p><strong>Full disclosure:</strong> I build one of the tools in this list, a small app
+            called Runway. I have tried to be fair, and where another tool is better for a job I say
+            so plainly. If you just want the shortlist of tools that actually handle a move, skip to
+            <a href="#verdict">the verdict</a>.</p>
+        </div>
+
+        <h2>The two things a cross-border move breaks</h2>
+        <p>
+          A domestic FIRE calculation is not complicated in shape: project your pot, pick a safe
+          withdrawal rate, find the age the pot can cover your spending. Moving countries breaks that
+          in two specific places.
+        </p>
+        <p>
+          <strong>1. The exit tax on the way out.</strong> Some countries treat your departure as a
+          taxable event. They look at the unrealised gains sitting in your investments, the growth you
+          have not sold yet, and tax it as though you had sold everything the day you left. Norway's
+          <em>utflyttingsskatt</em> is one example, and it is not alone. For someone who has spent a
+          decade building an index-fund pot, that latent gain can be large, and a single-country
+          calculator will never mention the bill.
+        </p>
+        <p>
+          <strong>2. The destination's tax on your withdrawals.</strong> The country you retire to has
+          its own rules on pensions, capital gains, and foreign income. The same 40,000 a year of
+          drawdown can be taxed very differently in Portugal, Spain, or Thailand, and that changes the
+          pot you actually need. A cost-of-living comparison that only looks at rent and groceries
+          misses this entirely.
+        </p>
+        <p>
+          There is a third, quieter one: <strong>currency</strong>. If you save in one currency and
+          spend in another, your plan lives or dies partly on an exchange rate, and it helps to see
+          your number in the currency you will actually spend.
+        </p>
+
+        <h2>How the popular tools compare</h2>
+        <p>
+          "Cross-border" below means one specific thing: the tool prices both ends of a move, the exit
+          tax for leaving and the destination's tax on your drawdown, not just the cost of living.
+        </p>
+
+        <div class="cmp-wrap">
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Best at</th>
+                <th>Destination tax</th>
+                <th>Exit tax</th>
+                <th>Platform</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ProjectionLab</td>
+                <td>Deep, flexible modelling you build yourself; scenario comparison</td>
+                <td class="no">You model it</td>
+                <td class="no">No</td>
+                <td>Web, subscription</td>
+              </tr>
+              <tr>
+                <td>Boldin</td>
+                <td>Very deep US retirement detail (Social Security, Roth, Medicare)</td>
+                <td class="no">US-centric</td>
+                <td class="no">No</td>
+                <td>Web, subscription</td>
+              </tr>
+              <tr>
+                <td>Empower</td>
+                <td>Free dashboard once your US accounts are linked</td>
+                <td class="no">US-centric</td>
+                <td class="no">No</td>
+                <td>Web and app, free</td>
+              </tr>
+              <tr>
+                <td>Expat / by-country calculators</td>
+                <td>Comparing cost of living across many destinations</td>
+                <td class="yes">Often</td>
+                <td class="no">Rarely</td>
+                <td>Web, mostly free</td>
+              </tr>
+              <tr class="is-ours">
+                <td>Runway</td>
+                <td>Your home rules and the destination move priced together, on a phone</td>
+                <td class="yes">14 countries</td>
+                <td class="yes">Yes</td>
+                <td>iOS, free core</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cmp-note">Pricing and features change; check each tool's own site for the current details.</p>
+
+        <h3>ProjectionLab</h3>
+        <p>
+          Deservedly popular with the FIRE crowd. If you enjoy building a model and pulling it apart,
+          ProjectionLab gives you a lot of rope: multiple scenarios, historical backtesting, granular
+          control. Its tax handling is built around you specifying the rules, which is powerful and
+          also means the cross-border logic, especially an exit tax, is on you to construct. It is a
+          web app on a subscription, and it is genuinely good at what it does.
+        </p>
+
+        <h3>Boldin (formerly NewRetirement)</h3>
+        <p>
+          One of the deepest retirement planners around, with strong Social Security, Roth conversion,
+          and Medicare modelling. That depth is built for the US system. If you are American and
+          staying put, it is hard to beat. For a cross-border move out of the US it is not the tool,
+          and it is not trying to be.
+        </p>
+
+        <h3>Empower (formerly Personal Capital)</h3>
+        <p>
+          Free, and strong once you connect your accounts, which is the trade: it is a US wealth
+          dashboard with a retirement planner attached, and connecting accounts is the point. If you
+          would rather not link banks, or you are not on the US system, it is a poor fit.
+        </p>
+
+        <h3>Expat and by-country FIRE calculators</h3>
+        <p>
+          There is a useful family of web tools that estimate your FIRE number across dozens of
+          countries using local cost of living, and some fold in local tax. These are the right tool
+          for the geoarbitrage question, "how much cheaper is my number in Portugal than in Oslo".
+          Where they usually stop is your actual accounts back home and the exit tax you would owe
+          leaving. They answer how cheap the destination is, more than what the whole move does to
+          your plan.
+        </p>
+
+        <h3 id="verdict">Where Runway fits, and where it does not</h3>
+        <p>
+          Runway is the tool I wanted and could not find, so I built it. One number is free: your
+          freedom age. Underneath, it runs Norway's actual rules, with other countries lighter for now
+          while their tax packs get built out. Point it at any of 14 destinations and it prices both the
+          local tax on your withdrawals and the bill for leaving, then gives you the total in the
+          currency you will actually spend. It all runs on your iPhone. No account, no bank logins.
+        </p>
+        <div class="callout is-note">
+          <p><strong>Where Runway is the wrong choice:</strong> it is iOS only, so no web or
+            Android yet. It is newer and less battle-tested than ProjectionLab. Its deepest home-country
+            tax detail is strongest for Norway right now, with other countries at a lighter level while
+            their packs are built out. And you type your own figures, there is no account-linking. If you
+            need any of those, one of the tools above will serve you better.</p>
+        </div>
+
+        <h2>A worked example, in plain terms</h2>
+        <p>
+          Say you have built a solid index-fund pot in Norway and you dream of retiring in Portugal. A
+          cost-of-living tool tells you Portugal is cheaper, so the number looks smaller and the date
+          looks closer. Good, but that is half the story. Leaving Norway can trigger an exit tax on the
+          gains in that pot (more on that in <a href="/runway/blog/fire-number-norway/">the FIRE number in
+          Norway</a>). Once you land in Portugal, your withdrawals answer to Portuguese rules, not
+          Norwegian ones. And you now save in kroner but spend in euros. Each of those moves the real
+          number. Retiring abroad might still pull your freedom age forward, it often does, just by less
+          than the rent gap alone suggests.
+        </p>
+        <p>
+          A precise euro figure is not really the point. "Can I retire abroad, and when" only answers
+          once the exit and the destination sit in the same sum, and most tools hand you one side or the
+          other. None of this is tax advice, and some of the 2026 numbers are still moving.
+        </p>
+
+        <h2>Frequently asked</h2>
+        <div class="faq-list" style="margin-top:20px;">
+          <details>
+            <summary>Do FIRE calculators account for moving to another country?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>Most do not. The common ones assume you retire under one country's tax rules, usually the one you already live in. If you plan to move, the two things they tend to miss are the exit tax your current country may charge on unrealised gains when you leave, and the way your new country taxes the money you withdraw. A small number of tools model destination taxes, and fewer still model the exit on the way out.</p></div>
+          </details>
+          <details>
+            <summary>What is an exit tax and does it affect early retirement?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>An exit tax, or departure tax, is a charge some countries apply on the unrealised gains in your investments when you stop being a tax resident, as if you had sold everything on the way out. Norway's utflyttingsskatt is one example. It matters for early retirement because a large investment pot built over years can carry a big untaxed gain, and leaving can trigger a bill that a single-country calculator never shows you.</p></div>
+          </details>
+          <details>
+            <summary>Which FIRE calculator is best if I plan to retire in another country?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>It depends on what you need. For deep single-country modelling that you drive yourself, ProjectionLab and Boldin are strong. For comparing the cost of living across destinations, the expat-specific calculators are useful. If you want your home-country rules and the destination move priced together, including the exit tax, on a phone and without an account, that gap is the reason Runway exists. Be honest with yourself about which question you are actually asking.</p></div>
+          </details>
+          <details>
+            <summary>Is there a free FIRE calculator that models cross-border tax?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>Free tools tend to be either quick single-country estimators or cost-of-living comparisons by destination. Runway gives your freedom age and freedom number for free, models 14 retirement destinations including the exit tax on the way out, and keeps everything on your device with no account. Deeper year-by-year analysis is a paid tier. As with any tool, treat the numbers as estimates, not tax advice.</p></div>
+          </details>
+          <details>
+            <summary>Does retiring abroad let me retire earlier?<span class="summary-icon">+</span></summary>
+            <div class="faq-body"><p>Often, yes, because a lower cost of living shrinks the pot you need. But the saving is smaller than a pure cost-of-living comparison suggests, once you add the destination's tax on your withdrawals and any exit tax when you leave. To answer it properly, price the whole move, the leaving and the arriving, not just the rent.</p></div>
+          </details>
+        </div>
+
+        <div class="post-cta">
+          <img src="/runway/assets/mascot-globe.svg" width="96" height="96" loading="lazy" decoding="async" alt="" style="margin:0 auto 8px;display:block;" />
+          <h2>See your freedom age, move included</h2>
+          <p class="js-prelaunch">Runway gives you one honest number and prices retiring abroad, exit tax and all, on your iPhone. It launches on the App Store on 25 August 2026, and the beta is open now.</p>
+          <p class="js-live">Runway gives you one honest number and prices retiring abroad, exit tax and all, on your iPhone. Your freedom age is free, forever.</p>
+          <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-primary js-prelaunch" target="_blank" rel="noopener">Try the beta on TestFlight</a>
+          <a href="https://apps.apple.com/app/id6784426559" class="btn-primary js-live" target="_blank" rel="noopener">Download free on the App Store</a>
+        </div>
+
+        <div class="author-box">
+          <img src="/runway/assets/mascot-proud.svg" alt="" width="54" height="54" />
+          <div>
+            <h3>Written by Dylan, maker of Runway</h3>
+            <p>Italian, in Norway about eight years, building the cross-border FIRE planner that did not exist for someone like me. Runway runs entirely on your iPhone. It is an educational planning tool, not financial or tax advice.</p>
+          </div>
+        </div>
+
+        <p class="updated" style="margin-top:32px;">Tools mentioned, for your own research:
+          <a href="https://projectionlab.com" target="_blank" rel="noopener">ProjectionLab</a>,
+          <a href="https://boldin.com" target="_blank" rel="noopener">Boldin</a>,
+          <a href="https://empower.com" target="_blank" rel="noopener">Empower</a>, and by-country calculators such as
+          <a href="https://getwherenext.com/tools/fire-calculator" target="_blank" rel="noopener">WhereNext</a> and
+          <a href="https://www.financialaha.com/data-analysis/fire-number-by-country/" target="_blank" rel="noopener">FinancialAha</a>.
+          Pricing and features are theirs and change often; verify on their sites.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/runway/" class="footer-logo">
+        <img class="logo-mark" src="/assets/icons/ludyem.png" alt="" width="22" height="22" />
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/runway/blog/">Blog</a>
+        <a href="/runway/privacy.html">Privacy</a>
+        <a href="/runway/terms.html">Terms</a>
+        <a href="/runway/support.html">Support</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Ludyem AS &middot; Not financial advice</p>
+    </div>
+  </footer>
+
+</body>
+</html>
