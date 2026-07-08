@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://ludyem.dev/</loc></url>
-  <url><loc>https://ludyem.dev/runway/</loc></url>
+  <url>
+    <loc>https://ludyem.dev/runway/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/" />
+  </url>
   <url><loc>https://ludyem.dev/runway/blog/</loc><lastmod>2026-07-07</lastmod></url>
+  <url><loc>https://ludyem.dev/runway/no/blog/</loc><lastmod>2026-07-08</lastmod></url>
   <url><loc>https://ludyem.dev/runway/blog/fire-calculator-retire-abroad/</loc><lastmod>2026-07-07</lastmod></url>
-  <url><loc>https://ludyem.dev/runway/blog/fire-number-norway/</loc><lastmod>2026-07-07</lastmod></url>
-  <url><loc>https://ludyem.dev/runway/blog/exit-tax-leaving-norway/</loc><lastmod>2026-07-07</lastmod></url>
+  <url>
+    <loc>https://ludyem.dev/runway/blog/fire-number-norway/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/blog/fire-number-norway/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/blog/fire-tall-norge/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/blog/fire-tall-norge/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/blog/fire-number-norway/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/blog/fire-tall-norge/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/blog/exit-tax-leaving-norway/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/blog/exit-tax-leaving-norway/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/blog/utflyttingsskatt-norge/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/blog/utflyttingsskatt-norge/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/blog/exit-tax-leaving-norway/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/blog/utflyttingsskatt-norge/" />
+  </url>
   <url><loc>https://ludyem.dev/runway/blog/fire-apps-iphone/</loc><lastmod>2026-07-07</lastmod></url>
   <url><loc>https://ludyem.dev/runway/blog/types-of-fire/</loc><lastmod>2026-07-07</lastmod></url>
   <url><loc>https://ludyem.dev/runway/blog/four-percent-rule/</loc><lastmod>2026-07-07</lastmod></url>
