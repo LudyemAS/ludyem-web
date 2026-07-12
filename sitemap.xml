@@ -14,6 +14,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/" />
     <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/" />
   </url>
+  <url><loc>https://ludyem.dev/runway/calculators/</loc><lastmod>2026-07-12</lastmod></url>
+  <url><loc>https://ludyem.dev/runway/calculators/fire/</loc><lastmod>2026-07-12</lastmod></url>
+  <url><loc>https://ludyem.dev/runway/calculators/coast-fire/</loc><lastmod>2026-07-12</lastmod></url>
   <url><loc>https://ludyem.dev/runway/blog/</loc><lastmod>2026-07-07</lastmod></url>
   <url><loc>https://ludyem.dev/runway/no/blog/</loc><lastmod>2026-07-08</lastmod></url>
   <url><loc>https://ludyem.dev/runway/blog/fire-calculator-retire-abroad/</loc><lastmod>2026-07-07</lastmod></url>

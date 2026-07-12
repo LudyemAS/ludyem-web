@@ -1,0 +1,116 @@
+/* ============================================================================
+   Runway calculators — interactive tool surfaces layered on ludyem.css.
+   Additive + Runway-scoped: only /runway/calculators/* pages link this file,
+   so it never touches another app. Inherits the dark house theme and Runway's
+   teal/gold accents from the per-page :root override.
+   ========================================================================== */
+
+/* ── Calculator page hero (tighter than the marketing hero) ── */
+.calc-hero { padding: 116px 0 8px; text-align: center; }
+.calc-hero .page-label { color: var(--accent2); }
+.calc-hero h1 { font-size: clamp(34px, 5.5vw, 58px); font-weight: 800; letter-spacing: -1.6px; line-height: 1.08; margin: 6px 0 16px; }
+.calc-hero .lede { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); max-width: 640px; margin: 0 auto; line-height: 1.62; }
+
+.calc-wrap { max-width: 940px; margin: 0 auto; padding: 0 24px 40px; position: relative; z-index: 1; }
+.calc-wrap .back-link { display: inline-flex; margin: 20px 0 0; }
+
+/* ── The tool: inputs on the left, live result on the right ── */
+.calc {
+  display: grid; grid-template-columns: 1fr 0.92fr;
+  background: var(--card); border: 1px solid var(--border); border-radius: 24px;
+  overflow: hidden; margin-top: 36px;
+}
+@media (max-width: 780px) { .calc { grid-template-columns: 1fr; } }
+
+.calc-form { padding: 32px; display: flex; flex-direction: column; gap: 20px; }
+@media (max-width: 480px) { .calc-form { padding: 24px 20px; } }
+
+.calc-field label { display: block; font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.calc-field label .hint { font-weight: 400; color: var(--faint); font-size: 13px; }
+
+.calc-input { position: relative; display: flex; align-items: center; }
+.calc-input input[type="number"] {
+  width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 12px;
+  padding: 13px 46px 13px 15px; font-size: 16px; color: var(--text); font-family: inherit;
+  font-variant-numeric: tabular-nums; -moz-appearance: textfield; transition: border-color .2s;
+}
+.calc-input input[type="number"]::-webkit-outer-spin-button,
+.calc-input input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.calc-input input:focus { outline: none; border-color: var(--accent-line); }
+.calc-input .unit { position: absolute; right: 15px; color: var(--faint); font-size: 14px; font-weight: 600; pointer-events: none; }
+
+/* Slider row (return, withdrawal rate) */
+.calc-range { display: flex; align-items: center; gap: 16px; }
+.calc-range input[type="range"] { flex: 1; accent-color: var(--accent1); height: 4px; cursor: pointer; }
+.calc-range .rv { min-width: 62px; text-align: right; font-weight: 700; color: var(--grad-a); font-variant-numeric: tabular-nums; font-size: 15px; }
+
+/* Currency segmented toggle */
+.calc-cur { display: inline-flex; gap: 4px; background: var(--bg); border: 1px solid var(--border); border-radius: 50px; padding: 4px; }
+.calc-cur button {
+  border: none; background: transparent; color: var(--muted); font-family: inherit; font-size: 14px; font-weight: 600;
+  padding: 6px 14px; border-radius: 50px; cursor: pointer; transition: background .2s, color .2s; min-width: 40px;
+}
+.calc-cur button[aria-pressed="true"] { background: linear-gradient(135deg, var(--accent1), var(--accent2)); color: #fff; }
+
+/* ── Result panel ── */
+.calc-out {
+  padding: 36px 34px; background: linear-gradient(165deg, var(--accent-soft), rgba(255,255,255,.02));
+  border-left: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center;
+}
+@media (max-width: 780px) { .calc-out { border-left: none; border-top: 1px solid var(--border); order: -1; } }
+.calc-out .out-label { font-size: 12px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.calc-out .out-big {
+  font-size: clamp(38px, 7vw, 56px); font-weight: 800; letter-spacing: -2px; line-height: 1.02;
+  background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.calc-out .out-sub { font-size: 15px; color: var(--muted); line-height: 1.55; margin-top: 8px; }
+.calc-out .out-sub strong { color: var(--text); font-weight: 600; }
+.calc-out .out-rows { display: flex; flex-direction: column; margin-top: 24px; }
+.calc-out .out-row { display: flex; justify-content: space-between; gap: 16px; font-size: 14px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+.calc-out .out-row:last-child { border-bottom: none; }
+.calc-out .out-row .k { color: var(--muted); }
+.calc-out .out-row .v { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+
+/* Verdict pill (coast: on track / not yet) */
+.calc-verdict { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: .3px; border-radius: 50px; padding: 6px 14px; margin-bottom: 14px; align-self: flex-start; }
+.calc-verdict.is-good { color: var(--grad-a); background: var(--accent-soft); border: 1px solid var(--accent-line); }
+.calc-verdict.is-wait { color: var(--accent2); background: rgba(246,183,62,0.12); border: 1px solid rgba(246,183,62,0.30); }
+.calc-verdict .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+/* Method / assumptions disclosure */
+.calc-method { margin-top: 22px; }
+.calc-method summary { cursor: pointer; list-style: none; font-size: 14px; font-weight: 600; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+.calc-method summary::-webkit-details-marker { display: none; }
+.calc-method summary::before { content: "+"; color: var(--accent2); font-weight: 800; }
+.calc-method[open] summary::before { content: "\2212"; }
+.calc-method .method-body { font-size: 14px; color: var(--muted); line-height: 1.7; margin-top: 14px; }
+.calc-method .method-body p { margin-bottom: 10px; }
+.calc-method .method-body strong { color: var(--text); }
+
+/* ── Explainer / SEO body under the tool (reuses .doc-body voice) ── */
+.calc-body { max-width: 720px; margin: 60px auto 0; }
+.calc-body h2 { font-size: clamp(24px, 3.4vw, 30px); font-weight: 800; letter-spacing: -.6px; margin: 44px 0 14px; }
+.calc-body h2:first-child { margin-top: 0; }
+.calc-body p { font-size: 16px; color: var(--muted); line-height: 1.75; margin-bottom: 15px; }
+.calc-body p strong { color: var(--text); }
+.calc-body a { color: var(--accent2); text-decoration: none; }
+.calc-body a:hover { text-decoration: underline; }
+
+/* ── Calculator hub index cards ── */
+.calc-index { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr)); gap: 18px; margin-top: 48px; }
+.calc-card {
+  position: relative; background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+  padding: 28px; text-decoration: none; color: var(--text);
+  display: flex; flex-direction: column; gap: 12px; transition: border-color .3s, transform .3s;
+}
+.calc-card:hover { border-color: var(--accent-line); transform: translateY(-4px); }
+.calc-card .cc-ic { width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--accent-soft); }
+.calc-card .cc-ic svg { width: 24px; height: 24px; fill: none; stroke: var(--grad-a); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.calc-card h3 { font-size: 18px; font-weight: 700; letter-spacing: -.3px; }
+.calc-card p { font-size: 14px; color: var(--muted); line-height: 1.6; flex: 1; }
+.calc-card .cc-go { font-size: 14px; font-weight: 700; color: var(--grad-a); }
+.calc-card.is-soon { pointer-events: none; }
+.calc-card.is-soon .cc-ic svg { stroke: var(--faint); }
+.calc-card.is-soon h3, .calc-card.is-soon p { color: var(--faint); }
+.calc-card .cc-soon { position: absolute; top: 20px; right: 20px; font-size: 10px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--muted); background: var(--border); border-radius: 50px; padding: 3px 10px; }
