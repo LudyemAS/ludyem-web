@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="nb-NO" class="is-prelaunch">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renters rente-kalkulator: Se pengene dine vokse (gratis, 2026)</title>
+  <meta name="description" content="Gratis renters rente-kalkulator. Se hvordan et startbeløp pluss månedlige innskudd vokser med renten du velger, når renten beregnes månedlig, og hvor mye av sluttsummen som er ren vekst. Fungerer i kr, $, € eller £. Uten konto." />
+  <link rel="canonical" href="https://ludyem.dev/runway/no/calculators/compound-interest/" />
+  <link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/compound-interest/" />
+  <link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/compound-interest/" />
+  <link rel="alternate" hreflang="x-default" href="https://ludyem.dev/runway/calculators/compound-interest/" />
+
+  <meta property="og:title" content="Renters rente-kalkulator: se pengene dine vokse" />
+  <meta property="og:description" content="Se hvordan et startbeløp og månedlige innskudd vokser med renters rente over årene, og hvor mye av summen som er ren vekst. Gratis, uten konto, valgfri valuta." />
+  <meta property="og:url" content="https://ludyem.dev/runway/no/calculators/compound-interest/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ludyem.dev/assets/icons/runway.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <link rel="stylesheet" href="/runway/assets/runway-calc.css" />
+  <style>
+    :root {
+      --accent1: #14b8a6; --accent2: #0d9488;
+      --grad-a: #5fd6c4; --grad-b: #34d399;
+      --accent-soft: rgba(20,184,166,0.14); --accent-line: rgba(20,184,166,0.32);
+    }
+  </style>
+  <script src="/assets/launch.js"></script>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/runway-icon.svg?v=2" />
+  <link rel="alternate icon" type="image/png" href="/assets/icons/runway.png?v=2" />
+  <link rel="apple-touch-icon" href="/assets/icons/runway-180.png?v=2" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Runway renters rente-kalkulator",
+    "url": "https://ludyem.dev/runway/no/calculators/compound-interest/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "nb-NO",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "En gratis renters rente-kalkulator: den lar et startbeløp pluss månedlige innskudd vokse med renten du velger, beregnet månedlig, og viser sluttsaldoen, hvor mye du har lagt inn, og hvor mye av totalen som er ren vekst fra renters rente.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ludyem",
+      "logo": { "@type": "ImageObject", "url": "https://ludyem.dev/assets/icons/ludyem.png" }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "nb-NO",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hva er renters rente?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Renters rente er renten pengene dine tjener oppå renten de allerede har tjent. Hver periodes vekst legges til saldoen, så neste periode tjener på et større beløp. Gjenta i årevis, og saldoen bøyer seg oppover i stedet for å stige i en rett linje, og jo lenger pengene står investert, desto mer av sluttsummen kommer fra vekst i stedet for fra det du selv la inn." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvordan regnes renters rente ut her?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Denne kalkulatoren beregner renten månedlig. Hver måned tjener saldoen en tolvdel av den årlige renten, så legges det månedlige innskuddet til, og den nye summen tjener renter måneden etter. Startbeløpet pluss hvert månedlige innskudd er det du legger inn; alt over det er renters rente." }
+      },
+      {
+        "@type": "Question",
+        "name": "Tar dette høyde for inflasjon?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nei. Dette er nominelle tall: de viser råsaldoen uten å justere for stigende priser. Fordi inflasjon tærer på det pengene kan kjøpe, ville en reell, inflasjonsjustert avkastning vært lavere, ofte med to til tre prosentpoeng i året. Se sluttbeløpet som framtidige kroner, ikke dagens kjøpekraft." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvorfor betyr månedlige innskudd så mye?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Faste innskudd gjør to ting: de tilfører nye penger, og de kjøper tid i markedet slik at hvert innskudd får vokse med renters rente. Penger som legges inn tidlig, har flest år på å vokse, så et jevnt månedlig beløp som får stå i fred i årevis, bidrar ofte mer til sluttsummen enn en større engangssum lagt inn sent. Jevnhet slår som regel timing." }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/runway/assets/runway-site.css" />
+  <script>(function(){try{var s=localStorage.getItem('runway-theme');var t=s||((window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/runway/assets/runway-ui.js" defer></script>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/runway/no/" class="logo">
+        <img class="logo-mark" src="/assets/icons/runway.png" alt="" width="32" height="32" />
+        Runway
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="nav-links" id="nav-links">
+        <a href="/runway/no/#slik-fungerer-det">Slik fungerer det</a>
+        <a href="/runway/no/#funksjoner">Funksjoner</a>
+        <a href="/runway/no/blog/">Artikler</a>
+        <a href="/runway/calculators/compound-interest/" lang="en">English</a>
+      </div>
+      <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-nav js-prelaunch" style="white-space:nowrap;" target="_blank" rel="noopener">Prøv betaen</a>
+      <a href="https://apps.apple.com/app/id6784426559" class="btn-nav js-live" style="white-space:nowrap;" target="_blank" rel="noopener">Last ned gratis</a>
+    </div>
+  </nav>
+
+  <main class="calc-wrap">
+    <a href="/runway/no/calculators/" class="back-link">&larr; Alle kalkulatorer</a>
+
+    <div class="calc-hero">
+      <p class="page-label">Renters rente-kalkulator</p>
+      <h1>Hvor mye vokser det?</h1>
+      <p class="lede">Renters rente er renten pengene dine tjener oppå renten de allerede har tjent. Sett et startbeløp, et månedlig innskudd og en rente, og se hvor mye av sluttsummen som er ren vekst.</p>
+    </div>
+
+    <section class="calc" aria-label="Renters rente-kalkulator">
+      <div class="calc-form">
+        <div class="calc-field">
+          <label id="cur-label">Valuta</label>
+          <div class="calc-cur" role="group" aria-labelledby="cur-label" id="cur">
+            <button type="button" data-cur="kr" aria-pressed="true">kr</button>
+            <button type="button" data-cur="$" aria-pressed="false">$</button>
+            <button type="button" data-cur="&euro;" aria-pressed="false">&euro;</button>
+            <button type="button" data-cur="&pound;" aria-pressed="false">&pound;</button>
+          </div>
+        </div>
+        <div class="calc-field">
+          <label for="principal">Startbeløp</label>
+          <div class="calc-input"><input type="number" id="principal" value="100000" min="0" step="10000" inputmode="numeric" /><span class="unit cur-unit">kr</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="monthly">Månedlig innskudd</label>
+          <div class="calc-input"><input type="number" id="monthly" value="5000" min="0" step="500" inputmode="numeric" /><span class="unit cur-unit">kr</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="rate">Årlig rente <span class="hint">— nominelt, før inflasjon</span></label>
+          <div class="calc-range"><input type="range" id="rate" value="7" min="1" max="12" step="0.5" aria-label="Årlig rente, prosent per år" /><span class="rv" id="rate-v">7.0%</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="years">Antall år</label>
+          <div class="calc-input"><input type="number" id="years" value="20" min="1" max="60" step="1" inputmode="numeric" /><span class="unit">år</span></div>
+        </div>
+      </div>
+
+      <div class="calc-out" aria-live="polite">
+        <div class="out-label" id="out-label">Etter 20 år har du</div>
+        <div class="out-big" id="out-big">kr 3,008,507</div>
+        <div class="out-sub" id="out-sub"><strong>kr 1,708,507</strong> av det er ren vekst.</div>
+        <div class="out-rows">
+          <div class="out-row"><span class="k">Sum du har lagt inn</span><span class="v" id="out-contrib">kr 1,300,000</span></div>
+          <div class="out-row"><span class="k">Opptjente renter</span><span class="v" id="out-interest">kr 1,708,507</span></div>
+          <div class="out-row"><span class="k">Vekstmultippel</span><span class="v" id="out-mult">2.3&times;</span></div>
+        </div>
+        <details class="calc-method">
+          <summary>Slik regnes det ut</summary>
+          <div class="method-body">
+            <p>Saldoen din <strong>får renters rente hver måned</strong>: hver måned tjener den en tolvdel av den årlige renten, så legges det månedlige innskuddet til. <strong>Sum du har lagt inn</strong> er startbeløpet pluss hvert innskudd; alt over det er ren vekst.</p>
+            <p>Dette er <strong>nominelle</strong> tall, ikke justert for inflasjon, så den reelle kjøpekraften vil være lavere. Dette er et pedagogisk verktøy, ikke økonomisk rådgivning eller skatterådgivning.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <div class="calc-body doc-body">
+      <h2>Hva renters rente egentlig er</h2>
+      <p>
+        <strong>Renters rente</strong> er renten pengene dine tjener oppå renten de allerede har tjent.
+        Den første måneden tjener saldoen litt; neste måned er det lille en del av saldoen, så det tjener
+        også. Gjenta i årevis, og veksten forsterker seg selv og bøyer saldoen oppover i stedet for å stige
+        i en rett linje. Det er den stille motoren bak enhver langsiktig plan, fra ett enkelt indeksfond til
+        et helt <a href="/runway/no/calculators/fire/">FIRE-tall</a>.
+      </p>
+
+      <h2>Hvorfor månedlig renteberegning og jevne innskudd betyr noe</h2>
+      <p>
+        To grep gjør mesteparten av jobben her. Å beregne renten <strong>månedlig</strong> i stedet for én
+        gang i året lar hver måneds rente begynne å tjene med en gang, en liten fordel som hoper seg opp over
+        tiår. Og et fast <strong>månedlig innskudd</strong> betyr mer enn folk tror: hvert innskudd kjøper tid
+        i markedet, og penger som legges inn tidlig, har flest år på å vokse med renters rente. Et jevnt beløp
+        som får stå i fred i tjue år, bidrar ofte mer til sluttsummen enn en større engangssum lagt inn sent.
+        Tid i markedet, ikke å time markedet.
+      </p>
+
+      <h2>Én hake: dette er et nominelt tall</h2>
+      <p>
+        Hovedtallet er <strong>nominelt</strong>, det er råsaldoen, ikke justert for inflasjon. Stigende priser
+        tærer i det stille på det pengene er verdt, så realavkastningen — den inflasjonsjusterte avkastningen —
+        ville vært lavere, ofte med to til tre prosentpoeng i året. En million om tjue år kjøper ikke det en
+        million kjøper i dag. Derfor jobber seriøs pensjonsmatematikk, som
+        <a href="/runway/no/blog/fire-tall-norge/">4-prosentregelen</a> og Runways egne prognoser, i faste
+        kroner. Bruk denne kalkulatoren til å få en følelse av formen på veksten, og trekk fra for inflasjon
+        før du stoler på hovedtallet.
+      </p>
+    </div>
+
+    <div class="calc-body">
+      <div class="post-cta">
+        <img src="/runway/assets/mascot-globe.svg" width="96" height="96" loading="lazy" decoding="async" alt="" style="margin:0 auto 8px;display:block;" />
+        <h2 style="border:0;padding:0;">La de ekte pengene dine vokse, ikke et leketall</h2>
+        <p class="js-prelaunch">Runway fremskriver de faktiske kontoene dine med renters rente og innskudd, bruker skatte- og pensjonsreglene i landet ditt, og viser det inflasjonsjusterte bildet, slik at du ser reell kjøpekraft, ikke bare et nominelt hovedtall. Appen lanseres på App Store 25. august 2026, og betaen er åpen nå.</p>
+        <p class="js-live">Runway fremskriver de faktiske kontoene dine med renters rente og innskudd, bruker skatte- og pensjonsreglene i landet ditt, og viser det inflasjonsjusterte bildet, slik at du ser reell kjøpekraft, ikke bare et nominelt hovedtall. Prognosen din er gratis, for alltid.</p>
+        <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-primary js-prelaunch" target="_blank" rel="noopener">Prøv betaen på TestFlight</a>
+        <a href="https://apps.apple.com/app/id6784426559" class="btn-primary js-live" target="_blank" rel="noopener">Last ned gratis på App Store</a>
+      </div>
+    </div>
+
+    <div class="calc-body doc-body">
+      <h2>Ofte stilte spørsmål</h2>
+      <div class="faq-list" style="margin-top:20px;">
+        <details>
+          <summary>Hva er renters rente?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Renters rente er renten pengene dine tjener oppå renten de allerede har tjent. Hver periodes vekst legges til saldoen, så neste periode tjener på et større beløp. Gjenta i årevis, og saldoen bøyer seg oppover i stedet for å stige i en rett linje, og jo lenger pengene står investert, desto mer av sluttsummen kommer fra vekst i stedet for fra det du selv la inn.</p></div>
+        </details>
+        <details>
+          <summary>Hvordan regnes renters rente ut her?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Denne kalkulatoren beregner renten månedlig. Hver måned tjener saldoen en tolvdel av den årlige renten, så legges det månedlige innskuddet til, og den nye summen tjener renter måneden etter. Startbeløpet pluss hvert månedlige innskudd er det du legger inn; alt over det er renters rente.</p></div>
+        </details>
+        <details>
+          <summary>Tar dette høyde for inflasjon?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Nei. Dette er nominelle tall: de viser råsaldoen uten å justere for stigende priser. Fordi inflasjon tærer på det pengene kan kjøpe, ville en reell, inflasjonsjustert avkastning vært lavere, ofte med to til tre prosentpoeng i året. Se sluttbeløpet som framtidige kroner, ikke dagens kjøpekraft.</p></div>
+        </details>
+        <details>
+          <summary>Hvorfor betyr månedlige innskudd så mye?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Faste innskudd gjør to ting: de tilfører nye penger, og de kjøper tid i markedet slik at hvert innskudd får vokse med renters rente. Penger som legges inn tidlig, har flest år på å vokse, så et jevnt månedlig beløp som får stå i fred i årevis, bidrar ofte mer til sluttsummen enn en større engangssum lagt inn sent. Jevnhet slår som regel timing.</p></div>
+        </details>
+      </div>
+
+      <div class="author-box">
+        <img src="/runway/assets/mascot-proud.svg" alt="" width="54" height="54" />
+        <div>
+          <h3>Bygd av Dylan, skaperen av Runway</h3>
+          <p>Italiener, bosatt i Norge i rundt åtte år, og bygger FIRE-planleggeren på tvers av landegrenser som ikke fantes for en som meg. Denne kalkulatoren er et pedagogisk verktøy, ikke økonomisk rådgivning eller skatterådgivning.</p>
+        </div>
+      </div>
+
+      <p class="updated" style="margin-top:32px;">Beslektet:
+        <a href="/runway/no/calculators/fire/">FIRE-kalkulator</a>,
+        <a href="/runway/no/calculators/coast-fire/">Coast FIRE-kalkulator</a> og
+        <a href="/runway/no/blog/fire-tall-norge/">4-prosentregelen</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/runway/no/" class="footer-logo">
+        <img class="logo-mark" src="/assets/icons/ludyem.png" alt="" width="22" height="22" />
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/runway/no/calculators/">Kalkulatorer</a>
+        <a href="/runway/no/blog/">Artikler</a>
+        <a href="/runway/privacy.html">Personvern</a>
+        <a href="/runway/terms.html">Vilkår</a>
+        <a href="/runway/support.html">Kundestøtte</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg><span class="theme-toggle-label">Light</span></button>
+      <p class="footer-copy">&copy; 2026 Ludyem AS &middot; Ikke økonomisk rådgivning</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var cur = "kr";
+      var el = function (id) { return document.getElementById(id); };
+      var inputs = ["principal", "monthly", "rate", "years"].map(el);
+
+      function money(n) {
+        if (!isFinite(n)) return "—";
+        var s = Math.round(n).toLocaleString("nb-NO");
+        return cur === "kr" ? "kr " + s : cur + s;
+      }
+      function setCurUnits() {
+        Array.prototype.forEach.call(document.querySelectorAll(".cur-unit"), function (u) { u.innerHTML = cur; });
+      }
+
+      function compute() {
+        var principal = Math.max(0, +el("principal").value || 0);
+        var monthly = Math.max(0, +el("monthly").value || 0);
+        var rate = +el("rate").value || 0;
+        var years = Math.max(0, +el("years").value || 0);
+
+        el("rate-v").textContent = rate.toFixed(1) + "%";
+
+        var rr = rate / 100 / 12;          // monthly rate
+        var bal = principal;
+        var months = Math.round(years * 12);
+        for (var m = 1; m <= months; m++) { bal = bal * (1 + rr) + monthly; }
+        var finalBalance = bal;
+        var contributions = principal + monthly * 12 * years;
+        var interest = finalBalance - contributions;
+
+        el("out-label").textContent = "Etter " + years + " år har du";
+        el("out-big").textContent = money(finalBalance);
+        el("out-sub").innerHTML = "<strong>" + money(interest) + "</strong> av det er ren vekst.";
+        el("out-contrib").textContent = money(contributions);
+        el("out-interest").textContent = money(interest);
+        el("out-mult").textContent = contributions > 0 ? (finalBalance / contributions).toFixed(1) + "×" : "—";
+      }
+
+      inputs.forEach(function (i) { i && i.addEventListener("input", compute); });
+
+      var curWrap = el("cur");
+      curWrap.addEventListener("click", function (e) {
+        var b = e.target.closest("button"); if (!b) return;
+        cur = b.getAttribute("data-cur");
+        Array.prototype.forEach.call(curWrap.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        setCurUnits();
+        compute();
+      });
+
+      setCurUnits();
+      compute();
+    })();
+  </script>
+
+</body>
+</html>

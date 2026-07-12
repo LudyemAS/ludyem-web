@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="nb-NO" class="is-prelaunch">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIRE-kalkulator: Når kan du gå av med tidlig pensjon? (Gratis, 2026)</title>
+  <meta name="description" content="Gratis FIRE-kalkulator. Skriv inn hva du har spart, hva du investerer hver måned og hva du vil bruke, og se alderen du kan bli økonomisk uavhengig, pluss FIRE-tallet du trenger. Fungerer i kr, $, € eller £. Uten registrering." />
+  <link rel="canonical" href="https://ludyem.dev/runway/no/calculators/fire/" />
+  <link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/fire/" />
+  <link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/fire/" />
+  <link rel="alternate" hreflang="x-default" href="https://ludyem.dev/runway/calculators/fire/" />
+
+  <meta property="og:title" content="FIRE-kalkulator: når kan du gå av med tidlig pensjon?" />
+  <meta property="og:description" content="Se alderen du kan slutte å jobbe og FIRE-tallet du trenger, ut fra dine egne tall. Gratis, uten registrering, fungerer i alle valutaer." />
+  <meta property="og:url" content="https://ludyem.dev/runway/no/calculators/fire/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ludyem.dev/assets/icons/runway.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <link rel="stylesheet" href="/runway/assets/runway-calc.css" />
+  <style>
+    :root {
+      --accent1: #14b8a6; --accent2: #0d9488;
+      --grad-a: #5fd6c4; --grad-b: #34d399;
+      --accent-soft: rgba(20,184,166,0.14); --accent-line: rgba(20,184,166,0.32);
+    }
+  </style>
+  <script src="/assets/launch.js"></script>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/runway-icon.svg?v=2" />
+  <link rel="alternate icon" type="image/png" href="/assets/icons/runway.png?v=2" />
+  <link rel="apple-touch-icon" href="/assets/icons/runway-180.png?v=2" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "inLanguage": "nb-NO",
+    "name": "Runway FIRE-kalkulator",
+    "url": "https://ludyem.dev/runway/no/calculators/fire/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "En gratis kalkulator som anslår alderen du kan nå økonomisk uavhengighet (FIRE) og FIRE-tallet du trenger, ut fra sparepengene dine, månedlig sparing, forventet realavkastning og planlagt forbruk.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ludyem",
+      "logo": { "@type": "ImageObject", "url": "https://ludyem.dev/assets/icons/ludyem.png" }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "nb-NO",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hva er et FIRE-tall?",
+        "acceptedAnswer": { "@type": "Answer", "text": "FIRE-tallet ditt er den investerte potten som kan dekke årsforbruket ditt i det uendelige med en trygg uttaksgrad. Med den vanlige 4-prosentregelen er det årsforbruket ganget med 25. Bruker du 400 000 i året, er FIRE-tallet ditt rundt 10 000 000. Senker du uttaksgraden til 3,5 prosent, stiger multippelen til omtrent 28,5 ganger." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvordan finner denne FIRE-kalkulatoren pensjonsalderen min?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Den lar dagens investeringer og de månedlige innskuddene dine vokse framover måned for måned med den realavkastningen du velger, altså avkastningen etter inflasjon, og viser alderen der potten først når FIRE-tallet ditt. Fordi alt er i faste priser, er resultatet i dagens kroner og tar allerede høyde for inflasjon." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvilken realavkastning bør jeg bruke?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Realavkastning er avkastningen på investeringene dine etter at inflasjonen er trukket fra. En bred, global aksjeportefølje har historisk gitt rundt 5 prosent realavkastning over lange perioder, men ingen fremtid er garantert, og en tyngre andel obligasjoner trekker den ned. Prøv et intervall, for eksempel 4 til 6 prosent, og se hvor mye datoen din flytter seg. Se resultatet som en retning, ikke et løfte." }
+      },
+      {
+        "@type": "Question",
+        "name": "Er denne FIRE-kalkulatoren nøyaktig for Norge eller andre land?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Selve matematikken er universell, men den modellerer ikke skatt, pensjon eller kontoregler, som er ulike fra land til land og kan flytte den reelle datoen din med flere år. Norsk formuesskatt, aksjesparekonto (ASK) og folketrygden er eksempler. Runway-appen bruker landets faktiske regler på dine egne tall; denne nettkalkulatoren er det raske, universelle første anslaget." }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/runway/assets/runway-site.css" />
+  <script>(function(){try{var s=localStorage.getItem('runway-theme');var t=s||((window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/runway/assets/runway-ui.js" defer></script>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/runway/no/" class="logo">
+        <img class="logo-mark" src="/assets/icons/runway.png" alt="" width="32" height="32" />
+        Runway
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="nav-links" id="nav-links">
+        <a href="/runway/no/calculators/">Kalkulatorer</a>
+        <a href="/runway/no/#funksjoner">Funksjoner</a>
+        <a href="/runway/no/blog/">Artikler</a>
+        <a href="/runway/support.html">Kundestøtte</a>
+      </div>
+      <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-nav js-prelaunch" style="white-space:nowrap;" target="_blank" rel="noopener">Prøv betaen</a>
+      <a href="https://apps.apple.com/app/id6784426559" class="btn-nav js-live" style="white-space:nowrap;" target="_blank" rel="noopener">Last ned gratis</a>
+    </div>
+  </nav>
+
+  <main class="calc-wrap">
+    <a href="/runway/no/calculators/" class="back-link">&larr; Alle kalkulatorer</a>
+
+    <div class="calc-hero">
+      <p class="page-label">FIRE-kalkulator</p>
+      <h1>Når kan du slutte å jobbe?</h1>
+      <p class="lede">Skriv inn hva du har, hva du investerer og hva du kommer til å bruke. Se alderen der pengene dine kan gjøre deg fri, og FIRE-tallet du sikter mot.</p>
+    </div>
+
+    <section class="calc" aria-label="FIRE-kalkulator">
+      <div class="calc-form">
+        <div class="calc-field">
+          <label id="cur-label">Valuta</label>
+          <div class="calc-cur" role="group" aria-labelledby="cur-label" id="cur">
+            <button type="button" data-cur="kr" aria-pressed="true">kr</button>
+            <button type="button" data-cur="$" aria-pressed="false">$</button>
+            <button type="button" data-cur="&euro;" aria-pressed="false">&euro;</button>
+            <button type="button" data-cur="&pound;" aria-pressed="false">&pound;</button>
+          </div>
+        </div>
+        <div class="calc-field">
+          <label for="age">Alderen din i dag</label>
+          <div class="calc-input"><input type="number" id="age" value="32" min="16" max="80" step="1" inputmode="numeric" /><span class="unit">år</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="invested">Investert så langt <span class="hint">— pensjon + aksjer + fond</span></label>
+          <div class="calc-input"><input type="number" id="invested" value="600000" min="0" step="10000" inputmode="numeric" /><span class="unit cur-unit">kr</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="monthly">Investert hver måned</label>
+          <div class="calc-input"><input type="number" id="monthly" value="18000" min="0" step="500" inputmode="numeric" /><span class="unit cur-unit">kr</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="spend">Årlig forbruk som pensjonist</label>
+          <div class="calc-input"><input type="number" id="spend" value="420000" min="0" step="10000" inputmode="numeric" /><span class="unit cur-unit">kr</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="ret">Forventet avkastning <span class="hint">— etter inflasjon (realavkastning)</span></label>
+          <div class="calc-range"><input type="range" id="ret" value="5" min="1" max="9" step="0.5" aria-label="Forventet realavkastning, prosent per år" /><span class="rv" id="ret-v">5.0%</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="wr">Uttaksgrad <span class="hint">— 4-prosentregelen</span></label>
+          <div class="calc-range"><input type="range" id="wr" value="4" min="2.5" max="5" step="0.1" aria-label="Trygg uttaksgrad, prosent per år" /><span class="rv" id="wr-v">4.0%</span></div>
+        </div>
+      </div>
+
+      <div class="calc-out" aria-live="polite">
+        <div class="out-label">Du kan være fri ved</div>
+        <div class="out-big" id="out-age">54 år</div>
+        <div class="out-sub" id="out-when">om <strong>22 år</strong>, rundt 2048</div>
+        <div class="out-rows">
+          <div class="out-row"><span class="k">FIRE-tallet ditt</span><span class="v" id="out-fire">kr 10,500,000</span></div>
+          <div class="out-row"><span class="k">Det er en multippel på</span><span class="v" id="out-mult">25&times; forbruk</span></div>
+          <div class="out-row"><span class="k">Spareår igjen</span><span class="v" id="out-years">22</span></div>
+        </div>
+        <details class="calc-method">
+          <summary>Slik regnes det ut</summary>
+          <div class="method-body">
+            <p><strong>FIRE-tallet</strong> ditt er årsforbruket ditt delt på uttaksgraden. Dagens pott og den månedlige sparingen din vokser så framover med <strong>realavkastningen</strong> din (etter inflasjon), måned for måned, til potten når det tallet. Alt er i dagens kroner.</p>
+            <p>Den ser bevisst bort fra skatt, pensjon og kontoregler, som varierer fra land til land og kan flytte den reelle datoen med flere år. Det er et raskt førsteanslag, ikke skatterådgivning.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <div class="calc-body doc-body">
+      <h2>Hva denne FIRE-kalkulatoren forteller deg</h2>
+      <p>
+        FIRE står for <strong>Financial Independence, Retire Early</strong>, altså økonomisk uavhengighet og
+        tidlig pensjon. Hele bevegelsen dreier seg om to tall: størrelsen på potten som lar deg slutte å
+        jobbe, og alderen du når den. Denne kalkulatoren gir deg begge deler ut fra en håndfull ærlige tall,
+        uten registrering og uten at noe lagres.
+      </p>
+      <p>
+        Potten du sikter mot, er <strong>FIRE-tallet</strong> ditt: årsforbruket ditt delt på en trygg
+        uttaksgrad. Med den klassiske <a href="/runway/no/blog/fire-tall-norge/">4-prosentregelen</a> er det
+        forbruket ganget med 25. Alderen finner du ved å la det du allerede har, pluss det du legger til hver
+        måned, vokse med den forventede <strong>realavkastningen</strong> din til potten er der.
+      </p>
+
+      <h2>Hvorfor realavkastning er viktig</h2>
+      <p>
+        Denne kalkulatoren regner utelukkende i <strong>faste priser</strong>, altså avkastning etter
+        inflasjon. Derfor er svaret i dagens kroner: et FIRE-tall på ti millioner her betyr ti millioner i
+        dagens kjøpekraft, ikke et oppblåst fremtidstall som bare ser stort ut. Vil du heller bruke nominell
+        avkastning, trekker du først fra inflasjonsforventningen din, for eksempel 7 prosent nominelt minus
+        2,5 prosent inflasjon blir omtrent 4,5 prosent realavkastning.
+      </p>
+
+      <h2>Der den enkle versjonen kommer til kort</h2>
+      <p>
+        En universell kalkulator ser ikke det som faktisk bøyer datoen din: <strong>skatt på uttakene
+        dine</strong>, en <strong>folketrygd eller tjenestepensjon</strong> som kommer et stykke ut i løpet, og
+        <strong>kontoreglene</strong> der du bor. Bare i Norge flytter den årlige
+        <a href="/runway/no/blog/fire-tall-norge/">formuesskatten</a>, uttaksrekkefølgen på aksjesparekonto
+        (ASK) og folketrygden hver for seg det reelle tallet. Og planlegger du å
+        <a href="/runway/no/blog/utflyttingsskatt-norge/">pensjonere deg i et annet land</a> enn det du sparte
+        i, kommer utflyttingsskatt og reglene i det nye landet inn i bildet. Det er nettopp dette gapet
+        Runway-appen er bygd for å tette.
+      </p>
+    </div>
+
+    <div class="calc-body">
+      <div class="post-cta">
+        <img src="/runway/assets/mascot-celebrate.svg" width="96" height="96" loading="lazy" decoding="async" alt="" style="margin:0 auto 8px;display:block;" />
+        <h2 style="border:0;padding:0;">Få den ekte frihetsalderen din, ikke den grove</h2>
+        <p class="js-prelaunch">Runway tar den samme idéen og bruker landets faktiske skatte-, pensjons- og kontoregler, kjører 400 markedsforløp over den og viser grepene som trekker datoen din nærmere. Bygd for Norge. Appen lanseres på App Store 25. august 2026, og betaen er åpen nå.</p>
+        <p class="js-live">Runway tar den samme idéen og bruker landets faktiske skatte-, pensjons- og kontoregler, kjører 400 markedsforløp over den og viser grepene som trekker datoen din nærmere. Frihetsalderen din er gratis, for alltid.</p>
+        <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-primary js-prelaunch" target="_blank" rel="noopener">Prøv betaen på TestFlight</a>
+        <a href="https://apps.apple.com/app/id6784426559" class="btn-primary js-live" target="_blank" rel="noopener">Last ned gratis på App Store</a>
+      </div>
+    </div>
+
+    <div class="calc-body doc-body">
+      <h2>Ofte stilte spørsmål</h2>
+      <div class="faq-list" style="margin-top:20px;">
+        <details>
+          <summary>Hva er et FIRE-tall?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>FIRE-tallet ditt er den investerte potten som kan dekke årsforbruket ditt i det uendelige med en trygg uttaksgrad. Med 4-prosentregelen er det årsforbruket ganget med 25, så et forbruk på 400 000 i året peker mot rundt 10 000 000. Senker du satsen til 3,5 prosent, klatrer multippelen til omtrent 28,5 ganger.</p></div>
+        </details>
+        <details>
+          <summary>Hvordan finner den pensjonsalderen min?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Den lar dagens investeringer og de månedlige innskuddene dine vokse framover, måned for måned, med den realavkastningen du velger, og viser alderen der potten først når FIRE-tallet ditt. Fordi alt er i faste priser, er svaret allerede i dagens kroner.</p></div>
+        </details>
+        <details>
+          <summary>Hvilken realavkastning bør jeg bruke?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Realavkastning er avkastningen din etter inflasjon. En bred, global aksjeportefølje har historisk ligget nær 5 prosent realavkastning over lange perioder, men ingenting om fremtiden er garantert, og mer obligasjoner betyr mindre. Prøv 4 til 6 prosent og se hvor langt datoen din svinger, det spennet er den ærlige usikkerheten.</p></div>
+        </details>
+        <details>
+          <summary>Fungerer den for Norge eller andre land?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Selve matematikken er universell, men den modellerer ikke skatt, pensjon eller kontoregler, som er ulike fra land til land og kan flytte den reelle datoen din med flere år. <a href="/runway/no/">Runway-appen</a> bruker disse reglene på dine egne tall; denne siden er det raske, universelle første anslaget. Se også <a href="/runway/no/blog/fire-tall-norge/">FIRE-tallet i Norge</a>.</p></div>
+        </details>
+      </div>
+
+      <div class="author-box">
+        <img src="/runway/assets/mascot-proud.svg" alt="" width="54" height="54" />
+        <div>
+          <h3>Skrevet av Dylan, skaperen av Runway</h3>
+          <p>Italiener, bosatt i Norge i rundt åtte år, og bygger FIRE-planleggeren på tvers av landegrenser som ikke fantes for en som meg. Denne kalkulatoren er et pedagogisk verktøy, ikke økonomisk eller skatterådgivning.</p>
+        </div>
+      </div>
+
+      <p class="updated" style="margin-top:32px;">Relatert:
+        <a href="/runway/no/calculators/coast-fire/">Coast FIRE-kalkulatoren</a>,
+        <a href="/runway/no/blog/fire-tall-norge/">4-prosentregelen forklart</a>, og
+        <a href="/runway/no/calculators/">alle kalkulatorene</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/runway/no/" class="footer-logo">
+        <img class="logo-mark" src="/assets/icons/ludyem.png" alt="" width="22" height="22" />
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/runway/no/calculators/">Kalkulatorer</a>
+        <a href="/runway/no/blog/">Artikler</a>
+        <a href="/runway/privacy.html">Personvern</a>
+        <a href="/runway/terms.html">Vilkår</a>
+        <a href="/runway/support.html">Kundestøtte</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg><span class="theme-toggle-label">Light</span></button>
+      <p class="footer-copy">&copy; 2026 Ludyem AS &middot; Ikke økonomisk rådgivning</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var cur = "kr";
+      var el = function (id) { return document.getElementById(id); };
+      var inputs = ["age", "invested", "monthly", "spend", "ret", "wr"].map(el);
+
+      function money(n) {
+        if (!isFinite(n)) return "—";
+        var s = Math.round(n).toLocaleString("nb-NO");
+        return cur === "kr" ? "kr " + s : cur + s;
+      }
+      function setCurUnits() {
+        var label = cur === "kr" ? "kr" : cur;
+        Array.prototype.forEach.call(document.querySelectorAll(".cur-unit"), function (u) { u.innerHTML = label; });
+      }
+
+      function compute() {
+        var age = +el("age").value || 0;
+        var P = Math.max(0, +el("invested").value || 0);
+        var m = Math.max(0, +el("monthly").value || 0);
+        var spend = Math.max(0, +el("spend").value || 0);
+        var r = (+el("ret").value || 0) / 100;
+        var w = (+el("wr").value || 0) / 100;
+
+        el("ret-v").textContent = (+el("ret").value).toFixed(1) + "%";
+        el("wr-v").textContent = (+el("wr").value).toFixed(1) + "%";
+
+        var fire = w > 0 ? spend / w : Infinity;
+        el("out-fire").textContent = money(fire);
+        el("out-mult").innerHTML = (w > 0 ? Math.round(1 / w) : "—") + "&times; forbruk";
+
+        var outAge = el("out-age"), outWhen = el("out-when"), outYears = el("out-years");
+
+        if (P >= fire && isFinite(fire)) {
+          outAge.textContent = "fri nå";
+          outWhen.innerHTML = "Investeringene dine dekker allerede dette forbruket.";
+          outYears.textContent = "0";
+          return;
+        }
+
+        // Grow the pot month by month in real terms until it reaches the FIRE number.
+        var rr = Math.pow(1 + r, 1 / 12) - 1;
+        var bal = P, months = 0, cap = 12 * 75;
+        while (bal < fire && months < cap) { bal = bal * (1 + rr) + m; months++; }
+
+        if (months >= cap || !isFinite(fire)) {
+          outAge.textContent = "Ikke ennå";
+          outWhen.innerHTML = "Potten når ikke tallet ditt innen 75 år. Prøv å spare mer, bruke mindre, eller få høyere avkastning.";
+          outYears.textContent = "75+";
+          return;
+        }
+
+        var years = months / 12;
+        var freedomAge = age + years;
+        outAge.textContent = Math.round(freedomAge) + " år";
+        outWhen.innerHTML = "om <strong>" + Math.round(years) + " år</strong>, rundt " + Math.round(2026 + years);
+        outYears.textContent = Math.round(years);
+      }
+
+      inputs.forEach(function (i) { i && i.addEventListener("input", compute); });
+
+      var curWrap = el("cur");
+      curWrap.addEventListener("click", function (e) {
+        var b = e.target.closest("button"); if (!b) return;
+        cur = b.getAttribute("data-cur");
+        Array.prototype.forEach.call(curWrap.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        setCurUnits();
+        compute();
+      });
+
+      setCurUnits();
+      compute();
+    })();
+  </script>
+
+</body>
+</html>

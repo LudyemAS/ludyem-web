@@ -14,13 +14,90 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/" />
     <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/" />
   </url>
-  <url><loc>https://ludyem.dev/runway/calculators/</loc><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://ludyem.dev/runway/calculators/fire/</loc><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://ludyem.dev/runway/calculators/coast-fire/</loc><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://ludyem.dev/runway/calculators/compound-interest/</loc><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://ludyem.dev/runway/calculators/mortgage/</loc><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://ludyem.dev/runway/calculators/savings-rate/</loc><lastmod>2026-07-12</lastmod></url>
-  <url><loc>https://ludyem.dev/runway/calculators/barista-fire/</loc><lastmod>2026-07-12</lastmod></url>
+  <url>
+    <loc>https://ludyem.dev/runway/calculators/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/calculators/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/calculators/fire/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/fire/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/fire/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/calculators/fire/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/fire/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/fire/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/calculators/coast-fire/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/coast-fire/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/coast-fire/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/calculators/coast-fire/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/coast-fire/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/coast-fire/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/calculators/barista-fire/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/barista-fire/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/barista-fire/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/calculators/barista-fire/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/barista-fire/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/barista-fire/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/calculators/compound-interest/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/compound-interest/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/compound-interest/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/calculators/compound-interest/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/compound-interest/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/compound-interest/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/calculators/mortgage/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/mortgage/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/mortgage/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/calculators/mortgage/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/mortgage/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/mortgage/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/calculators/savings-rate/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/savings-rate/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/savings-rate/" />
+  </url>
+  <url>
+    <loc>https://ludyem.dev/runway/no/calculators/savings-rate/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ludyem.dev/runway/calculators/savings-rate/" />
+    <xhtml:link rel="alternate" hreflang="nb-NO" href="https://ludyem.dev/runway/no/calculators/savings-rate/" />
+  </url>
   <url><loc>https://ludyem.dev/runway/blog/</loc><lastmod>2026-07-07</lastmod></url>
   <url><loc>https://ludyem.dev/runway/no/blog/</loc><lastmod>2026-07-08</lastmod></url>
   <url><loc>https://ludyem.dev/runway/blog/fire-calculator-retire-abroad/</loc><lastmod>2026-07-07</lastmod></url>

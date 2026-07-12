@@ -41,3 +41,21 @@
     });
   }
 })();
+
+// Language switcher (EN <-> NO), built from the page's hreflang alternates so it
+// only appears when a counterpart exists, and always links the right URL.
+(function () {
+  var lang = (document.documentElement.lang || "en").toLowerCase();
+  var isNO = lang.indexOf("nb") === 0 || lang.indexOf("no") === 0;
+  var alt = document.querySelector('link[rel="alternate"][hreflang="' + (isNO ? "en" : "nb-NO") + '"]');
+  var toggle = document.getElementById("theme-toggle");
+  if (alt && alt.getAttribute("href") && toggle && toggle.parentNode) {
+    var a = document.createElement("a");
+    a.className = "lang-switch";
+    a.href = alt.getAttribute("href");
+    a.textContent = isNO ? "English" : "Norsk";
+    a.setAttribute("lang", isNO ? "en" : "nb");
+    a.setAttribute("aria-label", isNO ? "Switch to English" : "Bytt til norsk");
+    toggle.parentNode.insertBefore(a, toggle);
+  }
+})();
