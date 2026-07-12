@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="is-prelaunch">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barista FIRE Calculator: The Smaller Pot You Actually Need (Free)</title>
+  <meta name="description" content="Free Barista FIRE calculator. See the smaller pot you actually need when part-time income covers part of your spending, so your portfolio only has to fund the gap. Works in kr, $, € or £. No sign-up." />
+  <link rel="canonical" href="https://ludyem.dev/runway/calculators/barista-fire/" />
+
+  <meta property="og:title" content="Barista FIRE Calculator: the smaller pot you actually need" />
+  <meta property="og:description" content="See how much smaller your FIRE number gets when part-time work covers some of your spending. Free, no sign-up, any currency." />
+  <meta property="og:url" content="https://ludyem.dev/runway/calculators/barista-fire/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ludyem.dev/assets/icons/runway.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <link rel="stylesheet" href="/runway/assets/runway-calc.css" />
+  <style>
+    :root {
+      --accent1: #14b8a6; --accent2: #0d9488;
+      --grad-a: #5fd6c4; --grad-b: #34d399;
+      --accent-soft: rgba(20,184,166,0.14); --accent-line: rgba(20,184,166,0.32);
+    }
+  </style>
+  <script src="/assets/launch.js"></script>
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/runway-icon.svg?v=2" />
+  <link rel="alternate icon" type="image/png" href="/assets/icons/runway.png?v=2" />
+  <link rel="apple-touch-icon" href="/assets/icons/runway-180.png?v=2" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Runway Barista FIRE Calculator",
+    "url": "https://ludyem.dev/runway/calculators/barista-fire/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "A free calculator for Barista FIRE: it shows the smaller portfolio you need when part-time income covers part of your yearly spending, so your pot only has to fund the remaining gap at a safe withdrawal rate.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ludyem",
+      "logo": { "@type": "ImageObject", "url": "https://ludyem.dev/assets/icons/ludyem.png" }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Barista FIRE?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Barista FIRE is a form of semi-retirement where you leave the full-time career but keep some part-time or lower-stress work. That income covers part of your yearly spending, so your invested pot only has to fund the remaining gap. It takes its name from part-time roles, a barista shift being the classic example, that people take for the steady income, and sometimes the benefits, rather than the career." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do I need for Barista FIRE?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Take your yearly spending, subtract the income your part-time work brings in after tax, then divide the remaining gap by your safe withdrawal rate, usually 4%. That figure is the pot your portfolio has to cover. Because part-time income shrinks the amount your investments must fund, the Barista FIRE number is much smaller than a full FIRE number." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Barista FIRE and Coast FIRE?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Both let you ease off, but in different ways. Barista FIRE is about income: you keep part-time work so your pot covers only the gap in your spending, and you draw on it now. Coast FIRE is about the pot: you have already invested enough that it will grow into your full number on its own, so you can stop saving and leave it to compound untouched." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does part-time income have to cover all of my spending?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Part-time income only needs to cover the difference between your yearly spending and what your portfolio safely provides. Whatever your part-time work does not cover, your pot does, at your withdrawal rate. If your part-time income happens to cover everything, you need not draw on the pot yet, but Barista FIRE works fine when it covers only part of the gap." }
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/runway/assets/runway-site.css" />
+  <script>(function(){try{var s=localStorage.getItem('runway-theme');var t=s||((window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <script src="/runway/assets/runway-ui.js" defer></script>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/runway/" class="logo">
+        <img class="logo-mark" src="/assets/icons/runway.png" alt="" width="32" height="32" />
+        Runway
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="nav-links" id="nav-links">
+        <a href="/runway/calculators/">Calculators</a>
+        <a href="/runway/#features">Features</a>
+        <a href="/runway/blog/">Blog</a>
+        <a href="/runway/support.html">Support</a>
+      </div>
+      <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-nav js-prelaunch" style="white-space:nowrap;" target="_blank" rel="noopener">Try the beta</a>
+      <a href="https://apps.apple.com/app/id6784426559" class="btn-nav js-live" style="white-space:nowrap;" target="_blank" rel="noopener">Download free</a>
+    </div>
+  </nav>
+
+  <main class="calc-wrap">
+    <a href="/runway/calculators/" class="back-link">&larr; All calculators</a>
+
+    <div class="calc-hero">
+      <p class="page-label">Barista FIRE Calculator</p>
+      <h1>Retire early, work a little</h1>
+      <p class="lede">Barista FIRE is semi-retirement: a little part-time income covers part of your spending, so the pot you need to save is far smaller. See how much smaller yours is.</p>
+    </div>
+
+    <section class="calc" aria-label="Barista FIRE calculator">
+      <div class="calc-form">
+        <div class="calc-field">
+          <label id="cur-label">Currency</label>
+          <div class="calc-cur" role="group" aria-labelledby="cur-label" id="cur">
+            <button type="button" data-cur="kr" aria-pressed="true">kr</button>
+            <button type="button" data-cur="$" aria-pressed="false">$</button>
+            <button type="button" data-cur="&euro;" aria-pressed="false">&euro;</button>
+            <button type="button" data-cur="&pound;" aria-pressed="false">&pound;</button>
+          </div>
+        </div>
+        <div class="calc-field">
+          <label for="spend">Yearly spending in retirement</label>
+          <div class="calc-input"><input type="number" id="spend" value="420000" min="0" step="10000" inputmode="numeric" /><span class="unit cur-unit">kr</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="parttime">Part-time income <span class="hint">— per year, after tax</span></label>
+          <div class="calc-input"><input type="number" id="parttime" value="180000" min="0" step="10000" inputmode="numeric" /><span class="unit cur-unit">kr</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="invested">Invested so far</label>
+          <div class="calc-input"><input type="number" id="invested" value="2000000" min="0" step="10000" inputmode="numeric" /><span class="unit cur-unit">kr</span></div>
+        </div>
+        <div class="calc-field">
+          <label for="wr">Withdrawal rate <span class="hint">— the 4% rule</span></label>
+          <div class="calc-range"><input type="range" id="wr" value="4" min="2.5" max="5" step="0.1" aria-label="Safe withdrawal rate, percent per year" /><span class="rv" id="wr-v">4.0%</span></div>
+        </div>
+      </div>
+
+      <div class="calc-out" aria-live="polite">
+        <div class="calc-verdict is-wait" id="verdict"><span class="dot"></span> <span id="verdict-txt">Keep saving</span></div>
+        <div class="out-label">Barista FIRE number</div>
+        <div class="out-big" id="out-big">kr 6,000,000</div>
+        <div class="out-sub" id="out-explain">About <strong>kr 4,000,000</strong> more and your pot covers the gap after part-time work.</div>
+        <div class="out-rows">
+          <div class="out-row"><span class="k">Full FIRE number</span><span class="v" id="out-fire">kr 10,500,000</span></div>
+          <div class="out-row"><span class="k">Barista saves you</span><span class="v" id="out-saved">kr 4,500,000</span></div>
+          <div class="out-row"><span class="k">Portfolio must cover</span><span class="v" id="out-gap">kr 240,000/yr</span></div>
+        </div>
+        <details class="calc-method">
+          <summary>How this is worked out</summary>
+          <div class="method-body">
+            <p>Your <strong>full FIRE number</strong> is yearly spending divided by the withdrawal rate. Subtract your part-time income from spending first, and that smaller <strong>gap</strong> divided by the same rate is your <strong>Barista FIRE number</strong>, the pot your portfolio actually has to cover.</p>
+            <p>It assumes your part-time net income is steady and covers the rest of your spending, works in real terms, and ignores tax and benefit nuance and the bridge before you start drawing the pot. Not tax advice.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <div class="calc-body doc-body">
+      <h2>What Barista FIRE means</h2>
+      <p>
+        <strong>Barista FIRE</strong> is semi-retirement. You leave the full-time career but keep some
+        part-time or lower-stress work, and that income covers part of your yearly spending. Because your
+        job is no longer to fund everything, the pot you need to save is far smaller than a full retirement
+        number. The name comes from the kind of part-time role, a barista shift being the classic example,
+        that people take for the steady income, and sometimes the benefits, rather than the career. It's one
+        of the <a href="/runway/blog/types-of-fire/">types of FIRE</a>, and often the fastest to reach.
+      </p>
+
+      <h2>Why part-time income shrinks the pot so much</h2>
+      <p>
+        Here's the leverage. Under the <a href="/runway/blog/four-percent-rule/">4% rule</a>, every unit of
+        yearly spending your portfolio has to cover needs about 25 times that invested behind it. So each
+        unit of spending your part-time work covers instead saves you roughly 25 in the pot. A modest
+        part-time income can therefore knock a startling amount off the number. Subtract your part-time
+        income from your spending, and it's only that remaining <strong>gap</strong>, divided by your
+        withdrawal rate, that your investments must fund, not the whole
+        <a href="/runway/calculators/fire/">FIRE number</a> this shrinks from.
+      </p>
+
+      <h2>Barista FIRE vs Coast FIRE</h2>
+      <p>
+        They both let you downshift, but they lean on different things. Barista FIRE is about
+        <strong>income</strong>: you keep part-time work so the pot only has to cover the gap, and you start
+        drawing on it now. Coast FIRE is about the <strong>pot</strong>: you've already invested enough that
+        it will grow into your full number on its own, so you stop saving and leave it untouched. You can
+        even be both at once. The <a href="/runway/calculators/coast-fire/">Coast FIRE calculator</a> finds
+        the age you can stop saving, and <a href="/runway/blog/barista-fire/">the Barista FIRE guide</a>
+        walks through the trade-offs of semi-retiring.
+      </p>
+    </div>
+
+    <div class="calc-body">
+      <div class="post-cta">
+        <img src="/runway/assets/mascot-globe.svg" width="96" height="96" loading="lazy" decoding="async" alt="" style="margin:0 auto 8px;display:block;" />
+        <h2 style="border:0;padding:0;">See your real Barista FIRE number</h2>
+        <p class="js-prelaunch">Runway builds your Barista FIRE number from your real figures, applies your country's tax and pension rules, and shows how part-time income reshapes the pot and the age you reach it. It launches on the App Store on 25 August 2026, and the beta is open now.</p>
+        <p class="js-live">Runway builds your Barista FIRE number from your real figures, applies your country's tax and pension rules, and shows how part-time income reshapes the pot and the age you reach it. Your freedom age is free, forever.</p>
+        <a href="https://testflight.apple.com/join/mW9JahfG" class="btn-primary js-prelaunch" target="_blank" rel="noopener">Try the beta on TestFlight</a>
+        <a href="https://apps.apple.com/app/id6784426559" class="btn-primary js-live" target="_blank" rel="noopener">Download free on the App Store</a>
+      </div>
+    </div>
+
+    <div class="calc-body doc-body">
+      <h2>Frequently asked</h2>
+      <div class="faq-list" style="margin-top:20px;">
+        <details>
+          <summary>What is Barista FIRE?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Barista FIRE is semi-retirement: you leave the full-time career but keep some part-time or lower-stress work. That income covers part of your yearly spending, so your invested pot only has to fund the remaining gap. It's named after part-time roles, like a barista shift, that people take for the income, and sometimes the benefits, not the career.</p></div>
+        </details>
+        <details>
+          <summary>How much do I need for Barista FIRE?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Take your yearly spending, subtract your part-time income after tax, and divide the remaining gap by your withdrawal rate, usually 4%. That's the pot your portfolio has to cover. Because part-time income shrinks what your investments must fund, the Barista number is much smaller than a full FIRE number.</p></div>
+        </details>
+        <details>
+          <summary>Barista FIRE vs Coast FIRE?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>Barista FIRE is about income: you keep part-time work so the pot only covers the gap, and you draw on it now. Coast FIRE is about the pot: you've invested enough that it grows into your full number on its own, so you stop saving and leave it to compound. You can be both at once.</p></div>
+        </details>
+        <details>
+          <summary>Does part-time income have to cover everything?<span class="summary-icon">+</span></summary>
+          <div class="faq-body"><p>No, just the gap. Part-time income only needs to cover the difference between your spending and what your portfolio safely provides; your pot covers the rest at your withdrawal rate. If it happens to cover all of your spending you needn't draw the pot yet, but Barista FIRE works fine covering only part of the gap.</p></div>
+        </details>
+      </div>
+
+      <div class="author-box">
+        <img src="/runway/assets/mascot-proud.svg" alt="" width="54" height="54" />
+        <div>
+          <h3>Built by Dylan, maker of Runway</h3>
+          <p>Italian, in Norway about eight years, building the cross-border FIRE planner that didn't exist for someone like me. This calculator is an educational tool, not financial or tax advice.</p>
+        </div>
+      </div>
+
+      <p class="updated" style="margin-top:32px;">Related:
+        <a href="/runway/calculators/coast-fire/">Coast FIRE calculator</a>,
+        <a href="/runway/calculators/fire/">FIRE calculator</a>, and
+        <a href="/runway/blog/barista-fire/">the Barista FIRE guide</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/runway/" class="footer-logo">
+        <img class="logo-mark" src="/assets/icons/ludyem.png" alt="" width="22" height="22" />
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/runway/calculators/">Calculators</a>
+        <a href="/runway/blog/">Blog</a>
+        <a href="/runway/privacy.html">Privacy</a>
+        <a href="/runway/terms.html">Terms</a>
+        <a href="/runway/support.html">Support</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg><span class="theme-toggle-label">Light</span></button>
+      <p class="footer-copy">&copy; 2026 Ludyem AS &middot; Not financial advice</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var cur = "kr";
+      var el = function (id) { return document.getElementById(id); };
+      var inputs = ["spend", "parttime", "invested", "wr"].map(el);
+
+      function money(n) {
+        if (!isFinite(n)) return "—";
+        var s = Math.round(n).toLocaleString("en-US");
+        return cur === "kr" ? "kr " + s : cur + s;
+      }
+      function setCurUnits() {
+        Array.prototype.forEach.call(document.querySelectorAll(".cur-unit"), function (u) { u.innerHTML = cur; });
+      }
+
+      function compute() {
+        var spend = Math.max(0, +el("spend").value || 0);
+        var parttime = Math.max(0, +el("parttime").value || 0);
+        var invested = Math.max(0, +el("invested").value || 0);
+        var w = (+el("wr").value || 0) / 100;
+
+        el("wr-v").textContent = (+el("wr").value).toFixed(1) + "%";
+
+        var fire = w > 0 ? spend / w : Infinity;                 // full FIRE number
+        var gapSpend = Math.max(0, spend - parttime);            // what the pot must cover per year
+        var barista = w > 0 ? gapSpend / w : Infinity;           // smaller pot for the gap
+        var saved = fire - barista;                              // what part-time work shaves off
+
+        el("out-big").textContent = money(barista);
+        el("out-fire").textContent = money(fire);
+        el("out-saved").textContent = money(saved);
+        el("out-gap").textContent = money(gapSpend) + "/yr";
+
+        var verdict = el("verdict"), vtxt = el("verdict-txt"), explain = el("out-explain");
+        if (invested >= barista && isFinite(barista)) {
+          verdict.className = "calc-verdict is-good";
+          vtxt.textContent = "You could Barista now";
+          explain.innerHTML = "Your part-time income covers <strong>" + money(parttime) + "</strong>/yr, so your pot only has to cover the rest — and it does.";
+        } else {
+          verdict.className = "calc-verdict is-wait";
+          vtxt.textContent = "Keep saving";
+          explain.innerHTML = "About <strong>" + money(barista - invested) + "</strong> more and your pot covers the gap after part-time work.";
+        }
+      }
+
+      inputs.forEach(function (i) { i && i.addEventListener("input", compute); });
+
+      var curWrap = el("cur");
+      curWrap.addEventListener("click", function (e) {
+        var b = e.target.closest("button"); if (!b) return;
+        cur = b.getAttribute("data-cur");
+        Array.prototype.forEach.call(curWrap.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        setCurUnits();
+        compute();
+      });
+
+      setCurUnits();
+      compute();
+    })();
+  </script>
+
+</body>
+</html>

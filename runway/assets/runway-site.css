@@ -1,0 +1,85 @@
+/* ============================================================================
+   Runway shared site chrome — linked on every Runway page.
+   Holds three Runway-scoped concerns, all additive and gated so they never
+   affect the shared dark default of the other apps (tend/workouts):
+     1. the opt-in LIGHT theme (via <html data-theme="light">)
+     2. the mobile nav hamburger (the shared bar hides its links under ~860px)
+     3. the footer light/dark toggle control
+   ========================================================================== */
+
+/* ── 1. LIGHT theme ── darker green accents so type reads on white ── */
+:root[data-theme="light"] {
+  --bg:     #f6f8fb;
+  --bg2:    #eef2f7;
+  --text:   #0f1e2e;
+  --muted:  #4a5b6d;
+  --faint:  #8a99a8;
+  --card:   #ffffff;
+  --border: rgba(15,30,46,0.10);
+  --accent1: #0d9488;
+  --accent2: #0f766e;
+  --grad-a:  #0d9488;
+  --grad-b:  #0f766e;
+  --accent-soft: rgba(13,148,136,0.10);
+  --accent-line: rgba(13,148,136,0.28);
+}
+:root[data-theme="light"] nav { background: rgba(246,248,251,0.86); border-bottom-color: var(--border); }
+:root[data-theme="light"] .feature-card,
+:root[data-theme="light"] .calc,
+:root[data-theme="light"] .calc-card,
+:root[data-theme="light"] .step,
+:root[data-theme="light"] .post-card,
+:root[data-theme="light"] .app-card,
+:root[data-theme="light"] .author-box,
+:root[data-theme="light"] .stats-bar,
+:root[data-theme="light"] details {
+  box-shadow: 0 1px 2px rgba(15,30,46,0.05), 0 10px 30px -18px rgba(15,30,46,0.22);
+}
+:root[data-theme="light"] .calc-input input[type="number"],
+:root[data-theme="light"] .calc-cur,
+:root[data-theme="light"] .waitlist-email-row input[type="email"] { background: #eef2f6; }
+:root[data-theme="light"] .calc-out,
+:root[data-theme="light"] .post-cta,
+:root[data-theme="light"] .cta-card,
+:root[data-theme="light"] .waitlist-card {
+  background: linear-gradient(165deg, rgba(13,148,136,0.10), rgba(13,148,136,0.02));
+}
+:root[data-theme="light"] .cmp thead th { background: #eef2f6; }
+
+/* ── 2. Mobile nav hamburger ──
+   The shared stylesheet hides .nav-links under ~860px with no fallback; add a
+   toggle that drops them down as a panel. ── */
+.nav-toggle {
+  display: none; background: var(--card); border: 1px solid var(--border); color: var(--text);
+  width: 42px; height: 40px; border-radius: 10px; cursor: pointer; padding: 0;
+  align-items: center; justify-content: center;
+}
+.nav-toggle svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+@media (max-width: 860px) {
+  .nav-toggle { display: inline-flex; order: 3; margin-left: 12px; }
+  .nav-inner .btn-nav { order: 2; margin-left: auto; }
+  nav .nav-links { order: 5; }
+  nav.is-open .nav-links {
+    display: flex; flex-direction: column; align-items: stretch; gap: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 4px 24px 14px; box-shadow: 0 20px 34px -22px rgba(0,0,0,0.65);
+  }
+  nav.is-open .nav-links a { padding: 14px 2px; border-bottom: 1px solid var(--border); font-size: 16px; color: var(--text); }
+  nav.is-open .nav-links a:last-child { border-bottom: none; }
+}
+
+/* ── 3. Footer light/dark toggle ── */
+.theme-toggle {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--card);
+  border: 1px solid var(--border); color: var(--muted); border-radius: 50px;
+  padding: 8px 15px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--accent-line); }
+.theme-toggle svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+/* Show the sun in light mode, the moon in dark mode */
+.theme-toggle .ic-sun { display: none; }
+.theme-toggle .ic-moon { display: block; }
+:root[data-theme="light"] .theme-toggle .ic-sun { display: block; }
+:root[data-theme="light"] .theme-toggle .ic-moon { display: none; }
