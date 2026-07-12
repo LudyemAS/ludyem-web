@@ -46,6 +46,12 @@
 }
 :root[data-theme="light"] .cmp thead th { background: #eef2f6; }
 
+/* ── Layout fix ── the "Built for Norway" duo mascot carries square width/height
+   <img> attributes that don't match its portrait SVG viewBox, so without an
+   explicit height the box kept the 768px attribute height and reserved a big
+   empty gap below it. Force proportional scaling. ── */
+.duo img { height: auto; }
+
 /* ── 2. Mobile nav hamburger ──
    The shared stylesheet hides .nav-links under ~860px with no fallback; add a
    toggle that drops them down as a panel. ── */
@@ -77,6 +83,14 @@
   transition: color .2s, border-color .2s;
 }
 .theme-toggle:hover { color: var(--text); border-color: var(--accent-line); }
+/* Footer language switch (EN <-> NO), sits next to the theme toggle */
+.lang-switch {
+  display: inline-flex; align-items: center; background: var(--card);
+  border: 1px solid var(--border); color: var(--muted); border-radius: 50px;
+  padding: 8px 15px; font-size: 13px; font-weight: 600; text-decoration: none;
+  transition: color .2s, border-color .2s;
+}
+.lang-switch:hover { color: var(--text); border-color: var(--accent-line); }
 .theme-toggle svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 /* Show the sun in light mode, the moon in dark mode */
 .theme-toggle .ic-sun { display: none; }
