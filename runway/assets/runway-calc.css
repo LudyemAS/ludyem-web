@@ -96,6 +96,11 @@
 .calc-body p strong { color: var(--text); }
 .calc-body a { color: var(--accent2); text-decoration: none; }
 .calc-body a:hover { text-decoration: underline; }
+/* The app-download CTA is an <a class="btn-primary"> inside .calc-body; the link
+   colour above out-specifies .btn-primary and was tinting the button text dark
+   green on the green button. Force white (mirrors ludyem.css's .doc-body fix). */
+.calc-body a.btn-primary, .doc-body a.btn-primary { color: #fff; }
+.calc-body a.btn-primary:hover, .doc-body a.btn-primary:hover { text-decoration: none; }
 
 /* ── Calculator hub index cards ── */
 .calc-index { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr)); gap: 18px; margin-top: 48px; }
