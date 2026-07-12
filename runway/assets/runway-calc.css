@@ -19,6 +19,7 @@
   display: grid; grid-template-columns: 1fr 0.92fr;
   background: var(--card); border: 1px solid var(--border); border-radius: 24px;
   overflow: hidden; margin-top: 36px;
+  padding: 0;   /* .calc is a <section>; cancel the global section{padding:100px 0} */
 }
 @media (max-width: 780px) { .calc { grid-template-columns: 1fr; } }
 
@@ -60,7 +61,10 @@
 @media (max-width: 780px) { .calc-out { border-left: none; border-top: 1px solid var(--border); order: -1; } }
 .calc-out .out-label { font-size: 12px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 .calc-out .out-big {
-  font-size: clamp(38px, 7vw, 56px); font-weight: 800; letter-spacing: -2px; line-height: 1.02;
+  font-size: clamp(38px, 7vw, 56px); font-weight: 800; letter-spacing: -2px;
+  /* Looser line-height + a touch of padding so background-clip:text doesn't
+     clip glyph descenders (e.g. the "g" in "age 54"). */
+  line-height: 1.12; padding-bottom: 0.08em;
   background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
