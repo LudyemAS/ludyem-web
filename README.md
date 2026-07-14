@@ -26,9 +26,9 @@ HTML + one shared stylesheet, deployed straight from `main`.
 
 ```bash
 # Not on the App Store yet → "Coming soon" buttons, no dead links:
-./new-app.py water --name Water --emoji 💧 --accent "#2e8dd9" \
-    --tagline "Log hydration in a single tap." \
-    --blurb "A friendly hydration tracker that keeps you on pace all day."
+./new-app.py myapp --name MyApp --emoji ✨ --accent "#2e8dd9" \
+    --tagline "One clear sentence about what it does." \
+    --blurb "A slightly longer sentence for the hero section."
 
 # Live app → wires real App Store buttons:
 ./new-app.py tend --name Tend --emoji 🌿 --accent "#22c55e" --appstore-id 6450000000 \
