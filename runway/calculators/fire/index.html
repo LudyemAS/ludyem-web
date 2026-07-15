@@ -107,6 +107,7 @@
     <a href="/runway/calculators/" class="back-link">&larr; All calculators</a>
 
     <div class="calc-hero">
+      <div class="hero-spot spot-tile"><img src="/runway/assets/spot/SpotFire.svg" alt="" width="88" height="88" /></div>
       <p class="page-label">FIRE Calculator</p>
       <h1>When can you retire?</h1>
       <p class="lede">Enter what you have, what you invest, and what you'll spend. See the age your money could set you free, and the FIRE number you're aiming at.</p>
@@ -169,7 +170,7 @@
     </section>
 
     <div class="calc-body doc-body">
-      <h2>What this FIRE calculator tells you</h2>
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotTargetHit.svg" alt="" /></span>What this FIRE calculator tells you</h2>
       <p>
         FIRE stands for <strong>Financial Independence, Retire Early</strong>. The whole movement turns on
         two numbers: the size of pot that would let you stop working, and the age you'd reach it. This
@@ -182,7 +183,32 @@
         your expected <strong>real</strong> return until the pot gets there.
       </p>
 
-      <h2>Why "real" return matters</h2>
+      <figure class="figure">
+        <div class="fig-kicker">How the pot reaches your number</div>
+        <svg viewBox="0 0 640 300" role="img" aria-label="A chart of invested savings compounding upward over about 22 years until they reach the FIRE number, the point at which you are financially free.">
+          <defs>
+            <linearGradient id="fireFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#14b8a6" stop-opacity="0.30" />
+              <stop offset="1" stop-color="#14b8a6" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <line x1="64" y1="250" x2="600" y2="250" stroke="var(--border)" stroke-width="1.5" />
+          <line x1="64" y1="44" x2="64" y2="250" stroke="var(--border)" stroke-width="1.5" />
+          <line x1="64" y1="64" x2="600" y2="64" stroke="var(--accent2)" stroke-width="1.5" stroke-dasharray="5 5" />
+          <text x="600" y="54" text-anchor="end" class="fig-label" style="fill:var(--accent2)">Your FIRE number</text>
+          <path d="M64,244 C 244,238 384,196 500,64 L500,250 L64,250 Z" fill="url(#fireFill)" />
+          <path d="M64,244 C 244,238 384,196 500,64" fill="none" stroke="var(--accent1)" stroke-width="3" stroke-linecap="round" />
+          <line x1="500" y1="64" x2="500" y2="250" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 5" />
+          <circle cx="64" cy="244" r="4.5" fill="var(--muted)" />
+          <circle cx="500" cy="64" r="6.5" fill="var(--accent1)" stroke="var(--card)" stroke-width="2.5" />
+          <text x="500" y="34" text-anchor="middle" class="fig-strong">You're free</text>
+          <text x="64" y="272" text-anchor="middle" class="fig-axis">Age 32</text>
+          <text x="500" y="272" text-anchor="middle" class="fig-axis">Age 54</text>
+        </svg>
+        <figcaption>Your savings and monthly investing compound in real terms until the pot reaches your FIRE number. Everything is in today's money.</figcaption>
+      </figure>
+
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotInflation.svg" alt="" /></span>Why "real" return matters</h2>
       <p>
         This calculator works entirely in <strong>real</strong> terms, meaning returns after inflation. That's
         why the answer is in today's money: a FIRE number of ten million here means ten million of today's
@@ -191,7 +217,7 @@
         inflation is about 4.5 percent real.
       </p>
 
-      <h2>Where the simple version breaks</h2>
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotCaution.svg" alt="" /></span>Where the simple version breaks</h2>
       <p>
         A universal calculator can't see the things that actually bend your date: <strong>tax on your
         withdrawals</strong>, a <strong>state or workplace pension</strong> arriving partway through, and the

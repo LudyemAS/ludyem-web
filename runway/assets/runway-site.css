@@ -97,3 +97,67 @@
 .theme-toggle .ic-moon { display: block; }
 :root[data-theme="light"] .theme-toggle .ic-sun { display: block; }
 :root[data-theme="light"] .theme-toggle .ic-moon { display: none; }
+
+/* ============================================================================
+   4. VISUAL SYSTEM — Spot illustrations + inline diagrams (the "fuller refresh")
+   Reuses the app's own Spot* art (charcoal-on-cream vector) as page illustration.
+   The art is drawn for a LIGHT ground, so every spot sits on a fixed light-teal
+   "sticker" tile (--spot-a/--spot-b are fixed, NOT theme tokens) so it reads
+   identically on the dark default and the light theme. Runway-scoped: only pages
+   that link this file get it, so tend/workouts are untouched.
+   ========================================================================== */
+:root { --spot-a: #ecfaf6; --spot-b: #d3f0ea; --spot-edge: rgba(13,148,136,0.30); }
+
+.spot-tile {
+  display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  background: linear-gradient(158deg, var(--spot-a), var(--spot-b));
+  border: 1px solid var(--spot-edge); border-radius: 20px;
+}
+.spot-tile img { width: 68%; height: 68%; object-fit: contain; display: block; }
+
+/* Hero spot — the centered illustration above a calculator / article title. */
+.hero-spot { display: flex; position: relative; width: 124px; height: 124px; border-radius: 30px; margin: 0 auto 24px; box-shadow: 0 24px 46px -26px rgba(13,148,136,0.55); }
+.hero-spot::after { content: ""; position: absolute; inset: -46%; z-index: -1; background: radial-gradient(circle, rgba(20,184,166,0.22), transparent 68%); pointer-events: none; }
+@media (max-width: 600px) { .hero-spot { width: 100px; height: 100px; border-radius: 25px; } }
+
+/* Illustrated row — a spot beside a short explainer block (breaks up prose). */
+.illus-row { display: flex; gap: 20px; align-items: flex-start; margin: 30px 0; }
+.illus-row .spot-tile { width: 68px; height: 68px; border-radius: 17px; }
+.illus-row .ir-body { flex: 1; min-width: 0; }
+.illus-row .ir-body h3 { font-size: 17px; font-weight: 700; color: var(--text); margin: 4px 0 6px; letter-spacing: -.2px; }
+.illus-row .ir-body p { margin: 0; }
+@media (max-width: 520px) { .illus-row { gap: 14px; } .illus-row .spot-tile { width: 56px; height: 56px; border-radius: 15px; } }
+
+/* Small lead spot that sits inline before an <h2> section heading. */
+.h2-spot { display: inline-flex; vertical-align: -8px; width: 38px; height: 38px; border-radius: 11px; margin-right: 12px; }
+
+/* Trio / strip of spots (e.g. the four types of FIRE, or three country rules). */
+.spot-strip { display: flex; flex-wrap: wrap; gap: 14px; margin: 26px 0; }
+.spot-strip .ss-item { flex: 1 1 130px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px 14px; }
+.spot-strip .spot-tile { width: 58px; height: 58px; border-radius: 15px; margin: 0 auto 12px; }
+.spot-strip h4 { font-size: 14px; font-weight: 700; color: var(--text); margin: 0 0 4px; }
+.spot-strip p { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0; }
+
+/* ── Inline SVG diagram card (theme-aware via currentColor + CSS vars) ── */
+.figure { margin: 32px 0; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px 24px 18px; }
+.figure .fig-kicker { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent2); text-align: center; margin-bottom: 18px; }
+.figure svg { display: block; width: 100%; height: auto; overflow: visible; }
+.figure figcaption { margin-top: 16px; font-size: 13px; color: var(--faint); text-align: center; line-height: 1.55; }
+.figure .fig-axis { fill: var(--faint); font-size: 12px; font-family: inherit; }
+.figure .fig-label { fill: var(--muted); font-size: 13px; font-weight: 600; font-family: inherit; }
+.figure .fig-strong { fill: var(--text); font-weight: 700; font-family: inherit; }
+
+/* ── Blog index cards, refreshed: a spot thumbnail beside the copy ── */
+.post-card.has-spot { display: flex; gap: 22px; align-items: center; }
+.post-card .pc-spot { width: 84px; height: 84px; border-radius: 20px; }
+.post-card .pc-body { flex: 1; min-width: 0; }
+.post-card .pc-body h2 { margin-top: 0; }
+.post-card .pc-body p { margin-bottom: 0; }
+@media (max-width: 560px) {
+  .post-card.has-spot { gap: 16px; align-items: flex-start; }
+  .post-card .pc-spot { width: 60px; height: 60px; border-radius: 16px; }
+}
+
+/* Calculator hub cards: swap the thin stroke glyph for a full-colour spot. */
+.calc-card .cc-ic.is-spot { background: linear-gradient(158deg, var(--spot-a), var(--spot-b)); border: 1px solid var(--spot-edge); width: 54px; height: 54px; border-radius: 15px; }
+.calc-card .cc-ic.is-spot img { width: 68%; height: 68%; display: block; }

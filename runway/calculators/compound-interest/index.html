@@ -107,6 +107,7 @@
     <a href="/runway/calculators/" class="back-link">&larr; All calculators</a>
 
     <div class="calc-hero">
+      <div class="hero-spot spot-tile"><img src="/runway/assets/spot/SpotSnowball.svg" alt="" width="88" height="88" /></div>
       <p class="page-label">Compound Interest Calculator</p>
       <h1>How much will it grow?</h1>
       <p class="lede">Compound interest is the interest your money earns on top of the interest it already earned. Set a starting amount, a monthly contribution and a rate, and see how much of the final total is pure growth.</p>
@@ -161,7 +162,7 @@
     </section>
 
     <div class="calc-body doc-body">
-      <h2>What compound interest actually is</h2>
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotIdea.svg" alt="" /></span>What compound interest actually is</h2>
       <p>
         <strong>Compound interest</strong> is the interest your money earns on top of the interest it has
         already earned. In the first month a balance earns a little; the next month that little is part of the
@@ -170,7 +171,25 @@
         a single index fund to a full <a href="/runway/calculators/fire/">FIRE number</a>.
       </p>
 
-      <h2>Why monthly compounding and steady contributions matter</h2>
+      <figure class="figure">
+        <div class="fig-kicker">Where the growth comes from</div>
+        <svg viewBox="0 0 640 300" role="img" aria-label="A stacked chart: the money you contribute rises in a straight line, and investment growth stacks on top as a widening band, so most of the final total is growth.">
+          <defs><linearGradient id="ciGrow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14b8a6" stop-opacity="0.36" /><stop offset="1" stop-color="#14b8a6" stop-opacity="0.06" /></linearGradient></defs>
+          <line x1="64" y1="250" x2="600" y2="250" stroke="var(--border)" stroke-width="1.5" />
+          <line x1="64" y1="44" x2="64" y2="250" stroke="var(--border)" stroke-width="1.5" />
+          <path d="M64,244 L576,158 L576,250 L64,250 Z" fill="rgba(148,163,184,0.16)" />
+          <path d="M64,244 C 260,224 440,150 576,72 L576,158 Z" fill="url(#ciGrow)" />
+          <path d="M64,244 L576,158" fill="none" stroke="var(--muted)" stroke-width="2" />
+          <path d="M64,244 C 260,224 440,150 576,72" fill="none" stroke="var(--accent1)" stroke-width="3" stroke-linecap="round" />
+          <text x="250" y="228" class="fig-label" style="fill:var(--muted)">What you put in</text>
+          <text x="404" y="150" class="fig-strong">Growth</text>
+          <text x="64" y="272" text-anchor="middle" class="fig-axis">Start</text>
+          <text x="576" y="272" text-anchor="end" class="fig-axis">30 years on</text>
+        </svg>
+        <figcaption>The straight band is the cash you contribute. The teal band above it is compounding, and over decades it becomes the bigger half.</figcaption>
+      </figure>
+
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotGrowth.svg" alt="" /></span>Why monthly compounding and steady contributions matter</h2>
       <p>
         Two levers do most of the work here. Compounding <strong>monthly</strong> rather than once a year lets
         each month's interest start earning immediately, a small edge that stacks up over decades. And a
@@ -180,7 +199,7 @@
         market, not timing the market.
       </p>
 
-      <h2>One catch: this is a nominal number</h2>
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotInflation.svg" alt="" /></span>One catch: this is a nominal number</h2>
       <p>
         The headline figure is <strong>nominal</strong>, it's the raw balance, not adjusted for inflation.
         Rising prices quietly erode what money buys, so a real, inflation-adjusted return would be lower, often
