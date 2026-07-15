@@ -109,6 +109,7 @@
     <a href="/runway/no/calculators/" class="back-link">&larr; Alle kalkulatorer</a>
 
     <div class="calc-hero">
+      <div class="hero-spot spot-tile"><img src="/runway/assets/spot/SpotSnowball.svg" alt="" width="88" height="88" /></div>
       <p class="page-label">Renters rente-kalkulator</p>
       <h1>Hvor mye vokser det?</h1>
       <p class="lede">Renters rente er renten pengene dine tjener oppå renten de allerede har tjent. Sett et startbeløp, et månedlig innskudd og en rente, og se hvor mye av sluttsummen som er ren vekst.</p>
@@ -163,7 +164,7 @@
     </section>
 
     <div class="calc-body doc-body">
-      <h2>Hva renters rente egentlig er</h2>
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotIdea.svg" alt="" /></span>Hva renters rente egentlig er</h2>
       <p>
         <strong>Renters rente</strong> er renten pengene dine tjener oppå renten de allerede har tjent.
         Den første måneden tjener saldoen litt; neste måned er det lille en del av saldoen, så det tjener
@@ -172,7 +173,25 @@
         et helt <a href="/runway/no/calculators/fire/">FIRE-tall</a>.
       </p>
 
-      <h2>Hvorfor månedlig renteberegning og jevne innskudd betyr noe</h2>
+      <figure class="figure">
+        <div class="fig-kicker">Hvor veksten kommer fra</div>
+        <svg viewBox="0 0 640 300" role="img" aria-label="Et stablet diagram: pengene du legger inn stiger i en rett linje, og avkastningen stables oppå som et voksende bånd, slik at mesteparten av sluttsummen er vekst.">
+          <defs><linearGradient id="ciGrow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14b8a6" stop-opacity="0.36" /><stop offset="1" stop-color="#14b8a6" stop-opacity="0.06" /></linearGradient></defs>
+          <line x1="64" y1="250" x2="600" y2="250" stroke="var(--border)" stroke-width="1.5" />
+          <line x1="64" y1="44" x2="64" y2="250" stroke="var(--border)" stroke-width="1.5" />
+          <path d="M64,244 L576,158 L576,250 L64,250 Z" fill="rgba(148,163,184,0.16)" />
+          <path d="M64,244 C 260,224 440,150 576,72 L576,158 Z" fill="url(#ciGrow)" />
+          <path d="M64,244 L576,158" fill="none" stroke="var(--muted)" stroke-width="2" />
+          <path d="M64,244 C 260,224 440,150 576,72" fill="none" stroke="var(--accent1)" stroke-width="3" stroke-linecap="round" />
+          <text x="250" y="228" class="fig-label" style="fill:var(--muted)">Det du legger inn</text>
+          <text x="404" y="150" class="fig-strong">Vekst</text>
+          <text x="64" y="272" text-anchor="middle" class="fig-axis">Start</text>
+          <text x="576" y="272" text-anchor="end" class="fig-axis">30 år senere</text>
+        </svg>
+        <figcaption>Det jevne båndet er pengene du legger inn. Det teal båndet over er renters rente, og over flere tiår blir det den største delen.</figcaption>
+      </figure>
+
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotGrowth.svg" alt="" /></span>Hvorfor månedlig renteberegning og jevne innskudd betyr noe</h2>
       <p>
         To grep gjør mesteparten av jobben her. Å beregne renten <strong>månedlig</strong> i stedet for én
         gang i året lar hver måneds rente begynne å tjene med en gang, en liten fordel som hoper seg opp over
@@ -182,7 +201,7 @@
         Tid i markedet, ikke å time markedet.
       </p>
 
-      <h2>Én hake: dette er et nominelt tall</h2>
+      <h2><span class="h2-spot spot-tile"><img src="/runway/assets/spot/SpotInflation.svg" alt="" /></span>Én hake: dette er et nominelt tall</h2>
       <p>
         Hovedtallet er <strong>nominelt</strong>, det er råsaldoen, ikke justert for inflasjon. Stigende priser
         tærer i det stille på det pengene er verdt, så realavkastningen — den inflasjonsjusterte avkastningen —
