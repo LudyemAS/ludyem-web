@@ -1,0 +1,20 @@
+{
+  "name": "ludyem-waitlist",
+  "main": "src/index.js",
+  "workers_dev": true,
+  "preview_urls": true,
+  "compatibility_date": "2026-06-01",
+  "kv_namespaces": [
+    {
+      "id": "dd3e9880879c4a84bfb59dfe611d1dd2",
+      "binding": "WAITLIST"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "SUBSCRIBE_RL",
+      "namespace_id": "1001",
+      "simple": { "limit": 5, "period": 60 }
+    }
+  ]
+}
