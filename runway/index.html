@@ -41,9 +41,6 @@
     }
     .covenant strong { color: var(--grad-a); }
 
-    /* Custom feature icons (replace emoji) */
-    .feature-icon svg.ficon, .ficon { width: 24px; height: 24px; display: block; fill: none; stroke: var(--grad-a); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
     /* "How it works" three-step path */
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
     @media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
@@ -115,29 +112,6 @@
   <script src="/runway/assets/runway-ui.js" defer></script>
 </head>
 <body>
-
-  <!-- Icon sprite (decorative) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
-    <symbol id="ic-flag" viewBox="0 0 24 24"><path d="M6 21V4"/><path d="M6 4.5h11l-2.2 3.2L17 11H6"/></symbol>
-    <symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1"/></symbol>
-    <symbol id="ic-levers" viewBox="0 0 24 24"><line x1="4" y1="8" x2="20" y2="8"/><circle cx="9" cy="8" r="2.3"/><line x1="4" y1="16" x2="20" y2="16"/><circle cx="15" cy="16" r="2.3"/></symbol>
-    <symbol id="ic-gauge" viewBox="0 0 24 24"><path d="M4.5 16a8 8 0 0 1 15 0"/><path d="M12 16l4.2-4.6"/><circle cx="12" cy="16" r="1.4"/></symbol>
-    <symbol id="ic-chart" viewBox="0 0 24 24"><path d="M4 5v15h16"/><path d="M7 15l4-4 3 2 5-6"/></symbol>
-    <symbol id="ic-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M18 13.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"/></symbol>
-    <symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.5 2.4 3.9 5.3 3.9 8.5s-1.4 6.1-3.9 8.5c-2.5-2.4-3.9-5.3-3.9-8.5s1.4-6.1 3.9-8.5z"/></symbol>
-    <symbol id="ic-lab" viewBox="0 0 24 24"><path d="M9.5 3h5"/><path d="M10.5 3v5.5L5.8 17a2 2 0 0 0 1.8 3h8.8a2 2 0 0 0 1.8-3L13.5 8.5V3"/><line x1="8" y1="15" x2="16" y2="15"/></symbol>
-    <symbol id="ic-exit" viewBox="0 0 24 24"><path d="M14 4h3.5a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H14"/><path d="M3.5 12h11"/><path d="M11 8.2l3.8 3.8L11 15.8"/></symbol>
-    <symbol id="ic-currency" viewBox="0 0 24 24"><path d="M4 9.5a8 8 0 0 1 13.2-3.1L20 8.8"/><path d="M20 14.5a8 8 0 0 1-13.2 3.1L4 15.2"/><path d="M20 4.5v4.3h-4.3"/><path d="M4 19.5v-4.3h4.3"/></symbol>
-    <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></symbol>
-    <symbol id="ic-notrack" viewBox="0 0 24 24"><path d="M3.2 12C5.6 8.2 8.6 6.5 12 6.5s6.4 1.7 8.8 5.5c-2.4 3.8-5.4 5.5-8.8 5.5-1 0-2-.15-3-.45"/><circle cx="12" cy="12" r="2.4"/><path d="M4.5 4.5l15 15"/></symbol>
-    <symbol id="ic-bank" viewBox="0 0 24 24"><path d="M3.5 9.5L12 5l8.5 4.5"/><path d="M5.5 10v7M18.5 10v7M10 10v7M14 10v7"/><path d="M4 20h16"/><path d="M4.5 4.5l15 15"/></symbol>
-    <symbol id="ic-watch" viewBox="0 0 24 24"><rect x="7" y="6.5" width="10" height="11" rx="3"/><path d="M9.2 6.5L9.7 4h4.6l.5 2.5"/><path d="M9.2 17.5l.5 2.5h4.6l.5-2.5"/></symbol>
-    <symbol id="ic-widgets" viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.8"/></symbol>
-    <symbol id="ic-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.2 8.8l-1.9 4.5-4.5 1.9 1.9-4.5z"/></symbol>
-    <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9.5L5 20.5V16H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="M9 10.5h.01"/><path d="M12 10.5h.01"/><path d="M15 10.5h.01"/></symbol>
-    <symbol id="ic-cal" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="15" rx="2"/><path d="M4 10h16"/><path d="M8.5 3.5v3M15.5 3.5v3"/><path d="M9 14.5l2 2 4-4"/></symbol>
-    <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.7v5.1c0 4.6-3 7.7-7 9.2-4-1.5-7-4.6-7-9.2V5.7z"/><path d="M9 12l2 2 4-4.3"/></symbol>
-  </defs></svg>
 
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -273,18 +247,18 @@
         <p class="section-sub">Most planners are either shallow toys or overwhelming web apps built for US tax law. Runway is right-sized depth that fits in your pocket.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-flag"/></svg></div><h3>Your freedom age</h3><p>The one number that matters: the age your money could carry you. It's the hook, and it's free forever, no account required.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-target"/></svg></div><h3>Freedom number</h3><p>The pot you actually need, derived from your real spending and a safe 4% withdrawal, net of pensions, rental, and side income.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-levers"/></svg></div><h3>The levers</h3><p>An opportunity engine that finds the doors you didn't open: "invest 300 more a month, retire two years sooner." Every lever shows its effect.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-gauge"/></svg></div><h3>Plan health</h3><p>A seeded Monte Carlo runs your plan through 400 simulated market futures and scores how often your money lasts the distance.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-chart"/></svg></div><h3>Money over time</h3><p>Watch your pot grow, peak, and draw down year by year, with your freedom goal line anchored to today so progress reads honestly.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-sparkle"/></svg></div><h3>Adaptive onboarding</h3><p>No side income? Runway never mentions it. No property? It skips the mortgage questions. It asks only what fits your life, nothing more.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-lab"/></svg></div><h3>Scenario lab</h3><p>Try the what-ifs side by side: a market crash, a later start, a different spend, a change in how you invest. Compare paths before you commit.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-globe"/></svg></div><h3>Built for Norway</h3><p>The only FIRE planner that knows formuesskatt, the ASK account, NAV and IPS pensions, and the exit tax you would owe if you ever leave. Your number, by Norwegian rules.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-exit"/></svg></div><h3>Retire abroad</h3><p>Dreaming of Spain or Thailand? Pick a destination and Runway prices the move: local taxes on your drawdown, the exit tax on the way out, spending in local currency. 14 countries modelled.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-chat"/></svg></div><h3>Ask Pip</h3><p>Runway's plan assistant. Ask why your number moved or what would help most, get answers grounded in your plan, and let Pip apply the change. On-device with Apple Intelligence.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-cal"/></svg></div><h3>Life events, real spending</h3><p>Add an inheritance, a windfall, or a big one-off cost. Let retirement spending ease with age, and set guardrails that flex it when markets misbehave.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-widgets"/></svg></div><h3>Widgets and Siri</h3><p>Keep your freedom date on your home and lock screen, ask Siri, or find your milestones in Spotlight. A glance is all it takes to see how close you are.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotFreedom.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Your freedom age</h3><p>The one number that matters: the age your money could carry you. It's the hook, and it's free forever, no account required.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotTargetHit.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Freedom number</h3><p>The pot you actually need, derived from your real spending and a safe 4% withdrawal, net of pensions, rental, and side income.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotIdea.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>The levers</h3><p>An opportunity engine that finds the doors you didn't open: "invest 300 more a month, retire two years sooner." Every lever shows its effect.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotSafeSpend.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Plan health</h3><p>A seeded Monte Carlo runs your plan through 400 simulated market futures and scores how often your money lasts the distance.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotGrowth.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Money over time</h3><p>Watch your pot grow, peak, and draw down year by year, with your freedom goal line anchored to today so progress reads honestly.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotMoneyMap.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Adaptive onboarding</h3><p>No side income? Runway never mentions it. No property? It skips the mortgage questions. It asks only what fits your life, nothing more.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotAssumptions.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Scenario lab</h3><p>Try the what-ifs side by side: a market crash, a later start, a different spend, a change in how you invest. Compare paths before you commit.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotWealthTax.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Built for Norway</h3><p>The only FIRE planner that knows formuesskatt, the ASK account, NAV and IPS pensions, and the exit tax you would owe if you ever leave. Your number, by Norwegian rules.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotRelocate.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Retire abroad</h3><p>Dreaming of Spain or Thailand? Pick a destination and Runway prices the move: local taxes on your drawdown, the exit tax on the way out, spending in local currency. 14 countries modelled.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotPip.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Ask Pip</h3><p>Runway's plan assistant. Ask why your number moved or what would help most, get answers grounded in your plan, and let Pip apply the change. On-device with Apple Intelligence.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotSpending.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Life events, real spending</h3><p>Add an inheritance, a windfall, or a big one-off cost. Let retirement spending ease with age, and set guardrails that flex it when markets misbehave.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotWidget.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Widgets and Siri</h3><p>Keep your freedom date on your home and lock screen, ask Siri, or find your milestones in Spotlight. A glance is all it takes to see how close you are.</p></div>
       </div>
     </div>
   </section>
@@ -347,9 +321,9 @@
         <p class="section-sub">Start free and keep your freedom age forever. Upgrade when you want the full toolkit, as a yearly plan with a discounted first year, or a one-time lifetime purchase.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-flag"/></svg></div><h3>Free, forever</h3><p>Your freedom age and number, the base projection, the full ranked list of levers, and a Monte Carlo read on your plan. No account, no expiry.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-levers"/></svg></div><h3>Pro: the full toolkit</h3><p>The complete year-by-year projection and cost ledger, stress tests, the scenario lab, the live countdown ticker, the Coast and Barista solvers, CSV export, and the deep plan-health detail behind the score.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-globe"/></svg></div><h3>Pro: Norway, kept current</h3><p>The deep Norwegian tax detail behind your number, updated as the figures change each year, so your plan stays honest over time.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotFreedom.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Free, forever</h3><p>Your freedom age and number, the base projection, the full ranked list of levers, and a Monte Carlo read on your plan. No account, no expiry.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotPotGold.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Pro: the full toolkit</h3><p>The complete year-by-year projection and cost ledger, stress tests, the scenario lab, the live countdown ticker, the Coast and Barista solvers, CSV export, and the deep plan-health detail behind the score.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotTaxes.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Pro: Norway, kept current</h3><p>The deep Norwegian tax detail behind your number, updated as the figures change each year, so your plan stays honest over time.</p></div>
       </div>
     </div>
   </section>
@@ -363,9 +337,9 @@
         <p class="section-sub">iPhone and iPad ship first. Here's what's already taxiing for take-off.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-compass"/></svg></div><h3>More home countries<span class="badge-next">Next</span></h3><p>Runway already models 14 retirement destinations. Next: full tax-accurate home packs beyond Norway, so more of us can plan from where we live today.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-watch"/></svg></div><h3>Apple Watch<span class="badge-next">Later</span></h3><p>A quiet check on your number and plan health, from your wrist.</p></div>
-        <div class="feature-card"><div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-chat"/></svg></div><h3>And whatever you ask for</h3><p>Tell us what would help at <a href="mailto:support@ludyem.dev" style="color:var(--grad-a);text-decoration:none;">support@ludyem.dev</a>. A human reads every note.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotGlobe.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>More home countries<span class="badge-next">Next</span></h3><p>Runway already models 14 retirement destinations. Next: full tax-accurate home packs beyond Norway, so more of us can plan from where we live today.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotWidget.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>Apple Watch<span class="badge-next">Later</span></h3><p>A quiet check on your number and plan health, from your wrist.</p></div>
+        <div class="feature-card"><div class="feature-icon is-spot"><img src="/runway/assets/spot/SpotIdea.svg" alt="" width="56" height="56" loading="lazy" decoding="async" /></div><h3>And whatever you ask for</h3><p>Tell us what would help at <a href="mailto:support@ludyem.dev" style="color:var(--grad-a);text-decoration:none;">support@ludyem.dev</a>. A human reads every note.</p></div>
       </div>
     </div>
   </section>

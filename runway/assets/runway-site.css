@@ -161,3 +161,9 @@
 /* Calculator hub cards: swap the thin stroke glyph for a full-colour spot. */
 .calc-card .cc-ic.is-spot { background: linear-gradient(158deg, var(--spot-a), var(--spot-b)); border: 1px solid var(--spot-edge); width: 54px; height: 54px; border-radius: 15px; }
 .calc-card .cc-ic.is-spot img { width: 68%; height: 68%; display: block; }
+
+/* Landing feature / Pro / roadmap cards: same swap — full-colour spot on a
+   fixed light-teal sticker in place of the flat single-teal stroke glyph, so
+   the grids read in colour and scan by illustration rather than a wall of lines. */
+.feature-icon.is-spot { width: 56px; height: 56px; border-radius: 15px; background: linear-gradient(158deg, var(--spot-a), var(--spot-b)); border: 1px solid var(--spot-edge); }
+.feature-icon.is-spot img { width: 70%; height: 70%; object-fit: contain; display: block; }
