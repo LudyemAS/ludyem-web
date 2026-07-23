@@ -1,6 +1,8 @@
 const ALLOWED_ORIGINS = new Set([
   "https://ludyem.dev",
   "https://www.ludyem.dev",
+  "https://runwayfire.com",
+  "https://www.runwayfire.com",
 ]);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_EMAIL_LEN = 254;
