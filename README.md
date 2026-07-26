@@ -68,9 +68,13 @@ Optional: set up **email forwarding** in Porkbun so `support@ludyem.dev`
 ## Notes
 
 * The Workouts App Store IDs are the live ASC records from the app's `project.yml`.
-  Confirm each listing is live before announcing — if one isn't ready, flip its card in
-  `workouts/index.html` to the "coming soon" style.
+  As of 26 Jul 2026 only Push-Ups resolves — the other three 404 because their availability
+  is deliberately held at 0/175 territories until 4.0 is approved. Those buttons start
+  working on their own once availability is restored; no page change needed.
 * `vitaview.app` stays its own separate site; the landing page links out to it.
-* Mascot art (Rocky) comes from `~/Developer/asset-gen/pushup-mascot/`.
+* Workouts carries **no mascot**. The Rocky art (source
+  `~/Developer/asset-gen/pushup-mascot/`) was removed — it sat between the CTA and the
+  stats bar saying nothing the headline hadn't already said. Tend's Sprout is unrelated
+  and still in use.
 
 © Ludyem AS
