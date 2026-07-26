@@ -4,20 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Workouts — Push-Ups, Sit-Ups, Pull-Ups &amp; Squats trainers</title>
-  <meta name="description" content="Four focused bodyweight trainers from Ludyem. Adaptive plans, camera rep detection, streaks, and Apple Watch — every set written to Apple Health. No account." />
+  <meta name="description" content="Four focused bodyweight trainers from Ludyem. Adaptive plans, camera rep detection, streaks and ranks — every set written to Apple Health. No account." />
   <meta property="og:title" content="Workouts — Bodyweight rep trainers by Ludyem" />
-  <meta property="og:description" content="Push-Ups, Sit-Ups, Pull-Ups & Squats. Adaptive plans, rep detection, Apple Watch, and Apple Health. No account." />
+  <meta property="og:description" content="Push-Ups, Sit-Ups, Pull-Ups & Squats. Adaptive plans, rep detection, and Apple Health. No account." />
   <meta property="og:url" content="https://ludyem.dev/workouts" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://ludyem.dev/workouts" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    /* ── Workouts theme: energetic orange → red ── */
+    /* ── Workouts theme ──
+       Grass → blue, taken from the apps themselves rather than invented here.
+       The four hues live in one table in the app (SharedConstants.brandAccent)
+       and sit at the SAME perceptual lightness and chroma (OKLCH L 0.679 /
+       C 0.145), differing only in hue, so the family reads as siblings on a
+       shelf. Each app icon's background is its exact hue, so the page, the
+       icon and the app can't drift apart — which is what the old orange → red
+       had already done. That red was also the one colour the family rules out. */
     :root {
-      --accent1: #ff7a2f; --accent2: #ff3b5c;
-      --grad-a:  #ffb27a; --grad-b:  #ff7a93;
-      --accent-soft: rgba(255,122,47,0.14);
-      --accent-line: rgba(255,122,47,0.32);
+      --accent1: #57AF5D; --accent2: #3F9EEC;
+      --grad-a:  #8FD094; --grad-b:  #86C4F5;
+      --accent-soft: rgba(87,175,93,0.14);
+      --accent-line: rgba(87,175,93,0.32);
     }
   </style>
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
@@ -47,7 +54,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Four apps · One adaptive trainer · Apple Watch ready</div>
+      <div class="hero-badge"><span class="hero-badge-dot"></span> Four apps · One adaptive trainer · Nine ranks to climb</div>
       <h1>Master the basics,<br><span class="grad">one rep at a time.</span></h1>
       <p class="hero-sub">
         Four focused bodyweight trainers — Push-Ups, Sit-Ups, Pull-Ups, and Squats. Each builds you
@@ -66,7 +73,7 @@
       <div class="stats-bar">
         <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Focused apps</div></div>
         <div class="stat-item"><div class="stat-num">Adaptive</div><div class="stat-label">Training plans</div></div>
-        <div class="stat-item"><div class="stat-num">⌚</div><div class="stat-label">Apple Watch</div></div>
+        <div class="stat-item"><div class="stat-num">9</div><div class="stat-label">Ranks to climb</div></div>
         <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Accounts</div></div>
       </div>
     </div>
@@ -84,7 +91,11 @@
 
         <!-- App Store IDs are the live ASC records from project.yml.
              TODO: confirm each listing is live before publishing (all 4 returned 404 at build time). -->
-        <div class="app-card" id="pushups" style="--app:#ff7a2f;">
+        <!-- Card hues are the apps' own, from SharedConstants.brandAccent(for:) —
+             grass / blue / lavender / amber. They were orange / red / violet /
+             green here, so every card but Pull-Ups showed a colour the app does
+             not use, and Push-Ups and Squats had each other's green. -->
+        <div class="app-card" id="pushups" style="--app:#57AF5D;">
           <div class="app-icon"><img src="assets/icon-pushups.png" alt="" /></div>
           <h3>Push-Ups</h3>
           <p class="app-blurb">Build to 100 consecutive push-ups. Optional camera rep detection counts for you, hands-free.</p>
@@ -96,7 +107,7 @@
           </div>
         </div>
 
-        <div class="app-card" id="situps" style="--app:#ff3b5c;">
+        <div class="app-card" id="situps" style="--app:#3F9EEC;">
           <div class="app-icon"><img src="assets/icon-situps.png" alt="" /></div>
           <h3>Sit-Ups</h3>
           <p class="app-blurb">Work toward 200 sit-ups with a plan that scales to your level. Tap to count, set after set.</p>
@@ -108,10 +119,10 @@
           </div>
         </div>
 
-        <div class="app-card" id="pullups" style="--app:#8b5cf6;">
+        <div class="app-card" id="pullups" style="--app:#9787EB;">
           <div class="app-icon"><img src="assets/icon-pullups.png" alt="" /></div>
           <h3>Pull-Ups</h3>
-          <p class="app-blurb">The hardest of the four — ramp safely from your current max toward 20 strict pull-ups.</p>
+          <p class="app-blurb">The hardest of the four — ramp safely from your current max toward 30 strict pull-ups.</p>
           <div class="dl-row">
             <a class="appstore-btn" href="https://apps.apple.com/app/id6449373216" target="_blank" rel="noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -120,7 +131,7 @@
           </div>
         </div>
 
-        <div class="app-card" id="squats" style="--app:#22c55e;">
+        <div class="app-card" id="squats" style="--app:#D87F27;">
           <div class="app-icon"><img src="assets/icon-squats.png" alt="" /></div>
           <h3>Squats</h3>
           <p class="app-blurb">Legs day, every day. Climb toward 200 squats with the same adaptive ladder.</p>
@@ -133,7 +144,7 @@
         </div>
 
       </div>
-      <p class="text-center" style="color:var(--faint);font-size:13px;margin-top:28px;">All four are free to download · iOS 26+ · Apple Watch optional</p>
+      <p class="text-center" style="color:var(--faint);font-size:13px;margin-top:28px;">All four are free to download · iOS 26+ · Writes to Apple Health</p>
     </div>
   </section>
 
@@ -161,15 +172,16 @@
           <h3>Streaks &amp; records</h3>
           <p>Daily streaks you'll want to protect, plus personal-best tracking with a satisfying "new best" celebration.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">⌚</div>
-          <h3>Apple Watch trainer</h3>
-          <p>A standalone watch app — count with taps or the Digital Crown, guided through your sets right on your wrist.</p>
-        </div>
+        <!-- Two cards removed here, both advertising things the app does not have.
+             "Apple Watch trainer": the family went iPhone-only and the watch app
+             was dropped. "Game Center leaderboards": there has never been a line
+             of GameKit in the binary — that same phantom feature, left enabled on
+             three of the four App Store records, blocked the 4.0 submission with
+             BUILD_INDICATES_GAME_CENTER_DISABLED. -->
         <div class="feature-card">
           <div class="feature-icon">🏆</div>
-          <h3>Game Center leaderboards</h3>
-          <p>Compare your best session against everyone else training the same movement. Friendly, optional pressure.</p>
+          <h3>Nine ranks to climb</h3>
+          <p>Every rep moves you up a ladder from Beginner to Legend, with the goal in the app's name as the summit. Your best single set is what promotes you.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🍎</div>
@@ -201,7 +213,7 @@
         <h2>Pick a movement.<br><span class="grad">Start today.</span></h2>
         <p>Free to download. No account required. Your reps stay on your iPhone.</p>
         <a href="#apps" class="btn-primary" style="display:inline-flex;">Choose your app</a>
-        <p class="cta-note">iOS 26+ · Apple Watch optional · Writes to Apple Health</p>
+        <p class="cta-note">iOS 26+ · iPhone · Writes to Apple Health</p>
       </div>
     </div>
   </section>
