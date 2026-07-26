@@ -1,2 +1,6 @@
 .DS_Store
 *.log
+
+# Wrangler's local state. `wrangler-account.json` caches the Cloudflare account
+# id and name, and none of it belongs in the repo.
+.wrangler/
