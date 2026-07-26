@@ -32,10 +32,6 @@
 </head>
 <body>
 
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
   <nav>
     <div class="nav-inner">
       <a href="./" class="logo">
@@ -68,7 +64,12 @@
         </a>
         <a href="#features" class="btn-secondary">See what's inside</a>
       </div>
-      <img class="hero-art" src="assets/rocky-pushup.svg" width="1024" height="1024" decoding="async" fetchpriority="high" alt="Rocky, the Workouts mascot, doing a push-up" />
+      <!-- 1024x792, not square: the artwork sat in a 2048 box with 544 units of
+           empty space above AND below it, so more than half the image's height
+           was nothing, and the hero rendered the mascot floating in a gap. The
+           viewBox is now cropped to the drawing. These width/height attributes
+           must keep matching it or the browser reserves the wrong space. -->
+      <img class="hero-art" src="assets/rocky-pushup.svg" width="1024" height="792" decoding="async" fetchpriority="high" alt="Rocky, the Workouts mascot, doing a push-up" />
 
       <div class="stats-bar">
         <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Focused apps</div></div>
@@ -89,9 +90,15 @@
       </div>
       <div class="app-grid">
 
-        <!-- App Store IDs are the live ASC records from project.yml.
-             TODO: confirm each listing is live before publishing (all 4 returned 404 at build time). -->
-        <!-- Card hues are the apps' own, from SharedConstants.brandAccent(for:) —
+        <!-- App Store IDs are the live ASC records from project.yml. The ids are
+             right, but as of 26 Jul 2026 only Push-Ups resolves — Sit-Ups,
+             Pull-Ups and Squats return 404 because their availability is
+             deliberately held at 0/175 territories until 4.0 is approved
+             (restoring it earlier would republish 3.0 mid-review). Those three
+             buttons are dead links until then, and start working on their own
+             the moment availability is restored. No change needed here.
+
+             Card hues are the apps' own, from SharedConstants.brandAccent(for:) —
              grass / blue / lavender / amber. They were orange / red / violet /
              green here, so every card but Pull-Ups showed a colour the app does
              not use, and Push-Ups and Squats had each other's green. -->
