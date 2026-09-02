@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Know When Your App Is Featured on the App Store</title>
+  <meta name="description" content="Apple notifies you for select Today tab placements only. Every other shelf, in every other country, arrives silently. Here is what Apple tells you, what it doesn't, and how to catch the rest on the day." />
+  <link rel="canonical" href="https://ludyem.dev/storeglance/guides/how-to-know-if-your-app-is-featured/" />
+
+  <meta property="og:title" content="How to know when your app is featured on the App Store" />
+  <meta property="og:description" content="Apple tells you about one kind of featuring. Here is how to catch the other 170 storefronts." />
+  <meta property="og:url" content="https://ludyem.dev/storeglance/guides/how-to-know-if-your-app-is-featured/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="StoreGlance" />
+  <meta property="og:image" content="https://ludyem.dev/assets/icons/storeglance.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #1FBFA4; --accent2: #E3AE4A;
+      --grad-a: #84dccd; --grad-b: #f0d29b;
+      --accent-soft: rgba(31,191,164,0.14); --accent-line: rgba(31,191,164,0.32);
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
+  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "inLanguage": "en",
+    "headline": "How to know when your app is featured on the App Store",
+    "description": "Apple notifies you for select Today tab placements only. Here is what Apple tells you, what it doesn't, and how to catch the rest on the day.",
+    "image": "https://ludyem.dev/assets/icons/storeglance.png",
+    "datePublished": "2026-09-02",
+    "dateModified": "2026-09-02",
+    "author": { "@type": "Person", "name": "Dylan", "description": "Maker of StoreGlance, the App Store featuring tracker for indie developers." },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ludyem",
+      "logo": { "@type": "ImageObject", "url": "https://ludyem.dev/assets/icons/ludyem.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ludyem.dev/storeglance/guides/how-to-know-if-your-app-is-featured/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "en",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does Apple tell you when your app is featured?", "acceptedAnswer": { "@type": "Answer", "text": "Only for some placements. Apple's announcement says that if you are featured in select placements on the Today tab, you receive a notification via the App Store Connect app. That covers marquee slots such as App of the Day and Game of the Day. Editorial shelves on the Apps and Games tabs, category shelves, and every placement in the other storefronts arrive with no notification at all. StoreGlance was built to cover that gap: it tells you the day any of the 171 storefronts features your app." } },
+      { "@type": "Question", "name": "How can I see if my app is featured in another country?", "acceptedAnswer": { "@type": "Answer", "text": "There is no report in App Store Connect that lists your placements country by country, so the only complete answer is to watch the storefronts themselves. That is what StoreGlance does: add your app once and it covers all 171 storefronts, then pushes you the shelf name, the country and the slot on the day it happens." } },
+      { "@type": "Question", "name": "Can App Store Connect analytics show that I was featured?", "acceptedAnswer": { "@type": "Answer", "text": "Indirectly. Featuring traffic lands in the App Store Browse acquisition source, which Apple defines as people who viewed or downloaded your app while browsing the App Store, for example in the Today, Games or Apps sections. Browse also contains Top Charts, category pages and In-App Events, so a spike is evidence, not proof, and it arrives after the analytics settle rather than on the day." } },
+      { "@type": "Question", "name": "How long does an App Store feature last?", "acceptedAnswer": { "@type": "Answer", "text": "It varies by shelf. App of the Day is a single day by definition. Editorial shelves such as Best New Apps and Updates typically hold their apps for about a week, and some evergreen collections keep an app for much longer. Because a shelf can rotate before you notice it, the day it appears is the day worth catching." } },
+      { "@type": "Question", "name": "Can I see whether a competitor is featured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. StoreGlance treats competitors as first-class: track any app on the store and get the same alert when it lands on a shelf, in any storefront. Knowing which of your rivals the editors are picking, and on which shelves, is often more useful than watching your own." } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "StoreGlance", "item": "https://ludyem.dev/storeglance" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ludyem.dev/storeglance/guides/" },
+      { "@type": "ListItem", "position": 3, "name": "How to know when your app is featured", "item": "https://ludyem.dev/storeglance/guides/how-to-know-if-your-app-is-featured/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/storeglance" class="logo">
+        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ StoreGlance</span>
+      </a>
+      <div class="nav-links">
+        <a href="/storeglance#features">Features</a>
+        <a href="/storeglance/guides/">Guides</a>
+        <a href="/storeglance/support">Support</a>
+      </div>
+      <a href="/storeglance" class="btn-nav">Get StoreGlance</a>
+    </div>
+  </nav>
+
+  <main class="doc-main post-main">
+    <a href="/storeglance/guides/" class="back-link">&larr; All guides</a>
+
+    <article>
+      <p class="page-label">Featuring</p>
+      <h1>How to know when your app is featured on the App Store</h1>
+      <div class="post-meta">
+        <strong>Dylan</strong>
+        <span class="dot"></span><span>2 September 2026</span>
+        <span class="dot"></span><span>6 min read</span>
+      </div>
+
+      <div class="doc-body">
+        <p class="post-lead">
+          Apple tells you about <strong>one</strong> kind of featuring. If your app lands in
+          select placements on the Today tab, the App Store Connect app sends you a
+          notification. Every other shelf, on every other tab, in every one of the other
+          170 storefronts, arrives without a word — and usually you hear about it from
+          a stranger on the internet, a week late.
+        </p>
+
+        <div class="callout">
+          <p><strong>The short answer.</strong> App Store Connect covers the marquee Today tab
+          slots. For everything else there is
+          <a href="/storeglance">StoreGlance</a> — add your apps once and get a push the day any
+          of the 171 storefronts puts one of them on a shelf, with the shelf name, the country
+          and the slot.</p>
+        </div>
+
+        <h2>What Apple actually tells you</h2>
+
+        <p>
+          In November 2024 Apple shipped Featuring Nominations and, alongside it, a
+          notification. The wording in
+          <a href="https://developer.apple.com/news/?id=nx3eotat" target="_blank" rel="noopener">Apple's own announcement</a>
+          is precise, and worth reading twice:
+        </p>
+
+        <div class="callout is-note">
+          <p>&ldquo;If you're featured in <strong>select placements</strong> on the
+          <strong>Today tab</strong>, you'll also receive a notification via the
+          App Store Connect app.&rdquo;</p>
+        </div>
+
+        <p>Every phrase in that sentence is load-bearing:</p>
+
+        <ul>
+          <li><strong>select placements</strong> — a subset, not all of them. In practice the marquee slots: App of the Day, Game of the Day, and the stories Apple's editors treat as headline placements.</li>
+          <li><strong>on the Today tab</strong> — not the Apps tab, not the Games tab, not a category page, not a category shelf.</li>
+          <li><strong>via the App Store Connect app</strong> — on a phone, with the app installed, notifications allowed, signed in to the account that holds the app.</li>
+        </ul>
+
+        <p>
+          When it does fire it is genuinely good: tapping the notification hands you a set of
+          Apple-designed &ldquo;Promote Your App&rdquo; marketing assets, ready to post. It is
+          simply the top of the pyramid, and the pyramid is much wider than most developers
+          realise.
+        </p>
+
+        <h2>The part nobody warns you about</h2>
+
+        <p>
+          The App Store is not one store. It is <strong>171 storefronts</strong>, each with its
+          own editors and its own editorial calendar. Every one of them has a Today, an Apps and
+          a Games tab, and every tab is a stack of named shelves — &ldquo;Best New Apps and
+          Updates&rdquo;, &ldquo;Editors' Choice Apps&rdquo;, &ldquo;Apps You Might've
+          Missed&rdquo; and dozens more, each one filled by a person who chose the apps on it.
+        </p>
+
+        <p>
+          Apple's notification reaches a slice of one of those tabs. Everything else — the whole
+          Apps tab, the whole Games tab, the category shelves, and all of it repeated across 170
+          more countries — happens in silence.
+        </p>
+
+        <p class="pullquote">
+          Being featured in a country you have never opened the App Store in is the normal case,
+          not the exotic one.
+        </p>
+
+        <p>
+          Smaller storefronts feature more aggressively, because there is less to choose from —
+          and they are exactly the ones you will never think to check. &ldquo;Best New Apps and
+          Updates&rdquo; exists in Japan too, run by different editors, refreshed on Japanese
+          time, in Japanese. Your App Store Connect app stays quiet.
+        </p>
+
+        <h2>Option 1: watch App Analytics for a Browse spike</h2>
+
+        <p>
+          This is where most developers end up, and it is free and official. In App Store Connect,
+          open <strong>Analytics &rarr; Acquisition &rarr; Sources</strong> and look at
+          <strong>App Store Browse</strong>. Apple defines it as:
+        </p>
+
+        <div class="callout is-note">
+          <p>&ldquo;Users viewed your app or tapped to download it while browsing the App Store
+          (for example, in the Today, Games, or Apps sections).&rdquo;</p>
+        </div>
+
+        <p>
+          A feature usually shows up as a step change in Browse impressions — not a gentle rise,
+          a cliff. That is a real signal. Its limits are real too:
+        </p>
+
+        <div class="verdict-grid">
+          <div class="verdict-col pro">
+            <h4>What it gives you</h4>
+            <ul>
+              <li>Free, official, no third-party tool</li>
+              <li>Impressions, product page views and downloads, so you can price the feature</li>
+              <li>A territory breakdown, if you go digging</li>
+            </ul>
+          </div>
+          <div class="verdict-col con">
+            <h4>What it doesn't</h4>
+            <ul>
+              <li>Browse is a bucket: Top Charts, category pages and In-App Events land in it too</li>
+              <li>It never names the shelf you were on</li>
+              <li>It is retrospective — analytics settle over about a day, and shelves rotate</li>
+              <li>Finding the country means reverse-engineering a territory table</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>
+          So a Browse spike is a hypothesis, not an answer. Working out what caused one is a skill
+          of its own — see
+          <a href="/storeglance/guides/app-store-browse-traffic-spike/">your App Store impressions spiked: was it a feature?</a>
+        </p>
+
+        <h2>Option 2: go looking for it yourself</h2>
+
+        <p>
+          You can switch your App Store to another country and scroll its editorial tabs. That is
+          fine for a hunch — you launched in Germany, you want to see what Germany is showing
+          today.
+        </p>
+
+        <p>
+          It is also the option that quietly fails. There are 171 storefronts, each running to its
+          own calendar and its own clock, and a shelf can appear and rotate away between two of
+          your checks. Doing this thoroughly, every day, in every country, is not a habit anyone
+          keeps for a week — which is why the placements people miss are almost never the ones
+          they went looking for.
+        </p>
+
+        <h2>Option 3: let StoreGlance do it</h2>
+
+        <p>
+          <a href="/storeglance">StoreGlance</a> is an iPhone app that watches the App Store for
+          you. Add your apps once — and your competitors' — and it tells you the day one of them
+          is featured, anywhere.
+        </p>
+
+        <ul>
+          <li><strong>A push on the day it happens</strong>, not a screenshot someone posts a week later.</li>
+          <li><strong>All 171 storefronts</strong>, including every one you would never think to open.</li>
+          <li><strong>The shelf, the country and the slot</strong> — plus the apps sitting either side of you on it.</li>
+          <li><strong>Competitors as first-class citizens</strong>, so you see which rivals the editors are picking.</li>
+          <li><strong>A featuring history</strong> per app, with a 13-week calendar, so you can point at your record when you nominate.</li>
+          <li><strong>Top chart positions</strong> per storefront alongside it, with the day-over-day move.</li>
+        </ul>
+
+        <div class="post-cta" style="margin: 34px 0;">
+          <h2>Never miss a shelf again</h2>
+          <p>Add your apps once. Get the push the day Apple features you, in any country.</p>
+          <a href="/storeglance" class="btn-primary" style="display:inline-flex;">See what StoreGlance does</a>
+        </div>
+
+        <p>
+          Larger ASO platforms (AppTweak, Sensor Tower, AppFollow and friends) also track
+          featuring, bundled into suites priced for teams with an ASO budget. StoreGlance does
+          this one job, on your phone, for indie money.
+        </p>
+
+        <h2>The options, side by side</h2>
+
+        <div class="cmp-wrap">
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th>How you find out</th>
+                <th>Covers</th>
+                <th>Tells you the shelf?</th>
+                <th>Speed</th>
+                <th>Effort</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>App Store Connect notification</td>
+                <td>Select Today tab placements</td>
+                <td class="yes">Yes</td>
+                <td>Same day</td>
+                <td>None — but only fires for a slice</td>
+              </tr>
+              <tr>
+                <td>App Analytics (Browse)</td>
+                <td>All featuring, mixed with charts &amp; categories</td>
+                <td class="no">No</td>
+                <td>After analytics settle</td>
+                <td>Manual reading, every day</td>
+              </tr>
+              <tr>
+                <td>Looking yourself</td>
+                <td>Whatever you have time to open</td>
+                <td class="yes">Yes</td>
+                <td>Only if you happen to look</td>
+                <td>Unsustainable past a country or two</td>
+              </tr>
+              <tr class="is-ours">
+                <td>StoreGlance</td>
+                <td>All 171 storefronts, yours and competitors'</td>
+                <td class="yes">Yes — shelf, country, slot, neighbours</td>
+                <td>Push on the day</td>
+                <td>Add the app once</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cmp-note">
+          Written by the maker of StoreGlance, so read the last row with that in mind. The first
+          two rows are free and worth doing regardless.
+        </p>
+
+        <h2>What to do the day you find out</h2>
+
+        <p>
+          A feature is a short window, so the useful moves are the fast ones:
+        </p>
+
+        <ul>
+          <li><strong>Screenshot the shelf</strong> while it is live. It disappears when the shelf rotates, and it is the single best piece of marketing collateral you will get for free.</li>
+          <li><strong>Look at the neighbours.</strong> The apps beside you on a shelf tell you which editor picked you and what they thought you were.</li>
+          <li><strong>Do not ship</strong> that day. A crash spike during your one week on &ldquo;Best New Apps and Updates&rdquo; is an expensive way to learn this.</li>
+          <li><strong>Note the date.</strong> Editors revisit apps they have featured before, and a featuring history is exactly the thing a nomination can point at.</li>
+        </ul>
+
+        <p>
+          All four are easier when something hands you the shelf, the country and the neighbours
+          on the morning it happens — which is the whole reason
+          <a href="/storeglance">StoreGlance</a> exists.
+        </p>
+
+        <h2>Frequently asked</h2>
+
+        <div class="faq-list">
+          <details>
+            <summary>Does Apple tell you when your app is featured?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>Only for some placements. Apple's announcement says that if you are featured in
+              select placements on the Today tab, you receive a notification via the App Store
+              Connect app — App of the Day and Game of the Day being the obvious cases.
+              Editorial shelves on the Apps and Games tabs, category shelves, and every
+              placement in the other storefronts arrive with no notification at all.
+              <a href="/storeglance">StoreGlance</a> was built to cover exactly that gap.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How can I see if my app is featured in another country?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>There is no report in App Store Connect that lists your placements country by
+              country. <a href="/storeglance">StoreGlance</a> covers all 171 storefronts and
+              pushes you the shelf name, the country and the slot on the day it happens.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Can App Store Connect analytics show that I was featured?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>Indirectly. Featuring traffic lands in the <strong>App Store Browse</strong>
+              acquisition source, but Browse also contains Top Charts, category pages and
+              In-App Events, so a spike is evidence rather than proof — and it arrives after
+              the analytics settle, not on the day.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How long does an App Store feature last?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>It depends on the shelf. App of the Day is one day by definition. Editorial
+              shelves such as &ldquo;Best New Apps and Updates&rdquo; typically hold their apps
+              for about a week, and some evergreen collections keep an app far longer. Since a
+              shelf can rotate before you notice, the day it appears is the day worth catching.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Can I see whether a competitor is featured?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>Yes — StoreGlance treats competitors as first-class. Track any app on the store
+              and get the same alert when it lands on a shelf, in any storefront. Knowing which
+              rivals the editors are picking, and on which shelves, is often more useful than
+              watching your own.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do I get featured in the first place?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>Apple's own route is <strong>Featuring Nominations</strong> in App Store
+              Connect, with a minimum lead time of three weeks. See
+              <a href="/storeglance/guides/app-store-featuring-nominations/">the nominations guide</a>.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="author-box">
+          <img src="/assets/icons/storeglance.png" alt="" width="54" height="54" />
+          <div>
+            <h3>Dylan · Ludyem</h3>
+            <p>I build small iOS apps and the tools I needed while shipping them. StoreGlance
+            grew out of finding out, four days late and from someone else, that one of my apps
+            had been on a shelf in a country I had never opened.</p>
+          </div>
+        </div>
+
+        <div class="post-cta">
+          <h2>Stop finding out from strangers</h2>
+          <p>StoreGlance watches all 171 App Store storefronts and pushes you the day your app —
+          or a competitor's — lands on a shelf.</p>
+          <a href="/storeglance" class="btn-primary" style="display:inline-flex;">Get StoreGlance</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div class="doc-foot">
+    <p>
+      <a href="/storeglance">StoreGlance</a>
+      <a href="/storeglance/guides/">Guides</a>
+      <a href="/storeglance/privacy">Privacy</a>
+      <a href="/storeglance/terms">Terms</a>
+      <a href="/storeglance/support">Support</a>
+    </p>
+    <p style="margin-top:14px;">© 2026 Ludyem AS</p>
+  </div>
+
+</body>
+</html>

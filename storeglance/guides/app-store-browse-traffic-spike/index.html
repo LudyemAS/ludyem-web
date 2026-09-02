@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your App Store Impressions Spiked. Was It a Feature?</title>
+  <meta name="description" content="A sudden jump in App Store Browse impressions usually means a feature, a chart entry or an event. How to tell them apart in App Store Connect, and how to find which country did it." />
+  <link rel="canonical" href="https://ludyem.dev/storeglance/guides/app-store-browse-traffic-spike/" />
+
+  <meta property="og:title" content="Your App Store impressions spiked. Was it a feature?" />
+  <meta property="og:description" content="How to read an App Store Browse spike: feature, chart, event or press — and how to find the country behind it." />
+  <meta property="og:url" content="https://ludyem.dev/storeglance/guides/app-store-browse-traffic-spike/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="StoreGlance" />
+  <meta property="og:image" content="https://ludyem.dev/assets/icons/storeglance.png" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #1FBFA4; --accent2: #E3AE4A;
+      --grad-a: #84dccd; --grad-b: #f0d29b;
+      --accent-soft: rgba(31,191,164,0.14); --accent-line: rgba(31,191,164,0.32);
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
+  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "inLanguage": "en",
+    "headline": "Your App Store impressions spiked. Was it a feature?",
+    "description": "A sudden jump in App Store Browse impressions usually means a feature, a chart entry or an event. How to tell them apart in App Store Connect.",
+    "image": "https://ludyem.dev/assets/icons/storeglance.png",
+    "datePublished": "2026-09-02",
+    "dateModified": "2026-09-02",
+    "author": { "@type": "Person", "name": "Dylan", "description": "Maker of StoreGlance, the App Store featuring tracker for indie developers." },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ludyem",
+      "logo": { "@type": "ImageObject", "url": "https://ludyem.dev/assets/icons/ludyem.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ludyem.dev/storeglance/guides/app-store-browse-traffic-spike/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "en",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is App Store Browse?", "acceptedAnswer": { "@type": "Answer", "text": "It is one of the acquisition sources in App Store Connect analytics. Apple defines it as users who viewed your app or tapped to download it while browsing the App Store, for example in the Today, Games or Apps sections. It covers editorial shelves, Top Charts, category pages, In-App Events and similar-app modules — everything that is discovery but not search." } },
+      { "@type": "Question", "name": "Does a Browse spike mean my app was featured?", "acceptedAnswer": { "@type": "Answer", "text": "Not on its own. Browse also contains Top Charts, category browsing and In-App Events. A feature usually looks like a cliff — impressions multiply overnight, concentrate in one or a few countries, and fall away when the shelf rotates. A chart entry ramps more gradually and sustains. Analytics can never tell you which shelf it was; StoreGlance alerts you on the day with the shelf name, the country and the slot." } },
+      { "@type": "Question", "name": "Which country was my app featured in?", "acceptedAnswer": { "@type": "Answer", "text": "App Store Connect analytics can be broken down by territory, so filter impressions by country and look for the ones that moved. That narrows it down, but the analytics arrive after the day they describe, so by the time you have identified the country the shelf may already have rotated — and the territory table never names the placement itself. StoreGlance tracks all 171 storefronts and pushes you the shelf, the country and the slot on the day." } },
+      { "@type": "Question", "name": "Why is there a delay in App Store Connect analytics?", "acceptedAnswer": { "@type": "Answer", "text": "App Store Connect analytics are reported daily rather than live, so a given day's figures settle roughly a day later. That is fine for measuring a feature after the fact and too slow for catching one while the shelf is still on screen." } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "StoreGlance", "item": "https://ludyem.dev/storeglance" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://ludyem.dev/storeglance/guides/" },
+      { "@type": "ListItem", "position": 3, "name": "Reading an App Store Browse spike", "item": "https://ludyem.dev/storeglance/guides/app-store-browse-traffic-spike/" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/storeglance" class="logo">
+        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ StoreGlance</span>
+      </a>
+      <div class="nav-links">
+        <a href="/storeglance#features">Features</a>
+        <a href="/storeglance/guides/">Guides</a>
+        <a href="/storeglance/support">Support</a>
+      </div>
+      <a href="/storeglance" class="btn-nav">Get StoreGlance</a>
+    </div>
+  </nav>
+
+  <main class="doc-main post-main">
+    <a href="/storeglance/guides/" class="back-link">&larr; All guides</a>
+
+    <article>
+      <p class="page-label">Analytics</p>
+      <h1>Your App Store impressions spiked. Was it a feature?</h1>
+      <div class="post-meta">
+        <strong>Dylan</strong>
+        <span class="dot"></span><span>2 September 2026</span>
+        <span class="dot"></span><span>6 min read</span>
+      </div>
+
+      <div class="doc-body">
+        <p class="post-lead">
+          A step change in <strong>App Store Browse</strong> impressions is the fingerprint of
+          being featured — but Browse is a bucket, and charts, categories and In-App Events land
+          in it too. Here is how to tell the shapes apart, how to find the country, and why the
+          answer usually arrives a day after it would have been useful.
+        </p>
+
+        <h2>What Browse actually contains</h2>
+
+        <p>
+          App Store Connect splits acquisition by source. Apple's definition of the Browse source
+          is broad on purpose:
+        </p>
+
+        <div class="callout is-note">
+          <p>&ldquo;Users viewed your app or tapped to download it while browsing the App Store
+          (for example, in the Today, Games, or Apps sections).&rdquo;</p>
+        </div>
+
+        <p>
+          So Browse is everything that is discovery but not search: editorial shelves, Top Charts,
+          category pages, In-App Events, and the similar-app modules on other apps' product pages.
+          <strong>Search</strong> is its counterpart, and includes Apple Search Ads results.
+          <strong>App Referrer</strong> and <strong>Web Referrer</strong> are the two that tell
+          you somebody sent traffic in from outside.
+        </p>
+
+        <p>
+          That means the first useful question is not &ldquo;did Browse rise?&rdquo; but
+          &ldquo;which source rose, and in what shape?&rdquo;
+        </p>
+
+        <h2>Reading the shape</h2>
+
+        <div class="cmp-wrap">
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th>What happened</th>
+                <th>Source</th>
+                <th>Shape</th>
+                <th>Geography</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Editorial feature</td>
+                <td>Browse</td>
+                <td>A cliff. Impressions multiply overnight, hold while the shelf holds, then drop just as sharply</td>
+                <td>One country, or a handful — rarely all of them</td>
+              </tr>
+              <tr>
+                <td>Today tab / App of the Day</td>
+                <td>Browse</td>
+                <td>The steepest cliff of all, usually a single day wide</td>
+                <td>Usually one storefront</td>
+              </tr>
+              <tr>
+                <td>Entering a Top Chart</td>
+                <td>Browse</td>
+                <td>A ramp, not a cliff, and it sustains while the position holds</td>
+                <td>Per country, and it tracks your rank</td>
+              </tr>
+              <tr>
+                <td>In-App Event</td>
+                <td>Browse</td>
+                <td>Bounded by the event's own dates</td>
+                <td>Wherever the event is published</td>
+              </tr>
+              <tr>
+                <td>Press or a viral post</td>
+                <td>Web Referrer, then Search</td>
+                <td>Sharp, and it moves branded search terms with it</td>
+                <td>Follows the audience of whoever posted</td>
+              </tr>
+              <tr>
+                <td>ASO or keyword change</td>
+                <td>Search</td>
+                <td>A gradual drift over days, not a jump</td>
+                <td>Broad</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="cmp-note">The tell for a feature is the combination: Browse only, overnight, and geographically concentrated.</p>
+
+        <h2>Two ratios worth checking</h2>
+
+        <p>
+          <strong>Impressions versus product page views.</strong> A shelf puts your icon in front
+          of a lot of people who scroll past it. Featuring spikes tend to move impressions far
+          more than they move page views, so conversion rate <em>drops</em> during a feature even
+          though downloads rise. That is normal, and a good reason not to panic at the
+          conversion chart.
+        </p>
+
+        <p>
+          <strong>Product page views versus downloads.</strong> If both rose in proportion, the
+          traffic was well-matched to your app — the mark of a shelf whose theme actually fits.
+          If page views rose and downloads did not, you were on a shelf that flattered you into
+          the wrong audience.
+        </p>
+
+        <h2>Finding the country</h2>
+
+        <p>
+          Break impressions down by territory and look for the ones that moved. Featuring is
+          per-storefront, so this narrows it fast — a 40&times; jump in Brazil and flat everywhere
+          else is not ambiguous.
+        </p>
+
+        <p>
+          What the territory table cannot give you is the <em>placement</em>: which shelf, what it
+          was called, which slot you sat in, and which apps were beside you. None of that is in
+          App Store Connect, in any report, ever.
+        </p>
+
+        <h2>The problem with all of this</h2>
+
+        <p>
+          App Store Connect analytics are reported daily, not live. A given day's figures settle
+          roughly a day later — which means the sequence goes: the shelf goes up, your app has its
+          best day of the year, the numbers arrive the next day, you work out which country, you
+          open that storefront, and the shelf has rotated.
+        </p>
+
+        <p class="pullquote">
+          Analytics tell you a feature happened. They cannot tell you one is happening.
+        </p>
+
+        <p>
+          You are left with the number but not the screenshot, the country but not the shelf name,
+          and no idea which apps were beside you. For a placement you will never get back, that is
+          a thin souvenir.
+        </p>
+
+        <h2>Catching it on the day instead</h2>
+
+        <p>
+          Apple sends a notification for
+          <a href="https://developer.apple.com/news/?id=nx3eotat" target="_blank" rel="noopener">select placements on the Today tab</a>,
+          which covers the marquee slots and nothing else. For every other shelf, and every other
+          country, there is no alert at all — which is the gap
+          <a href="/storeglance">StoreGlance</a> was built to close.
+        </p>
+
+        <p>
+          Add your apps once, and your competitors' too. StoreGlance pushes you on the day a
+          tracked app lands on a shelf, in any of the 171 storefronts, and tells you the shelf
+          name, the country, the slot and the apps either side of you. Then the analytics, when
+          they arrive the next day, are just confirmation of something you already screenshotted.
+        </p>
+
+        <div class="post-cta" style="margin: 34px 0;">
+          <h2>Know before the spike shows up</h2>
+          <p>Get the push on the day, with the shelf and the country attached — instead of a
+          number you have to reverse-engineer a day later.</p>
+          <a href="/storeglance" class="btn-primary" style="display:inline-flex;">See what StoreGlance does</a>
+        </div>
+
+        <p>
+          For the fuller picture of what Apple does and does not tell you, see
+          <a href="/storeglance/guides/how-to-know-if-your-app-is-featured/">how to know when your app is featured on the App Store</a>.
+        </p>
+
+        <h2>Frequently asked</h2>
+
+        <div class="faq-list">
+          <details>
+            <summary>What is App Store Browse?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>An acquisition source in App Store Connect analytics: people who viewed or
+              downloaded your app while browsing the store — Today, Games and Apps sections,
+              charts, categories and In-App Events. Everything that is discovery but not
+              search.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Does a Browse spike mean I was featured?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>Not by itself. A feature usually looks like an overnight cliff concentrated in
+              one or a few countries; a chart entry ramps and sustains. To be certain which shelf
+              it was, you need something watching the storefronts — see
+              <a href="/storeglance">StoreGlance</a>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Why did my conversion rate drop during a feature?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>Because a shelf generates impressions from people scrolling past. Impressions
+              rise faster than product page views, so the ratio falls even while downloads
+              climb. It is expected, not a problem with your page.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How quickly do App Store Connect analytics update?<span class="summary-icon">+</span></summary>
+            <div class="faq-body">
+              <p>Daily, not live — a day's numbers settle roughly a day later. Good enough to
+              measure a feature, too slow to catch one.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="author-box">
+          <img src="/assets/icons/storeglance.png" alt="" width="54" height="54" />
+          <div>
+            <h3>Dylan · Ludyem</h3>
+            <p>I build small iOS apps and the tools I needed while shipping them. StoreGlance
+            exists because a Browse spike told me something had happened, and by the time I
+            worked out where, the shelf was gone. Now it tells me on the day.</p>
+          </div>
+        </div>
+
+        <div class="post-cta">
+          <h2>Know before the analytics do</h2>
+          <p>All 171 storefronts, yours and your competitors', with a push on the day your app
+          lands on a shelf — shelf name, country and slot included.</p>
+          <a href="/storeglance" class="btn-primary" style="display:inline-flex;">Get StoreGlance</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div class="doc-foot">
+    <p>
+      <a href="/storeglance">StoreGlance</a>
+      <a href="/storeglance/guides/">Guides</a>
+      <a href="/storeglance/privacy">Privacy</a>
+      <a href="/storeglance/terms">Terms</a>
+      <a href="/storeglance/support">Support</a>
+    </p>
+    <p style="margin-top:14px;">© 2026 Ludyem AS</p>
+  </div>
+
+</body>
+</html>

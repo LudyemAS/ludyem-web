@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    <url><loc>https://ludyem.dev/</loc></url>
-  <url><loc>https://ludyem.dev/tend/</loc></url>
-  <url><loc>https://ludyem.dev/workouts/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ludyem.dev</loc></url>
+  <url><loc>https://ludyem.dev/tend</loc></url>
+  <url><loc>https://ludyem.dev/workouts</loc></url>
+
+  <url><loc>https://ludyem.dev/storeglance</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/guides/</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/guides/how-to-know-if-your-app-is-featured/</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/guides/app-store-featuring-nominations/</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/guides/app-store-browse-traffic-spike/</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/support</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/privacy</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/terms</loc><lastmod>2026-09-02</lastmod></url>
 </urlset>
