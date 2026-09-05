@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- DRAFT. Not reviewed by the owner. Do not treat as final.
+
+     Generated from _template/ by new-app.py on 5 September 2026, then rewritten. Three
+     things the template shipped are FALSE for this app and were removed rather than
+     edited around: an Apple Watch companion, "reads and writes Apple Health" (this app
+     never writes), and "free to download" (there is no free tier). Do not let a future
+     re-run of new-app.py --force put them back.
+
+     Buttons are "Coming soon" on purpose. App Store Connect Apple ID 6808904948 exists
+     but the app is in Prepare for Submission, so there is nothing to link to yet. When
+     it is approved:
+         ./new-app.py never-stall --appstore-id 6808904948 --force ...
+     will overwrite this file and the three legal pages with template copy. Wire the
+     buttons by hand instead, or re-check every claim on all four pages afterwards. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Never Stall · A habit tracker where the habit gets harder as you keep it</title>
+  <meta name="description" content="Every habit sits on a ladder. Keep it and the target rises. Miss it and it eases back. On your iPhone, with no account and no tracking." />
+  <meta property="og:title" content="Never Stall · A habit tracker where the habit gets harder as you keep it" />
+  <meta property="og:description" content="Every habit sits on a ladder. Keep it and the target rises. Miss it and it eases back." />
+  <meta property="og:url" content="https://ludyem.dev/never-stall/" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://ludyem.dev/never-stall/" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #35E0FF; --accent2: #A87BFF;
+      --grad-a: #90eeff; --grad-b: #cfb6ff;
+      --accent-soft: rgba(53,224,255,0.14); --accent-line: rgba(53,224,255,0.32);
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
+  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Never Stall</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">How it works</a>
+        <a href="/never-stall/support/">Support</a>
+      </div>
+      <span class="btn-nav" style="opacity:.6;cursor:default;">Coming soon</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><span class="hero-badge-dot"></span> On device · No account · Apple Health, read only</div>
+      <h1>Your habits,<br><span class="grad">one rung higher.</span></h1>
+      <p class="hero-sub">A habit tracker where the habit gets harder as you keep it. Streak apps ask whether you did it. Never Stall asks whether you are getting better at it.</p>
+      <div class="hero-actions">
+        <span class="btn-primary" style="opacity:.6;cursor:default;">Coming soon</span>
+        <a href="#features" class="btn-secondary">How it works</a>
+      </div>
+      <img class="hero-art" src="assets/hero.png" alt="Never Stall on iPhone" onerror="this.remove()" />
+
+      <div class="stats-bar">
+        <div class="stat-item"><div class="stat-num">📱</div><div class="stat-label">iPhone, iOS 26+</div></div>
+        <div class="stat-item"><div class="stat-num">🍎</div><div class="stat-label">Health, read only</div></div>
+        <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Accounts</div></div>
+        <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Trackers</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="features" class="alt">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">How it works</div>
+        <h2 class="section-title">The target moves with you</h2>
+        <p class="section-sub">You tap to say you did it. That is the whole interaction. Everything below follows from the days you actually showed up.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🪜</div><h3>A ladder, not a checkbox</h3><p>Hit your target on 4 of your last 5 scheduled days and it rises. Miss it on 3 of 5 and it eases back, never below where you started.</p></div>
+        <div class="feature-card"><div class="feature-icon">🎓</div><h3>Every habit has a top</h3><p>Hold the ceiling and the habit graduates. It stops climbing and stays there. A ladder with no top is a treadmill.</p></div>
+        <div class="feature-card"><div class="feature-icon">❄️</div><h3>Freezes for the bad weeks</h3><p>Spend a freeze and the day goes neutral. Your streak survives. Being ill should not wipe out ninety days of work.</p></div>
+        <div class="feature-card"><div class="feature-icon">🍎</div><h3>Apple Health ticks it for you</h3><p>Build a habit on steps, exercise minutes or sleep and it marks itself done. Read only, never written, never leaves your iPhone.</p></div>
+        <div class="feature-card"><div class="feature-icon">⬆️</div><h3>A level, six stats, a rank</h3><p>Strength, Vitality, Intellect, Focus, Spirit and Order. Every one of them comes from a habit you actually did. Nothing here can be bought.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔒</div><h3>Nothing leaves the phone</h3><p>No account, no backend, no analytics, no ads. There is nothing to breach because there is nothing to hold.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section id="privacy">
+    <div class="container text-center">
+      <div class="section-label">Privacy</div>
+      <h2 class="section-title">On your iPhone. Full stop.</h2>
+      <p class="section-sub" style="margin-bottom:40px;">No account, no sign-in, no tracking, and no Health data going anywhere. Read the detail rather than taking our word for it.</p>
+      <div class="dl-row" style="justify-content:center;">
+        <a href="/never-stall/privacy/" class="btn-secondary">Privacy Policy →</a>
+        <a href="/never-stall/terms/" class="btn-secondary">Terms →</a>
+        <a href="/never-stall/support/" class="btn-secondary">Support →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Stop counting days.<br><span class="grad">Start climbing.</span></h2>
+        <p>No account. No tracking. Your habits stay on your iPhone.</p>
+        <span class="btn-primary" style="display:inline-flex;opacity:.6;cursor:default;">Coming soon</span>
+        <p class="cta-note">iPhone · iOS 26 or later · Apple Health optional</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="footer-logo">
+        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="22" height="22" />
+        Ludyem
+      </a>
+      <div class="footer-links">
+        <a href="/">All apps</a>
+        <a href="#features">How it works</a>
+        <a href="/never-stall/privacy/">Privacy</a>
+        <a href="/never-stall/terms/">Terms</a>
+        <a href="/never-stall/support/">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </div>
+      <p class="footer-copy">Last updated 5 September 2026 · © 2026 Ludyem AS</p>
+    </div>
+  </footer>
+
+</body>
+</html>

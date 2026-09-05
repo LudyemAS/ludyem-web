@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- DRAFT. Not reviewed by the owner, not reviewed by a lawyer. Do not treat as final.
+
+     Written 5 September 2026 from ~/Developer/Rung/docs (SPEC, HABITS, DECISIONS) and
+     from the shipping source, not from assumption. Two sections describe things that
+     are not built yet and are marked as such on the page: iCloud sync (no CloudKit
+     entitlement and no cloudKitDatabase on the ModelConfiguration as of this date) and
+     RevenueCat (no SDK in the project; StoreKit only). When either ships, drop the
+     "will" wording and the "not yet" line, and for RevenueCat add their privacy policy
+     link, which is already in the markup below, commented, ready to uncomment.
+
+     Directory-form page (privacy/index.html) rather than the privacy.html the other
+     apps use, so that both /never-stall/privacy and /never-stall/privacy/ resolve.
+     GitHub Pages 404s the trailing-slash form of a bare .html file. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy · Never Stall by Ludyem</title>
+  <meta name="description" content="Privacy Policy for Never Stall by Ludyem. No account, no analytics, no data collected. Apple Health is read only and never leaves your iPhone." />
+  <link rel="canonical" href="https://ludyem.dev/never-stall/privacy/" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #35E0FF; --accent2: #A87BFF;
+      --grad-a: #90eeff; --grad-b: #cfb6ff;
+      --accent-soft: rgba(53,224,255,0.14); --accent-line: rgba(53,224,255,0.32);
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
+  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/never-stall/" class="logo">
+        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Never Stall</span>
+      </a>
+      <a href="/never-stall/" class="back-link">← Back to Never Stall</a>
+    </div>
+  </nav>
+
+  <main class="doc-main">
+    <div class="page-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="doc-body">
+      <p class="updated">Last updated 5 September 2026 · Applies to <strong>Never Stall</strong> by Ludyem AS (the "app").</p>
+
+      <p>Never Stall runs on your iPhone and keeps your habits there. There is no account to make, no server of ours for your habits to travel to, and nothing about you for us to hold. This policy says exactly what that means, and it is short because there is not much to describe.</p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>Ludyem collects nothing about you. No account, no sign-up, no email, no profile.</li>
+        <li>There is no analytics, no tracking, no advertising, and no third party SDK of any kind in the app.</li>
+        <li>Your habits, your history, your level and your stats live on your iPhone.</li>
+        <li>Apple Health is <strong>read only</strong>. Never Stall never writes to Health, never sends Health data anywhere, never sells it, and never uses it for advertising.</li>
+        <li>We never sell or share your data, because we never have it.</li>
+      </ul>
+
+      <h2>What we collect</h2>
+      <p>Nothing. Never Stall has no backend of ours, no login, and no way to send us your information. We do not receive your name, your email address, your location, your contacts, your device identifiers, your habits or your health data. Because there is no account, there is nothing to sign in to and nothing about you stored on any machine we run.</p>
+      <p>We also do not build a profile of you, and there is nothing here to sell, so we do not sell anything. No advertising network, analytics service or tracking SDK is built into the app.</p>
+
+      <h2>What stays on your iPhone</h2>
+      <p>Everything the app knows is on the device: the habits you added, the days you marked done, your targets and where each one sits on its ladder, your freezes, your XP, level, six stats and rank, and your settings. It is stored in the app's own database on your iPhone, inside a container shared with Never Stall's own extensions on the same device.</p>
+      <p>None of it is transmitted to us, and none of it is transmitted to anyone else.</p>
+
+      <h2>Apple Health</h2>
+      <p>This section is the important one, so it is spelled out in full.</p>
+
+      <h3>Read only, always</h3>
+      <p>Never Stall <strong>reads</strong> from Apple Health with your permission. It <strong>never writes</strong> a sample of any kind. Nothing Never Stall does ends up in your health record.</p>
+
+      <h3>What we never do with Health data</h3>
+      <ul>
+        <li>It is <strong>never used for advertising</strong>, marketing, or any similar service.</li>
+        <li>It is <strong>never sold</strong> to anyone, for any purpose.</li>
+        <li>It is <strong>never shared or disclosed to any third party</strong>, including us. Ludyem cannot see it.</li>
+        <li>It is <strong>never sent off your device</strong>. Every read happens on the iPhone, and the app does not store the totals it reads. It reads them fresh each time it needs one.</li>
+      </ul>
+
+      <h3>What we ask for at setup, and why</h3>
+      <p>When you first set the app up, it asks to read three things: <strong>steps</strong>, <strong>exercise minutes</strong> and <strong>sleep</strong>. It looks at the last 14 days of those to do two jobs, both on the device:</p>
+      <ul>
+        <li>Measure your starting <strong>Vitality</strong> stat from your own numbers, rather than asking you to rate yourself.</li>
+        <li>Suggest a first target that is where you actually are, rather than a number we guessed for you.</li>
+      </ul>
+      <p>If you decline, nothing breaks. The app asks you a question instead, and everything else works the same.</p>
+
+      <h3>What a habit reads, once you have one</h3>
+      <p>If you build a habit on a Health measurement, the app reads <strong>today's total for that one measurement</strong> so it can mark the day done without you having to tap. It asks for each measurement separately, when you add a habit that needs it, and never for the whole Health catalogue.</p>
+      <p>The measurements a habit can be built on today are: steps, walking and running distance, cycling distance, swimming distance, exercise minutes, stand minutes, flights climbed, active energy, water, mindful minutes, sleep, and running workouts.</p>
+
+      <h3>Your tap always wins, and you can turn it off</h3>
+      <p>Health verification is a convenience, never a judge. You can always mark a day done by hand, and your tap beats whatever Health says.</p>
+      <p>You can withdraw Health access at any time in <strong>iOS Settings → Health → Data Access &amp; Devices → Never Stall</strong>, or from your profile in the Health app. If you do, the habit simply goes back to being one you tap. It does not disappear, and you do not lose your history.</p>
+
+      <h2>iCloud sync</h2>
+      <p><em>Not switched on yet. This describes what it will do when it ships, so there are no surprises.</em></p>
+      <p>Never Stall will be able to sync your habits between your own Apple devices through <strong>your private iCloud database</strong>, and it will be on by default. That means your data goes from your iPhone to your own iCloud account and back to your other devices. It is your Apple account, governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. <strong>Ludyem has no access to it at any point.</strong> We cannot read it, we cannot recover it, and we are not told it exists.</p>
+      <p>Health data is not part of this. Never Stall does not store Health readings, so there are none to sync.</p>
+
+      <h2>Purchases</h2>
+      <p>Never Stall is paid. You buy it through the App Store, and <strong>Apple handles the payment</strong>. We never see your card, your billing address or your Apple Account details. Apple's handling of that is covered by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+      <p>To check whether your purchase is active, Never Stall will use <strong>RevenueCat</strong> as its subscription service. <em>It is not switched on yet.</em> When it is, RevenueCat receives an <strong>anonymous app user ID</strong> that identifies a purchase rather than a person, and the <strong>App Store transaction</strong> for that purchase. It receives nothing else: no name, no email, no habits, and no Health data of any kind.
+      <!-- Uncomment the sentence below the day the RevenueCat SDK ships in a build:
+      RevenueCat's own policy is at <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>. -->
+      </p>
+
+      <h2>Notifications</h2>
+      <p>Notifications are <strong>local to your iPhone</strong>. They are scheduled by the app on the device and sent by iOS. There is no push server, and nothing about them reaches us. Today they are used for a running timer, and later for habit reminders. They are optional, and you can turn them off in <strong>iOS Settings → Notifications → Never Stall</strong>.</p>
+
+      <h2>Widgets and Shortcuts</h2>
+      <p><em>Not shipped yet.</em> When home screen widgets and Shortcuts arrive, they will read the same database on your iPhone that the app writes, through a container shared between them on the device. They will send nothing anywhere, and they add no new data collection of any kind.</p>
+
+      <h2>Deleting your data</h2>
+      <p>Delete the app and the data goes with it. That is the whole procedure, because the data was only ever on your iPhone. If you have turned iCloud sync on, you can also remove the app's data from your iCloud account in <strong>iOS Settings → [your name] → iCloud</strong>.</p>
+      <p>There is no export feature yet. We would rather say that plainly than let you find out later.</p>
+
+      <h2>Children</h2>
+      <p>Never Stall is not directed at children, and it is not designed or marketed for them. It does not knowingly collect personal information from anyone of any age, because it does not collect personal information at all.</p>
+
+      <h2>Your rights in the EEA and the UK</h2>
+      <p>Under the GDPR and equivalent law you have the right to ask a company for access to the personal data it holds about you, and to have it corrected, erased, restricted, ported, or to object to it being used. You also have the right to complain to a data protection authority.</p>
+      <p>Here is the honest position: <strong>Ludyem holds no personal data about you</strong>, so there is nothing of yours for us to hand over, correct or erase. Your habits are on your iPhone and under your control, and you can erase all of it by deleting the app. If you believe we hold something about you, write to us and we will tell you what we find, within 30 days.</p>
+      <p>Ludyem AS is registered in Norway. Our supervisory authority is the Norwegian Data Protection Authority, Datatilsynet (<a href="https://www.datatilsynet.no" target="_blank" rel="noopener">datatilsynet.no</a>), and you may also complain to the authority in the country you live in.</p>
+      <p>Data that Apple holds because you use an iPhone, the App Store or iCloud is Apple's, not ours, and is covered by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the date at the top changes with it, and the change ships in an app update. If a change ever means the app starts collecting something, we will say so plainly rather than quietly editing a sentence.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about any of this go to <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>, and we answer in English or Norwegian.</p>
+      <p>Ludyem AS, Norway.</p>
+    </div>
+  </main>
+
+  <footer class="doc-foot">
+    <p>
+      <a href="/never-stall/">Ludyem · Never Stall</a>
+      <a href="/never-stall/terms/">Terms</a>
+      <a href="/never-stall/support/">Support</a>
+      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+    </p>
+    <p style="margin-top:12px;">Last updated 5 September 2026 · © 2026 Ludyem AS. All rights reserved.</p>
+  </footer>
+</body>
+</html>

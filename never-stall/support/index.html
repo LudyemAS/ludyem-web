@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- DRAFT. Not reviewed by the owner. Do not treat as final.
+
+     Written 5 September 2026. The mechanics in the FAQ are taken from
+     ~/Developer/Rung/docs/SPEC.md sections 1, 3 and 4 and from DECISIONS section 36
+     (Hold at N), not paraphrased from memory. If the advance rule, the retreat rule,
+     the freeze grants or the bank capacities change in SPEC, this page is wrong and
+     has to change with them.
+
+     Two claims to re-check before this goes live:
+       1. The reply time below says two business days. Nothing enforces that.
+       2. support@ludyem.dev has to actually reach an inbox. It is a Porkbun forwarding
+          rule, and App Review mails this address.
+
+     Deliberately absent, because the app does not do them: an Apple Watch app, an iPad
+     app, and data export. The _template FAQ claims a Watch app and Health writing.
+     Both are false here.
+
+     Directory-form page (support/index.html) rather than support.html, so both
+     /never-stall/support and /never-stall/support/ resolve. GitHub Pages 404s the
+     trailing-slash form of a bare .html file. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support · Never Stall by Ludyem</title>
+  <meta name="description" content="Help with Never Stall by Ludyem. How the ladder works, what a freeze is, Apple Health verification, subscriptions, and how to reach a person." />
+  <link rel="canonical" href="https://ludyem.dev/never-stall/support/" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <style>
+    :root {
+      --accent1: #35E0FF; --accent2: #A87BFF;
+      --grad-a: #90eeff; --grad-b: #cfb6ff;
+      --accent-soft: rgba(53,224,255,0.14); --accent-line: rgba(53,224,255,0.32);
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
+  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/never-stall/" class="logo">
+        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
+        Ludyem <span style="color:var(--muted);font-weight:600;">/ Never Stall</span>
+      </a>
+      <a href="/never-stall/" class="back-link">← Back to Never Stall</a>
+    </div>
+  </nav>
+
+  <main class="doc-main">
+    <div class="page-label">Help</div>
+    <h1>Support</h1>
+    <p class="subtitle">Something not working, or a question the answers below do not cover? Write to us.</p>
+
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <h2>Contact us</h2>
+        <p>Email us and we aim to reply <strong>within two business days</strong>. Ludyem is small, so it is a person reading your message, not a ticket system. Telling us your iPhone model and your iOS version saves a round trip. We answer in English or Norwegian.</p>
+        <a href="mailto:support@ludyem.dev" class="btn-contact">support@ludyem.dev</a>
+      </div>
+    </div>
+
+    <div class="faq-label">Frequently asked questions</div>
+    <div class="faq-list">
+
+      <details>
+        <summary>How does the ladder work?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>This is the thing that makes Never Stall different from a streak app. A habit is not a fixed target you either hit or miss. It sits on a <strong>ladder</strong>, and the target moves with you.</p>
+          <p><strong>It goes up when you have earned it.</strong> Hit your target on <strong>4 of your last 5 scheduled days</strong> and the app offers you the next rung. Walk 6,000 steps often enough and it asks for 6,500.</p>
+          <p><strong>It comes back down when you clearly have not.</strong> Miss your target on <strong>3 of your last 5 scheduled days</strong> and it drops by one step. It never falls below the floor you started at. Nothing is taken from you when it does: no XP is removed, your streak does not break, and the app just tells you the new number.</p>
+          <p><strong>Higher rungs take longer.</strong> The first few rungs come after one clean run. Rungs 5 to 8 need two in a row, and 9 to 12 need three. That is deliberate. A target that rises every single week would have you at an impossible number inside a year.</p>
+          <p><strong>Every habit has a top.</strong> Hold the ceiling and the habit <strong>graduates</strong>. It stops climbing and stays there. A ladder with no top is a treadmill.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>I know next week will be bad. Can I stay where I am?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>Yes. When the app offers you the next rung, the second button is <strong>Hold at this target for now</strong>. Tap it and the habit stays exactly where it is.</p>
+          <p>Nothing you have is taken away. The XP you earned stays, the day still counts, and your streak carries on. The only thing holding costs you is the clean run itself: the next offer starts from scratch, the same as if you had climbed. That keeps holding worth the same as climbing rather than better.</p>
+          <p>You can hold at a rung as long as you like, and take the next one whenever you are ready.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What is a freeze?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>A freeze protects one day. Spend it and that day goes <strong>neutral</strong>: it does not break your streak, and it does not count against the ladder either. Illness should not wipe out ninety days of work.</p>
+          <p><strong>Every habit banks its own freezes</strong>, and you earn them by showing up:</p>
+          <ul>
+            <li><strong>One a week</strong>, for each habit.</li>
+            <li><strong>One</strong> when a habit graduates, for that habit.</li>
+            <li><strong>One for every habit</strong> when you rank up.</li>
+          </ul>
+          <p><strong>How many you can hold depends on your rank</strong>, and it is the one number a rank actually changes: 3 at rank E and D, 4 at C and B, 5 at A and S. If a freeze arrives when the bank is already full it is lost, and the app tells you rather than pretending it banked.</p>
+          <p>Freezes cannot be bought, and there is no shop. Every one of them comes from a habit somebody actually did.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How does Apple Health verification work, and how do I turn it off?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>If a habit is built on something Apple Health already measures, such as steps or exercise minutes, Never Stall reads <strong>today's total for that one measurement</strong> and ticks the day off for you once you pass your target. You do not have to remember to open the app.</p>
+          <p><strong>Your tap always wins.</strong> If Health says 2,800 steps and you know you walked, mark it done. The app will not argue with you. Health verification is a convenience, never a judge.</p>
+          <p><strong>Never Stall only reads Health. It never writes to it</strong>, never sends it anywhere, and never shares or sells it. See the <a href="/never-stall/privacy/">Privacy Policy</a> for the full detail.</p>
+          <p><strong>To turn it off:</strong> <strong>iOS Settings → Health → Data Access &amp; Devices → Never Stall</strong>, and switch off whatever you do not want read. You can also do it from your profile in the Health app. The habit does not disappear when you do: it goes back to being one you tap, and you keep your history.</p>
+          <p><strong>If Health shows nothing:</strong> the app needs permission for that specific measurement. Check the same screen and turn the measurement on.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I cancel, or get a refund?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>Apple sells the app and handles the money, so both happen on Apple's side and we cannot do either for you.</p>
+          <p><strong>To cancel a subscription:</strong> <strong>iOS Settings → [your name] → Subscriptions</strong>, choose Never Stall, then <strong>Cancel Subscription</strong>. You keep access until the period you have paid for runs out. Cancel at least 24 hours before it ends, or it renews.</p>
+          <p><strong>For a refund:</strong> <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. Apple decides refunds under Apple's policy. If you live in the EEA, your consumer rights still apply.</p>
+          <p>If you bought the one time purchase rather than a subscription, there is nothing to cancel. It does not renew.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>I got a new iPhone. How do I get my purchase back?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>Sign in with the <strong>same Apple Account</strong> you bought it with, open Never Stall, and use <strong>Restore Purchases</strong>. Your purchase comes back at no charge.</p>
+          <p>Your habits and your history are a separate matter: they move with an iPhone backup, or with iCloud sync once that ships. If neither applies, the purchase restores but the history does not.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I delete my data?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p><strong>Delete the app.</strong> That is all of it. Your habits, your history, your level and your stats are only ever on your iPhone, so removing the app removes them.</p>
+          <p>If you have turned iCloud sync on, you can also clear the app's data from your iCloud account in <strong>iOS Settings → [your name] → iCloud</strong>.</p>
+          <p>There is no export yet, so <strong>deleting is permanent and we cannot get it back for you</strong>. We never had a copy.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Which devices does it work on?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p><strong>iPhone, on iOS 26 or later.</strong> That is the whole list today.</p>
+          <p>There is no iPad app and no Apple Watch app. Home screen widgets, Shortcuts and syncing between your own devices through iCloud are planned, and this page will say so when they ship rather than before.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is there a free version?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>No. Never Stall is paid, with no free tier and no ads. You can see the price in the App Store before you buy, in your own currency.</p>
+          <p>Buying it is what pays for it. There is no other way this app makes money: no advertising, no analytics, and nothing about you to sell.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do I need an account?<span class="summary-icon">+</span></summary>
+        <div class="faq-body">
+          <p>No, and there is not one to make. No sign-up, no email, no password. Everything lives on your iPhone. See the <a href="/never-stall/privacy/">Privacy Policy</a>.</p>
+        </div>
+      </details>
+
+    </div>
+  </main>
+
+  <footer class="doc-foot">
+    <p>
+      <a href="/never-stall/">Ludyem · Never Stall</a>
+      <a href="/never-stall/privacy/">Privacy</a>
+      <a href="/never-stall/terms/">Terms</a>
+      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+    </p>
+    <p style="margin-top:12px;">Last updated 5 September 2026 · © 2026 Ludyem AS. All rights reserved.</p>
+  </footer>
+</body>
+</html>
