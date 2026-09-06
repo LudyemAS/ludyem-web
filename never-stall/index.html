@@ -6,14 +6,28 @@
      things the template shipped are FALSE for this app and were removed rather than
      edited around: an Apple Watch companion, "reads and writes Apple Health" (this app
      never writes), and "free to download" (there is no free tier). Do not let a future
-     re-run of new-app.py --force put them back.
+     run of new-app.py put them back. It cannot as things stand: this app serves its
+     legal pages the directory way, and new-app.py exits on that before it writes
+     anything. --buttons-only is the safe way to wire the App Store buttons.
+
+     Restyled 6 September 2026 into the app's own look. The constellation stylesheet is
+     still the base; /never-stall/assets/never-stall.css is a layer over it carrying the
+     values from ~/Developer/Rung/DESIGN.md section 3, and NOTHING on this page may use
+     a colour that is not in that table. Three rules from it that this page obeys and
+     that are easy to undo by accident:
+       - no gradient text and no gradient fills. The app draws depth with a 1px border
+         and a flat fill. .grad is kept as a hook but resolves to flat cyan.
+       - cyan means progress, violet means a ceiling, and the six stat hues are never
+         a panel fill. If a new element wants a colour, it needs a meaning first.
+       - no emoji. The feature marks are drawn from the app's own vocabulary (the
+         rungs, the hexagon, the done check), because an emoji is somebody else's art.
+
+     The screenshots are the real thing, from the 6 September build (Artifacts/shots in
+     the app repo), cropped at the top and quantised to 256 colours. Regenerate them
+     with `make shots` over there rather than editing these by hand.
 
      Buttons are "Coming soon" on purpose. App Store Connect Apple ID 6808904948 exists
-     but the app is in Prepare for Submission, so there is nothing to link to yet. When
-     it is approved:
-         ./new-app.py never-stall --appstore-id 6808904948 --force ...
-     will overwrite this file and the three legal pages with template copy. Wire the
-     buttons by hand instead, or re-check every claim on all four pages afterwards. -->
+     but the app is in Prepare for Submission, so there is nothing to link to yet. -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,55 +37,103 @@
   <meta property="og:description" content="Every habit sits on a ladder. Keep it and the target rises. Miss it and it eases back." />
   <meta property="og:url" content="https://ludyem.dev/never-stall/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ludyem.dev/never-stall/assets/shot-today.png" />
+  <meta name="theme-color" content="#0E1116" />
   <link rel="canonical" href="https://ludyem.dev/never-stall/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+
   <link rel="stylesheet" href="/assets/ludyem.css" />
-  <style>
-    :root {
-      --accent1: #35E0FF; --accent2: #A87BFF;
-      --grad-a: #90eeff; --grad-b: #cfb6ff;
-      --accent-soft: rgba(53,224,255,0.14); --accent-line: rgba(53,224,255,0.32);
-    }
-  </style>
+  <link rel="stylesheet" href="/never-stall/assets/never-stall.css" />
+
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
 
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
   <nav>
     <div class="nav-inner">
       <a href="/" class="logo">
         <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ Never Stall</span>
+        Ludyem <span class="mono ns-suffix">/ Never&nbsp;Stall</span>
       </a>
       <div class="nav-links">
         <a href="#features">How it works</a>
+        <a href="#privacy">Privacy</a>
         <a href="/never-stall/support/">Support</a>
       </div>
-      <span class="btn-nav" style="opacity:.6;cursor:default;">Coming soon</span>
+      <span class="btn-nav">Coming soon</span>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> On device · No account · Apple Health, read only</div>
+      <!-- The app's own shape, drawn once and very faintly. Decorative. -->
+      <svg class="hero-hex" viewBox="0 0 200 174" fill="none" aria-hidden="true">
+        <path d="M100 3 184 46.5v87L100 171 16 133.5v-87z" stroke="currentColor" stroke-width="1" />
+        <path d="M100 31 160 60.5v57L100 143 40 117.5v-57z" stroke="currentColor" stroke-width="1" />
+      </svg>
+
+      <div class="hero-badge"><span class="hero-badge-dot"></span> On device · No account · Health, read only</div>
       <h1>Your habits,<br><span class="grad">one rung higher.</span></h1>
       <p class="hero-sub">A habit tracker where the habit gets harder as you keep it. Streak apps ask whether you did it. Never Stall asks whether you are getting better at it.</p>
       <div class="hero-actions">
-        <span class="btn-primary" style="opacity:.6;cursor:default;">Coming soon</span>
-        <a href="#features" class="btn-secondary">How it works</a>
+        <span class="btn-primary is-soon">Coming soon</span>
+        <a href="#features" class="btn-secondary">How it works →</a>
       </div>
-      <img class="hero-art" src="assets/hero.png" alt="Never Stall on iPhone" onerror="this.remove()" />
+
+      <!-- The one idea, drawn rather than described. This is the Climb screen's
+           MOVING NEXT card: twelve rungs, filled to where you are, the ceiling
+           outlined in violet at the top. -->
+      <div class="ladder-card">
+        <div class="lc-head">
+          <span class="eyebrow">Moving next</span>
+          <span class="mono rung">04 / 12</span>
+        </div>
+        <div class="lc-row">
+          <span class="lc-name">Walk</span>
+          <span class="mono lc-target">6,000 <span class="to">&rarr;</span> 6,500 steps</span>
+        </div>
+        <div class="rungs" role="img" aria-label="Rung 4 of 12 on this ladder. The twelfth is the ceiling.">
+          <i class="on" style="height:10px"></i>
+          <i class="on" style="height:13px"></i>
+          <i class="on" style="height:17px"></i>
+          <i class="on" style="height:20px"></i>
+          <i style="height:23px"></i>
+          <i style="height:26px"></i>
+          <i style="height:30px"></i>
+          <i style="height:33px"></i>
+          <i style="height:36px"></i>
+          <i style="height:40px"></i>
+          <i style="height:43px"></i>
+          <i class="top" style="height:46px"></i>
+        </div>
+        <p class="lc-note"><b>Four of the last five.</b> That is what moves it. Miss three of five and it steps back down, never below where you started.</p>
+      </div>
+
+      <div class="shots">
+        <figure class="shot">
+          <img src="assets/shot-today.png" alt="The Today screen: four quests, two of them ticked, and the day's XP." width="390" height="818" />
+          <figcaption>Today</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/shot-climb.png" alt="The Climb screen: every ladder, and how far each one has come." width="390" height="818" loading="lazy" />
+          <figcaption>Climb</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/shot-character.png" alt="The Character screen: level, rank, the stat hexagon and six stats." width="390" height="818" loading="lazy" />
+          <figcaption>Character</figcaption>
+        </figure>
+      </div>
 
       <div class="stats-bar">
-        <div class="stat-item"><div class="stat-num">📱</div><div class="stat-label">iPhone, iOS 26+</div></div>
-        <div class="stat-item"><div class="stat-num">🍎</div><div class="stat-label">Health, read only</div></div>
-        <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Accounts</div></div>
-        <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Trackers</div></div>
+        <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Stats</div></div>
+        <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Ranks, E to S</div></div>
+        <div class="stat-item is-zero"><div class="stat-num">0</div><div class="stat-label">Accounts</div></div>
+        <div class="stat-item is-zero"><div class="stat-num">0</div><div class="stat-label">Trackers</div></div>
       </div>
     </div>
   </section>
@@ -85,12 +147,83 @@
         <p class="section-sub">You tap to say you did it. That is the whole interaction. Everything below follows from the days you actually showed up.</p>
       </div>
       <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">🪜</div><h3>A ladder, not a checkbox</h3><p>Hit your target on 4 of your last 5 scheduled days and it rises. Miss it on 3 of 5 and it eases back, never below where you started.</p></div>
-        <div class="feature-card"><div class="feature-icon">🎓</div><h3>Every habit has a top</h3><p>Hold the ceiling and the habit graduates. It stops climbing and stays there. A ladder with no top is a treadmill.</p></div>
-        <div class="feature-card"><div class="feature-icon">❄️</div><h3>Freezes for the bad weeks</h3><p>Spend a freeze and the day goes neutral. Your streak survives. Being ill should not wipe out ninety days of work.</p></div>
-        <div class="feature-card"><div class="feature-icon">🍎</div><h3>Apple Health ticks it for you</h3><p>Build a habit on steps, exercise minutes or sleep and it marks itself done. Read only, never written, never leaves your iPhone.</p></div>
-        <div class="feature-card"><div class="feature-icon">⬆️</div><h3>A level, six stats, a rank</h3><p>Strength, Vitality, Intellect, Focus, Spirit and Order. Every one of them comes from a habit you actually did. Nothing here can be bought.</p></div>
-        <div class="feature-card"><div class="feature-icon">🔒</div><h3>Nothing leaves the phone</h3><p>No account, no backend, no analytics, no ads. There is nothing to breach because there is nothing to hold.</p></div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2"    y="15"   width="3.6" height="6"    rx="1.2" fill="#35E0FF" />
+              <rect x="7.2"  y="11"   width="3.6" height="10"   rx="1.2" fill="#35E0FF" />
+              <rect x="12.4" y="7"    width="3.6" height="14"   rx="1.2" fill="#35E0FF" opacity=".45" />
+              <rect x="17.9" y="3.7"  width="3.4" height="17.3" rx="1.2" fill="none" stroke="#A87BFF" stroke-width="1.3" opacity=".8" />
+            </svg>
+          </div>
+          <h3>A ladder, not a checkbox</h3>
+          <p>Hit your target on 4 of your last 5 scheduled days and it rises. Miss it on 3 of 5 and it eases back, never below where you started.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 1.9 20.4 6.75v9.7L12 21.3 3.6 16.45v-9.7z" stroke="#A87BFF" stroke-width="1.35" stroke-linejoin="round" />
+              <path d="M8.5 11.9 10.9 14.4 15.6 9.3" stroke="#A87BFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Every habit has a top</h3>
+          <p>Hold the ceiling and the habit graduates. It stops climbing and stays there, with a seal on its page. A ladder with no top is a treadmill.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#35E0FF" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M12 2.8v18.4M4.03 7.4l15.94 9.2M19.97 7.4 4.03 16.6" />
+              <path d="M9.9 4.9 12 6.9l2.1-2M9.9 19.1 12 17.1l2.1 2" stroke-width="1.3" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Freezes for the bad weeks</h3>
+          <p>Spend a freeze and the day goes neutral. Your streak survives and the ladder holds. Being ill should not wipe out ninety days of work.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9.3" fill="#35E0FF" />
+              <path d="M7.7 12.3 10.6 15.2 16.4 9" stroke="#0E1116" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Apple Health ticks it for you</h3>
+          <p>Build a habit on steps, exercise minutes or sleep and it marks itself done. Read only, never written, and it never leaves your iPhone.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2.4 20 7.05v9.9L12 21.6 4 16.95v-9.9z" stroke="rgba(255,255,255,0.20)" stroke-width="1.2" stroke-linejoin="round" />
+              <path d="M12 6.5 16.5 9.1v5.8L12 17.5 7.5 14.9V9.1z" fill="rgba(53,224,255,0.13)" stroke="#35E0FF" stroke-width="1.3" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>A level, six stats, a rank</h3>
+          <p>Every one of them comes from a habit you actually did, and the rank runs E to S. Nothing on this screen can be bought.</p>
+          <div class="stat-chips">
+            <span style="color:var(--str)">STR</span>
+            <span style="color:var(--vit)">VIT</span>
+            <span style="color:var(--int)">INT</span>
+            <span style="color:var(--foc)">FOC</span>
+            <span style="color:var(--spi)">SPI</span>
+            <span style="color:var(--ord)">ORD</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#97A3B4" stroke-width="1.5" aria-hidden="true">
+              <rect x="4.5" y="10.3" width="15" height="10.9" rx="3.2" />
+              <path d="M8.3 10.3V7.5a3.7 3.7 0 0 1 7.4 0v2.8" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Nothing leaves the phone</h3>
+          <p>No account, no backend, no analytics, no ads. There is nothing to breach because there is nothing to hold.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -102,9 +235,9 @@
       <h2 class="section-title">On your iPhone. Full stop.</h2>
       <p class="section-sub" style="margin-bottom:40px;">No account, no sign-in, no tracking, and no Health data going anywhere. Read the detail rather than taking our word for it.</p>
       <div class="dl-row" style="justify-content:center;">
-        <a href="/never-stall/privacy/" class="btn-secondary">Privacy Policy →</a>
-        <a href="/never-stall/terms/" class="btn-secondary">Terms →</a>
-        <a href="/never-stall/support/" class="btn-secondary">Support →</a>
+        <a href="/never-stall/privacy/" class="btn-secondary">Privacy Policy &rarr;</a>
+        <a href="/never-stall/terms/" class="btn-secondary">Terms &rarr;</a>
+        <a href="/never-stall/support/" class="btn-secondary">Support &rarr;</a>
       </div>
     </div>
   </section>
@@ -115,7 +248,7 @@
       <div class="cta-card">
         <h2>Stop counting days.<br><span class="grad">Start climbing.</span></h2>
         <p>No account. No tracking. Your habits stay on your iPhone.</p>
-        <span class="btn-primary" style="display:inline-flex;opacity:.6;cursor:default;">Coming soon</span>
+        <span class="btn-primary is-soon" style="display:inline-flex;">Coming soon</span>
         <p class="cta-note">iPhone · iOS 26 or later · Apple Health optional</p>
       </div>
     </div>
@@ -135,7 +268,7 @@
         <a href="/never-stall/support/">Support</a>
         <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
       </div>
-      <p class="footer-copy">Last updated 5 September 2026 · © 2026 Ludyem AS</p>
+      <p class="footer-copy">Last updated 6 September 2026 · © 2026 Ludyem AS</p>
     </div>
   </footer>
 
