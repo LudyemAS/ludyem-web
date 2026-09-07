@@ -2,17 +2,19 @@
 <html lang="en">
 <!-- DRAFT. Not reviewed by the owner, not reviewed by a lawyer. Do not treat as final.
 
-     Written 5 September 2026. Facts checked against ~/Developer/Rung: three products
-     exist in App Store Connect and in Configuration.storekit, and one of the three is
-     NOT a subscription. com.ludyem.NeverStall.monthly (1 month) and .yearly (1 year)
-     auto-renew; .lifetime is a non-consumable one-time purchase. The subscription
-     section below covers both, deliberately.
+     Written 5 September 2026. Rewritten 7 September 2026 for DECISIONS section 105:
+     the app is free and the paywall is deleted, not dormant. It was describing three
+     subscription products that the app no longer sells, which was written when it was
+     true and stopped being true.
 
-     No trial, introductory offer, promotional offer or offer code exists on any product
-     as of this date, and DECISIONS section 1 leaves the question open. The trial
-     sentence is therefore written to be true whether or not one is ever added, so that
-     adding one later needs an App Store Connect row and a change to the paywall copy,
-     not a change to this page.
+     Facts checked against ~/Developer/Rung as of the rewrite: six products exist in
+     App Store Connect and in Configuration.storekit, and all six are CONSUMABLES —
+     .freeze, .freeze3, .freeze5, .dayfreeze, .dayfreeze3, .freezebundle. There is no
+     subscription, no non-consumable, no trial and no offer code. Nothing is gated:
+     every quest, ladder, stat and screen is open without paying.
+
+     Consumables are not re-delivered by the App Store, so there is no restore. The app
+     has no Restore Purchases control, and this page must not promise one.
 
      Directory-form page (terms/index.html) rather than terms.html, so both
      /never-stall/terms and /never-stall/terms/ resolve. GitHub Pages 404s the
@@ -21,7 +23,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Use · Never Stall by Ludyem</title>
-  <meta name="description" content="Terms of Use for Never Stall by Ludyem. Licence, subscriptions and purchases, no guarantee of outcomes, governing law." />
+  <meta name="description" content="Terms of Use for Never Stall by Ludyem. Licence, the free app and its in-app purchases, no guarantee of outcomes, governing law." />
   <link rel="canonical" href="https://ludyem.dev/never-stall/terms/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,26 +60,24 @@
       <p>The app itself, its design, its code and its artwork belong to Ludyem AS. These terms do not give you any right to our name or our branding.</p>
 
       <h2>Paying for Never Stall</h2>
-      <p>Never Stall is a paid app. There is no free tier, and you can see what it costs before you pay for it.</p>
+      <p><strong>The app is free, and all of it is free.</strong> Every quest, every ladder, your level, your six stats, your rank and your whole history are open without paying. There is no subscription, no trial, no paid tier and nothing behind a paywall.</p>
 
-      <h3>The price</h3>
+      <h3>The only thing we sell is freezes</h3>
+      <p>A freeze closes one day as neutral, so a day you could not keep does not break a streak. You earn them as you climb, and <strong>if you run out you can buy more</strong>. That is the whole of it.</p>
+      <p><strong>Nothing you buy changes what you have done.</strong> A freeze cannot add XP, raise a level, move a stat, change a rank or alter the record of a day you kept. It only ever marks a day neutral, which is the same thing an earned freeze does.</p>
+
+      <h3>Freezes are consumables</h3>
+      <p>A freeze is used up when it is spent, the way a ticket is. Payment is charged to your Apple Account when you confirm the purchase. <strong>Nothing renews, nothing is billed again, and there is nothing to cancel.</strong></p>
       <p><strong>The price that counts is the one shown in the App Store at the moment you buy</strong>, in your own currency and for your own country. We do not print prices on this page, because they differ by country and change over time.</p>
 
-      <h3>Subscriptions renew by themselves</h3>
-      <p>Never Stall offers auto renewing subscriptions. Payment is charged to your Apple Account when you confirm the purchase. <strong>A subscription renews automatically at the same price for the same length of time, unless you cancel it at least 24 hours before the current period ends.</strong> Your Apple Account is charged for the renewal within 24 hours of the period ending. Cancelling stops the next renewal; it does not shorten the period you have already paid for, and you keep access until that period runs out.</p>
+      <h3>There is no restore, and that is not an oversight</h3>
+      <p>The App Store does not re-deliver consumables, so a freeze you have bought cannot be restored the way an app or a subscription can. <strong>Freezes you have not yet spent live on the device, and in your iCloud data if you use it.</strong> The app has no Restore Purchases control, because a control that could only ever say "nothing to restore" would be misleading.</p>
 
-      <h3>The one time purchase does not renew</h3>
-      <p>Never Stall also offers a one time purchase that is not a subscription. You pay once, nothing renews, and there is nothing to cancel.</p>
-
-      <h3>Free trials and introductory offers</h3>
-      <p>We may offer a free trial or an introductory price on a subscription, and we may choose not to. <strong>If one is offered, its length and its terms are shown on the purchase screen before you buy, and that screen is what applies.</strong> A trial rolls into a paid subscription at the standard price unless you cancel at least 24 hours before it ends. If you buy a subscription while a free trial is running, the unused part of that trial ends at the moment you buy.</p>
-
-      <h3>Managing, cancelling and getting a refund</h3>
-      <p>Apple sells the app and handles the money, so Apple is where all of this happens and we cannot do any of it for you.</p>
+      <h3>Refunds</h3>
+      <p>Apple sells the app and handles the money, so refunds are Apple's and we cannot issue one for you.</p>
       <ul>
-        <li><strong>To manage or cancel:</strong> <strong>iOS Settings → [your name] → Subscriptions</strong>, choose Never Stall, then cancel.</li>
         <li><strong>To ask for a refund:</strong> <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. Refunds are Apple's decision under Apple's policy, not ours. If you live in the EEA, your statutory rights as a consumer are unaffected by this.</li>
-        <li><strong>To restore a purchase</strong> on a new iPhone or after reinstalling: sign in with the Apple Account you bought it with, then use <strong>Restore Purchases</strong> in the app.</li>
+        <li><strong>To see what you have bought:</strong> your purchase history is in <strong>iOS Settings → [your name] → Media &amp; Purchases</strong>. There is no subscription to manage, because there is not one.</li>
       </ul>
 
       <h2>What the app does not promise</h2>
@@ -91,7 +91,7 @@
       <p>Do not reverse engineer, decompile or tamper with the app, resell or redistribute it, use it to break the law, or interfere with Apple's services or with anyone else's use of the app. That is the whole list. The app has no accounts, no social features and no shared content, so there is nothing here about what you may post.</p>
 
       <h2>Ending this</h2>
-      <p>You can end these terms at any time by deleting the app. We may end your licence if you materially break these terms, and the licence ends automatically if you stop using the app. We may also stop selling or supporting Never Stall, or withdraw it from the App Store. If we do, a one time purchase you have already made stays yours to use on your devices for as long as it keeps working, and any subscription you hold will not be renewed. Apple handles any refund that is due.</p>
+      <p>You can end these terms at any time by deleting the app. We may end your licence if you materially break these terms, and the licence ends automatically if you stop using the app. We may also stop selling or supporting Never Stall, or withdraw it from the App Store. If we do, freezes you have already bought and not spent stay on your device for as long as the app keeps working, and nothing further will be charged to you. Apple handles any refund that is due.</p>
 
       <h2>No warranty</h2>
       <p>The app is provided "as is" and "as available", without warranties of any kind so far as the law allows. We do not promise it will be uninterrupted, error free, or right about every number. Nothing here removes rights you have as a consumer that cannot be removed by agreement.</p>
