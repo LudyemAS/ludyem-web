@@ -3,33 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support — Tend by Ludyem</title>
+  <title>Support · Tend by Ludyem</title>
   <meta name="description" content="Help with Tend by Ludyem. FAQs and contact." />
   <link rel="canonical" href="https://ludyem.dev/tend/support" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #109e8d; --accent2: #6bbf59;
-      --grad-a: #7ccac0; --grad-b: #aedca4;
-      --accent-soft: rgba(16,158,141,0.14); --accent-line: rgba(16,158,141,0.32);
-    }
+    :root { --accent: #109E8D; --accent-ink: #6AD3C4; --on-accent: #fff; }
   </style>
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/tend" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ Tend</span>
-      </a>
-      <a href="/tend" class="back-link">← Back to Tend</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/tend/">/ <b>Tend</b></a></span>
+      <div class="links">
+        <a class="opt" href="/tend/privacy">Privacy</a>
+        <a class="opt" href="/tend/terms">Terms</a>
+        <a class="sup" href="/tend/support">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6778921650" target="_blank" rel="noopener">Download</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Help</div>
@@ -37,7 +33,7 @@
     <p class="subtitle">Can't find what you're looking for? We're happy to help.</p>
 
     <div class="contact-card">
-      <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--grad-a)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg></div>
+      <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/sprite.svg#mail"/></svg></div>
       <div>
         <h2>Contact us</h2>
         <p>Send us an email and we'll get back to you as soon as possible, usually within one business day.</p>
@@ -51,8 +47,8 @@
       <details>
         <summary>Is Tend free?<span class="summary-icon">+</span></summary>
         <div class="faq-body">
-          <p>Logging is free forever: mood check-ins, all 39+ symptoms, custom symptoms, factors, streaks, the weekly report, and a widget. That's a promise, not a trial.</p>
-          <p>Tend Pro deepens your insights: your all-time history, deeper patterns powered by passive Apple Health signals (sleep, steps, activity, mindfulness, cycle), the doctor report, and on-device AI summaries. Pro is an annual subscription with a free trial, or a one-time lifetime purchase.</p>
+          <p>Tend is one yearly plan, or a one-time lifetime purchase. Either one unlocks everything from the first check-in: unlimited check-ins, every symptom plus your own, patterns across your whole history, the doctor-ready summary and your weekly report. There are no ads, and nothing about you is ever sold.</p>
+          <p>If you installed Tend before 2 September 2026, you keep the free logging you started with, and it stays free. Either way, your check-ins live in Apple Health, so they outlive Tend.</p>
         </div>
       </details>
 
@@ -130,14 +126,18 @@
     </div>
   </main>
 
-  <footer class="doc-foot">
-    <p>
-      <a href="/tend">Tend</a>
-      <a href="privacy">Privacy</a>
-      <a href="terms">Terms</a>
-      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
-    </p>
-    <p style="margin-top:12px;">© 2026 Ludyem AS. All rights reserved.</p>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/tend/privacy">Privacy</a>
+        <a href="/tend/terms">Terms</a>
+        <a href="/tend/support">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
   </footer>
 </body>
 </html>

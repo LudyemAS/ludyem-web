@@ -3,33 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service — Tend by Ludyem</title>
+  <title>Terms of Service · Tend by Ludyem</title>
   <meta name="description" content="Terms of Service for Tend by Ludyem." />
   <link rel="canonical" href="https://ludyem.dev/tend/terms" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #109e8d; --accent2: #6bbf59;
-      --grad-a: #7ccac0; --grad-b: #aedca4;
-      --accent-soft: rgba(16,158,141,0.14); --accent-line: rgba(16,158,141,0.32);
-    }
+    :root { --accent: #109E8D; --accent-ink: #6AD3C4; --on-accent: #fff; }
   </style>
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/tend" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ Tend</span>
-      </a>
-      <a href="/tend" class="back-link">← Back to Tend</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/tend/">/ <b>Tend</b></a></span>
+      <div class="links">
+        <a class="opt" href="/tend/privacy">Privacy</a>
+        <a class="opt" href="/tend/terms">Terms</a>
+        <a class="sup" href="/tend/support">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6778921650" target="_blank" rel="noopener">Download</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Legal</div>
@@ -96,14 +92,18 @@
     </div>
   </main>
 
-  <footer class="doc-foot">
-    <p>
-      <a href="/tend">Tend</a>
-      <a href="privacy">Privacy</a>
-      <a href="support">Support</a>
-      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
-    </p>
-    <p style="margin-top:12px;">© 2026 Ludyem AS. All rights reserved.</p>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/tend/privacy">Privacy</a>
+        <a href="/tend/terms">Terms</a>
+        <a href="/tend/support">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
   </footer>
 </body>
 </html>
