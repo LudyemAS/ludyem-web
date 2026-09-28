@@ -36,15 +36,17 @@
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a href="/never-stall/" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span class="mono ns-suffix">/ Never&nbsp;Stall</span>
-      </a>
-      <a href="/never-stall/" class="back-link">← Back to Never Stall</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/never-stall/">/ <b>Never Stall</b></a></span>
+      <div class="links">
+        <a class="opt" href="/never-stall/privacy/">Privacy</a>
+        <a class="opt" href="/never-stall/terms/">Terms</a>
+        <a class="sup" href="/never-stall/support/">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6808904948" target="_blank" rel="noopener">Download</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Legal</div>
@@ -112,14 +114,18 @@
     </div>
   </main>
 
-  <footer class="doc-foot">
-    <p>
-      <a href="/never-stall/">Ludyem · Never Stall</a>
-      <a href="/never-stall/privacy/">Privacy</a>
-      <a href="/never-stall/support/">Support</a>
-      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
-    </p>
-    <p style="margin-top:12px;">Last updated 5 September 2026 · © 2026 Ludyem AS. All rights reserved.</p>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/never-stall/privacy/">Privacy</a>
+        <a href="/never-stall/terms/">Terms</a>
+        <a href="/never-stall/support/">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
   </footer>
 </body>
 </html>
