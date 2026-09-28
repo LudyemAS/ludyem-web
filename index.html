@@ -5,199 +5,287 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="jymblGnOnUNlwOBcRVeSFtCW26tCSH9Gyfk5S3SYMAQ" />
   <meta name="msvalidate.01" content="49736687CF6A2200E3BE0207ABE9EF5C" />
-  <title>Ludyem, focused privacy-first iOS apps</title>
-  <meta name="description" content="Ludyem builds a small constellation of privacy-first, focused iOS apps, for your health and your money. On-device, no accounts, no tracking." />
-  <meta property="og:title" content="Ludyem, focused privacy-first iOS apps" />
-  <meta property="og:description" content="A constellation of privacy-first, focused iOS apps, for your health and your money. On-device, no accounts, no tracking." />
-  <meta property="og:url" content="https://ludyem.dev" />
+  <title>Ludyem · Focused apps for iPhone, made in Oslo</title>
+  <meta name="description" content="Ludyem is an independent studio in Oslo. Eleven apps on the App Store, each built to do one job well: RCKit, AppGlance, StoreGlance, VitaView, Tend, Never Stall, Runway and the Workouts trainers." />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="Ludyem · One job each. Done properly." />
+  <meta property="og:description" content="Eleven focused apps for iPhone, iPad, Mac and Apple Watch, from an independent studio in Oslo. No ads, and your data is never for sale." />
+  <meta property="og:url" content="https://ludyem.dev/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://ludyem.dev/assets/icons/ludyem-512.png" />
-  <link rel="canonical" href="https://ludyem.dev" />
-  <link rel="icon" type="image/png" href="assets/icons/ludyem.png" />
-  <link rel="apple-touch-icon" href="assets/icons/ludyem-180.png" />
-  <link rel="stylesheet" href="assets/ludyem.css" />
-  <style>
-    .feature-icon svg.ficon, .ficon { width: 24px; height: 24px; display: block; fill: none; stroke: var(--grad-a); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  </style>
+  <meta property="og:image" content="https://ludyem.dev/assets/og/ludyem.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://ludyem.dev/assets/og/ludyem.png" />
+  <link rel="canonical" href="https://ludyem.dev/" />
+  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
+  <link rel="icon" type="image/png" sizes="256x256" href="/assets/icons/ludyem.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
+  <link rel="stylesheet" href="/assets/ludyem.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ludyem AS",
+    "url": "https://ludyem.dev/",
+    "logo": "https://ludyem.dev/assets/icons/ludyem-512.png",
+    "email": "support@ludyem.dev",
+    "address": { "@type": "PostalAddress", "addressLocality": "Oslo", "addressCountry": "NO" },
+    "sameAs": ["https://apps.apple.com/developer/id931436519"]
+  }
+  </script>
 </head>
-<body>
+<body class="home">
 
-  <!-- Icon sprite (decorative) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
-    <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></symbol>
-    <symbol id="ic-notrack" viewBox="0 0 24 24"><path d="M3.2 12C5.6 8.2 8.6 6.5 12 6.5s6.4 1.7 8.8 5.5c-2.4 3.8-5.4 5.5-8.8 5.5-1 0-2-.15-3-.45"/><circle cx="12" cy="12" r="2.4"/><path d="M4.5 4.5l15 15"/></symbol>
-    <symbol id="ic-health" viewBox="0 0 24 24"><path d="M12 20.3C9.5 18.8 3 14.8 3 9.6 3 7 4.8 5 7.2 5c1.7 0 3 .9 3.8 2.2C11.8 5.9 13.1 5 14.8 5 17.2 5 19 7 19 9.6c0 5.2-6.5 9.2-7 10.7z"/></symbol>
-    <symbol id="ic-devices" viewBox="0 0 24 24"><rect x="4" y="4" width="9" height="16" rx="2.5"/><line x1="7" y1="17.5" x2="10" y2="17.5"/><rect x="15" y="8" width="5.5" height="8" rx="2"/></symbol>
-    <symbol id="ic-focus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/></symbol>
-    <symbol id="ic-gem" viewBox="0 0 24 24"><path d="M6 4h12l3 5-9 11L3 9z"/><path d="M3 9h18"/><path d="M9 4l-3 5 6 11 6-11-3-5"/></symbol>
-  </defs></svg>
-
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="/" class="logo">
-        <img class="logo-mark" src="assets/icons/ludyem.png" alt="" width="32" height="32" />
-        Ludyem
-      </a>
-      <div class="nav-links">
-        <a href="#apps">Apps</a>
-        <a href="#values">Why Ludyem</a>
-        <a href="mailto:support@ludyem.dev">Contact</a>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a></span>
+      <div class="links">
+        <a class="opt" href="#developers">For developers</a>
+        <a class="opt" href="#health">Health</a>
+        <a class="opt" href="#money">Money</a>
+        <a class="sup" href="#promise">Our promise</a>
+        <a class="get" href="https://apps.apple.com/developer/id931436519" target="_blank" rel="noopener">App Store</a>
       </div>
-      <a href="#apps" class="btn-nav">See the apps</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Privacy-first · On-device · No accounts, no tracking</div>
-      <h1>Apps that<br><span class="grad">respect your data.</span></h1>
-      <p class="hero-sub">
-        Ludyem builds a small constellation of focused iOS apps. Each does one thing well
-        and keeps everything on your iPhone, with no accounts and no tracking.
-      </p>
-      <div class="hero-actions">
-        <a href="#apps" class="btn-primary">
-          Explore the apps
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#values" class="btn-secondary">What we stand for</a>
+  <main>
+
+    <!-- Hero: the mark draws itself, then every app on one shelf. -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-mark">
+          <svg viewBox="0 0 1024 1024" role="img" aria-label="Ludyem">
+            <path d="M1024.0 512.0L1023.8 652.2L1023.4 697.0L1022.6 729.4L1021.5 755.8L1020.0 778.3L1018.3 798.1L1016.2 815.9L1013.8 832.1L1011.1 846.9L1008.0 860.7L1004.6 873.4L1000.9 885.3L996.8 896.5L992.4 906.9L987.6 916.7L982.4 926.0L976.8 934.6L970.9 942.8L964.5 950.5L957.7 957.7L950.5 964.5L942.8 970.9L934.6 976.8L926.0 982.4L916.7 987.6L906.9 992.4L896.5 996.8L885.3 1000.9L873.4 1004.6L860.7 1008.0L846.9 1011.1L832.1 1013.8L815.9 1016.2L798.1 1018.3L778.3 1020.0L755.8 1021.5L729.4 1022.6L697.0 1023.4L652.2 1023.8L512.0 1024.0L371.8 1023.8L327.0 1023.4L294.6 1022.6L268.2 1021.5L245.7 1020.0L225.9 1018.3L208.1 1016.2L191.9 1013.8L177.1 1011.1L163.3 1008.0L150.6 1004.6L138.7 1000.9L127.5 996.8L117.1 992.4L107.3 987.6L98.0 982.4L89.4 976.8L81.2 970.9L73.5 964.5L66.3 957.7L59.5 950.5L53.1 942.8L47.2 934.6L41.6 926.0L36.4 916.7L31.6 906.9L27.2 896.5L23.1 885.3L19.4 873.4L16.0 860.7L12.9 846.9L10.2 832.1L7.8 815.9L5.7 798.1L4.0 778.3L2.5 755.8L1.4 729.4L0.6 697.0L0.2 652.2L0.0 512.0L0.2 371.8L0.6 327.0L1.4 294.6L2.5 268.2L4.0 245.7L5.7 225.9L7.8 208.1L10.2 191.9L12.9 177.1L16.0 163.3L19.4 150.6L23.1 138.7L27.2 127.5L31.6 117.1L36.4 107.3L41.6 98.0L47.2 89.4L53.1 81.2L59.5 73.5L66.3 66.3L73.5 59.5L81.2 53.1L89.4 47.2L98.0 41.6L107.3 36.4L117.1 31.6L127.5 27.2L138.7 23.1L150.6 19.4L163.3 16.0L177.1 12.9L191.9 10.2L208.1 7.8L225.9 5.7L245.7 4.0L268.2 2.5L294.6 1.4L327.0 0.6L371.8 0.2L512.0 0.0L652.2 0.2L697.0 0.6L729.4 1.4L755.8 2.5L778.3 4.0L798.1 5.7L815.9 7.8L832.1 10.2L846.9 12.9L860.7 16.0L873.4 19.4L885.3 23.1L896.5 27.2L906.9 31.6L916.7 36.4L926.0 41.6L934.6 47.2L942.8 53.1L950.5 59.5L957.7 66.3L964.5 73.5L970.9 81.2L976.8 89.4L982.4 98.0L987.6 107.3L992.4 117.1L996.8 127.5L1000.9 138.7L1004.6 150.6L1008.0 163.3L1011.1 177.1L1013.8 191.9L1016.2 208.1L1018.3 225.9L1020.0 245.7L1021.5 268.2L1022.6 294.6L1023.4 327.0L1023.8 371.8Z" fill="#0C0C0E"/>
+            <path d="M1024.0 512.0L1023.8 652.2L1023.4 697.0L1022.6 729.4L1021.5 755.8L1020.0 778.3L1018.3 798.1L1016.2 815.9L1013.8 832.1L1011.1 846.9L1008.0 860.7L1004.6 873.4L1000.9 885.3L996.8 896.5L992.4 906.9L987.6 916.7L982.4 926.0L976.8 934.6L970.9 942.8L964.5 950.5L957.7 957.7L950.5 964.5L942.8 970.9L934.6 976.8L926.0 982.4L916.7 987.6L906.9 992.4L896.5 996.8L885.3 1000.9L873.4 1004.6L860.7 1008.0L846.9 1011.1L832.1 1013.8L815.9 1016.2L798.1 1018.3L778.3 1020.0L755.8 1021.5L729.4 1022.6L697.0 1023.4L652.2 1023.8L512.0 1024.0L371.8 1023.8L327.0 1023.4L294.6 1022.6L268.2 1021.5L245.7 1020.0L225.9 1018.3L208.1 1016.2L191.9 1013.8L177.1 1011.1L163.3 1008.0L150.6 1004.6L138.7 1000.9L127.5 996.8L117.1 992.4L107.3 987.6L98.0 982.4L89.4 976.8L81.2 970.9L73.5 964.5L66.3 957.7L59.5 950.5L53.1 942.8L47.2 934.6L41.6 926.0L36.4 916.7L31.6 906.9L27.2 896.5L23.1 885.3L19.4 873.4L16.0 860.7L12.9 846.9L10.2 832.1L7.8 815.9L5.7 798.1L4.0 778.3L2.5 755.8L1.4 729.4L0.6 697.0L0.2 652.2L0.0 512.0L0.2 371.8L0.6 327.0L1.4 294.6L2.5 268.2L4.0 245.7L5.7 225.9L7.8 208.1L10.2 191.9L12.9 177.1L16.0 163.3L19.4 150.6L23.1 138.7L27.2 127.5L31.6 117.1L36.4 107.3L41.6 98.0L47.2 89.4L53.1 81.2L59.5 73.5L66.3 66.3L73.5 59.5L81.2 53.1L89.4 47.2L98.0 41.6L107.3 36.4L117.1 31.6L127.5 27.2L138.7 23.1L150.6 19.4L163.3 16.0L177.1 12.9L191.9 10.2L208.1 7.8L225.9 5.7L245.7 4.0L268.2 2.5L294.6 1.4L327.0 0.6L371.8 0.2L512.0 0.0L652.2 0.2L697.0 0.6L729.4 1.4L755.8 2.5L778.3 4.0L798.1 5.7L815.9 7.8L832.1 10.2L846.9 12.9L860.7 16.0L873.4 19.4L885.3 23.1L896.5 27.2L906.9 31.6L916.7 36.4L926.0 41.6L934.6 47.2L942.8 53.1L950.5 59.5L957.7 66.3L964.5 73.5L970.9 81.2L976.8 89.4L982.4 98.0L987.6 107.3L992.4 117.1L996.8 127.5L1000.9 138.7L1004.6 150.6L1008.0 163.3L1011.1 177.1L1013.8 191.9L1016.2 208.1L1018.3 225.9L1020.0 245.7L1021.5 268.2L1022.6 294.6L1023.4 327.0L1023.8 371.8Z" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="8"/>
+            <path class="t t1" d="M492.0 364.0L491.9 403.1L491.5 416.8L490.9 426.9L490.1 435.1L489.0 442.1L487.7 448.3L486.1 453.8L484.2 458.7L482.1 463.1L479.7 467.2L477.1 470.8L474.1 474.1L470.8 477.1L467.2 479.7L463.1 482.1L458.7 484.2L453.8 486.1L448.3 487.7L442.1 489.0L435.1 490.1L426.9 490.9L416.8 491.5L403.1 491.9L364.0 492.0L324.9 491.9L311.2 491.5L301.1 490.9L292.9 490.1L285.9 489.0L279.7 487.7L274.2 486.1L269.3 484.2L264.9 482.1L260.8 479.7L257.2 477.1L253.9 474.1L250.9 470.8L248.3 467.2L245.9 463.1L243.8 458.7L241.9 453.8L240.3 448.3L239.0 442.1L237.9 435.1L237.1 426.9L236.5 416.8L236.1 403.1L236.0 364.0L236.1 324.9L236.5 311.2L237.1 301.1L237.9 292.9L239.0 285.9L240.3 279.7L241.9 274.2L243.8 269.3L245.9 264.9L248.3 260.8L250.9 257.2L253.9 253.9L257.2 250.9L260.8 248.3L264.9 245.9L269.3 243.8L274.2 241.9L279.7 240.3L285.9 239.0L292.9 237.9L301.1 237.1L311.2 236.5L324.9 236.1L364.0 236.0L403.1 236.1L416.8 236.5L426.9 237.1L435.1 237.9L442.1 239.0L448.3 240.3L453.8 241.9L458.7 243.8L463.1 245.9L467.2 248.3L470.8 250.9L474.1 253.9L477.1 257.2L479.7 260.8L482.1 264.9L484.2 269.3L486.1 274.2L487.7 279.7L489.0 285.9L490.1 292.9L490.9 301.1L491.5 311.2L491.9 324.9Z" fill="#fff"/>
+            <path class="t t2" d="M492.0 660.0L491.9 699.1L491.5 712.8L490.9 722.9L490.1 731.1L489.0 738.1L487.7 744.3L486.1 749.8L484.2 754.7L482.1 759.1L479.7 763.2L477.1 766.8L474.1 770.1L470.8 773.1L467.2 775.7L463.1 778.1L458.7 780.2L453.8 782.1L448.3 783.7L442.1 785.0L435.1 786.1L426.9 786.9L416.8 787.5L403.1 787.9L364.0 788.0L324.9 787.9L311.2 787.5L301.1 786.9L292.9 786.1L285.9 785.0L279.7 783.7L274.2 782.1L269.3 780.2L264.9 778.1L260.8 775.7L257.2 773.1L253.9 770.1L250.9 766.8L248.3 763.2L245.9 759.1L243.8 754.7L241.9 749.8L240.3 744.3L239.0 738.1L237.9 731.1L237.1 722.9L236.5 712.8L236.1 699.1L236.0 660.0L236.1 620.9L236.5 607.2L237.1 597.1L237.9 588.9L239.0 581.9L240.3 575.7L241.9 570.2L243.8 565.3L245.9 560.9L248.3 556.8L250.9 553.2L253.9 549.9L257.2 546.9L260.8 544.3L264.9 541.9L269.3 539.8L274.2 537.9L279.7 536.3L285.9 535.0L292.9 533.9L301.1 533.1L311.2 532.5L324.9 532.1L364.0 532.0L403.1 532.1L416.8 532.5L426.9 533.1L435.1 533.9L442.1 535.0L448.3 536.3L453.8 537.9L458.7 539.8L463.1 541.9L467.2 544.3L470.8 546.9L474.1 549.9L477.1 553.2L479.7 556.8L482.1 560.9L484.2 565.3L486.1 570.2L487.7 575.7L489.0 581.9L490.1 588.9L490.9 597.1L491.5 607.2L491.9 620.9Z" fill="#fff"/>
+            <path class="t t3" d="M788.0 660.0L787.9 699.1L787.5 712.8L786.9 722.9L786.1 731.1L785.0 738.1L783.7 744.3L782.1 749.8L780.2 754.7L778.1 759.1L775.7 763.2L773.1 766.8L770.1 770.1L766.8 773.1L763.2 775.7L759.1 778.1L754.7 780.2L749.8 782.1L744.3 783.7L738.1 785.0L731.1 786.1L722.9 786.9L712.8 787.5L699.1 787.9L660.0 788.0L620.9 787.9L607.2 787.5L597.1 786.9L588.9 786.1L581.9 785.0L575.7 783.7L570.2 782.1L565.3 780.2L560.9 778.1L556.8 775.7L553.2 773.1L549.9 770.1L546.9 766.8L544.3 763.2L541.9 759.1L539.8 754.7L537.9 749.8L536.3 744.3L535.0 738.1L533.9 731.1L533.1 722.9L532.5 712.8L532.1 699.1L532.0 660.0L532.1 620.9L532.5 607.2L533.1 597.1L533.9 588.9L535.0 581.9L536.3 575.7L537.9 570.2L539.8 565.3L541.9 560.9L544.3 556.8L546.9 553.2L549.9 549.9L553.2 546.9L556.8 544.3L560.9 541.9L565.3 539.8L570.2 537.9L575.7 536.3L581.9 535.0L588.9 533.9L597.1 533.1L607.2 532.5L620.9 532.1L660.0 532.0L699.1 532.1L712.8 532.5L722.9 533.1L731.1 533.9L738.1 535.0L744.3 536.3L749.8 537.9L754.7 539.8L759.1 541.9L763.2 544.3L766.8 546.9L770.1 549.9L773.1 553.2L775.7 556.8L778.1 560.9L780.2 565.3L782.1 570.2L783.7 575.7L785.0 581.9L786.1 588.9L786.9 597.1L787.5 607.2L787.9 620.9Z" fill="#fff"/>
+            <circle class="d" cx="660" cy="364" r="70" fill="#FF5A36"/>
+          </svg>
+        </div>
+
+        <h1 class="display">One job each. <span>Done properly.</span></h1>
+        <p class="lede">Ludyem is an independent studio in Oslo. Eleven apps for iPhone, iPad, Mac and Apple Watch: tools for the people who ship apps, and calm ones for your health and your money.</p>
+        <div class="acts center">
+          <a class="btn light" href="#developers">See the apps</a>
+          <a class="go" href="https://apps.apple.com/developer/id931436519" target="_blank" rel="noopener">All eleven on the App Store</a>
+        </div>
+        <p class="proof">On the App Store since 2020 · No ads in any of them · Made in Oslo</p>
+
+        <nav class="dock" aria-label="Every Ludyem app">
+          <a href="#rckit" data-name="RCKit" style="--i:0"><img src="/assets/icons/rckit.png" alt="RCKit" width="78" height="78" /></a>
+          <a href="#appglance" data-name="AppGlance" style="--i:1"><img src="/assets/icons/appglance.png" alt="AppGlance" width="78" height="78" /></a>
+          <a href="#storeglance" data-name="StoreGlance" style="--i:2"><img src="/assets/icons/storeglance.png" alt="StoreGlance" width="78" height="78" /></a>
+          <a class="grp" href="#vitaview" data-name="VitaView" style="--i:3"><img src="/assets/icons/vitaview.png" alt="VitaView" width="78" height="78" /></a>
+          <a href="#tend" data-name="Tend" style="--i:4"><img src="/assets/icons/tend.png" alt="Tend" width="78" height="78" /></a>
+          <a href="#never-stall" data-name="Never Stall" style="--i:5"><img src="/assets/icons/never-stall.png" alt="Never Stall" width="78" height="78" /></a>
+          <a href="#workouts" data-name="Push-Ups" style="--i:6"><img src="/assets/icons/pushups.png" alt="Push-Ups" width="78" height="78" /></a>
+          <a href="#workouts" data-name="Sit-Ups" style="--i:7"><img src="/assets/icons/situps.png" alt="Sit-Ups" width="78" height="78" /></a>
+          <a href="#workouts" data-name="Pull-Ups" style="--i:8"><img src="/assets/icons/pullups.png" alt="Pull-Ups" width="78" height="78" /></a>
+          <a href="#workouts" data-name="Squats" style="--i:9"><img src="/assets/icons/squats.png" alt="Squats" width="78" height="78" /></a>
+          <a class="grp" href="#runway" data-name="Runway" style="--i:10"><img src="/assets/icons/runway.png" alt="Runway" width="78" height="78" /></a>
+        </nav>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Apps -->
-  <section id="apps">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label">The constellation</div>
-        <h2 class="section-title">One family of apps</h2>
-        <p class="section-sub">Built on a shared foundation, so each app feels familiar the moment you open it.</p>
-      </div>
-      <div class="app-grid">
-
-        <a class="app-card" href="/workouts" style="--app:#ff7a2f;">
-          <div class="app-icon"><img src="assets/icons/workouts.png" alt="" /></div>
-          <h3>Workouts</h3>
-          <p class="app-blurb">Four focused rep counters: Push-Ups, Sit-Ups, Pull-Ups, Squats. Guided plans, streaks, and Apple Watch, writing every set to Health.</p>
-          <div class="app-foot">Explore →</div>
-        </a>
-
-        <a class="app-card" href="https://vitaview.app" target="_blank" rel="noopener" style="--app:#26b373;">
-          <div class="app-icon"><img src="assets/icons/vitaview.png" alt="" /></div>
-          <h3>VitaView</h3>
-          <p class="app-blurb">Turn Apple Health into live widgets, on-device AI insights, and daily goals. 26+ metrics on every home and lock screen.</p>
-          <div class="app-foot">Visit vitaview.app →</div>
-        </a>
-
-        <!-- live App Store button (id 6778921650) -->
-        <a class="app-card" href="https://apps.apple.com/app/id6778921650" target="_blank" rel="noopener" style="--app:#109e8d;">
-          <div class="app-icon"><img src="assets/icons/tend.png" alt="" /></div>
-          <h3>Tend</h3>
-          <p class="app-blurb">A gentle mood and symptom diary that finds your patterns and writes every entry to Apple Health, where your data belongs.</p>
-          <div class="app-foot">Download on the App Store →</div>
-        </a>
-
-        <!-- Runway lives on its own domain; link straight there, never via the
-             /runway/* redirect stubs, or Google keeps them in the index. -->
-        <a class="app-card" href="/storeglance" style="--app:#1FBFA4;">
-          <div class="app-icon"><img src="assets/icons/storeglance.png" alt="" /></div>
-          <h3>StoreGlance</h3>
-          <p class="app-blurb">Know the day Apple features you. Every shelf in all 175 App Store storefronts, checked daily, with a push the day your app, or a competitor's, lands on one.</p>
-          <div class="app-foot">Explore →</div>
-        </a>
-        <a class="app-card" href="/never-stall/" style="--app:#35E0FF;">
-          <div class="app-icon"><img src="assets/icons/never-stall.png" alt="" /></div>
-          <h3>Never Stall <span class="badge-soon">Soon</span></h3>
-          <p class="app-blurb">A habit tracker where the habit gets harder as you keep it. Every habit sits on a ladder: keep it and the target rises, miss it and it eases back. On device, no account, Apple Health read only.</p>
-          <div class="app-foot">Explore →</div>
-        </a>
-        <a class="app-card" href="https://runwayfire.com/" style="--app:#14b8a6;">
-          <div class="app-icon"><img src="assets/icons/runway.png" alt="" /></div>
-          <h3>Runway <span class="badge-soon">Soon</span></h3>
-          <p class="app-blurb">The adaptive FIRE planner. Turns your money into one honest number, the age you could stop working, then shows the levers to get there sooner. On-device, no bank logins.</p>
-          <div class="app-foot">Explore →</div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Values -->
-  <section id="values" class="alt">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label">Why Ludyem</div>
-        <h2 class="section-title">The same promise in every app</h2>
-        <p class="section-sub">These aren't features we toggle per app. They're how everything we make is built.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-lock"/></svg></div>
-          <h3>Your data stays yours</h3>
-          <p>Everything runs on-device. Your data is never sent to our servers, because we don't have any servers for it.</p>
+    <!-- Developer tools -->
+    <section class="sec tight" id="developers">
+      <div class="wrap">
+        <div data-rise>
+          <p class="eyebrow">For people who make apps</p>
+          <h2 class="title">Sales, users and shelves. <span>Each in one glance.</span></h2>
+          <p class="sub">Three apps that stand alone and work better together. RCKit puts your revenue, AppGlance's live users and StoreGlance's featuring side by side.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-notrack"/></svg></div>
-          <h3>No accounts, no tracking</h3>
-          <p>No sign-up, no email wall, no analytics following you around. Open the app and it just works.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-health"/></svg></div>
-          <h3>Connected where it counts</h3>
-          <p>Our health apps read and write Apple Health, so your data flows where you need it. Apps like Runway keep your numbers just as private, on your device alone.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-devices"/></svg></div>
-          <h3>iPhone &amp; Apple Watch</h3>
-          <p>Widgets, Live Activities, and watch apps where it makes sense, built for the way you actually use your devices.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-focus"/></svg></div>
-          <h3>Focused, not bloated</h3>
-          <p>Each app does one job well instead of a hundred jobs poorly. Less to learn, faster to use.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><svg class="ficon" aria-hidden="true"><use href="#ic-gem"/></svg></div>
-          <h3>Crafted, not cranked out</h3>
-          <p>Shared design system, thoughtful detail, and real attention to accessibility across the whole family.</p>
+        <div class="bento three align">
+
+          <article class="card app" id="rckit" style="--tint:#F2605D" data-rise>
+            <div class="name"><img src="/assets/icons/rckit.png" alt="" width="56" height="56" /><div><b>RCKit</b><small>App revenue dashboard</small></div></div>
+            <h3>Every sale, the second it happens.</h3>
+            <p>Transactions, MRR, trials, payouts, reviews and TestFlight in one app. On iPhone, iPad, Mac, Apple Watch and Apple TV.</p>
+            <div class="acts">
+              <a class="store sm" href="https://apps.apple.com/app/id1544144499" target="_blank" rel="noopener" aria-label="Download RCKit on the App Store"><svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg><span><small>Download on the</small>App Store</span></a>
+              <a class="go" href="https://rckit.app/">Learn more</a>
+            </div>
+            <div class="peek"><div class="iphone"><img src="/assets/shots/rckit-overview.webp" width="660" height="1434" loading="lazy" decoding="async" alt="RCKit's Overview: MRR of $5,240, 431 subscriptions, 62 trials and the last 28 days of revenue." /></div></div>
+          </article>
+
+          <article class="card app" id="appglance" style="--tint:#30D090" data-rise>
+            <div class="name"><img src="/assets/icons/appglance.png" alt="" width="56" height="56" /><div><b>AppGlance</b><small>App analytics</small></div></div>
+            <h3>Your apps, live. Your users, anonymous.</h3>
+            <p>Installs, sessions and events as they happen, from two lines of SDK. A push the moment someone installs or buys.</p>
+            <div class="acts">
+              <a class="store sm" href="https://apps.apple.com/app/id6801786470" target="_blank" rel="noopener" aria-label="Download AppGlance on the App Store"><svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg><span><small>Download on the</small>App Store</span></a>
+              <a class="go" href="https://appglance.app/">Learn more</a>
+            </div>
+            <div class="peek"><div class="iphone"><img src="/assets/shots/appglance-activity.webp" width="660" height="1434" loading="lazy" decoding="async" alt="AppGlance's Activity screen: today's sessions hour by hour, who is live now and the last hour of sessions." /></div></div>
+          </article>
+
+          <article class="card app" id="storeglance" style="--tint:#1FBFA4" data-rise>
+            <div class="name"><img src="/assets/icons/storeglance.png" alt="" width="56" height="56" /><div><b>StoreGlance</b><small>App Store featuring</small></div></div>
+            <h3>Know the day Apple features you.</h3>
+            <p>All 175 storefronts, checked every day, and a push the day your app, or a competitor's, lands on a shelf.</p>
+            <div class="acts">
+              <a class="store sm" href="https://apps.apple.com/app/id6807185861" target="_blank" rel="noopener" aria-label="Download StoreGlance on the App Store"><svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg><span><small>Download on the</small>App Store</span></a>
+              <a class="go" href="/storeglance/">Learn more</a>
+            </div>
+            <div class="peek"><div class="iphone"><img src="/storeglance/assets/shots/today.webp" width="660" height="1434" loading="lazy" decoding="async" alt="StoreGlance's Today screen: featured in 3 storefronts, and the live shelves." /></div></div>
+          </article>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container">
-      <div class="cta-card">
-        <h2>Build something on<br><span class="grad">your terms.</span></h2>
-        <p>Pick the app for what you need today. Your data stays on your iPhone.</p>
-        <a href="#apps" class="btn-primary" style="display:inline-flex;">See the apps</a>
-        <p class="cta-note">Made by Ludyem AS · Designed for iOS 26+</p>
-      </div>
-    </div>
-  </section>
+    <!-- Health -->
+    <section class="sec" id="health">
+      <div class="wrap">
+        <div data-rise>
+          <p class="eyebrow">Health and habits</p>
+          <h2 class="title">Built on Apple Health. <span>Not around it.</span></h2>
+          <p class="sub">Four apps that read from Health, write to it, or both. What they learn about you stays on your iPhone, in the Health app, or in your own iCloud.</p>
+        </div>
+        <div class="bento">
 
-  <footer>
-    <div class="footer-inner">
-      <a href="/" class="footer-logo">
-        <img class="logo-mark" src="assets/icons/ludyem.png" alt="" width="22" height="22" />
-        Ludyem
-      </a>
-      <div class="footer-links">
-        <a href="#apps">Apps</a>
-        <a href="/workouts">Workouts</a>
-        <a href="https://vitaview.app" target="_blank" rel="noopener">VitaView</a>
-        <a href="#values">Why Ludyem</a>
-        <a href="mailto:support@ludyem.dev">Contact</a>
+          <article class="card app wide" id="tend" style="--tint:#109E8D" data-rise>
+            <div class="txt">
+              <div class="name"><img src="/assets/icons/tend.png" alt="" width="56" height="56" /><div><b>Tend</b><small>Mood and symptom diary</small></div></div>
+              <h3>Tend to yourself, gently.</h3>
+              <p>A check-in takes seconds. Tend finds the patterns behind how you feel and writes every entry to Apple Health, so your history outlives the app.</p>
+              <div class="acts">
+                <a class="store sm" href="https://apps.apple.com/app/id6778921650" target="_blank" rel="noopener" aria-label="Download Tend on the App Store"><svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg><span><small>Download on the</small>App Store</span></a>
+                <a class="go" href="/tend/">Learn more</a>
+              </div>
+            </div>
+            <div class="peek"><div class="iphone"><img src="/tend/assets/shots/home.webp" width="660" height="1434" loading="lazy" decoding="async" alt="Tend's Home screen: today's mood check-in, the streak and the factors that moved your mood." /></div></div>
+          </article>
+        </div>
+        <div class="bento pair align">
+
+          <article class="card app" id="vitaview" style="--tint:#4FB2F2" data-rise>
+            <div class="name"><img src="/assets/icons/vitaview.png" alt="" width="56" height="56" /><div><b>VitaView</b><small>Health widgets</small></div></div>
+            <h3>Your health, on every screen.</h3>
+            <p>Apple Health as clear widgets, charts, goals and streaks, with private AI insights. For the Home Screen, the Lock Screen and StandBy.</p>
+            <div class="acts">
+              <a class="store sm" href="https://apps.apple.com/app/id6772708337" target="_blank" rel="noopener" aria-label="Download VitaView on the App Store"><svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg><span><small>Download on the</small>App Store</span></a>
+              <a class="go" href="https://vitaview.app/">Learn more</a>
+            </div>
+            <div class="peek"><div class="iphone"><img src="/assets/shots/vitaview-today.webp" width="660" height="1434" loading="lazy" decoding="async" alt="VitaView's Today screen: steps, sleep, heart rate and the day's goals from Apple Health." /></div></div>
+          </article>
+
+          <article class="card app" id="never-stall" style="--tint:#35E0FF" data-rise>
+            <div class="name"><img src="/assets/icons/never-stall.png" alt="" width="56" height="56" /><div><b>Never Stall</b><small>Habits that level up</small></div></div>
+            <h3>Your habits, one rung higher.</h3>
+            <p>Keep a habit and its target rises. Miss it and it eases back. Streak apps ask whether you did it. Never Stall asks whether you are getting better.</p>
+            <div class="acts">
+              <a class="store sm" href="https://apps.apple.com/app/id6808904948" target="_blank" rel="noopener" aria-label="Download Never Stall on the App Store"><svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg><span><small>Download on the</small>App Store</span></a>
+              <a class="go" href="/never-stall/">Learn more</a>
+            </div>
+            <div class="peek"><div class="iphone"><img src="/never-stall/assets/shots/today.webp" width="660" height="1434" loading="lazy" decoding="async" alt="Never Stall's Today screen: the day's quests, two of them done, and the XP earned." /></div></div>
+          </article>
+        </div>
+        <div class="bento">
+
+          <article class="card app wide" id="workouts" style="--tint:#57AF5D" data-rise>
+            <div class="txt">
+              <div class="quad" aria-hidden="true">
+                <img src="/assets/icons/pushups.png" alt="" width="46" height="46" /><img src="/assets/icons/situps.png" alt="" width="46" height="46" /><img src="/assets/icons/pullups.png" alt="" width="46" height="46" /><img src="/assets/icons/squats.png" alt="" width="46" height="46" />
+              </div>
+              <p class="kicker">Workouts · four bodyweight trainers</p>
+              <h3>Master the basics, one rep at a time.</h3>
+              <p>Push-Ups, Sit-Ups, Pull-Ups and Squats. Each builds you from your current max to a real goal with an adaptive plan, counts your reps and writes every set to Apple Health. No account, ever.</p>
+              <div class="acts">
+                <a class="btn ghost" href="/workouts/#apps">Choose your exercise</a>
+                <a class="go" href="/workouts/">Learn more</a>
+              </div>
+            </div>
+            <div class="peek duo">
+              <div class="iphone"><img src="/workouts/assets/shots/pushups-home.webp" width="660" height="1434" loading="lazy" decoding="async" alt="Push-Ups: today's five sets, the rank card and a nine-week streak." /></div>
+              <div class="iphone"><img src="/workouts/assets/shots/pullups-session.webp" width="660" height="1434" loading="lazy" decoding="async" alt="Pull-Ups: a set in progress, counted rep by rep." /></div>
+            </div>
+          </article>
+
+        </div>
       </div>
-      <p class="footer-copy">© 2026 Ludyem AS</p>
+    </section>
+
+    <!-- Money -->
+    <section class="sec tight" id="money">
+      <div class="wrap">
+        <div data-rise>
+          <p class="eyebrow">Money</p>
+          <h2 class="title">The age you could stop working. <span>Wherever you end up.</span></h2>
+        </div>
+        <div class="bento">
+          <article class="card app wide" id="runway" style="--tint:#3FB39B" data-rise>
+            <div class="txt">
+              <div class="name"><img src="/assets/icons/runway.png" alt="" width="56" height="56" /><div><b>Runway</b><small>FIRE and early retirement planner</small></div></div>
+              <h3>Know your freedom age.</h3>
+              <p>Runway turns your savings, spending and pensions into one honest number, then shows the levers that bring it closer. Planning to retire abroad? It models the exit tax, the destination's taxes and your spending in the local currency. No bank logins.</p>
+              <div class="acts">
+                <a class="store sm" href="https://apps.apple.com/app/id6784426559" target="_blank" rel="noopener" aria-label="Download Runway on the App Store"><svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg><span><small>Download on the</small>App Store</span></a>
+                <a class="go" href="https://runwayfire.com/">Learn more</a>
+              </div>
+            </div>
+            <div class="peek duo">
+              <div class="iphone"><img src="/assets/shots/runway-plan.webp" width="660" height="1431" loading="lazy" decoding="async" alt="Runway's plan: free at 43, in four years, with the freedom number and plan health." /></div>
+              <div class="iphone"><img src="/assets/shots/runway-levers.webp" width="660" height="1431" loading="lazy" decoding="async" alt="Runway's levers: cut spending, overpay or invest, and what each change is worth." /></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- The promise -->
+    <section class="sec" id="promise">
+      <div class="wrap">
+        <div class="center" data-rise>
+          <p class="eyebrow">Our promise</p>
+          <h2 class="title">Eleven apps. <span>One set of rules.</span></h2>
+          <p class="sub center">Not features we switch on per app. It is how everything here is built.</p>
+        </div>
+        <ul class="plats" data-rise>
+          <li><b>No ads. Ever.</b><span>Not in a free tier and not in a paid one. None of our apps carries an ad or a tracking SDK.</span></li>
+          <li><b>Your data is not for sale.</b><span>We never sell or share what you put into our apps, and most of it never reaches us at all.</span></li>
+          <li><b>On your device first.</b><span>Health and money apps keep your data on your iPhone, in Apple Health or in your own iCloud.</span></li>
+          <li><b>No account unless the job needs one.</b><span>Open the app and it works. The developer tools sign in only to the services they read for you.</span></li>
+          <li><b>Made for Apple, all the way down.</b><span>Native apps with widgets, Siri, Apple Health and Apple Watch where they make sense.</span></li>
+          <li><b>A person answers.</b><span>Write to support@ludyem.dev and a person reads every email, whichever app it is about.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Close -->
+    <section class="close">
+      <div class="wrap">
+        <img class="appicon mark" src="/assets/ludyem-icon.svg" alt="" width="96" height="96" />
+        <h2 class="title">Find the one you need.</h2>
+        <p class="sub center">All eleven are waiting on the App Store.</p>
+        <div class="acts center">
+          <a class="store" href="https://apps.apple.com/developer/id931436519" target="_blank" rel="noopener" aria-label="See every Ludyem app on the App Store"><svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg><span><small>See all of them on the</small>App Store</span></a>
+        </div>
+        <p class="fine">Questions, ideas or a bug? <a href="mailto:support@ludyem.dev">support@ludyem.dev</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="dir">
+        <div>
+          <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+          <p>An independent studio in Oslo, making focused apps for Apple devices.</p>
+        </div>
+        <div><h4>For developers</h4><ul><li><a href="https://rckit.app/">RCKit</a></li><li><a href="https://appglance.app/">AppGlance</a></li><li><a href="/storeglance/">StoreGlance</a></li></ul></div>
+        <div><h4>Health</h4><ul><li><a href="https://vitaview.app/">VitaView</a></li><li><a href="/tend/">Tend</a></li><li><a href="/never-stall/">Never Stall</a></li><li><a href="/workouts/">Workouts</a></li></ul></div>
+        <div><h4>Money</h4><ul><li><a href="https://runwayfire.com/">Runway</a></li></ul></div>
+        <div><h4>Ludyem</h4><ul><li><a href="mailto:support@ludyem.dev">Contact</a></li><li><a href="https://apps.apple.com/developer/id931436519" target="_blank" rel="noopener">App Store</a></li><li><a href="/storeglance/press/">Press</a></li></ul></div>
+      </div>
+      <span>© 2026 Ludyem AS · Oslo, Norway</span>
     </div>
   </footer>
 
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>
