@@ -1,125 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Generated from _template/ by new-app.py.
-     After generating: edit the feature copy below, drop a hero image at
-     {{APP_SLUG}}/assets/hero.png (or remove the .hero-art line), and set real stats. -->
+<!-- Generated from _template/ by new-app.py. Before publishing:
+       - write the feature copy below, and check every claim against the app itself
+         (what leaves the phone, what it costs, which devices it runs on);
+       - put the icon at /assets/icons/{{APP_SLUG}}.png (256px) and {{APP_SLUG}}-512.png;
+       - put three raw simulator captures, 660px wide, at assets/shots/1.webp, 2.webp
+         and 3.webp. The phones stay hidden until all three exist. -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{APP_NAME}} — {{APP_TAGLINE}}</title>
+  <title>{{APP_NAME}} · {{APP_TAGLINE}}</title>
   <meta name="description" content="{{APP_BLURB}}" />
-  <meta property="og:title" content="{{APP_NAME}} — {{APP_TAGLINE}}" />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="{{APP_NAME}} · {{APP_TAGLINE}}" />
   <meta property="og:description" content="{{APP_BLURB}}" />
-  <meta property="og:url" content="https://ludyem.dev/{{APP_SLUG}}" />
+  <meta property="og:url" content="https://ludyem.dev/{{APP_SLUG}}/" />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://ludyem.dev/{{APP_SLUG}}" />
+  <link rel="canonical" href="https://ludyem.dev/{{APP_SLUG}}/" />
+  <link rel="icon" type="image/png" href="/assets/icons/{{APP_SLUG}}.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/{{APP_SLUG}}-512.png" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>{{THEME_CSS}}</style>
-  <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
-  <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
 
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="/" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ {{APP_NAME}}</span>
-      </a>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="support">Support</a>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/{{APP_SLUG}}/">/ <b>{{APP_NAME}}</b></a></span>
+      <div class="links">
+        <a class="opt" href="#features">Features</a>
+        <a class="sup" href="/{{APP_SLUG}}/support">Support</a>
+        {{DOWNLOAD_NAV}}
       </div>
-      {{DOWNLOAD_NAV}}
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Privacy-first · On-device · Apple Health</div>
-      <h1>{{APP_HEADLINE}}</h1>
-      <p class="hero-sub">{{APP_TAGLINE}}</p>
-      <div class="hero-actions">
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <img class="appicon" src="/assets/icons/{{APP_SLUG}}-512.png" alt="{{APP_NAME}}" width="112" height="112" onerror="this.remove()" />
+        <h1>{{APP_HEADLINE}}</h1>
+        <p class="lede">{{APP_TAGLINE}}</p>
         {{DOWNLOAD_PRIMARY}}
-        <a href="#features" class="btn-secondary">See features</a>
+        <p class="proof">iPhone · iOS 26 or later</p>
+        <div class="stage">
+          <div class="iphone side l"><img src="/{{APP_SLUG}}/assets/shots/2.webp" width="660" height="1434" alt="" onerror="this.closest('.stage').remove()" /></div>
+          <div class="iphone main"><img src="/{{APP_SLUG}}/assets/shots/1.webp" width="660" height="1434" alt="" onerror="this.closest('.stage').remove()" /></div>
+          <div class="iphone side r"><img src="/{{APP_SLUG}}/assets/shots/3.webp" width="660" height="1434" alt="" onerror="this.closest('.stage').remove()" /></div>
+        </div>
       </div>
-      <img class="hero-art" src="assets/hero.png" alt="{{APP_NAME}}" onerror="this.remove()" />
+    </section>
 
-      <div class="stats-bar">
-        <div class="stat-item"><div class="stat-num">⌚</div><div class="stat-label">Apple Watch</div></div>
-        <div class="stat-item"><div class="stat-num">🍎</div><div class="stat-label">Apple Health</div></div>
-        <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Accounts</div></div>
-        <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">On-device</div></div>
+    <!-- Features: one card per job the app does. Edit this copy for the app. -->
+    <section class="sec tight" id="features">
+      <div class="wrap">
+        <div data-rise>
+          <p class="eyebrow">Features</p>
+          <h2 class="title">One job. <span>Done properly.</span></h2>
+          <p class="sub">{{APP_BLURB}}</p>
+        </div>
+        <div class="bento pair align">
+          <article class="card" data-rise>
+            <h3>The first thing it does well.</h3>
+            <p>One or two sentences on what it does and why it matters, in the words a person would use.</p>
+          </article>
+          <article class="card" data-rise>
+            <h3>The second thing.</h3>
+            <p>Keep each card to one job. If a card needs a screenshot, add a phone: see /tend/ for the markup.</p>
+          </article>
+        </div>
+        <ul class="plats" data-rise>
+          <li><b>A smaller feature</b><span>One line about it.</span></li>
+          <li><b>Another one</b><span>One line about it.</span></li>
+          <li><b>And one more</b><span>One line about it.</span></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Features — edit this copy per app -->
-  <section id="features" class="alt">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label">Features</div>
-        <h2 class="section-title">Everything you need, nothing you don't</h2>
-        <p class="section-sub">{{APP_NAME}} does one job well and stays out of your way.</p>
+    <!-- Privacy: say exactly what stays on the phone and what does not. -->
+    <section class="sec" id="privacy">
+      <div class="wrap">
+        <div class="center" data-rise>
+          <p class="eyebrow">Privacy</p>
+          <h2 class="title">Your data, <span>your call.</span></h2>
+          <p class="sub center">Say here, plainly, what {{APP_NAME}} keeps on the iPhone and what, if anything, leaves it.</p>
+          <div class="acts center" style="margin-top:28px">
+            <a class="go" href="/{{APP_SLUG}}/privacy">Privacy policy</a>
+            <a class="go" href="/{{APP_SLUG}}/terms">Terms</a>
+            <a class="go" href="/{{APP_SLUG}}/support">Support</a>
+          </div>
+        </div>
       </div>
-      <div class="features-grid">
-        <div class="feature-card"><div class="feature-icon">⚡</div><h3>Fast &amp; focused</h3><p>Open it and go. No setup walls, no clutter — just the thing you came to do.</p></div>
-        <div class="feature-card"><div class="feature-icon">📱</div><h3>Widgets</h3><p>Glanceable widgets for your home and lock screen, so you stay on track without opening the app.</p></div>
-        <div class="feature-card"><div class="feature-icon">⌚</div><h3>Apple Watch</h3><p>A companion app on your wrist for when your phone isn't in your hand.</p></div>
-        <div class="feature-card"><div class="feature-icon">🍎</div><h3>Apple Health</h3><p>Reads and writes Apple Health so your data flows with the rest of your ecosystem.</p></div>
-        <div class="feature-card"><div class="feature-icon">🎯</div><h3>Goals &amp; streaks</h3><p>Set a target, build a streak, and watch your progress add up day after day.</p></div>
-        <div class="feature-card"><div class="feature-icon">🔒</div><h3>Private by design</h3><p>No account, no tracking. Everything stays on your device.</p></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Privacy -->
-  <section id="privacy">
-    <div class="container text-center">
-      <div class="section-label">Privacy</div>
-      <h2 class="section-title">On your iPhone. Full stop.</h2>
-      <p class="section-sub" style="margin-bottom:40px;">No account, no sign-in, no tracking. Your data stays with you.</p>
-      <div class="dl-row" style="justify-content:center;">
-        <a href="privacy" class="btn-secondary">Privacy Policy →</a>
-        <a href="terms" class="btn-secondary">Terms →</a>
-        <a href="support" class="btn-secondary">Support →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container">
-      <div class="cta-card">
-        <h2>Get started<br><span class="grad">today.</span></h2>
-        <p>Free to download. No account required. Your data stays on your iPhone.</p>
+    <section class="close">
+      <div class="wrap">
+        <img class="appicon" src="/assets/icons/{{APP_SLUG}}-512.png" alt="" width="96" height="96" onerror="this.remove()" />
+        <h2 class="title">{{APP_NAME}}.</h2>
+        <p class="sub center">{{APP_TAGLINE}}</p>
         {{DOWNLOAD_CTA}}
-        <p class="cta-note">iOS 26+ · Apple Watch optional · Apple Health</p>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer>
-    <div class="footer-inner">
-      <a href="/" class="footer-logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="22" height="22" />
-        Ludyem
-      </a>
-      <div class="footer-links">
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
         <a href="/">All apps</a>
-        <a href="#features">Features</a>
-        <a href="privacy">Privacy</a>
-        <a href="terms">Terms</a>
-        <a href="support">Support</a>
-      </div>
-      <p class="footer-copy">© {{YEAR}} Ludyem AS</p>
+        <a href="/{{APP_SLUG}}/privacy">Privacy</a>
+        <a href="/{{APP_SLUG}}/terms">Terms</a>
+        <a href="/{{APP_SLUG}}/support">Support</a>
+        <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>
+      </nav>
+      <span class="copy">© {{YEAR}} Ludyem AS</span>
     </div>
   </footer>
 
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>

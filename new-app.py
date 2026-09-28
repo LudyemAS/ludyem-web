@@ -14,16 +14,16 @@ assets/ludyem.css, so apps stay consistent automatically.
 
 Examples
 --------
-    # An app that isn't on the store yet (download buttons say "Coming soon"):
-    ./new-app.py water --name Water --emoji 💧 --accent "#2e8dd9" \\
+    # An app that isn't on the store yet (the badges say "Coming soon"):
+    ./new-app.py water --name Water --accent "#2e8dd9" \\
         --tagline "Log hydration in a single tap." \\
         --blurb "A friendly hydration tracker that keeps you on pace all day."
 
     # A live app (wires real App Store buttons):
-    ./new-app.py tend --name Tend --emoji 🌿 --accent "#22c55e" --accent2 "#0ea5e9" \\
-        --appstore-id 6450000000 --free \\
+    ./new-app.py tend --name Tend --accent "#109E8D" \\
+        --appstore-id 6450000000 \\
         --tagline "Track symptoms and mood, written to Apple Health." \\
-        --headline 'Your symptoms,<br><span class="grad">in one place.</span>'
+        --headline 'Your symptoms, <span>in one place.</span>'
 
     # An app that already shipped and whose pages are hand-written — wire the real
     # App Store buttons WITHOUT touching a word of the prose:
@@ -39,8 +39,9 @@ Neither ever deletes the folder, so assets/, guides/ and blog/ survive.
 Wording note: the download buttons only claim the app is free when you pass --free.
 Never add it for an app without a free tier — that claim is a legal one.
 
-After it runs: edit <slug>/index.html feature copy, drop a hero image at
-<slug>/assets/hero.png, and add a card for the app to the landing page (index.html).
+After it runs: edit <slug>/index.html feature copy, add the icon at
+assets/icons/<slug>.png and <slug>-512.png, three screenshots at
+<slug>/assets/shots/{1,2,3}.webp, and a card for the app on the landing page.
 """
 from __future__ import annotations
 import argparse, datetime, re, sys
@@ -89,7 +90,7 @@ def hex_to_rgb(h: str) -> tuple[int, int, int]:
 
 
 def lighten(h: str, amt: float) -> str:
-    """Blend a hex colour toward white by `amt` (0..1) — used for gradient text."""
+    """Blend a hex colour toward white by `amt` (0..1): the accent's readable text tint."""
     r, g, b = hex_to_rgb(h)
     r = round(r + (255 - r) * amt)
     g = round(g + (255 - g) * amt)
@@ -97,47 +98,46 @@ def lighten(h: str, amt: float) -> str:
     return f"#{r:02x}{g:02x}{b:02x}"
 
 
-def theme_css(accent1: str, accent2: str, grad_a: str, grad_b: str) -> str:
-    r, g, b = hex_to_rgb(accent1)
+def on_colour(h: str) -> str:
+    """Black or white, whichever reads better on `h` (WCAG relative luminance)."""
+    def lin(c: int) -> float:
+        c = c / 255
+        return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+    r, g, b = hex_to_rgb(h)
+    lum = 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b)
+    return "#000" if (lum + 0.05) / 0.05 > 1.05 / (lum + 0.05) else "#fff"
+
+
+def theme_css(accent: str, accent_ink: str) -> str:
+    """The three tokens assets/ludyem.css themes a page with (see its header)."""
     return (
         "\n    :root {\n"
-        f"      --accent1: {accent1}; --accent2: {accent2};\n"
-        f"      --grad-a: {grad_a}; --grad-b: {grad_b};\n"
-        f"      --accent-soft: rgba({r},{g},{b},0.14); --accent-line: rgba({r},{g},{b},0.32);\n"
+        f"      --accent: {accent}; --accent-ink: {accent_ink}; --on-accent: {on_colour(accent)};\n"
         "    }\n  "
     )
 
 
-APPLE_SVG = (
-    '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">'
-    '<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>'
-)
+APPLE_SVG = '<svg aria-hidden="true"><use href="/assets/sprite.svg#apple"/></svg>'
 
 
 def download_buttons(app_id: str | None, free: bool = False) -> dict[str, str]:
-    """Primary (hero), CTA, and nav download buttons — live or 'coming soon'.
+    """Hero and closing App Store badges, and the top bar's pill: live or 'coming soon'.
 
-    `free` opts in to the "Free" wording. It is off by default because a paid app
-    whose page says "Free" is a false claim, not a typo.
+    `free` opts in to the "free" wording on the pill. It is off by default because a
+    paid app whose page says "free" is a false claim, not a typo. (Apple's badge itself
+    never says it.)
     """
     if app_id:
         url = f"https://apps.apple.com/app/id{app_id}"
-        cta_label = "Download on App Store — Free" if free else "Download on App Store"
-        nav_label = "Download Free" if free else "Download"
-        primary = (
-            f'<a href="{url}" class="btn-primary" target="_blank" rel="noopener">{APPLE_SVG} '
-            "Download on App Store</a>"
+        badge = (
+            f'<a class="store" href="{url}" target="_blank" rel="noopener" aria-label="Download on the App Store">'
+            f"{APPLE_SVG}<span><small>Download on the</small>App Store</span></a>"
         )
-        cta = (
-            f'<a href="{url}" class="btn-primary" style="display:inline-flex;" target="_blank" rel="noopener">{APPLE_SVG} '
-            f"{cta_label}</a>"
-        )
-        nav = f'<a href="{url}" class="btn-nav" target="_blank" rel="noopener">{nav_label}</a>'
+        nav = f'<a class="get" href="{url}" target="_blank" rel="noopener">{"Get it free" if free else "Download"}</a>'
     else:
-        primary = '<span class="btn-primary" style="opacity:.6;cursor:default;">Coming soon</span>'
-        cta = '<span class="btn-primary" style="display:inline-flex;opacity:.6;cursor:default;">Coming soon</span>'
-        nav = '<span class="btn-nav" style="opacity:.6;cursor:default;">Coming soon</span>'
-    return {"DOWNLOAD_PRIMARY": primary, "DOWNLOAD_CTA": cta, "DOWNLOAD_NAV": nav}
+        badge = f'<span class="store is-soon">{APPLE_SVG}<span><small>Coming soon to the</small>App Store</span></span>'
+        nav = '<span class="get is-soon">Coming soon</span>'
+    return {"DOWNLOAD_PRIMARY": badge, "DOWNLOAD_CTA": badge, "DOWNLOAD_NAV": nav}
 
 
 def is_pristine(page_text: str, template_text: str) -> bool:
@@ -166,7 +166,13 @@ def is_pristine(page_text: str, template_text: str) -> bool:
 
 # --- --buttons-only surgery -------------------------------------------------------
 # Matches the button elements by structure, never by their label, because live pages
-# have hand-edited labels ("Download on the App Store") worth keeping.
+# have hand-edited labels worth keeping. The first three are the 2026 design (a
+# "store" badge and a "get" pill); the rest match pages from the old design.
+COMING_SOON_BADGE = re.compile(
+    r'<span class="store is-soon">\s*<svg.*?</svg>\s*<span>.*?</span>\s*</span>', re.S)
+COMING_SOON_PILL = re.compile(r'<span class="get is-soon">\s*Coming soon\s*</span>')
+LIVE_HREF_NEW = re.compile(
+    r'(<a class="(?:store|get)[^"]*" href=")https://apps\.apple\.com/app/id\d+(")')
 COMING_SOON_CTA = re.compile(
     r'<span class="btn-primary"[^>]*display:inline-flex[^>]*>\s*Coming soon\s*</span>')
 COMING_SOON_PRIMARY = re.compile(
@@ -184,7 +190,10 @@ def rewrite_buttons(text: str, buttons: dict[str, str], url: str) -> tuple[str, 
     n = 0
     # Re-point already-live buttons first, so the anchors written just below aren't
     # then matched by LIVE_HREF and counted a second time.
+    text, c = LIVE_HREF_NEW.subn(lambda m: f"{m.group(1)}{url}{m.group(2)}", text); n += c
     text, c = LIVE_HREF.subn(lambda m: f"{m.group(1)}{url}{m.group(2)}", text); n += c
+    text, c = COMING_SOON_BADGE.subn(lambda _: buttons["DOWNLOAD_PRIMARY"], text); n += c
+    text, c = COMING_SOON_PILL.subn(lambda _: buttons["DOWNLOAD_NAV"], text); n += c
     text, c = COMING_SOON_CTA.subn(lambda _: buttons["DOWNLOAD_CTA"], text); n += c
     text, c = COMING_SOON_PRIMARY.subn(lambda _: buttons["DOWNLOAD_PRIMARY"], text); n += c
     text, c = COMING_SOON_NAV.subn(lambda _: buttons["DOWNLOAD_NAV"], text); n += c
@@ -245,14 +254,16 @@ def main() -> None:
     )
     p.add_argument("slug", help="URL path / folder name, e.g. 'water' -> ludyem.dev/water")
     p.add_argument("--name", help="Display name, e.g. 'Water' (required unless --buttons-only)")
-    p.add_argument("--emoji", default="✨", help="Icon emoji used in the hero/cards")
-    p.add_argument("--accent", default="#6d6cff", help="Primary accent hex (default Ludyem indigo)")
-    p.add_argument("--accent2", default=None, help="Secondary accent hex (default: a lighter accent)")
-    p.add_argument("--grad-a", default=None, help="Gradient text start (default: lightened accent)")
-    p.add_argument("--grad-b", default=None, help="Gradient text end (default: lightened accent2)")
+    p.add_argument("--emoji", default="✨", help=argparse.SUPPRESS)  # unused since the 2026 design
+    p.add_argument("--accent", default="#FF5A36", help="The app's accent hex, from its icon (default Ludyem orange)")
+    p.add_argument("--accent-ink", default=None, help="Accent as text on black (default: the accent, lightened)")
+    # The old design's extra colours. Still accepted so old commands run; ignored.
+    p.add_argument("--accent2", default=None, help=argparse.SUPPRESS)
+    p.add_argument("--grad-a", default=None, help=argparse.SUPPRESS)
+    p.add_argument("--grad-b", default=None, help=argparse.SUPPRESS)
     p.add_argument("--tagline", default="A focused app from Ludyem.", help="Hero subtitle")
     p.add_argument("--headline", default=None,
-                   help="Hero H1 HTML. Default builds one from --name. Use <span class=\"grad\">…</span> to highlight.")
+                   help="Hero H1 HTML. Default builds one from --name. A <span>…</span> is the grey second half.")
     p.add_argument("--blurb", default=None, help="One-line description for meta tags (default: tagline)")
     p.add_argument("--appstore-id", default=None,
                    help="Numeric App Store ID. Omit for a 'Coming soon' page with no live links.")
@@ -330,11 +341,9 @@ def main() -> None:
     if not a.name:
         sys.exit("✗ --name is required when scaffolding.")
 
-    accent1 = a.accent
-    accent2 = a.accent2 or lighten(accent1, 0.25)
-    grad_a = getattr(a, "grad_a") or lighten(accent1, 0.45)
-    grad_b = getattr(a, "grad_b") or lighten(accent2, 0.45)
-    headline = a.headline or f'{a.name},<br><span class="grad">your way.</span>'
+    accent = a.accent
+    accent_ink = getattr(a, "accent_ink") or lighten(accent, 0.45)
+    headline = a.headline or f'{a.name}, <span>your way.</span>'
     blurb = a.blurb or a.tagline
     today = datetime.date.today()
 
@@ -365,7 +374,7 @@ def main() -> None:
         "APP_HEADLINE": headline,
         "APP_TAGLINE": a.tagline,
         "APP_BLURB": blurb,
-        "THEME_CSS": theme_css(accent1, accent2, grad_a, grad_b),
+        "THEME_CSS": theme_css(accent, accent_ink),
         "SUPPORT_EMAIL": a.support_email,
         "DATE": date,
         "YEAR": year,
@@ -390,9 +399,11 @@ def main() -> None:
     status = f"live (id {a.appstore_id})" if a.appstore_id else "COMING SOON (no live links)"
     print(f"\n✓ Scaffolded ludyem.dev/{slug} — {status} — © {year}\n")
     print("Next steps:")
-    print(f"  1. Edit {slug}/index.html — replace the placeholder feature copy.")
-    print(f"  2. Add a hero image at {slug}/assets/hero.png (or it auto-hides).")
-    print(f"  3. Add an <a class=\"app-card\" href=\"/{slug}\"> card to the landing page (index.html).")
+    print(f"  1. Edit {slug}/index.html — replace the placeholder feature copy, and check every claim.")
+    print(f"  2. Add the icon at assets/icons/{slug}.png (256px) and {slug}-512.png, and three raw")
+    print(f"     screenshots at {slug}/assets/shots/1.webp, 2.webp, 3.webp (660px wide). The phones")
+    print("     stay hidden until all three exist.")
+    print(f"  3. Add an <article class=\"card app\"> for it to the landing page (index.html).")
     if not a.appstore_id:
         print(f"  4. When the app ships: ./new-app.py {slug} --appstore-id <id> --buttons-only")
         print("     (wires the real buttons and leaves every word you wrote alone).")

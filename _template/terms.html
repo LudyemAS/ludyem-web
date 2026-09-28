@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Use — {{APP_NAME}} by Ludyem</title>
+  <title>Terms of Use · {{APP_NAME}} by Ludyem</title>
   <meta name="description" content="Terms of Use for {{APP_NAME}} by Ludyem." />
   <link rel="canonical" href="https://ludyem.dev/{{APP_SLUG}}/terms" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
@@ -12,18 +12,18 @@
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/{{APP_SLUG}}" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ {{APP_NAME}}</span>
-      </a>
-      <a href="/{{APP_SLUG}}" class="back-link">← Back to {{APP_NAME}}</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/{{APP_SLUG}}/">/ <b>{{APP_NAME}}</b></a></span>
+      <div class="links">
+        <a class="opt" href="/{{APP_SLUG}}/privacy">Privacy</a>
+        <a class="opt" href="/{{APP_SLUG}}/terms">Terms</a>
+        <a class="sup" href="/{{APP_SLUG}}/support">Support</a>
+        {{DOWNLOAD_NAV}}
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Legal</div>
@@ -65,14 +65,18 @@
     </div>
   </main>
 
-  <footer class="doc-foot">
-    <p>
-      <a href="/{{APP_SLUG}}">{{APP_NAME}}</a>
-      <a href="support">Support</a>
-      <a href="privacy">Privacy</a>
-      <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>
-    </p>
-    <p style="margin-top:12px;">© {{YEAR}} Ludyem AS. All rights reserved.</p>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/{{APP_SLUG}}/privacy">Privacy</a>
+        <a href="/{{APP_SLUG}}/terms">Terms</a>
+        <a href="/{{APP_SLUG}}/support">Support</a>
+        <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>
+      </nav>
+      <span class="copy">© {{YEAR}} Ludyem AS</span>
+    </div>
   </footer>
 </body>
 </html>
