@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ludyem.dev</loc></url>
-  <url><loc>https://ludyem.dev/tend</loc></url>
-  <url><loc>https://ludyem.dev/workouts</loc></url>
-
-  <url><loc>https://ludyem.dev/storeglance</loc><lastmod>2026-09-15</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/check/</loc><lastmod>2026-09-15</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/press/</loc><lastmod>2026-09-15</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/guides/</loc><lastmod>2026-09-02</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/guides/how-to-know-if-your-app-is-featured/</loc><lastmod>2026-09-02</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/guides/app-store-featuring-nominations/</loc><lastmod>2026-09-02</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/guides/app-store-browse-traffic-spike/</loc><lastmod>2026-09-02</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/support</loc><lastmod>2026-09-02</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/privacy</loc><lastmod>2026-09-02</lastmod></url>
-  <url><loc>https://ludyem.dev/storeglance/terms</loc><lastmod>2026-09-02</lastmod></url>
-  <url><loc>https://ludyem.dev/never-stall/</loc><lastmod>2026-09-05</lastmod></url>
-  <url><loc>https://ludyem.dev/never-stall/privacy/</loc><lastmod>2026-09-05</lastmod></url>
-  <url><loc>https://ludyem.dev/never-stall/terms/</loc><lastmod>2026-09-05</lastmod></url>
-  <url><loc>https://ludyem.dev/never-stall/support/</loc><lastmod>2026-09-05</lastmod></url>
+  <url><loc>https://ludyem.dev/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/workouts/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/workouts/privacy</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/workouts/terms</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/workouts/support</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/tend/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/tend/privacy</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/tend/terms</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/tend/support</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/check/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/press/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/guides/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/guides/how-to-know-if-your-app-is-featured/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/guides/app-store-featuring-nominations/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/guides/app-store-browse-traffic-spike/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/support</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/privacy</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/storeglance/terms</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/never-stall/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/never-stall/privacy/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/never-stall/terms/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://ludyem.dev/never-stall/support/</loc><lastmod>2026-09-28</lastmod></url>
 </urlset>
