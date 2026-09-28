@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support — Workouts by Ludyem</title>
+  <title>Support · Workouts by Ludyem</title>
   <meta name="description" content="Help with the Ludyem Workouts apps: Push-Ups, Sit-Ups, Pull-Ups, and Squats. FAQs and contact." />
   <link rel="canonical" href="https://ludyem.dev/workouts/support" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #57AF5D; --accent2: #3F9EEC; --grad-a: #8FD094; --grad-b: #86C4F5;
-      --accent-soft: rgba(87,175,93,0.14); --accent-line: rgba(87,175,93,0.32);
-    }
+    :root { --accent: #57AF5D; --accent-ink: #8FD094; --on-accent: #000; }
   </style>
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/workouts" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ Workouts</span>
-      </a>
-      <a href="/workouts" class="back-link">← Back to Workouts</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/workouts/">/ <b>Workouts</b></a></span>
+      <div class="links">
+        <a class="opt" href="/workouts/privacy">Privacy</a>
+        <a class="opt" href="/workouts/terms">Terms</a>
+        <a class="sup" href="/workouts/support">Support</a>
+        <a class="get" href="/workouts/#apps">Download</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Help</div>
@@ -34,10 +33,10 @@
     <p class="subtitle">Can't find what you're looking for? We're happy to help.</p>
 
     <div class="contact-card">
-      <div class="contact-icon">✉️</div>
+      <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/sprite.svg#mail"/></svg></div>
       <div>
         <h2>Contact us</h2>
-        <p>Send us an email and we'll get back to you as soon as possible — usually within one business day.</p>
+        <p>Send us an email and we'll get back to you as soon as possible, usually within one business day.</p>
         <a href="mailto:support@ludyem.dev" class="btn-contact">support@ludyem.dev</a>
       </div>
     </div>
@@ -48,21 +47,21 @@
       <details>
         <summary>What's the difference between the four apps?<span class="summary-icon">+</span></summary>
         <div class="faq-body">
-          <p>Push-Ups, Sit-Ups, Pull-Ups, and Squats are four separate apps that each focus on a single movement, so your home screen stays about the one goal you're chasing. They share the same trainer and plan engine — pick the exercise you want to build, or install several.</p>
+          <p>Push-Ups, Sit-Ups, Pull-Ups, and Squats are four separate apps that each focus on a single movement, so your home screen stays about the one goal you're chasing. They share the same trainer and plan engine. Pick the exercise you want to build, or install several.</p>
         </div>
       </details>
 
       <details>
         <summary>How does the training plan work?<span class="summary-icon">+</span></summary>
         <div class="faq-body">
-          <p>When you set up the app you enter your current max and a goal (for example, 100 push-ups). The app builds a multi-week ladder of sets and rest periods that ramps you from where you are to your goal at the pace you choose — Relaxed, Standard, or Aggressive. The bigger the gap, the longer the plan. You can change your goal or recalibrate any time from the Plans tab.</p>
+          <p>When you set up the app you enter your current max and a goal (for example, 100 push-ups). The app builds a multi-week ladder of sets and rest periods that ramps you from where you are to your goal at the pace you choose: Relaxed, Standard, or Aggressive. The bigger the gap, the longer the plan. You can change your goal or recalibrate any time from the Plans tab.</p>
         </div>
       </details>
 
       <details>
         <summary>How does camera rep detection work? Is it private?<span class="summary-icon">+</span></summary>
         <div class="faq-body">
-          <p>Push-Ups and Sit-Ups can count your reps using the front camera. It runs entirely on-device with Apple's Vision framework — video frames are analysed live and immediately discarded. Nothing is recorded, saved, or uploaded. The camera is only active while you're on the counting screen with detection switched on. You can always just tap to count instead.</p>
+          <p>Push-Ups and Sit-Ups can count your reps using the front camera. It runs entirely on-device with Apple's Vision framework. Video frames are analysed live and immediately discarded. Nothing is recorded, saved, or uploaded. The camera is only active while you're on the counting screen with detection switched on. You can always just tap to count instead.</p>
         </div>
       </details>
 
@@ -97,7 +96,7 @@
       <details>
         <summary>The rep counter miscounted. What can I do?<span class="summary-icon">+</span></summary>
         <div class="faq-body">
-          <p>Camera detection works best with good lighting and your whole body in frame. If a count looks off, you can adjust the number manually before saving, or switch to tap-to-count for full control. Detection improves with a stable phone position — prop it up so the camera can see your full range of motion.</p>
+          <p>Camera detection works best with good lighting and your whole body in frame. If a count looks off, you can adjust the number manually before saving, or switch to tap-to-count for full control. Detection improves with a stable phone position, so prop it up so the camera can see your full range of motion.</p>
         </div>
       </details>
 
@@ -111,14 +110,18 @@
     </div>
   </main>
 
-  <footer class="doc-foot">
-    <p>
-      <a href="/workouts">Workouts</a>
-      <a href="privacy">Privacy</a>
-      <a href="terms">Terms</a>
-      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
-    </p>
-    <p style="margin-top:12px;">© 2026 Ludyem AS. All rights reserved.</p>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/workouts/privacy">Privacy</a>
+        <a href="/workouts/terms">Terms</a>
+        <a href="/workouts/support">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
   </footer>
 </body>
 </html>
