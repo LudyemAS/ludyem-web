@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Updated 28 September 2026, FOR THE OWNER TO REVIEW: the 26 July text did not mention the
+     AppGlance analytics SDK (in the apps since 4.5) or the loudness-gated microphone counting
+     (SoundRepDetector) that the 4.9 listing advertises. Wording follows Tend section 7. -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Workouts by Ludyem</title>
+  <title>Privacy Policy · Workouts by Ludyem</title>
   <meta name="description" content="Privacy Policy for the Ludyem Workouts apps: Push-Ups, Sit-Ups, Pull-Ups, and Squats." />
   <link rel="canonical" href="https://ludyem.dev/workouts/privacy" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #57AF5D; --accent2: #3F9EEC; --grad-a: #8FD094; --grad-b: #86C4F5;
-      --accent-soft: rgba(87,175,93,0.14); --accent-line: rgba(87,175,93,0.32);
-    }
+    :root { --accent: #57AF5D; --accent-ink: #8FD094; --on-accent: #000; }
   </style>
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/workouts" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ Workouts</span>
-      </a>
-      <a href="/workouts" class="back-link">← Back to Workouts</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/workouts/">/ <b>Workouts</b></a></span>
+      <div class="links">
+        <a class="opt" href="/workouts/privacy">Privacy</a>
+        <a class="opt" href="/workouts/terms">Terms</a>
+        <a class="sup" href="/workouts/support">Support</a>
+        <a class="get" href="/workouts/#apps">Download</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Legal</div>
     <h1>Privacy Policy</h1>
     <div class="doc-body">
-      <p class="updated">Last updated 26 July 2026 · Applies to <strong>Push-Ups, Sit-Ups, Pull-Ups, and Squats</strong> by Ludyem (together, "the apps").</p>
+      <p class="updated">Last updated 28 September 2026 · Applies to <strong>Push-Ups, Sit-Ups, Pull-Ups, and Squats</strong> by Ludyem (together, "the apps").</p>
 
       <p>We build the apps so that your data stays on your device. We don't run servers that collect your personal information, we don't require an account, and we don't track you. This policy explains exactly what that means.</p>
 
@@ -41,7 +43,8 @@
         <li>No account, no sign-up, no email required.</li>
         <li>We don't collect, store, or sell your personal data.</li>
         <li>Your workout history lives on your device (and in your own iCloud, if enabled).</li>
-        <li>Camera rep detection runs entirely on-device — frames are never recorded or uploaded.</li>
+        <li>Camera and sound rep counting run entirely on your iPhone. Frames and audio are never recorded or uploaded.</li>
+        <li>A few anonymous usage events go to Ludyem's own analytics service, tied to a random install id and never to you.</li>
         <li>No third-party advertising or tracking SDKs.</li>
       </ul>
 
@@ -58,6 +61,18 @@
 
       <h2>Camera</h2>
       <p>Push-Ups and Sit-Ups offer optional camera-based rep detection. When you enable it, the camera feed is processed live and entirely on-device using Apple's Vision framework to detect movement. Video frames are <strong>not saved, not stored, and never leave your iPhone</strong>. The camera is only active while you are on the counting screen with detection enabled.</p>
+
+      <h2>Microphone</h2>
+      <p>Sit-Ups, Pull-Ups and Squats can count reps by sound: say the number, clap or grunt, and each loud-enough sound counts one rep. The apps only measure how loud the sound is, on your iPhone. There is <strong>no speech recognition, nothing is recorded or saved, and no audio ever leaves your iPhone</strong>. The microphone is only on while you are counting a set with sound counting switched on.</p>
+
+      <h2>Anonymous usage analytics</h2>
+      <p>The apps include Ludyem's own privacy-first analytics service, built and operated by us. App Store builds send a small set of anonymous usage events (for example that a workout was started or finished) so we can see which features are used and keep improving the apps.</p>
+      <ul>
+        <li>Events are tied to a randomly generated identifier stored in your device's Keychain. It is created on install, identifies only this installation, and is never linked to your name, email, Apple Account or any other identity.</li>
+        <li>No health or fitness data is ever included.</li>
+        <li>Location is limited to your device's region setting (country only). We never read GPS or derive a location from your network address.</li>
+        <li>We do not track you across other apps or websites, and we do not use the data for advertising.</li>
+      </ul>
 
       <h2>Data stored on your device</h2>
       <p>Your sets, records, streaks, plan progress, and preferences are stored locally on your device. If you enable iCloud, this data may sync across your own Apple devices via your private iCloud account, which is encrypted by Apple and not accessible to us.</p>
@@ -76,14 +91,18 @@
     </div>
   </main>
 
-  <footer class="doc-foot">
-    <p>
-      <a href="/workouts">Workouts</a>
-      <a href="support">Support</a>
-      <a href="terms">Terms</a>
-      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
-    </p>
-    <p style="margin-top:12px;">© 2026 Ludyem AS. All rights reserved.</p>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/workouts/privacy">Privacy</a>
+        <a href="/workouts/terms">Terms</a>
+        <a href="/workouts/support">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
   </footer>
 </body>
 </html>
