@@ -37,15 +37,17 @@
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a href="/never-stall/" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span class="mono ns-suffix">/ Never&nbsp;Stall</span>
-      </a>
-      <a href="/never-stall/" class="back-link">← Back to Never Stall</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/never-stall/">/ <b>Never Stall</b></a></span>
+      <div class="links">
+        <a class="opt" href="/never-stall/privacy/">Privacy</a>
+        <a class="opt" href="/never-stall/terms/">Terms</a>
+        <a class="sup" href="/never-stall/support/">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6808904948" target="_blank" rel="noopener">Download</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Help</div>
@@ -53,7 +55,7 @@
     <p class="subtitle">Something not working, or a question the answers below do not cover? Write to us.</p>
 
     <div class="contact-card">
-      <div class="contact-icon">✉️</div>
+      <div class="contact-icon"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/sprite.svg#mail"/></svg></div>
       <div>
         <h2>Contact us</h2>
         <p>Email us and we aim to reply <strong>within two business days</strong>. Ludyem is small, so it is a person reading your message, not a ticket system. Telling us your iPhone model and your iOS version saves a round trip. We answer in English or Norwegian.</p>
@@ -120,10 +122,10 @@
       </details>
 
       <details>
-        <summary>I got a new iPhone. How do I get my purchase back?<span class="summary-icon">+</span></summary>
+        <summary>I got a new iPhone. How do I bring my progress?<span class="summary-icon">+</span></summary>
         <div class="faq-body">
-          <p>Sign in with the <strong>same Apple Account</strong> you bought it with, open Never Stall, and use <strong>Restore Purchases</strong>. Your purchase comes back at no charge.</p>
-          <p>Your habits and your history are a separate matter: they move with an iPhone backup, or with iCloud sync once that ships. If neither applies, the purchase restores but the history does not.</p>
+          <p>Never Stall is free, so there is nothing to buy again: download it with your Apple Account and it is yours.</p>
+          <p>Your habits, your history and any freezes you have not spent live in the app's data on your iPhone, so they move with an iPhone backup or a device-to-device transfer. If neither applies, the app starts fresh.</p>
         </div>
       </details>
 
@@ -145,10 +147,10 @@
       </details>
 
       <details>
-        <summary>Is there a free version?<span class="summary-icon">+</span></summary>
+        <summary>Is Never Stall free?<span class="summary-icon">+</span></summary>
         <div class="faq-body">
-          <p>No. Never Stall is paid, with no free tier and no ads. You can see the price in the App Store before you buy, in your own currency.</p>
-          <p>Buying it is what pays for it. There is no other way this app makes money: no advertising, no analytics, and nothing about you to sell.</p>
+          <p>Yes. Every habit, every ladder, your character, your rank and your whole history are open without paying. There is no subscription and no ads.</p>
+          <p>The only thing it sells is freezes, for the days life gets in the way, and you earn them as you climb too. Nothing you can buy touches your XP, your level, your stats or the record of what you did.</p>
         </div>
       </details>
 
@@ -162,14 +164,18 @@
     </div>
   </main>
 
-  <footer class="doc-foot">
-    <p>
-      <a href="/never-stall/">Ludyem · Never Stall</a>
-      <a href="/never-stall/privacy/">Privacy</a>
-      <a href="/never-stall/terms/">Terms</a>
-      <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
-    </p>
-    <p style="margin-top:12px;">Last updated 5 September 2026 · © 2026 Ludyem AS. All rights reserved.</p>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/never-stall/privacy/">Privacy</a>
+        <a href="/never-stall/terms/">Terms</a>
+        <a href="/never-stall/support/">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
   </footer>
 </body>
 </html>
