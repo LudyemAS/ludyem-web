@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Press kit — StoreGlance by Ludyem</title>
+  <title>Press kit · StoreGlance by Ludyem</title>
   <meta name="description" content="Everything a writer needs about StoreGlance: what it is, facts, the founder, icon and screenshots free to use, and a boilerplate paragraph." />
   <link rel="canonical" href="https://ludyem.dev/storeglance/press/" />
   <meta property="og:title" content="StoreGlance press kit" />
@@ -17,11 +17,7 @@
   <meta name="twitter:image" content="https://ludyem.dev/storeglance/assets/press/og-storeglance.png" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #1FBFA4; --accent2: #E3AE4A;
-      --grad-a: #84dccd; --grad-b: #f0d29b;
-      --accent-soft: rgba(31,191,164,0.14); --accent-line: rgba(31,191,164,0.32);
-    }
+    :root { --accent: #1FBFA4; --accent-ink: #7FE0CF; --on-accent: #00140F; }
     .facts { width: 100%; border-collapse: collapse; font-size: 15px; margin: 8px 0 10px; }
     .facts th, .facts td { text-align: left; padding: 11px 0; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
     .facts th { color: var(--muted); font-weight: 600; width: 34%; padding-right: 16px; }
@@ -43,18 +39,18 @@
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
 </head>
 <body>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/storeglance" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ StoreGlance</span>
-      </a>
-      <a href="/storeglance" class="back-link">← Back to StoreGlance</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/storeglance/">/ <b>StoreGlance</b></a></span>
+      <div class="links">
+        <a class="opt" href="/storeglance/check/">Free check</a>
+        <a class="opt" href="/storeglance/guides/">Guides</a>
+        <a class="sup" href="/storeglance/support">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6807185861" target="_blank" rel="noopener">Download</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Press kit</div>
@@ -136,17 +132,20 @@
     </div>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <a href="/" class="footer-logo"><img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="22" height="22" /> Ludyem</a>
-      <div class="footer-links">
-        <a href="/storeglance">StoreGlance</a>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
         <a href="/storeglance/check/">Free check</a>
         <a href="/storeglance/guides/">Guides</a>
+        <a href="/storeglance/press/">Press</a>
         <a href="/storeglance/privacy">Privacy</a>
+        <a href="/storeglance/terms">Terms</a>
         <a href="/storeglance/support">Support</a>
-      </div>
-      <p class="footer-copy">© 2026 Ludyem AS</p>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
     </div>
   </footer>
 </body>
