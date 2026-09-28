@@ -17,11 +17,7 @@
 
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #1FBFA4; --accent2: #E3AE4A;
-      --grad-a: #84dccd; --grad-b: #f0d29b;
-      --accent-soft: rgba(31,191,164,0.14); --accent-line: rgba(31,191,164,0.32);
-    }
+    :root { --accent: #1FBFA4; --accent-ink: #7FE0CF; --on-accent: #00140F; }
   </style>
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
@@ -73,23 +69,17 @@
 </head>
 <body>
 
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="/storeglance" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ StoreGlance</span>
-      </a>
-      <div class="nav-links">
-        <a href="/storeglance#features">Features</a>
-        <a href="/storeglance/guides/">Guides</a>
-        <a href="/storeglance/support">Support</a>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/storeglance/">/ <b>StoreGlance</b></a></span>
+      <div class="links">
+        <a class="opt" href="/storeglance/check/">Free check</a>
+        <a class="opt" href="/storeglance/guides/">Guides</a>
+        <a class="sup" href="/storeglance/support">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6807185861" target="_blank" rel="noopener">Download</a>
       </div>
-      <a href="/storeglance" class="btn-nav">Get StoreGlance</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="doc-main post-main">
     <a href="/storeglance/guides/" class="back-link">&larr; All guides</a>
@@ -108,14 +98,14 @@
           Apple tells you about <strong>one</strong> kind of featuring. If your app lands in
           select placements on the Today tab, the App Store Connect app sends you a
           notification. Every other shelf, on every other tab, in every one of the other
-          170 storefronts, arrives without a word — and usually you hear about it from
+          170 storefronts, arrives without a word, and usually you hear about it from
           a stranger on the internet, a week late.
         </p>
 
         <div class="callout">
           <p><strong>The short answer.</strong> App Store Connect covers the marquee Today tab
           slots. For everything else there is
-          <a href="/storeglance">StoreGlance</a> — add your apps once and get a push the day any
+          <a href="/storeglance">StoreGlance</a>: add your apps once and get a push the day any
           of the 175 storefronts puts one of them on a shelf, with the shelf name, the country
           and the slot.</p>
         </div>
@@ -138,9 +128,9 @@
         <p>Every phrase in that sentence is load-bearing:</p>
 
         <ul>
-          <li><strong>select placements</strong> — a subset, not all of them. In practice the marquee slots: App of the Day, Game of the Day, and the stories Apple's editors treat as headline placements.</li>
-          <li><strong>on the Today tab</strong> — not the Apps tab, not the Games tab, not a category page, not a category shelf.</li>
-          <li><strong>via the App Store Connect app</strong> — on a phone, with the app installed, notifications allowed, signed in to the account that holds the app.</li>
+          <li><strong>select placements</strong>: a subset, not all of them. In practice the marquee slots: App of the Day, Game of the Day, and the stories Apple's editors treat as headline placements.</li>
+          <li><strong>on the Today tab</strong>: not the Apps tab, not the Games tab, not a category page, not a category shelf.</li>
+          <li><strong>via the App Store Connect app</strong>: on a phone, with the app installed, notifications allowed, signed in to the account that holds the app.</li>
         </ul>
 
         <p>
@@ -155,15 +145,15 @@
         <p>
           The App Store is not one store. It is <strong>175 storefronts</strong>, each with its
           own editors and its own editorial calendar. Every one of them has a Today, an Apps and
-          a Games tab, and every tab is a stack of named shelves — &ldquo;Best New Apps and
+          a Games tab, and every tab is a stack of named shelves: &ldquo;Best New Apps and
           Updates&rdquo;, &ldquo;Editors' Choice Apps&rdquo;, &ldquo;Apps You Might've
           Missed&rdquo; and dozens more, each one filled by a person who chose the apps on it.
         </p>
 
         <p>
-          Apple's notification reaches a slice of one of those tabs. Everything else — the whole
+          Apple's notification reaches a slice of one of those tabs. Everything else (the whole
           Apps tab, the whole Games tab, the category shelves, and all of it repeated across 170
-          more countries — happens in silence.
+          more countries) happens in silence.
         </p>
 
         <p class="pullquote">
@@ -172,7 +162,7 @@
         </p>
 
         <p>
-          Smaller storefronts feature more aggressively, because there is less to choose from —
+          Smaller storefronts feature more aggressively, because there is less to choose from,
           and they are exactly the ones you will never think to check. &ldquo;Best New Apps and
           Updates&rdquo; exists in Japan too, run by different editors, refreshed on Japanese
           time, in Japanese. Your App Store Connect app stays quiet.
@@ -192,7 +182,7 @@
         </div>
 
         <p>
-          A feature usually shows up as a step change in Browse impressions — not a gentle rise,
+          A feature usually shows up as a step change in Browse impressions: not a gentle rise,
           a cliff. That is a real signal. Its limits are real too:
         </p>
 
@@ -210,7 +200,7 @@
             <ul>
               <li>Browse is a bucket: Top Charts, category pages and In-App Events land in it too</li>
               <li>It never names the shelf you were on</li>
-              <li>It is retrospective — analytics settle over about a day, and shelves rotate</li>
+              <li>It is retrospective: analytics settle over about a day, and shelves rotate</li>
               <li>Finding the country means reverse-engineering a territory table</li>
             </ul>
           </div>
@@ -218,7 +208,7 @@
 
         <p>
           So a Browse spike is a hypothesis, not an answer. Working out what caused one is a skill
-          of its own — see
+          of its own. See
           <a href="/storeglance/guides/app-store-browse-traffic-spike/">your App Store impressions spiked: was it a feature?</a>
         </p>
 
@@ -226,7 +216,7 @@
 
         <p>
           You can switch your App Store to another country and scroll its editorial tabs. That is
-          fine for a hunch — you launched in Germany, you want to see what Germany is showing
+          fine for a hunch: you launched in Germany, you want to see what Germany is showing
           today.
         </p>
 
@@ -234,7 +224,7 @@
           It is also the option that quietly fails. There are 175 storefronts, each running to its
           own calendar and its own clock, and a shelf can appear and rotate away between two of
           your checks. Doing this thoroughly, every day, in every country, is not a habit anyone
-          keeps for a week — which is why the placements people miss are almost never the ones
+          keeps for a week, which is why the placements people miss are almost never the ones
           they went looking for.
         </p>
 
@@ -242,14 +232,14 @@
 
         <p>
           <a href="/storeglance">StoreGlance</a> is an iPhone app that watches the App Store for
-          you. Add your apps once — and your competitors' — and it tells you the day one of them
+          you. Add your apps and your competitors' once, and it tells you the day one of them
           is featured, anywhere.
         </p>
 
         <ul>
           <li><strong>A push on the day it happens</strong>, not a screenshot someone posts a week later.</li>
           <li><strong>All 175 storefronts</strong>, including every one you would never think to open.</li>
-          <li><strong>The shelf, the country and the slot</strong> — plus the apps sitting either side of you on it.</li>
+          <li><strong>The shelf, the country and the slot</strong>, plus the apps sitting either side of you on it.</li>
           <li><strong>Competitors as first-class citizens</strong>, so you see which rivals the editors are picking.</li>
           <li><strong>A featuring history</strong> per app, with a 13-week calendar, so you can point at your record when you nominate.</li>
           <li><strong>Top chart positions</strong> per storefront alongside it, with the day-over-day move.</li>
@@ -286,7 +276,7 @@
                 <td>Select Today tab placements</td>
                 <td class="yes">Yes</td>
                 <td>Same day</td>
-                <td>None — but only fires for a slice</td>
+                <td>None, but only fires for a slice</td>
               </tr>
               <tr>
                 <td>App Analytics (Browse)</td>
@@ -305,7 +295,7 @@
               <tr class="is-ours">
                 <td>StoreGlance</td>
                 <td>All 175 storefronts, yours and competitors'</td>
-                <td class="yes">Yes — shelf, country, slot, neighbours</td>
+                <td class="yes">Yes: shelf, country, slot, neighbours</td>
                 <td>Push on the day</td>
                 <td>Add the app once</td>
               </tr>
@@ -332,7 +322,7 @@
 
         <p>
           All four are easier when something hands you the shelf, the country and the neighbours
-          on the morning it happens — which is the whole reason
+          on the morning it happens, which is the whole reason
           <a href="/storeglance">StoreGlance</a> exists.
         </p>
 
@@ -344,7 +334,7 @@
             <div class="faq-body">
               <p>Only for some placements. Apple's announcement says that if you are featured in
               select placements on the Today tab, you receive a notification via the App Store
-              Connect app — App of the Day and Game of the Day being the obvious cases.
+              Connect app. App of the Day and Game of the Day are the obvious cases.
               Editorial shelves on the Apps and Games tabs, category shelves, and every
               placement in the other storefronts arrive with no notification at all.
               <a href="/storeglance">StoreGlance</a> was built to cover exactly that gap.</p>
@@ -363,7 +353,7 @@
             <div class="faq-body">
               <p>Indirectly. Featuring traffic lands in the <strong>App Store Browse</strong>
               acquisition source, but Browse also contains Top Charts, category pages and
-              In-App Events, so a spike is evidence rather than proof — and it arrives after
+              In-App Events, so a spike is evidence rather than proof, and it arrives after
               the analytics settle, not on the day.</p>
             </div>
           </details>
@@ -379,7 +369,7 @@
           <details>
             <summary>Can I see whether a competitor is featured?<span class="summary-icon">+</span></summary>
             <div class="faq-body">
-              <p>Yes — StoreGlance treats competitors as first-class. Track any app on the store
+              <p>Yes. StoreGlance treats competitors as first-class. Track any app on the store
               and get the same alert when it lands on a shelf, in any storefront. Knowing which
               rivals the editors are picking, and on which shelves, is often more useful than
               watching your own.</p>
@@ -407,24 +397,29 @@
 
         <div class="post-cta">
           <h2>Stop finding out from strangers</h2>
-          <p>StoreGlance watches all 175 App Store storefronts and pushes you the day your app —
-          or a competitor's — lands on a shelf.</p>
+          <p>StoreGlance watches all 175 App Store storefronts and pushes you the day your app,
+          or a competitor's, lands on a shelf.</p>
           <a href="/storeglance" class="btn-primary" style="display:inline-flex;">Get StoreGlance</a>
         </div>
       </div>
     </article>
   </main>
 
-  <div class="doc-foot">
-    <p>
-      <a href="/storeglance">StoreGlance</a>
-      <a href="/storeglance/guides/">Guides</a>
-      <a href="/storeglance/privacy">Privacy</a>
-      <a href="/storeglance/terms">Terms</a>
-      <a href="/storeglance/support">Support</a>
-    </p>
-    <p style="margin-top:14px;">© 2026 Ludyem AS</p>
-  </div>
-
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/storeglance/check/">Free check</a>
+        <a href="/storeglance/guides/">Guides</a>
+        <a href="/storeglance/press/">Press</a>
+        <a href="/storeglance/privacy">Privacy</a>
+        <a href="/storeglance/terms">Terms</a>
+        <a href="/storeglance/support">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
+  </footer>
 </body>
 </html>

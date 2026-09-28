@@ -20,11 +20,7 @@
   <meta name="apple-itunes-app" content="app-id=6807185861" />
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #1FBFA4; --accent2: #E3AE4A;
-      --grad-a: #84dccd; --grad-b: #f0d29b;
-      --accent-soft: rgba(31,191,164,0.14); --accent-line: rgba(31,191,164,0.32);
-    }
+    :root { --accent: #1FBFA4; --accent-ink: #7FE0CF; --on-accent: #00140F; }
     .lookup { display: flex; gap: 10px; flex-wrap: wrap; margin: 8px 0 18px; }
     .lookup input { flex: 1 1 320px; min-width: 0; background: var(--card); border: 1px solid var(--border); color: var(--text); border-radius: 50px; padding: 16px 22px; font-size: 16px; outline: none; transition: border-color .2s; }
     .lookup input:focus { border-color: var(--accent-line); }
@@ -87,18 +83,18 @@
   </script>
 </head>
 <body>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="/storeglance" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ StoreGlance</span>
-      </a>
-      <a href="https://apps.apple.com/app/id6807185861" class="btn-nav" target="_blank" rel="noopener">Get the app</a>
-    </div>
-  </nav>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/storeglance/">/ <b>StoreGlance</b></a></span>
+      <div class="links">
+        <a class="opt" href="/storeglance/check/">Free check</a>
+        <a class="opt" href="/storeglance/guides/">Guides</a>
+        <a class="sup" href="/storeglance/support">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6807185861" target="_blank" rel="noopener">Download</a>
+      </div>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <div class="page-label">Free check · No account</div>
@@ -122,17 +118,20 @@
     </div>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <a href="/" class="footer-logo"><img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="22" height="22" /> Ludyem</a>
-      <div class="footer-links">
-        <a href="/storeglance">StoreGlance</a>
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/storeglance/check/">Free check</a>
         <a href="/storeglance/guides/">Guides</a>
         <a href="/storeglance/press/">Press</a>
         <a href="/storeglance/privacy">Privacy</a>
+        <a href="/storeglance/terms">Terms</a>
         <a href="/storeglance/support">Support</a>
-      </div>
-      <p class="footer-copy">© 2026 Ludyem AS · Lookups go to Apple's public catalogue and to our servers. Nothing you type is stored.</p>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS · Lookups go to Apple's public catalogue and to our servers. Nothing you type is stored.</span>
     </div>
   </footer>
 

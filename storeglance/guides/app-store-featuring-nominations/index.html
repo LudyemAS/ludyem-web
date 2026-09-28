@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>App Store Featuring Nominations: How to Ask Apple to Feature Your App</title>
-  <meta name="description" content="What the Featuring Nominations form in App Store Connect asks for, the three-week minimum lead time, who can submit it, and what happens after you do — plus the shelves nominations never reach." />
+  <meta name="description" content="What the Featuring Nominations form in App Store Connect asks for, the three-week minimum lead time, who can submit it, and what happens after you do, plus the shelves nominations never reach." />
   <link rel="canonical" href="https://ludyem.dev/storeglance/guides/app-store-featuring-nominations/" />
 
   <meta property="og:title" content="App Store Featuring Nominations: how to ask Apple to feature your app" />
@@ -17,11 +17,7 @@
 
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #1FBFA4; --accent2: #E3AE4A;
-      --grad-a: #84dccd; --grad-b: #f0d29b;
-      --accent-soft: rgba(31,191,164,0.14); --accent-line: rgba(31,191,164,0.32);
-    }
+    :root { --accent: #1FBFA4; --accent-ink: #7FE0CF; --on-accent: #00140F; }
   </style>
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
@@ -73,23 +69,17 @@
 </head>
 <body>
 
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="/storeglance" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ StoreGlance</span>
-      </a>
-      <div class="nav-links">
-        <a href="/storeglance#features">Features</a>
-        <a href="/storeglance/guides/">Guides</a>
-        <a href="/storeglance/support">Support</a>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/storeglance/">/ <b>StoreGlance</b></a></span>
+      <div class="links">
+        <a class="opt" href="/storeglance/check/">Free check</a>
+        <a class="opt" href="/storeglance/guides/">Guides</a>
+        <a class="sup" href="/storeglance/support">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6807185861" target="_blank" rel="noopener">Download</a>
       </div>
-      <a href="/storeglance" class="btn-nav">Get StoreGlance</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="doc-main post-main">
     <a href="/storeglance/guides/" class="back-link">&larr; All guides</a>
@@ -108,14 +98,14 @@
           Since November 2024 there has been a front door. <strong>Featuring Nominations</strong>
           in App Store Connect lets you tell Apple's editorial team about a launch, an update or
           a piece of new content, with a <strong>minimum lead time of three weeks</strong>.
-          It is not a request form with a yes or no at the end — it is context, delivered to the
+          It is not a request form with a yes or no at the end. It is context, delivered to the
           people who fill the shelves.
         </p>
 
         <div class="callout">
           <p><strong>Before you nominate:</strong> Apple only notifies you about select Today tab
-          placements, so most featuring — including anything a nomination wins you on the Apps or
-          Games tabs, or abroad — arrives silently.
+          placements, so most featuring (including anything a nomination wins you on the Apps or
+          Games tabs, or abroad) arrives silently.
           <a href="/storeglance">StoreGlance</a> pushes you the day it happens, in any of the 175
           storefronts.</p>
         </div>
@@ -124,7 +114,7 @@
 
         <p>
           In App Store Connect, nominations sit alongside your apps rather than inside any one of
-          them —
+          them:
           <a href="https://developer.apple.com/help/app-store-connect/manage-featuring-nominations/nominate-your-app-for-featuring/" target="_blank" rel="noopener">Apple's help page</a>
           is the canonical walkthrough. The role requirement catches people out:
         </p>
@@ -146,8 +136,8 @@
         <p>
           Three weeks is the floor, not the target. Editorial calendars are planned further out
           than that, and a nomination that arrives the week before your launch is competing for
-          space that is already allocated. If your date is fixed — a hardware tie-in, a season, a
-          conference — four to six weeks is a kinder ask.
+          space that is already allocated. If your date is fixed (a hardware tie-in, a season, a
+          conference), four to six weeks is a kinder ask.
         </p>
 
         <h2>What the form asks for</h2>
@@ -155,24 +145,24 @@
         <p>Plan the answers before you open it. In order:</p>
 
         <ul>
-          <li><strong>Nomination name</strong> — internal, for your own reference.</li>
-          <li><strong>Type</strong> — one of <em>App Launch</em>, <em>New Content</em>, or <em>App Enhancements</em>.</li>
-          <li><strong>Description</strong> — the substance. Apple asks you to be explicit about the purpose of the nomination, how you rank its priority, what specifically is new, and what the new functionality is for.</li>
-          <li><strong>Related apps</strong> — up to 10 from the same account.</li>
-          <li><strong>Platforms</strong> — note that In-App Events can only be attached for iPhone and iPad.</li>
-          <li><strong>Countries or regions</strong> — pre-filled from your availability, and editable. This field matters more than it looks; see below.</li>
-          <li><strong>Localizations</strong> — also pre-filled from availability, also editable.</li>
-          <li><strong>In-App Events</strong> — you can attach approved or published events.</li>
-          <li><strong>Supplemental materials</strong> — up to 5 URLs. A press kit, a demo video, a TestFlight build.</li>
-          <li><strong>Helpful details</strong> — accessibility work, inclusivity, anything genuinely unusual about the app.</li>
-          <li><strong>Publish date</strong> — a specific date or a range.</li>
+          <li><strong>Nomination name</strong>: internal, for your own reference.</li>
+          <li><strong>Type</strong>: one of <em>App Launch</em>, <em>New Content</em>, or <em>App Enhancements</em>.</li>
+          <li><strong>Description</strong>: the substance. Apple asks you to be explicit about the purpose of the nomination, how you rank its priority, what specifically is new, and what the new functionality is for.</li>
+          <li><strong>Related apps</strong>: up to 10 from the same account.</li>
+          <li><strong>Platforms</strong>: note that In-App Events can only be attached for iPhone and iPad.</li>
+          <li><strong>Countries or regions</strong>: pre-filled from your availability, and editable. This field matters more than it looks; see below.</li>
+          <li><strong>Localizations</strong>: also pre-filled from availability, also editable.</li>
+          <li><strong>In-App Events</strong>: you can attach approved or published events.</li>
+          <li><strong>Supplemental materials</strong>: up to 5 URLs. A press kit, a demo video, a TestFlight build.</li>
+          <li><strong>Helpful details</strong>: accessibility work, inclusivity, anything genuinely unusual about the app.</li>
+          <li><strong>Publish date</strong>: a specific date or a range.</li>
         </ul>
 
         <div class="callout">
           <p><strong>The countries field is the underused one.</strong> The default is everywhere
           you are available, which reads as &ldquo;no opinion&rdquo;. If your app has a real
-          reason to matter in a particular market — it is localised properly, it solves a local
-          problem, your users are there — say so. Local editors fill local shelves.</p>
+          reason to matter in a particular market (it is localised properly, it solves a local
+          problem, your users are there), say so. Local editors fill local shelves.</p>
         </div>
 
         <h2>What happens next: nothing visible</h2>
@@ -188,8 +178,8 @@
           So how do you find out? For a slice of placements, Apple tells you: a notification via
           the App Store Connect app if you land in
           <a href="https://developer.apple.com/news/?id=nx3eotat" target="_blank" rel="noopener">select placements on the Today tab</a>.
-          For everything else — the Apps tab, the Games tab, category shelves, and all 175
-          storefronts — you find out by looking. That gap is the subject of
+          For everything else (the Apps tab, the Games tab, category shelves, and all 175
+          storefronts) you find out by looking. That gap is the subject of
           <a href="/storeglance/guides/how-to-know-if-your-app-is-featured/">how to know when your app is featured</a>.
         </p>
 
@@ -198,7 +188,7 @@
         <p>
           It is easy to read &ldquo;Featuring Nominations&rdquo; as <em>the</em> mechanism. It
           isn't. Editors fill most shelves themselves, browsing the store the way anyone else
-          does — and there are a lot of shelves to fill. Every one of the 175 storefronts has a
+          does, and there are a lot of shelves to fill. Every one of the 175 storefronts has a
           Today, an Apps and a Games tab, each a stack of named editorial collections:
           &ldquo;Best New Apps and Updates&rdquo;, &ldquo;Editors' Choice Apps&rdquo;,
           &ldquo;Apps You Might've Missed&rdquo;, &ldquo;Tap Into Apple Intelligence&rdquo; and
@@ -209,14 +199,14 @@
           The number of editorial slots filled every day is enormous, and the great majority of
           them have no nomination anywhere in the story. Many of those shelf names are also
           standing collections that refresh on a cycle, which is why an app that has been
-          featured once tends to be featured again — and why a featuring record is worth having
+          featured once tends to be featured again, and why a featuring record is worth having
           before you nominate.
         </p>
 
         <div class="post-cta" style="margin: 34px 0;">
           <h2>Build the record you can point at</h2>
           <p><a href="/storeglance" style="color:inherit;">StoreGlance</a> keeps a featuring
-          history for every app you track, across all 175 storefronts — the shelf, the country
+          history for every app you track, across all 175 storefronts: the shelf, the country
           and the date, ready to cite in your next nomination.</p>
           <a href="/storeglance" class="btn-primary" style="display:inline-flex;">See what StoreGlance does</a>
         </div>
@@ -228,7 +218,7 @@
         <ul>
           <li><strong>Look like the store.</strong> Editors feature apps that look at home next to the ones they already picked. Current platform conventions, a real icon, screenshots that show the app rather than a marketing collage.</li>
           <li><strong>Adopt the new thing early.</strong> Shelves like &ldquo;Tap Into Apple Intelligence&rdquo; and &ldquo;Do More With Apple Watch&rdquo; exist because Apple needs apps to point at. A well-built widget, Control, Live Activity or watch app is a category of shelf you become eligible for.</li>
-          <li><strong>Localise properly.</strong> Not machine-translated metadata — a genuinely localised app is what a local editor can justify picking.</li>
+          <li><strong>Localise properly.</strong> Not machine-translated metadata: a genuinely localised app is what a local editor can justify picking.</li>
           <li><strong>Do the accessibility work</strong>, and mention it in the Helpful Details field. Apple features accessible apps deliberately and repeatedly.</li>
           <li><strong>Ship on a rhythm.</strong> &ldquo;Best New Apps and Updates&rdquo; is a shelf about updates. An app that ships nothing for a year is eligible for fewer shelves than one that ships.</li>
         </ul>
@@ -255,7 +245,7 @@
             <summary>Does Apple reply?<span class="summary-icon">+</span></summary>
             <div class="faq-body">
               <p>There is no promised reply and no approved/rejected state. You find out by being
-              featured — via the App Store Connect notification for select Today tab placements,
+              featured, through the App Store Connect notification for select Today tab placements,
               or by watching the storefronts for everything else.</p>
             </div>
           </details>
@@ -269,7 +259,7 @@
           <details>
             <summary>Can I nominate an app that already launched?<span class="summary-icon">+</span></summary>
             <div class="faq-body">
-              <p>Yes — that is what the <em>New Content</em> and <em>App Enhancements</em> types
+              <p>Yes. That is what the <em>New Content</em> and <em>App Enhancements</em> types
               are for. A redesign, a new platform, or seasonal in-app content all qualify.</p>
             </div>
           </details>
@@ -294,16 +284,21 @@
     </article>
   </main>
 
-  <div class="doc-foot">
-    <p>
-      <a href="/storeglance">StoreGlance</a>
-      <a href="/storeglance/guides/">Guides</a>
-      <a href="/storeglance/privacy">Privacy</a>
-      <a href="/storeglance/terms">Terms</a>
-      <a href="/storeglance/support">Support</a>
-    </p>
-    <p style="margin-top:14px;">© 2026 Ludyem AS</p>
-  </div>
-
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/storeglance/check/">Free check</a>
+        <a href="/storeglance/guides/">Guides</a>
+        <a href="/storeglance/press/">Press</a>
+        <a href="/storeglance/privacy">Privacy</a>
+        <a href="/storeglance/terms">Terms</a>
+        <a href="/storeglance/support">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
+  </footer>
 </body>
 </html>

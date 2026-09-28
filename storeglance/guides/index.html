@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>App Store Featuring Guides — StoreGlance</title>
+  <title>App Store Featuring Guides · StoreGlance</title>
   <meta name="description" content="Plain guides to App Store editorial featuring: how to know when your app is featured, how Featuring Nominations work, and how to read a Browse traffic spike." />
   <link rel="canonical" href="https://ludyem.dev/storeglance/guides/" />
 
@@ -17,11 +17,7 @@
 
   <link rel="stylesheet" href="/assets/ludyem.css" />
   <style>
-    :root {
-      --accent1: #1FBFA4; --accent2: #E3AE4A;
-      --grad-a: #84dccd; --grad-b: #f0d29b;
-      --accent-soft: rgba(31,191,164,0.14); --accent-line: rgba(31,191,164,0.32);
-    }
+    :root { --accent: #1FBFA4; --accent-ink: #7FE0CF; --on-accent: #00140F; }
   </style>
   <link rel="icon" type="image/svg+xml" href="/assets/ludyem-icon.svg" />
   <link rel="apple-touch-icon" href="/assets/icons/ludyem-180.png" />
@@ -45,23 +41,17 @@
 </head>
 <body>
 
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="/storeglance" class="logo">
-        <img class="logo-mark" src="/assets/ludyem-icon.svg" alt="" width="32" height="32" />
-        Ludyem <span style="color:var(--muted);font-weight:600;">/ StoreGlance</span>
-      </a>
-      <div class="nav-links">
-        <a href="/storeglance#features">Features</a>
-        <a href="/storeglance/guides/">Guides</a>
-        <a href="/storeglance/support">Support</a>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main">
+      <span class="brand"><a class="home" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="28" height="28" /><span class="word">Ludyem</span></a><a class="crumb" href="/storeglance/">/ <b>StoreGlance</b></a></span>
+      <div class="links">
+        <a class="opt" href="/storeglance/check/">Free check</a>
+        <a class="opt" href="/storeglance/guides/">Guides</a>
+        <a class="sup" href="/storeglance/support">Support</a>
+        <a class="get" href="https://apps.apple.com/app/id6807185861" target="_blank" rel="noopener">Download</a>
       </div>
-      <a href="/storeglance" class="btn-nav">Get StoreGlance</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="doc-main">
     <a href="/storeglance" class="back-link">&larr; Back to StoreGlance</a>
@@ -71,7 +61,7 @@
     <p class="subtitle">
       What Apple tells you about editorial featuring, what it doesn't, and how to find out the
       rest. Written by the maker of StoreGlance, the app that tells you the day Apple features
-      you — in any of the 175 storefronts.
+      you, in any of the 175 storefronts.
     </p>
 
     <div class="post-list" style="margin-top:0;">
@@ -101,22 +91,27 @@
 
     <div class="post-cta" style="margin-top:56px;">
       <h2>Every shelf, every store, every day</h2>
-      <p>StoreGlance watches all 175 App Store storefronts and pushes you the day your app — or
-      a competitor's — lands on a shelf, with the shelf name, the country and the slot.</p>
+      <p>StoreGlance watches all 175 App Store storefronts and pushes you the day your app, or
+      a competitor's, lands on a shelf, with the shelf name, the country and the slot.</p>
       <a href="/storeglance" class="btn-primary" style="display:inline-flex;">Get StoreGlance</a>
     </div>
   </main>
 
-  <div class="doc-foot">
-    <p>
-      <a href="/storeglance">StoreGlance</a>
-      <a href="/storeglance/guides/">Guides</a>
-      <a href="/storeglance/privacy">Privacy</a>
-      <a href="/storeglance/terms">Terms</a>
-      <a href="/storeglance/support">Support</a>
-    </p>
-    <p style="margin-top:14px;">© 2026 Ludyem AS</p>
-  </div>
-
+  <footer class="foot">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/ludyem-icon.svg" alt="" width="24" height="24" />Ludyem</a>
+      <nav aria-label="Footer">
+        <a href="/">All apps</a>
+        <a href="/storeglance/check/">Free check</a>
+        <a href="/storeglance/guides/">Guides</a>
+        <a href="/storeglance/press/">Press</a>
+        <a href="/storeglance/privacy">Privacy</a>
+        <a href="/storeglance/terms">Terms</a>
+        <a href="/storeglance/support">Support</a>
+        <a href="mailto:support@ludyem.dev">support@ludyem.dev</a>
+      </nav>
+      <span class="copy">© 2026 Ludyem AS</span>
+    </div>
+  </footer>
 </body>
 </html>
